@@ -1,0 +1,61 @@
+{
+  "date": "2026-10-05",
+  "nativeVerification": {
+    "status": "Completed",
+    "mechanisms": 98,
+    "strictlyVerified": 234,
+    "nativePassed": 232,
+    "exactExpectedRejectionVerified": 2,
+    "targetedChecksRecordedSeparately": 68,
+    "guardsRecordedSeparately": 4,
+    "countsNotAddedAcrossOverlappingSuites": true
+  },
+  "source": "https://github.com/tianyilt/HextechSolverCompat",
+  "release": {
+    "url": "https://github.com/tianyilt/HextechSolverCompat/releases/tag/v0.1.0-preview-macos",
+    "status": "PublicPrereleaseDownloadedAndHashVerified",
+    "scope": "Pinned game0.111.0 / CombatSolver0.48.1 / HextechRunes0.9.7 / RitsuLib0.6.5; macOS preview"
+  },
+  "workshop": {
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3814083983",
+    "itemId": 3814083983,
+    "upload": "Success",
+    "metadataVisibility": "Public",
+    "banned": false,
+    "exactBilingualDescriptionVerified": true,
+    "dependencies": [
+      3747501308,
+      3747602295,
+      3790899961
+    ],
+    "coverAndTwoGameplayImagesDownloadedAndByteVerified": true,
+    "allFiveContentFilesDownloadedAndHashVerified": true,
+    "publicWebVisibility": "Pending: unauthenticated Steam page reports hidden or no permission",
+    "publicAvailabilityNotClaimed": true,
+    "cause": "Not established: owner UI unavailable. Email confirmation or moderation are possible according to Steam Support; neither is asserted as the actual cause.",
+    "workshopEulaStatusQuery": "InvalidParam; cannot establish agreement status."
+  },
+  "pr": {
+    "url": "https://github.com/Torch1230/CombatSolver/pull/224",
+    "status": "Draft",
+    "head": "89798a78418e72e5f75b066dce163aea778db3a0",
+    "bodyAndTwoImagesVerified": true,
+    "rebasedBase": "CombatSolver0.50.0",
+    "build": "Passed,0warnings0errors",
+    "nativeEvidenceVersion": "0.48.1 historical",
+    "performanceAcceptance": "NotPassed",
+    "current050NativeAndPerformance": "Pending"
+  },
+  "publicBinary": {
+    "nativeTestedSha256": "8ae924216c665a6c4e7957cf508e3039f97d5f9ffdfce9be72947d49d4fe7ddf",
+    "publishedSha256": "e83ccf3c625c0f612f6c34cfc377f5b64c032868d27be7e19385e371cb076c52",
+    "difference": "Only128bytes of the external-PDB debug filename were removed to avoid a private developer path. All other PE bytes identical;3326/3326 normalized method contracts match."
+  },
+  "pending": [
+    "Workshop anonymous public availability",
+    "Windows acceptance",
+    "Fresh complete run on the final candidate",
+    "Newer dependency acceptance",
+    "Upstream PR native/performance validation on0.50.0"
+  ]
+}

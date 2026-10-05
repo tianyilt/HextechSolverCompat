@@ -34,12 +34,28 @@ try
             out string url, 8192, out string originalName, 8192, out EItemPreviewType type)) return 8;
         previews.Add(new { url, originalName, type = type.ToString() });
     }
+    bool eulaDone = false, eulaFailed = false;
+    WorkshopEULAStatus_t eula = default;
+    using var eulaCallback = CallResult<WorkshopEULAStatus_t>.Create((value, ioFailure) =>
+    { eula = value; eulaFailed = ioFailure; eulaDone = true; });
+    eulaCallback.Set(SteamUGC.GetWorkshopEULAStatus());
+    var eulaDeadline = DateTime.UtcNow.AddSeconds(15);
+    while (!eulaDone && DateTime.UtcNow < eulaDeadline)
+    { SteamAPI.RunCallbacks(); Thread.Sleep(50); }
     Console.WriteLine(JsonSerializer.Serialize(new {
         id, result = details.m_eResult.ToString(), title = details.m_rgchTitle,
         description = details.m_rgchDescription, visibility = details.m_eVisibility.ToString(),
         consumerAppId = details.m_nConsumerAppID.m_AppId,
         dependencies = children.Select(child => child.m_PublishedFileId).Order().ToArray(),
-        cover, previews, tags = details.m_rgchTags
+        cover, previews, tags = details.m_rgchTags,
+        banned = details.m_bBanned,
+        acceptedForCuratedUse = details.m_bAcceptedForUse,
+        workshopEula = new { completed = eulaDone, ioFailure = eulaFailed,
+            result = eula.m_eResult.ToString(),
+            accepted = eulaDone && !eulaFailed && eula.m_eResult == EResult.k_EResultOK
+                ? (bool?)eula.m_bAccepted : null,
+            needsAction = eulaDone && !eulaFailed && eula.m_eResult == EResult.k_EResultOK
+                ? (bool?)eula.m_bNeedsAction : null }
     }));
     return 0;
 }

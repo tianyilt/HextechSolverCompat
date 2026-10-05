@@ -2,6 +2,10 @@
 
 **Pinned-version macOS preview / 固定版本 macOS 预览版**
 
+[Download / 下载](https://github.com/tianyilt/HextechSolverCompat/releases/tag/v0.1.0-preview-macos) · [Workshop / 工坊](https://steamcommunity.com/sharedfiles/filedetails/?id=3814083983) · [Draft PR224](https://github.com/Torch1230/CombatSolver/pull/224) · [Publication verification / 发布状态](docs/PUBLICATION.md)
+
+**Steam public visibility pending / 工坊公开可见性待确认：** upload, metadata, images and package verified; unauthenticated page currently reports hidden/no permission. / 上传、属性、图片与文件已核对，匿名页面目前仍显示隐藏或无权限。
+
 Requires **game0.111.0 / CombatSolver0.48.1 / HextechRunes0.9.7 / RitsuLib0.6.5**. This release rejects other unreviewed binaries, including newer CombatSolver versions. Workshop dependencies auto-update; subscribing to their latest versions alone is insufficient. Obtain **CombatSolver0.48.1 from its author's [official release](https://github.com/Torch1230/CombatSolver/releases/tag/v0.48.1)** and use that local installation with its Workshop copy disabled. Keep exactly one enabled source for each Mod. HextechRunes and RitsuLib must also match the reviewed versions/hashes in [versions.lock.json](versions.lock.json). Windows and a fresh complete run on this candidate are unverified.
 
 必须使用 **游戏0.111.0 / 求解器0.48.1 / 海克斯0.9.7 / RitsuLib0.6.5**。补丁会拒绝未经审阅的新版程序集。工坊依赖会自动更新，单纯订阅最新版不足以满足要求：请从作者的[官方0.48.1发行页](https://github.com/Torch1230/CombatSolver/releases/tag/v0.48.1)获取求解器，启用本地0.48.1并停用其工坊重复来源。海克斯/RitsuLib也须匹配锁定版本和摘要。Windows与当前候选全新整局尚未验证。
