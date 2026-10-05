@@ -4,7 +4,7 @@
 
 [Download / 下载](https://github.com/tianyilt/HextechSolverCompat/releases/tag/v0.1.0-preview-macos) · [Workshop / 工坊](https://steamcommunity.com/sharedfiles/filedetails/?id=3814083983) · [PR224（Ready for review）](https://github.com/Torch1230/CombatSolver/pull/224) · [Publication verification / 发布状态](docs/PUBLICATION.md)
 
-**Steam public visibility pending / 工坊公开可见性待确认：** upload, metadata, images and package verified; unauthenticated page currently reports hidden/no permission. / 上传、属性、图片与文件已核对，匿名页面目前仍显示隐藏或无权限。
+**Steam automatic content check pending / 等待Steam自动内容检查：** the logged-in author page confirms the item is temporarily hidden while Steam checks its content. Upload, metadata, images and package are verified. / 已登录的作者页面确认项目正在等待平台自动内容检查，通过前暂时隐藏；上传、属性、图片与文件已核对。
 
 Requires **game0.111.0 / CombatSolver0.48.1 / HextechRunes0.9.7 / RitsuLib0.6.5**. This release rejects other unreviewed binaries, including newer CombatSolver versions. Workshop dependencies auto-update; subscribing to their latest versions alone is insufficient. Obtain **CombatSolver0.48.1 from its author's [official release](https://github.com/Torch1230/CombatSolver/releases/tag/v0.48.1)** and use that local installation with its Workshop copy disabled. Keep exactly one enabled source for each Mod. HextechRunes and RitsuLib must also match the reviewed versions/hashes in [versions.lock.json](versions.lock.json). Windows and a fresh complete run on this candidate are unverified.
 

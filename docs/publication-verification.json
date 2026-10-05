@@ -30,11 +30,14 @@
     ],
     "coverAndTwoGameplayImagesDownloadedAndByteVerified": true,
     "allFiveContentFilesDownloadedAndHashVerified": true,
-    "publicWebVisibility": "Pending: unauthenticated Steam page reports hidden or no permission",
+    "publicWebVisibility": "Temporarily hidden pending Steam automatic content check, explicitly stated by logged-in author page",
     "publicAvailabilityNotClaimed": true,
-    "cause": "Not established: owner UI unavailable. Email confirmation or moderation are possible according to Steam Support; neither is asserted as the actual cause.",
+    "cause": "Steam automatic content check pending",
     "workshopEulaStatusQuery": "InvalidParam; cannot establish agreement status.",
-    "ownerUi": "Visible Steam Helper child-process windows found; macOS graphical session is locked, screenshot black; waiting for unlock, no login reset requested."
+    "ownerUi": "Logged-in author page observed after unlocking; cover and both gameplay images display; banner confirms temporary hiding until automated content check clears.",
+    "ownerLoginConfirmed": true,
+    "emailConfirmationRequestedByObservedBanner": false,
+    "noReuploadOrAccountChange": true
   },
   "pr": {
     "url": "https://github.com/Torch1230/CombatSolver/pull/224",
