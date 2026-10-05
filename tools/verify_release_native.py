@@ -149,6 +149,14 @@ def main():
     (OUT/('native-verification-partial.json' if args.partial else 'native-verification.json')).write_text(json.dumps(receipt, ensure_ascii=False, indent=2)+'\n')
     safe = {**receipt, 'cases': [{k:v for k,v in row.items() if k not in {'nativePid','evidence'}} for row in rows]}
     (public/'verification.json').write_text(json.dumps(safe, ensure_ascii=False, indent=2)+'\n')
+    monitor_path = OUT/'monitor.json'
+    if monitor_path.exists():
+        monitor = read(monitor_path)
+        monitor.update(strictlyVerified=receipt['total'],
+                       remainingToVerify=len(names)-receipt['total'])
+        if not args.partial:
+            monitor.update(status='Completed',stage='FullNativeMatrixVerified',activeNativeJob=None)
+        monitor_path.write_text(json.dumps(monitor,ensure_ascii=False,indent=2)+'\n')
     print(json.dumps({k:receipt[k] for k in ['status','families','total','counts','build']}))
 
 

@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "NATIVE-SOLID-TIME-MADSCIENCE-RELEASE-RITSU065-FULL-MODS-SOLVER0481",
+  "seed": "HEXTECHCOMPAT",
+  "expectedLoadedMods": [
+    "CombatSolver@0.48.1",
+    "HextechRunes@0.9.7",
+    "STS2-RitsuLib@0.6.5",
+    "HextechCompatLab@0.1.0",
+    "HextechSolverCompat@0.1.0",
+    "BaseLib@v3.4.7",
+    "MintySpire2@v1.2.0",
+    "QuickRestart@v2.0.0",
+    "RelicRewardChoices@0.3.9",
+    "ImportVanillaSaves@v0.2.1",
+    "sts2_god_mod@1.7.10",
+    "RandomForeseer@0.13.18"
+  ],
+  "characterId": "IRONCLAD",
+  "encounterId": "FUZZY_WURM_CRAWLER_WEAK",
+  "enemyCurrentHp": 2000,
+  "clearPlayerPiles": true,
+  "cards": [
+    {
+      "cardId": "DEFEND_IRONCLAD",
+      "pile": "Hand"
+    },
+    {
+      "cardId": "DEFEND_IRONCLAD",
+      "pile": "Draw",
+      "count": 45
+    }
+  ],
+  "fixedSearchBudget": true,
+  "searchBudgetOverrideMilliseconds": 0,
+  "timeoutSeconds": 90,
+  "initialEnemyMaxHps": [
+    3000,
+    3000
+  ],
+  "initialEnemyCurrentHps": [
+    2000,
+    2000
+  ],
+  "initialEnemyMoveIds": [
+    "FIRST_ACID_GOOP"
+  ],
+  "initialPlayerEnergy": 30,
+  "initialPlayerHp": 800,
+  "initialPlayerMaxHp": 1000,
+  "clearAllPowers": true,
+  "relics": [
+    {
+      "relicId": "SOLID_TIME_RUNE",
+      "addWithoutObtainedEffects": true
+    }
+  ],
+  "hextechEnemyHexes": [],
+  "hextechExpected": {},
+  "initialPlayerBlock": 0,
+  "hextechEnemyTierFloor": 1,
+  "fixtureNotes": "Original SolidTime65 methods/source64 exact plus reviewed inert hover enumerator Dispose. Persistent deck membership/removal, original stored JSON, upgrade/canonical restoration and direct protected OnPlay without paid play/hooks/history. Complete native snapshots and fork/key/stamp/RNG/two future turns.",
+  "initialPlayerStars": 0,
+  "powers": [],
+  "initialEnemyBlocks": [
+    0,
+    0
+  ],
+  "hextechNativePlaySequence": [
+    {
+      "cardId": "DEFEND_IRONCLAD",
+      "enemy": false,
+      "expectedPlays": 1
+    }
+  ],
+  "hextechNativeRoundsAfterPlay": 2,
+  "additionalMonsterIds": [
+    "LEAF_SLIME_M"
+  ],
+  "hextechNativeEndTurnOnlyRounds": true,
+  "hextechNativeSolidTimeProbe": true,
+  "hextechNativeScopeCounterProbe": true,
+  "hextechNativeSolidExpectedRemoved": 0,
+  "hextechNativeSolidStoredCards": [
+    {
+      "cardId": "MAD_SCIENCE",
+      "upgrades": 1
+    }
+  ]
+}

@@ -19,5 +19,9 @@
     "newer solver versions"
   ],
   "fullReleaseGateBypassed": false,
-  "note": "Separate preview artifact; tools/package.py complete-release gates remain unchanged."
+  "note": "Separate preview artifact; tools/package.py complete-release gates remain unchanged.",
+  "allMethodsIdentical": {
+    "methods": 3326,
+    "differences": 0
+  }
 }

@@ -1,0 +1,184 @@
+{
+  "registeredRuneWitnesses": {
+    "EscapePlanRune": [
+      "escape"
+    ],
+    "RegenerationSuppressionRune": [
+      "regeneration-suppression"
+    ],
+    "SoulCallingRune": [
+      "soul-calling"
+    ],
+    "KakaRune": [
+      "kaka"
+    ],
+    "AstralBodyRune": [
+      "astral"
+    ],
+    "PiggyBankRune": [
+      "piggy"
+    ],
+    "NeowsGrudgeRune": [
+      "neows-grudge"
+    ],
+    "SuperBrainRune": [
+      "super-brain"
+    ],
+    "OkBoomerangRune": [
+      "boomerang-acquisition"
+    ],
+    "NatureIsHealingRune": [
+      "player-nature"
+    ],
+    "PorcupineRune": [
+      "porcupine"
+    ],
+    "OmegaRune": [
+      "omega"
+    ],
+    "GetExcitedRune": [
+      "get-excited"
+    ],
+    "HardBonesRune": [
+      "hard-bones"
+    ],
+    "SwordFlightRune": [
+      "sword-flight"
+    ],
+    "DawnbringersResolveRune": [
+      "dawn"
+    ],
+    "TwilightVeilRune": [
+      "twilight"
+    ],
+    "EarthAwakensRune": [
+      "earth"
+    ],
+    "FeyMagicRune": [
+      "fey"
+    ],
+    "DieForYouRune": [
+      "die-for-you"
+    ],
+    "GhostFormRune": [
+      "ghost-form"
+    ],
+    "ShoulderVakuRune": [
+      "shoulder"
+    ],
+    "CardInspectionRune": [
+      "card-inspection",
+      "card-inspection-shuffle"
+    ],
+    "PrimitiveMadnessRune": [
+      "primitive-transform",
+      "primitive-cancel"
+    ],
+    "SomethingForNothingRune": [
+      "something-free",
+      "something-paid"
+    ],
+    "ScapegoatRune": [
+      "scapegoat"
+    ]
+  },
+  "groups": [
+    {
+      "name": "registered-runes",
+      "fixtureDir": "tests/registered-fixtures",
+      "fixtures": [
+        "astral",
+        "boomerang-acquisition",
+        "card-inspection",
+        "card-inspection-shuffle",
+        "dawn",
+        "die-for-you",
+        "earth",
+        "escape",
+        "fey",
+        "get-excited",
+        "ghost-form",
+        "hard-bones",
+        "kaka",
+        "neows-grudge",
+        "omega",
+        "piggy",
+        "player-nature",
+        "porcupine",
+        "primitive-cancel",
+        "primitive-transform",
+        "regeneration-suppression",
+        "scapegoat",
+        "shoulder",
+        "something-free",
+        "something-paid",
+        "soul-calling",
+        "super-brain",
+        "sword-flight",
+        "twilight"
+      ],
+      "reports": [
+        "artifacts/20261004-234418-reuse-session-suite.json",
+        "artifacts/20261004-235202-reuse-session-suite.json"
+      ]
+    },
+    {
+      "name": "combination-boundaries",
+      "fixtureDir": "tests/registered-boundaries",
+      "fixtures": [
+        "astral-max-hp-feed",
+        "card-inspection-nested-draw",
+        "die-for-you-osty-death",
+        "get-excited-kill-pending",
+        "kaka-manual-attack-gate",
+        "ordinary-player-poison-control",
+        "porcupine-permanent-thorns",
+        "scapegoat-existing-delayed",
+        "scapegoat-mixed-artifact",
+        "twilight-buff-order"
+      ],
+      "reports": [
+        "artifacts/20261004-233726-reuse-session-suite.json"
+      ]
+    },
+    {
+      "name": "affected-shared-mechanisms",
+      "fixtureDir": "artifacts/20261004-registered-runes/regression-inputs",
+      "fixtures": [
+        "native-draw-warmogs-below",
+        "native-draw-warmogs-threshold",
+        "native-draw-warmogs-multiple",
+        "native-draw-warmogs-saved-progress",
+        "native-draw-warmogs-night-combined",
+        "native-draw-night-threshold",
+        "native-draw-night-before",
+        "native-draw-dizzy-shuffle",
+        "native-draw-death-poison",
+        "native-draw-death-terminal",
+        "native-exhaust-rekindle-four",
+        "native-exhaust-rekindle-three",
+        "native-exhaust-rekindle-ethereal",
+        "native-turn-divine-period",
+        "native-enemy-draw-warmogs-1",
+        "native-enemy-draw-warmogs-2",
+        "native-enemy-draw-warmogs-3",
+        "native-nature-worker",
+        "native-nature-deployment",
+        "native-nature-multi",
+        "native-nature-vital",
+        "native-vakuu-nested",
+        "native-vakuu-limit13",
+        "native-vakuu-vital",
+        "native-before-draw-stack",
+        "native-buff-chain",
+        "native-neurosurge-order",
+        "native-death-feed-scaled",
+        "native-received-negative-artifact"
+      ],
+      "reports": [
+        "artifacts/20261004-235550-reuse-session-suite.json",
+        "artifacts/20261005-000332-reuse-session-suite.json"
+      ]
+    }
+  ]
+}

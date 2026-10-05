@@ -7276,14 +7276,12 @@
     }
   ],
   "pending": [
-    "26 other registered default-disabled player rune gaps after the Warmogs repair; audit and implementation required before any complete-compatibility release",
-    "Visible Steam launch/gameplay acceptance (original isolated corrupted save resumed through user-confirmed victory; not fresh floor-zero or Steam)",
-    "Multiplayer (outside current single-player scope)",
-    "Pre-combat forecast API (outside current combat scope)",
-    "Other gameplay mods including AutoAnthony (deferred by user)"
+    "Fresh complete run on current candidate",
+    "Windows native validation",
+    "Newer dependency binaries require separate adaptation"
   ],
   "fixtureDirectory": "tests/fixtures",
-  "evidence": "docs/DEVELOPMENT.md",
+  "evidence": "docs/TESTING.md",
   "completionCriteria": {
     "allSelectablePlayerRunes": true,
     "allEnabledEnemyHexesExceptExplicitBans": true,
@@ -9656,6 +9654,35 @@
   ],
   "mechanismVerification": {
     "status": "Passed",
+    "adapterSha256": "8ae924216c665a6c4e7957cf508e3039f97d5f9ffdfce9be72947d49d4fe7ddf",
+    "familyCount": 98,
+    "caseCount": 234,
+    "counts": {
+      "NativePassed": 232,
+      "ExpectedRejectionVerified": 2
+    },
+    "evidence": "artifacts/20261005-release-candidate/native-verification.json",
+    "scope": "Full reviewed mechanism matrix; not Steam UI, complete-run or Windows acceptance"
+  },
+  "currentSteamVerification": {
+    "status": "SteamStartupAndNormalRestartVerified",
+    "adapterSha256": "8ae924216c665a6c4e7957cf508e3039f97d5f9ffdfce9be72947d49d4fe7ddf",
+    "loadedModCount": 11,
+    "noLab": true,
+    "evidence": "artifacts/20261004-registered-runes/steam-current-acceptance/verification.json",
+    "scope": "Ordinary Steam startup/normal quit/restart/save resume. Genuine five-turn current-build combat is separately recorded in an isolated visible copy."
+  },
+  "previousSteamVerification": {
+    "status": "Passed",
+    "adapterSha256": "9f2ad0deb683dce8c90d1a7947b14fd74aa0c3523fc5565e23aa87c7c283a68c",
+    "evidence": "artifacts/20261003-132930-steam-install/steam-verification.json",
+    "targetedNativeRegression": "artifacts/20261003-141601-suite.json",
+    "targetedCaseCount": 4,
+    "previousFullMatrixAdapterSha256": "07cc8a21c16733f4774954137769ac54cb3641bafb0bf607a09aab3cd0e42217",
+    "scope": "Normal Steam Ironclad A10, GiantSlayer, 6-turn first fight victory and restart/load. BaseLib and its three dependents disabled for actual solver conflict. Full 234 matrix belongs to earlier 07cc hash; not claimed for current hash."
+  },
+  "historicalMechanismVerification": {
+    "status": "Passed",
     "evidence": "artifacts/20261003-final-fixed-matrix/verification.json",
     "adapterSha256": "07cc8a21c16733f4774954137769ac54cb3641bafb0bf607a09aab3cd0e42217",
     "familyCount": 98,
@@ -9664,7 +9691,7 @@
     "rejectionCases": 4,
     "scope": "Pinned macOS single-player shared-mechanism and semantic-boundary verification; not every rune/combination individually played; Steam acceptance remains separate."
   },
-  "currentSteamVerification": {
+  "historicalSteamVerification": {
     "status": "Passed",
     "adapterSha256": "4ca5fbb0ad3b2256ad4462e1c663d3d4be7f68b655112547705e46aea073209d",
     "evidence": "artifacts/20261003-163919-baselib-steam/steam-verification.json",
@@ -9679,20 +9706,25 @@
     "loadedModCount": 11,
     "scope": "Current 4ca5fb: 11 native targeted cases (5 actual BaseLib/Ritsu, 6 original-framework/tag-order regressions); normal daily Steam all 11 mods active, four-turn SludgeSpinner victory, clean exit/restart/resume. Previous 07cc 234 matrix remains historical."
   },
-  "previousSteamVerification": {
-    "status": "Passed",
-    "adapterSha256": "9f2ad0deb683dce8c90d1a7947b14fd74aa0c3523fc5565e23aa87c7c283a68c",
-    "evidence": "artifacts/20261003-132930-steam-install/steam-verification.json",
-    "targetedNativeRegression": "artifacts/20261003-141601-suite.json",
-    "targetedCaseCount": 4,
-    "previousFullMatrixAdapterSha256": "07cc8a21c16733f4774954137769ac54cb3641bafb0bf607a09aab3cd0e42217",
-    "scope": "Normal Steam Ironclad A10, GiantSlayer, 6-turn first fight victory and restart/load. BaseLib and its three dependents disabled for actual solver conflict. Full 234 matrix belongs to earlier 07cc hash; not claimed for current hash."
-  },
-  "currentWarmogsHotfixVerification": {
+  "historicalWarmogsHotfixVerification": {
     "status": "TargetedNativePassed",
     "adapterSha256": "7af8a18e5e891b9f7287e3ccee842dce321832f5208048c5bdc875b3fb3a4c2e",
     "nativeCases": 17,
     "evidence": "artifacts/20261004-warmogs-fix/native-verification.json",
     "steamSavedRunAcceptance": "Pending"
-  }
+  },
+  "registeredRuneVerification": {
+    "status": "TargetedNativePassed",
+    "implementedMissingRunes": 26,
+    "nativeCases": 68,
+    "separateGuards": 4,
+    "adapterSha256": "8ae924216c665a6c4e7957cf508e3039f97d5f9ffdfce9be72947d49d4fe7ddf",
+    "evidence": "artifacts/20261004-registered-runes/native-verification.json"
+  },
+  "outsideScope": [
+    "Multiplayer",
+    "Pre-combat forecast",
+    "Tony algorithm / AutoAnthony"
+  ],
+  "verificationStatusMeaning": "implemented-unverified means implemented code without current per-entry acceptance; it is not an unknown-effect bypass. Full mechanism testing is separately recorded and does not establish exhaustive combinations."
 }

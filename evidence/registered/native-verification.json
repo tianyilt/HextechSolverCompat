@@ -1,0 +1,1035 @@
+{
+  "status": "TargetedNativePassed",
+  "build": {
+    "schemaVersion": 1,
+    "inputs": {
+      "Directory.Build.props": "35bd2d462af4620863263ee0a22fb96def6fe7694f77b580d4403370c0b28782",
+      "HextechSolverCompat.csproj": "4c9445f9d96d7fe1c73e47b066809e717d08a7ebf31b3559cd35bf1ec9b9d998",
+      "HextechSolverCompat.json": "d10838c589616471dce8b643cfc73975da91fc5534151949d7a7a33bf81d81fb",
+      "local.props": "9615e9cf49bdac603a6021d136faecf7deaf304401fe0787b153690f71d0bf5f",
+      "src/AutomationUpgradeMirrors.cs": "fde0cff6708d8ea83d3de14aa7b3a3eec2c7052942075bb6b17dbc1192e9eb04",
+      "src/CompatibilityGuard.cs": "7ca000db6db0d1220849b8b549c5280318b4961716ac1ba0887400c21224ae77",
+      "src/ConditionalCardPatches.HandSize.cs": "54690f611eba0a28fa0b56aa7ae97e94fa726a3152b4656825857e8f3a5f632f",
+      "src/ConditionalCardPatches.cs": "dbd842929023ae1a8bc9e67751018cdd5610f23970633f2e3bc5e17e18e72025",
+      "src/EnemyHpState.cs": "5e14bc0b0a83caba721d4fdb08cc2638eb23c50236a99181cdddbfa57eb29b1a",
+      "src/EnemyMoveRepeatBridge.cs": "83bada0bcf08c84ebc1a7647acca1a01b56c754ede525feb604eb2cfc2dee654",
+      "src/EnemyTurnTrackingState.cs": "36e350cd350eb5ac9373a53ea9fca6ef494a1f0188a00cf93e15f7c3299fbd75",
+      "src/Entry.cs": "f12911429cdbf804e4bd53a284411224a4de70161ae844025a3ab213b147e2f0",
+      "src/FurCoatSnapshot.cs": "68d999274d1a16268928a223c45837ef01e1b0a72b6008224dad5cd709534a11",
+      "src/HandSizeContinuationPatch.cs": "1e9a42ccc8fbc266a49e1927043fbfcf157706a0a06efdd3280c83fca1e562e1",
+      "src/ModSourceSettingsPatch.cs": "b4fc1efb2a187a862e7b7cb360e1c3c16d7ce4c887ac4fc0e80999cdd378073b",
+      "src/ModifierMirrors.cs": "01035128b984fcf6eace675a3b88a8a921b8d892b94b12a8e50fc3de9428cd73",
+      "src/MysteryMirrors.cs": "4724f5102e7e4b5bbca6b685f7cf3d173fa7c6f62cfcd9478945b62e3fc3e27e",
+      "src/NativeCallbackContracts.cs": "e2fc4884ffd01f726b3ac40b7901f41781027741bc3e886c6d06369b3a4a3360",
+      "src/NativeOrobasState.cs": "f659503f23b1af106100aa74df36663ffabbb546a3f54f7efe1d70ca84dd1a70",
+      "src/NativePotionGenerationState.cs": "b7163c894b43b4c8642358575c3bd316a453e8fdb6a1f671ee50edbf9c02a414",
+      "src/NativeRuneBridge.AfterCardCommands.cs": "b0e9147dcb8dba2bf77f1896f9bc6b31304dbd06d6b9b5b87e9a45a61f1d571a",
+      "src/NativeRuneBridge.AttackCommands.cs": "117f27444fa9137e5a83cdc3200b08946484d0ff51bb2be61f41be7de6fe59c7",
+      "src/NativeRuneBridge.AutoPlay.cs": "5b46fa2fed2932bb6ff2424019e73ca69d6c7e328c3455779fe1ea00867c0f07",
+      "src/NativeRuneBridge.AutoPlaySelection.cs": "1336fb85b3e7bc482aa08aa42848f2d9f227f5bc15fd7ac45b711d00ce07d866",
+      "src/NativeRuneBridge.AuxiliaryForges.cs": "d2ed74188b0054825db0e77ea62da895b0f852f44662cbc67fe2d7b3dde4cd2c",
+      "src/NativeRuneBridge.BeforeHandDraw.cs": "465541f19f6388cba051988d3792fd62655270d1a0f9604eef9ccd9917a469ab",
+      "src/NativeRuneBridge.BlockCommands.cs": "35e4d6a9cd39f28645a691638ef8f378fc8f8fc46ca81fd4b71edcd7be00996d",
+      "src/NativeRuneBridge.BlockSustain.cs": "79e61a45154f7f676487d4a4ef4a9fffa26c0b065b227b771d14661a16588141",
+      "src/NativeRuneBridge.Bread.cs": "e3e4aa3771146b2aec756aa15a02c435aeaf246556ce56137b2edee220c5c1c2",
+      "src/NativeRuneBridge.BuffReactions.cs": "671e0409cd9499b9bf2123ab623493a4a497c73b2fe190b3803665661925cd3a",
+      "src/NativeRuneBridge.BurnReactions.cs": "9f0b431e381c949edab848670509b5e81da4eec7007a91efc6dec6bc038c7a80",
+      "src/NativeRuneBridge.BurnReplay.cs": "834eee19c6778807d0b820771d8c0b76864352b21d22200275002f17a2003ef7",
+      "src/NativeRuneBridge.BurnUpgrades.cs": "ed1b0ebc2c6741f8020170735639166ece426926661689e590d0d37ae6d98313",
+      "src/NativeRuneBridge.CapturedAwards.cs": "ed5400aafcbe46188c452d811720ab2541b4a92dd938668021f90f99dc5bd591",
+      "src/NativeRuneBridge.CardInspection.cs": "6b0b18db8e85e5d5b792d2c160c6c540553fa88636dff5fa0e37e1defd53998b",
+      "src/NativeRuneBridge.CardInstanceLedgers.cs": "2333d291317d5f6d042cebc38a5169c164d60ccec7e1858f0c1a3c9ca99540bb",
+      "src/NativeRuneBridge.CardUpgrades.cs": "08d4d96ac7476987d038d06587ad1ffd485c08e60308ea0e419f40a7cd5d67e5",
+      "src/NativeRuneBridge.ChemtechDragon.cs": "f4f20cd6fb3dcf42e733f3bae70a1eca8a6b9d7aa75deda956b5a689e39a035b",
+      "src/NativeRuneBridge.Choices.cs": "5274b8002f9a09d63a0fcfe89bea658da1aa37a50a80ecb1828fc7aec6282f50",
+      "src/NativeRuneBridge.CircleOfDeath.cs": "5ce934b8869a69434f4729f52d9ea83d34526d5472e22bc1f2f271a380ef1087",
+      "src/NativeRuneBridge.Cleanse.cs": "d3b32b2ec2304e6d23d4aec6ecfbb1fe2365298eff5d2459f2a1aa679de68a7b",
+      "src/NativeRuneBridge.ColorDiscovery.cs": "ad9b2521aa2d349d88a447b81a63bea55071891023803df09bbb94ed51a7e6c3",
+      "src/NativeRuneBridge.ConditionalUpgrades.cs": "204187a7e6df8240f4c31d16c631a072e22f661255c156b387c092917947755a",
+      "src/NativeRuneBridge.CostGates.cs": "7e99b8af773d3402fbf5aa13f153a17a22bc94e9d0788875727db9b7385b7fb9",
+      "src/NativeRuneBridge.DamageCommands.cs": "05962043973feaddbe49a64d56a82abca96cb9c83ef2f67f785fe2741eeec568",
+      "src/NativeRuneBridge.DamageHooks.cs": "63b852e52c203ae94eac559efaefda763a1dee191e4a82daa92eced824b2012b",
+      "src/NativeRuneBridge.DamageUpgrades.cs": "ad747478dbc16649ed06abfad403e477c50fd3b9486f8cee5a5a1055ccd91ae3",
+      "src/NativeRuneBridge.DeathGrowth.cs": "0cb314e25e125700d7026ac7d67c50a0ff7f48184b9e0468f8799240b64e1527",
+      "src/NativeRuneBridge.DoomReactions.cs": "2ab1cd70a4dee9d6302ed1b69290c1ba2be25f11dd3782495423e0069cdcbe3c",
+      "src/NativeRuneBridge.DragonSouls.cs": "0351fa3de9964de71a252e83f4a5bbfa38f41ec035013198d6e963b3fd19aba3",
+      "src/NativeRuneBridge.DrawExhaustPeriod.cs": "0dc93597581d37277b285ad27e98fa2ce1accad6f3d71b312d5c7207de09b289",
+      "src/NativeRuneBridge.DrawSustain.cs": "1270218db448c06ed25dba3f15f0a51b9831abfbc73e59e22367b0b34fa30acf",
+      "src/NativeRuneBridge.DualWield.cs": "e5400c1f2848974bb4d4e33cde48030eb23285e2b6bc726e84a9bf7030dc54da",
+      "src/NativeRuneBridge.Duality.cs": "88a64509e3d440ba5e5029ec6e44b13f5c179d9e730d6e6fab25fb1069923387",
+      "src/NativeRuneBridge.EffectiveAttack.cs": "3d5c749a24dac60fa53360f7386ee5adebe11fe009dec39ebdbb86254566828b",
+      "src/NativeRuneBridge.EnemyCardCosts.cs": "072bfe79aece5b323becc0c8c777b5363271232d9b4a13dda478c103b0db2b5c",
+      "src/NativeRuneBridge.EnemyCardFlow.cs": "21a0d2d9ad74a2c91981d5146360904f1e46fb7a61bc49b2ec0f6ce6d02ba2d7",
+      "src/NativeRuneBridge.EnemyDebuffTurns.cs": "79d2b256079033f090e06fa6877a5e1c4f598dfdefba875e3513a8dcb30499e2",
+      "src/NativeRuneBridge.EnemyDraw.cs": "45504d290223a8d21554df8348f756f8ca5a9e837a3aa52921450ff8545fa69c",
+      "src/NativeRuneBridge.EnemyDualWield.cs": "ed1fe7fef18cf2cb7ee4fbbf2c5de418fb192f2d1c9317945c1431102e9fced2",
+      "src/NativeRuneBridge.EnemyFlowLimits.cs": "1220fea0c40e5accff629bacb2e8d2182c2c2f38216e949b2081b25f0b807988",
+      "src/NativeRuneBridge.EnemyHealthThresholds.cs": "f47674a538a6d2a1bc897e22a92afac440a9bd10d1d381e9b7c7c02e30cb7e9f",
+      "src/NativeRuneBridge.EnemyHitEffects.cs": "7c9f117b9a4c574c2a7ae59ec1c8b428b1fd2491fa0d0250404ce6f82ac3ff27",
+      "src/NativeRuneBridge.EnemyHitMemory.cs": "1be24ba78a212460befe33a174912c7e40af201f2bdefb3c2f74c1f6f954a2e9",
+      "src/NativeRuneBridge.EnemyHpLifecycle.cs": "42af12070814091c194602157a3890faff33a6ea5ac110c386223d36e1a25de8",
+      "src/NativeRuneBridge.EnemyLifecycle.cs": "e47b68a98dc6855664e97f4d5b6267c214300557fd5d170089e6aeb9429d313d",
+      "src/NativeRuneBridge.EnemyPeriodic.cs": "3875c4115bb5045514a369ab980d5e274263759f8cd8618ef79bbb4820a14c5b",
+      "src/NativeRuneBridge.EnemyPileBoundaries.cs": "8d8a5beddf636f7f3d2b32da35cf1f2503a79c31f3a8ed4f45f804eb78aa015d",
+      "src/NativeRuneBridge.EnemyPlayed.cs": "56a05a81bd2b774be55e0f27f44095182deb0f45c829a58714fad0e39c1b1995",
+      "src/NativeRuneBridge.EnemyTurns.cs": "703fb5b369fc2cf535cbfc606a08562bbf676e9c481cfdf14095b211035c788b",
+      "src/NativeRuneBridge.Events.cs": "246ab34e864882d1164b1fb4dfef923c627431479123c783d60e1ec7c01d6efe",
+      "src/NativeRuneBridge.FinalForm.cs": "9df501ec2d9689922c870bdcc15bd7ceb31a22875c07ed775727333f2b2642ae",
+      "src/NativeRuneBridge.FinishedShivHistory.cs": "d058fa96dc426ad019c37e13d5f93f5f443e41b90d4d20d5709e69960f767a52",
+      "src/NativeRuneBridge.FlyingKick.cs": "fd2f03aaa8502fa2fce830dadea6e365a80ea0734f1d931097a258b51d6e97c8",
+      "src/NativeRuneBridge.Forge.cs": "a4244709f3065a2e8fa9a42b356b447807e1708352a3025cbaa84183affd2b9d",
+      "src/NativeRuneBridge.GeneratedReactions.cs": "919545f2141cfc001b80a47966cb2b818d56be6528979e7bd7aba87ca89eadd3",
+      "src/NativeRuneBridge.GeneratedTags.cs": "a1d5b8a2cb52e1951436f95a06718c4d0cef151dd651a287ee2f13c75b0cd599",
+      "src/NativeRuneBridge.GeneratedTokens.cs": "6f4d51148a4a4c844b8d52aa51935689bc722dff95317df9a1cbc731ba1d3e31",
+      "src/NativeRuneBridge.Gold.cs": "b0e448c1a498d174b3705c4ac902079151ad1d645e73f56bb0130ebf545f2df9",
+      "src/NativeRuneBridge.HandRules.cs": "279d6810bfddf8aa6b82ac3aa88c1647161a063cfc24d4b271a1319dd7c8ef6d",
+      "src/NativeRuneBridge.InstantDeath.cs": "f9ff95a2b8d05c965072b6b7acce2ce0713f8ca46476554aa593bb90f9d1f559",
+      "src/NativeRuneBridge.KeywordPersistence.cs": "b97d05a23b23c8f48336e3ea62178ddf511d4c6ad12772f34c463672e27b9547",
+      "src/NativeRuneBridge.MaxHp.cs": "de159f4d358d8cf07b043637a015df87aabbfd6d26b9016e439bebe19f10614f",
+      "src/NativeRuneBridge.MissileStars.cs": "13ca76e81b05ca19ec1bee711816aa46c02d74268236e1fdad2a577d43cd4796",
+      "src/NativeRuneBridge.MonsterUpgrades.cs": "3a0cfd9cce46104439924557a5e985b030a2c2f59672b2c132c1e6bccf600b8d",
+      "src/NativeRuneBridge.MysteryOpening.cs": "b051e54fd996733850a12f12a9ae8663c7331af9267fb8b90331f91370d73ef3",
+      "src/NativeRuneBridge.NativeResources.cs": "a6a10d9e19866c55a37ffa66a337c2d1105a065abc58b0323cc6f71e38be8e75",
+      "src/NativeRuneBridge.NatureHealing.cs": "27ebd81e1b2907e8e080585ff94a7864f6fd64050ebb10cd85d4944bdb5fbe48",
+      "src/NativeRuneBridge.NearDeath.cs": "c569ebd73640772a98389bdf29d9e28a3266e1c59470976da36fb8de8d26ed77",
+      "src/NativeRuneBridge.NetherBatch.cs": "492e422802986a04fea1517a13898db483c19fda835e986ea827cd7e227ffcdd",
+      "src/NativeRuneBridge.NeutralPowers.cs": "1b23c5a595a17cdc2c638df165913a71909e44957fdc298e5767e70109244004",
+      "src/NativeRuneBridge.OpeningAndGeneration.cs": "312c339eb22b03d85d61f8073c3ed6e6bd3756ecdfa8b432572d1cd372e81b6e",
+      "src/NativeRuneBridge.OpeningForms.cs": "2ee1568575fb41cb7c6e9a0f3f26db4588bc01102e3b8a84ed82ed9c6538a2fc",
+      "src/NativeRuneBridge.OrbCommands.cs": "52cc013b7b8e4b0b6572c546b18932f496a0dc4d75d324a4eefaccd3490ab3f5",
+      "src/NativeRuneBridge.OrbPassives.cs": "a9230ca1f8c2e6720002387832dde8054a2bf6598039174c686f59ddcee1a38e",
+      "src/NativeRuneBridge.OrbPhases.cs": "803257b3952209716733a3934f0e8f92bd59e2a23e71c1a1eceb52b1934f29c7",
+      "src/NativeRuneBridge.OrbReactions.cs": "405c9851e28ef75dc42ed73abe1b8e3d4fb42185e2237c29ab2c864ed8caf678",
+      "src/NativeRuneBridge.OrbShuffle.cs": "05b0da82f6af50cd2d87bc047230655865093f3a370d3c9f5377250bedb0cda1",
+      "src/NativeRuneBridge.OrobasRelics.cs": "c041e99f833dbc0391e4773b33c7f58ce9c3b97b398296db0655eb0d0ae03952",
+      "src/NativeRuneBridge.OutsideBattleEnemy.cs": "a442e7a1eb014ca5501795adefd6c8e1c3b55b34480840205ef6fdf9e62a0c46",
+      "src/NativeRuneBridge.OutsideRewards.cs": "78f292330741073aef3dd4f9b6fe5c46bcaec93961854d54e7fc35514df8aec7",
+      "src/NativeRuneBridge.PendingDamage.cs": "474ae6d97a6747688dd2cdcd0c5e5b93733afd8249ced51124bdbd81dcfb0320",
+      "src/NativeRuneBridge.PersistentKeywordCards.cs": "662f300f630c832b7f0e5e8b6e941d53d52a427f2936b5056f2d6f13d4dfdffb",
+      "src/NativeRuneBridge.PowerCommands.cs": "9e52f0b6d219d4ea66039cd23abe39aa4e05460febcc8867eb40d3d123da0990",
+      "src/NativeRuneBridge.PowerGivenQueries.cs": "c31a311c2cf4865e63e7bdcb0d3447cf51418c41ad1d9f30d7fe4bc77bc62e82",
+      "src/NativeRuneBridge.PowerLifecycle.cs": "3e68e7516f24a291138aa1c254fdaacca31425cc8a15c6924b3bad18cea98d77",
+      "src/NativeRuneBridge.PowerReceived.cs": "7ea672a3265b882cc77b58669c4f80fd7e977fac57a67035ecc1bdbf7d4e1f85",
+      "src/NativeRuneBridge.PowerSideStart.cs": "f8ffeacbd1f2d08374006340a2a5ef22763fc36abcdfe8d92a3d97dae4101337",
+      "src/NativeRuneBridge.ProgressStartUpgrades.cs": "c22cd6fae34e053c75011f2c35d9a7344c87f476a5dccec372162f64cb18e301",
+      "src/NativeRuneBridge.ProjectionFamily.cs": "5ce71ea788d24e3aa7deeebd518180290dcde4fc13f2231a22040012ba60acb9",
+      "src/NativeRuneBridge.QuantumComputing.cs": "80c015220decceef77e422415226e76391e2c0f1782f30009a19be36c149ae7b",
+      "src/NativeRuneBridge.QueryFamilies.cs": "ad854a866be37ce492618a1b6517f81af003d0472e5652d93e6401e3ba5f8fd5",
+      "src/NativeRuneBridge.RegisteredRunes.cs": "d2b98352924008669f19226d39b3072d60b1d9b9e78cf2d7e9ab476ac1aed664",
+      "src/NativeRuneBridge.RegisteredTransfers.cs": "5ec2cf12fadbe66ee0eb0876965ce887b60b6f7f1d19a40672afd70b9c55e22a",
+      "src/NativeRuneBridge.ResourceUpgrades.cs": "0ed18559df370cd4f7c4f51473f8f8c7ef233159dcb806f88f705cd191c3bb28",
+      "src/NativeRuneBridge.ResultPile.cs": "3c7113061bde8fc04292623ecb84f8bd30c4428ea8285048793f8ca360176765",
+      "src/NativeRuneBridge.ScopeReturn.cs": "c75a29b9875b24f06392bc56660793aa40a1f6da760ec72bfc069d73ec91cadf",
+      "src/NativeRuneBridge.SelfUpgrade.cs": "bd40b1732003bf3f74c8773096f95e6cfbcc854c148e9c865ca171f3a1ddce59",
+      "src/NativeRuneBridge.SellOff.cs": "a64f2e8dd8692dce619fac2451e0e9570d2e1df62daffff785af1a8af1b87800",
+      "src/NativeRuneBridge.SideStart.cs": "25fc6f71e06513b274029074e180bf8d881a905cd689492dbabefc057add3c90",
+      "src/NativeRuneBridge.SimpleHooks.cs": "b4b988859c037052c23369f595d842e5e056d87eb57b453d56464704d1dd2bc7",
+      "src/NativeRuneBridge.SlipperyDamage.cs": "3126b147277f11e1de918f9ebccfd72bb5de2d9c99f41fbc5e523096dc680f41",
+      "src/NativeRuneBridge.SolidTime.cs": "da102c8d4d4908d40e5d6714b52821342cf62f310bcdb7a89a087ee963dbf8ec",
+      "src/NativeRuneBridge.StableGeneration.cs": "44fe58cfec104a6c7b72a8c81aa335cf833f84a6a8ba8cd44b5c95bc020e849e",
+      "src/NativeRuneBridge.StackGrowth.cs": "2f8954ef636dc5dae448e85adb1e22c4c1c258237826f44fb43951d7b63459ac",
+      "src/NativeRuneBridge.SummonResources.cs": "bff3b360665229d9a82fd02726dc50b5db0a42507f2b487e22d4ad6f506f7082",
+      "src/NativeRuneBridge.SweepingBlade.cs": "37e5dbae9ab1f210001995c04c1071e531e3e68f4dd4bebaad08b2a066cd4675",
+      "src/NativeRuneBridge.ThievingHopper.cs": "32c422bd9945c2279fc56be55291a259adcfba2d3f341a287a0046c13b77d142",
+      "src/NativeRuneBridge.TokenCards.cs": "c7dd98f8d5fbb979b10a4bb8445aee0432d90ea8bb6c885e2770b00be8f6d8d9",
+      "src/NativeRuneBridge.TransientAutoPlay.cs": "157f295ac964a0c7c4cfa68f5aad0d2132f4aae3f39202cb8ee94f8c125ec8b6",
+      "src/NativeRuneBridge.TurnCostReplay.cs": "978d12d6eabab40dcc9b9b9f878b1562b1efaed0267fa860593b1b2d7e7880ca",
+      "src/NativeRuneBridge.TurnFlags.cs": "dd8b205f053bc0b497bd816ebdff5738af9a37db5956bf2c7221ae6b0c8c0fd5",
+      "src/NativeRuneBridge.TurnResources.cs": "7182711ee0d1ea384c3a80c24af75790d452181e6eb228330dfd7081db8c9407",
+      "src/NativeRuneBridge.UniversalSpiral.cs": "a77972421eae6d2527ea5c159755fed5178eacb3ef66949097223de5c235cb79",
+      "src/NativeRuneBridge.UpgradedAttacks.cs": "61e94e0e9ff47c8e582f7fde32dcc2c555d1f437dd97ce4f3ff4a9c91b549e1e",
+      "src/NativeRuneBridge.VakuuControl.cs": "f3aa219deea53e9dff0f892a7a07fd8aaba2b98cc99d99e65f8ff6e55479fef1",
+      "src/NativeRuneBridge.VitalSpark.cs": "9d7acc5325bf0d29aca56f6acf3e8fed50b3910a956db8b70517f7c907f723d9",
+      "src/NativeRuneBridge.WhiteHole.cs": "81d418d5e221c34bad26e6502277f266482b66bd3e607ae7c02ee66297e707a6",
+      "src/NativeRuneBridge.cs": "b27df6db6ed3abc36d067341e6b6690667aa9854a1c48bcbc14b69a62953092b",
+      "src/NativeRuneState.CardLedgers.cs": "5f00c88f9b15c5d9c07695e1b586751b3b17a07be48f97c92b46f56c6b93a569",
+      "src/NativeRuneState.DamageQueues.cs": "d4ca32ed02f87882ca76803ea9fd5ed52ad9d1b15746ac53f6347ca8c76061a5",
+      "src/NativeRuneState.NatureTimer.cs": "664c0f8c4a75d76b0b4e947ea37ff5311517ad36678f084e51df53e802cc734c",
+      "src/NativeSelfUpgradeState.cs": "30095d02d1076412c69b807acd9aebb9d01e1c6b2dc34a6fb988513008b9337a",
+      "src/NativeTheftState.cs": "a79585a6bfebe8f39b48ba3a3f977ec12a45db1dd92b8a44f9a5d5b0dd954b55",
+      "src/OpeningFormBoundary.cs": "a17d48f28b41147b6923d064791a129aec7eb310438def624870bf5a47d0661f",
+      "src/PinnedAssemblies.g.cs": "5859de961ae157ee2550187480f5ff57bb1c4195dc90b7a001553c6fdcd97eb8",
+      "src/PowerExpiryBridge.cs": "b75f85c4f830d660965ee283e4acd02048b496fb2bec9d48eab08385ae221158",
+      "src/PowerSourceBridge.cs": "a4240b7be5ccf39167bef5b6199fbb9a5cdefa3dd3303560c3f908b025b7f29b",
+      "src/RuneMirrors.Acquisition.cs": "0c4318d1e29fab19709f007371409f6e16db7f0dcb8461a6e642c48d5253c140",
+      "src/RuneMirrors.CardAndOrb.cs": "c223b3ecfdd24e5a3751b63a3b0efcbbedbd7eb6de998c93b413b8ce949628a5",
+      "src/RuneMirrors.Damage.cs": "6748ee8b54f592ca3665935ad1b417f219cc9b025f9dbdc3808ae5f35cee569d",
+      "src/RuneMirrors.Opening.cs": "0c3a306735395c11a24f07ae28e077d4dbd39bb99ed4f7ab549c237f40d8ab38",
+      "src/RuneMirrors.Sustain.cs": "82bef99bb7aca38260c0067d9d45c13672ec510bf4688a01b23e80550d6f7eae",
+      "src/RuneMirrors.cs": "66898c2c2aacd8fc947c196f7b02daebb602d9ebc4be34103e7fdab7826353bf",
+      "src/RuneProjectionMirrors.cs": "c7649527a9669c63d68a50cd8eda08f530611431c4896e03a1663ab5f382c7b9",
+      "src/SummonRuneMirrors.cs": "ae29fcc8b6e42f87eb3d9afa6d032fcde9f05e8a75159d254012ac809312505f",
+      "src/TemporaryDexterityBridge.cs": "29ac80858c5ac9b11f261258e4a79a3e6449aa56bb7ea0cfaa9ab2b306347791",
+      "tests/LabMod/AttackResultAssertions.cs": "cca420b4ef1c2bc824c0f4198391439ec31de886b080b274df26a230b5a6c4e2",
+      "tests/LabMod/AutomationAssertions.cs": "4da2b315c7a7aefe03bc1debd58b8d3bf153957af2f0ca761bab1e47ce080f70",
+      "tests/LabMod/EnemyAttackCounterAssertions.cs": "e458361e5ba2185dabbec48e3e121d15af63daa9ce8154462e801444accd1cdb",
+      "tests/LabMod/EnemyCoefficientAssertions.cs": "20931795cf53bf41688b75275a21ed967bd093e71c8e8b30d4da3985591243c6",
+      "tests/LabMod/EnemyDamageProcAssertions.cs": "16158292a2c5bac5158a40001923db0d238f5aa2500b0a2f33d39383699e955a",
+      "tests/LabMod/EnemyDebuffAssertions.cs": "52f57d469084dec17283d5ef28903f8028f3aa78e097a0e9b49f5b8f91fd04a5",
+      "tests/LabMod/EnemyDebuffTurnAssertions.cs": "39dbd122aa9c6cdfbd3268f479826a6836cdbfd1c0af2deb4372180b5a0c8afe",
+      "tests/LabMod/EnemyExhaustSlotAssertions.cs": "6a09f65f8522869587214093f8a68828e6cd06050efc82bfaa08ba957d9d9117",
+      "tests/LabMod/EnemyOpeningAssertions.cs": "6ba88c6d3ee0edc710129bf1c1aec4d98937095ba71f02e6d682b8141aab70de",
+      "tests/LabMod/EnemyPeriodicAssertions.cs": "e6be1b68438c3a749989436eb408271734fbd13bbda1c76988c7718e0b139e17",
+      "tests/LabMod/EnemyRepeatAssertions.cs": "b1f89049726265244c2377cf322b9b4ded3d672aa59ee44d7e4ce330ac4f61ad",
+      "tests/LabMod/EnemyRevivalAssertions.cs": "1287290f7138270160ec2fb27fda5adaec096972f43eab87e51f5312d080fec2",
+      "tests/LabMod/EnemySpawnAssertions.cs": "8cf0014c0c7010da075fbc34b29a08458cb5e83132ec5e5e38fe55b9c4234f6f",
+      "tests/LabMod/EnemyTurnAssertions.cs": "8a61f3950be55abe56041d85ec78b3f2273f6ac6e003e737765f51423981d51b",
+      "tests/LabMod/Entry.cs": "946e3e3e5b750cd38a7caa7d09d0ad9b690eef2d4ad0fd287a71568a8428b4be",
+      "tests/LabMod/FixtureAssertions.cs": "f9b985a3b5b27329bb57ee20cf6551fa5af7eb0d044bd380edd5d6a83c96d976",
+      "tests/LabMod/GeneratedOnPlayAssertions.cs": "9f789c69f3ab5a9798422b0fa17889e3d2f63e5d05108d1d37f1a0f74e3ffbb5",
+      "tests/LabMod/GeneratedReactionAssertions.cs": "b16c1e33633f8cdbf6d91936e8a945780962dbb926104430b2d37a23e5d254d0",
+      "tests/LabMod/HextechCompatLab.csproj": "17db96ee13bb6c7a0df9988e8bbf771ee44a044cbe3c5740fcaa2d041f5cb64d",
+      "tests/LabMod/HextechCompatLab.json": "0fade916f466ed7d54918a230fd337b1bf15da98c997a43617f6c578ab484035",
+      "tests/LabMod/ManualGateAssertions.cs": "6f95d321b3a0a40451c98cb37061956b83ea7f176b67a41a66c4f1b159923c0e",
+      "tests/LabMod/NativeAttributeChangeAssertions.cs": "bb7eb3e3b6a3a84f98ca88ffdedbbafbf95b990352e5abf216206e590dad6b16",
+      "tests/LabMod/NativeAuxiliaryAssertions.cs": "861cd42e4ec9cfcdfb971a85701305231e859e5f948b365476b64237c54afe79",
+      "tests/LabMod/NativeBeforeHandDrawAssertions.cs": "6cdffd455b81426d80e7355896ad09287639ec85a9f78c54ba6666c57cd32867",
+      "tests/LabMod/NativeCallbackChoiceAssertions.cs": "44a34485f85c7199b0a16321ca6eae7307376b6facf204d6ca9f4f310ed46de1",
+      "tests/LabMod/NativeCardAcquisitionAssertions.cs": "b0f73c2e0d0d2b77ceee7f2b2b163d9e8c62cfcbc3c97a836829e3de9588764c",
+      "tests/LabMod/NativeCleanseAssertions.cs": "c5227ad9cfdf6e18b574c67d8d5a307536fad844117cedb79813a28ac8bfbb47",
+      "tests/LabMod/NativeColorDiscoveryAssertions.cs": "bb730c19102428186b7e499639a6db1a6cbacbaae9d57570a723f68e698a9051",
+      "tests/LabMod/NativeDamageBoundaryAssertions.cs": "d3e0bab378f8a1a5a5567daf5ea609fa5d7b8c8b829a9ea9bdcff3fc262ace35",
+      "tests/LabMod/NativeDiscardQueueAssertions.cs": "0ab4f039991e8dde9d51518953c25b694bc9c679566570166a7c18e4fea636e5",
+      "tests/LabMod/NativeEnemyDualAssertions.cs": "5cc9bd8ff051b9d0cb2206dec14aaa343f0faed34478413990f6ec775a16146c",
+      "tests/LabMod/NativeEventAssertions.cs": "598e385a79ba220bfc3837fbf0b7fa58022dfc1021c76f018fd87ab10de141f7",
+      "tests/LabMod/NativeGeneratedTagsAssertions.cs": "093bdff3013820f75221d30f6b98d4ee98f42bc0eefadd87d970ebacdb78959b",
+      "tests/LabMod/NativeGeneratedTokenAssertions.cs": "2233381b5af2b3612cfcc1e2dd4a701c4bb60821b28e9bde54a051825db1de7f",
+      "tests/LabMod/NativeHandSizeAssertions.cs": "be0fdff649e2a131336b3200543ddef164134c9bed8fda6419a943922421d544",
+      "tests/LabMod/NativeInfernalStateAssertions.cs": "5ee0737305cd2eb6cfee2efd8e468a6d613a5f47c1a47fcdb4297fbea6634fcc",
+      "tests/LabMod/NativeInstantAssertions.cs": "0443d3aa83beaf60d7261568177bc482b31668da8a0266adb56044044daa6d68",
+      "tests/LabMod/NativeKeywordAssertions.cs": "6e5c01a69a4f8c29323b5b8cd6db28e129d213615315a065e474056b5e6274fb",
+      "tests/LabMod/NativeLocalCostAssertions.cs": "b495dcbc70f88efe6710b33f2e773f6b52c7b901739f974ef5041de8673fd865",
+      "tests/LabMod/NativeMentalShieldAssertions.cs": "0666bce328b8686dda558c2b4fbf083b4ad51ce0badbb0da74c471b3a3927df3",
+      "tests/LabMod/NativeMultiRoundAssertions.cs": "92421e08421d413a65ab30b166a43a7808f2e8268a95510be81bdc1fef30c3b8",
+      "tests/LabMod/NativeMysteryAssertions.cs": "1d2e9e44ad967d9a25ef2d109a1025990818d0f5956b25de51dbc4099fdab3ea",
+      "tests/LabMod/NativeNatureAssertions.cs": "e204c5a72dd79396038de1e899d25c020f879eb76028a2ff99d04dee0592b8e8",
+      "tests/LabMod/NativeNatureInterruptionAssertions.cs": "e7d040a5f29e1688a351ba95a17b2e274dfc8969768ff36b07a7654c8348c728",
+      "tests/LabMod/NativeNearDeathAssertions.cs": "587ce844fa664ccd513b1e0492135567721319ae7b9ede9fe03a3347024923b4",
+      "tests/LabMod/NativeNeutralAssertions.cs": "ced63b6124973e56252adbee245ac67a8dceb5b4ea0ff13a7be6034014c14b01",
+      "tests/LabMod/NativeOpeningAssertions.cs": "59df838861256a73e666d548e678bbd28ae2f8784ce608e56414981e47cfbae5",
+      "tests/LabMod/NativeOrbPassiveAssertions.cs": "7b5a39b96764ff290225b48a3c1f439911b2bbaa7b1c78a17a325484115b0bf2",
+      "tests/LabMod/NativePrimitiveAssertions.cs": "7a8fc6fc2b60e7bca9d78ecf426c6ede66036573e9ad48179cd110d3bb85366c",
+      "tests/LabMod/NativeProgressStartAssertions.cs": "3c8ecd711fca111f2961246065609a7aa13eb1d994d3c3ba63377b890eb6be01",
+      "tests/LabMod/NativeProjectionAssertions.cs": "42b9357c8c65e17f62465008fd61b7d969041c654b957ea08ffa425e33d69e9f",
+      "tests/LabMod/NativeRewardOpeningAssertions.cs": "8deb92418c51b6283ddd08a84a6265b672a7c79661edcedfbecc6b2f49e0caea",
+      "tests/LabMod/NativeRuneAssertions.cs": "a20b407adfec8007b13ec76cc1ee30be0a791d2f1d389c00f0067b5bee3235fb",
+      "tests/LabMod/NativeScalarAssertions.cs": "4b69f049bcde3f6d3bbaabfef13595679538deb3faf38275f827fa76c04a47a0",
+      "tests/LabMod/NativeScalarModelComparison.cs": "284ad7ddd97be7fdb0a836ddbc8938eec8338bf99742c18dc2f03c7cfbdf7edd",
+      "tests/LabMod/NativeSelfUpgradeAssertions.cs": "94e56aa6fec83973d8275a9fc89cbf2c56890977e50ccd672bee355bbd0c6304",
+      "tests/LabMod/NativeSolidTimeAssertions.cs": "87b299ce39e8753e0b8e453326e221cf0bd307bd553fb8ce4471f8d4356a782c",
+      "tests/LabMod/NativeSoulProjectionAssertions.cs": "c58d28e28f44fda7aaba54fa7f10f95e29df68148aa5735ef25927cd0b404a8c",
+      "tests/LabMod/NativeSweepingAssertions.cs": "0de304be47cb1d14e5f97f616f372bdb9ee8d1d06b445cb784895ca2da5f1e73",
+      "tests/LabMod/NativeThievingAssertions.cs": "5ac1c2c86653c47f30cde441bc36c4c5df017c44a361cccadfb26f81f9b7f2dd",
+      "tests/LabMod/NativeTokenAssertions.cs": "de91644ebe570ce35d089c14a9f69f607cb5c9b80bbeaa8f1e6d519c88cdeb9b",
+      "tests/LabMod/NativeTurnResourceAssertions.cs": "2429178ef9a41f91b1769c067ce04f93887f7756c4335e21482dfb4e09f6dec3",
+      "tests/LabMod/NativeVakuuAssertions.cs": "f9edfffc0effc1f10eda9dd64464d747430caf850ec9dbf23a24bc02328ad891",
+      "tests/LabMod/NativeVitalSparkAssertions.cs": "4af25c05ca8773e80c3cc02458ec042fac16d1f68709df417b5060fa22768a8c",
+      "tests/LabMod/OpeningFormAssertions.cs": "20dea4d127345d70d509a9d126d3ada635079e505c0fa14eb3e5b38514dc5468",
+      "tests/LabMod/OwnerDebuffAssertions.cs": "c604bbfdf27be7c58c676918703568f7501a2daf5a746aa4757404c6fc190776",
+      "tests/LabMod/PlayerDamageTurnAssertions.cs": "521cb0d1a0da2cf22463e2041de1868067092b71dfe2346857841edcb712dba4",
+      "tests/LabMod/PowerExpiryAssertions.cs": "4e256756ff79bf3bba0a4e849489ff4f972c4edfbbd38b72e63e4832d1bfd688",
+      "tests/LabMod/SummonAssertions.cs": "61f345542e8eef91a9358f0ed11295205badfd4d97a59d35feffbbe3ecb78dc2",
+      "tests/LabMod/TemporaryDexterityAssertions.cs": "9eb11c695dc430e4afc4a41d0ad0c57b07e7725c1acafbb8d77d26b579b247e1",
+      "tests/LabMod/TransientAutoPlayAssertions.cs": "32006be53a01d7a459961891b543c27c9e8467bc94a34594bddbbc23fec5d686",
+      "tests/LabMod/UnknownGuardAssertions.cs": "b2274ed30218129c62e1a9399a0e57756c65c078ef8444306ecc30ab05714059",
+      "tests/LabMod/WhiteHoleAssertions.cs": "043967ac22fb7a45d60fbe49a206231472b82c8769459302c8705920b596bda4",
+      "versions.lock.json": "319c6c67a6d878f7bfd5af98f809213e0eb80530c4c0f1dea0ddad3f05c02dc4"
+    },
+    "assemblies": {
+      "HextechSolverCompat": "8ae924216c665a6c4e7957cf508e3039f97d5f9ffdfce9be72947d49d4fe7ddf",
+      "HextechCompatLab": "89111444602f8399092624a7a3f1f0043b3a7b0213e5b0ca4d48d0e1654c11cc"
+    }
+  },
+  "dependencies": {
+    "sts2": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4",
+    "CombatSolver": "47b96a372d4f62d65fad1e31c7b1edac73b01b8c29ba02a70c52b8dd9135310c",
+    "HextechRunes": "274eebc2513a501fbbb654fc6100d47c6dbba9bf2088137293d234cb6f1ed56f",
+    "HextechLoader": "b62192b8001bad3f900941b6f94c5eca65f9d9473227c3632f822c05b1b6b39d",
+    "HextechPck": "3cc84b62ec13792b65ccb7206a6359910e3ec8deed88e3616595a874a444b7a4",
+    "RitsuRuntime": "383f86873509c76579ea3c6881ff0e021c25b82269b83a80cc918ee51b224594"
+  },
+  "total": 68,
+  "groupCounts": {
+    "registered-runes": 29,
+    "combination-boundaries": 10,
+    "affected-shared-mechanisms": 29
+  },
+  "cases": [
+    {
+      "fixture": "astral",
+      "group": "registered-runes",
+      "status": "NativePassed",
+      "inputSha256": "004138670f40b6f8204d8748aeca967c929c1e64d50e1897a1fd892d6f430ce2",
+      "nativeExitCode": -6,
+      "assertionLines": 16,
+      "requestSha256": "4a81734793b953ad0fadf787298c51a182873368c10747944b40fa4d72e4f004",
+      "resultSha256": "4a2e2b0d7f92fd4543ee8a6a18ff38492cde4e69a11d012a8c55adca391069fc"
+    },
+    {
+      "fixture": "boomerang-acquisition",
+      "group": "registered-runes",
+      "status": "NativePassed",
+      "inputSha256": "743cbfb75c979a68a3583ade78b8b0eb31131eab8c743b5587d36576a79d7192",
+      "nativeExitCode": -6,
+      "assertionLines": 23,
+      "requestSha256": "836c058aca531bdc4dd1468227a8c07a0fd0cd055695f034091e29a199493d14",
+      "resultSha256": "1347965b33c55c5d2bd262f83c862c1477a7963557e47c9c376a568bc8b8f714"
+    },
+    {
+      "fixture": "card-inspection",
+      "group": "registered-runes",
+      "status": "NativePassed",
+      "inputSha256": "f8c4e19737fb7257d4592753074eb7af59d41eb46e1f29d42b3ccab292e8553a",
+      "nativeExitCode": -6,
+      "assertionLines": 18,
+      "requestSha256": "d3ea015a2c7c919fad3b9cf42e6055a8221c0d295f9d5d4648208a793e2d54e6",
+      "resultSha256": "dedb66fe9d79c2fe7eb6922b9a494d6d0bc3906f782d2f9bdb313b73aa32e8a1"
+    },
+    {
+      "fixture": "card-inspection-shuffle",
+      "group": "registered-runes",
+      "status": "NativePassed",
+      "inputSha256": "8e1cc68b0349167c8aa9beec7a3b8b647dd975834b5926f7cdcd4501e7b05bfa",
+      "nativeExitCode": -6,
+      "assertionLines": 17,
+      "requestSha256": "4789ffb3b77c69290b234cc3702748b40b23e0d865056855c4951764f1882471",
+      "resultSha256": "71dc4b910145dd521ccebe4d7427f2366f21d149398a918e517340ba16ffa7ec"
+    },
+    {
+      "fixture": "dawn",
+      "group": "registered-runes",
+      "status": "NativePassed",
+      "inputSha256": "e00c924c0cc4f0ff532f31e368c1b7daebab8f6f68123ccf3a0e7bdea00b2013",
+      "nativeExitCode": -6,
+      "assertionLines": 8,
+      "requestSha256": "4268fadcfd1cc3f143557d55e2f159e9435d43b526088a0113dc6f9cd01dffa0",
+      "resultSha256": "20126c6ed645f0dc7577f3788e8b7041410a8076ee094439b348d8aee7980544"
+    },
+    {
+      "fixture": "die-for-you",
+      "group": "registered-runes",
+      "status": "NativePassed",
+      "inputSha256": "4571933f219198a32d634878747b5acf8fa05db6476666e56a7e7561d83af460",
+      "nativeExitCode": -6,
+      "assertionLines": 16,
+      "requestSha256": "e94728579a03c857abf46fe342f01f4414281aa6f7e283e5f179e8911e2e0733",
+      "resultSha256": "8d418b390761248a9e9e6f8024799e295a9e11727779547b5d30412382e42fb2"
+    },
+    {
+      "fixture": "earth",
+      "group": "registered-runes",
+      "status": "NativePassed",
+      "inputSha256": "eaa42b904abaa9f5f2c01304b039facab9e0c2dcced6a630c693b55bb8d4011c",
+      "nativeExitCode": -6,
+      "assertionLines": 16,
+      "requestSha256": "15da073e62af6b0e485870c4f95fccd1281e2530c4f7035cd6492db18155a3ce",
+      "resultSha256": "40b4957e0333842b67de9a985741437efb9dcf0cf4bbb713f6f10bb615e0282c"
+    },
+    {
+      "fixture": "escape",
+      "group": "registered-runes",
+      "status": "NativePassed",
+      "inputSha256": "5015d030e43f0ece4d35da632dbd844b03bd35794b4059c3d151a6fead750c81",
+      "nativeExitCode": -6,
+      "assertionLines": 8,
+      "requestSha256": "4ae874ddfede07e652efd282e9fdef12a65ec0becf6107b546e936c8ed13711a",
+      "resultSha256": "8d4a242aeb7c4f6959a691495b6dd7fb0210df0461b437024ba7d42d5d812718"
+    },
+    {
+      "fixture": "fey",
+      "group": "registered-runes",
+      "status": "NativePassed",
+      "inputSha256": "dd0a30064321e3343ebb72e1fd8359152d8d2591e6b26c248213a3af4bceb96b",
+      "nativeExitCode": -6,
+      "assertionLines": 15,
+      "requestSha256": "aa227579ddb7e40aeab75968782246a5398504d14d6f7c618da7a572a9c808c2",
+      "resultSha256": "3f9aaaa51e0d2ac314d1ac95f215def39a2c11268a3c0de0bdd0f9b5787049c6"
+    },
+    {
+      "fixture": "get-excited",
+      "group": "registered-runes",
+      "status": "NativePassed",
+      "inputSha256": "6804de2c370128f150447ea8c4c27517be8304ffb5cc30e45b33812bd1924b61",
+      "nativeExitCode": -6,
+      "assertionLines": 18,
+      "requestSha256": "1052e37bc9a6e37f0f99856bfda36c5bc95e9ac50847d9fa740399742acbfcb7",
+      "resultSha256": "9fedcffed85fbdde67aeeac8f1b7d1ea491c4d56260d3d0d6825f82c4a043ac0"
+    },
+    {
+      "fixture": "ghost-form",
+      "group": "registered-runes",
+      "status": "NativePassed",
+      "inputSha256": "b8ddc017ed7ea62207ac512d1804f5e67e2a459ec1c8d4c2e91b1774f5a41c6c",
+      "nativeExitCode": -6,
+      "assertionLines": 17,
+      "requestSha256": "2de0d65532a47f6394d66d84213e7f800c8d284a61df0c5e5a330f1235a67354",
+      "resultSha256": "5020960f3ffc3a790da4b8387e830c07db3b65fc1c916c634a20fb6d27fbc863"
+    },
+    {
+      "fixture": "hard-bones",
+      "group": "registered-runes",
+      "status": "NativePassed",
+      "inputSha256": "d42089439967c1148455ddf036ed12f5de615928c5e5c188ad396f92984f4f1c",
+      "nativeExitCode": -6,
+      "assertionLines": 17,
+      "requestSha256": "047ea2e3b4974d2517ae6547bd3288b8a986820313c9cdec679dc1f5c24ded3c",
+      "resultSha256": "5ae7c43203e0c3cf85495996a7c5933537ed60cade8b0e91b893c0dd643bbc40"
+    },
+    {
+      "fixture": "kaka",
+      "group": "registered-runes",
+      "status": "NativePassed",
+      "inputSha256": "5cce35beb1b26579e43f87833e3de7768563bc688aab93a474e3f574cba16494",
+      "nativeExitCode": -6,
+      "assertionLines": 17,
+      "requestSha256": "e074257074886aac8acefafff145dd0541165dc02fa35b551a2b0b7242e987b1",
+      "resultSha256": "e04c78bd330f051a6857f8d12d3384409140e0e040000a86f539196391b5e421"
+    },
+    {
+      "fixture": "neows-grudge",
+      "group": "registered-runes",
+      "status": "NativePassed",
+      "inputSha256": "56d38d84c5579f3caa0d4faeb0d4adfe32dfadfcc7327b1de12bf20ef266223b",
+      "nativeExitCode": -6,
+      "assertionLines": 16,
+      "requestSha256": "08defe74d624feab66a39057069c58442ee19de16de2a2c451b6eebf8ac2fee0",
+      "resultSha256": "23ecdf954d3ae1bb9273b01ab5746714cabb719810e09d42e6e105576b52394f"
+    },
+    {
+      "fixture": "omega",
+      "group": "registered-runes",
+      "status": "NativePassed",
+      "inputSha256": "953e88b56ab318b155943a5d6bee6eb54077b5a788ebfe34926404e52679e0f8",
+      "nativeExitCode": -6,
+      "assertionLines": 19,
+      "requestSha256": "8ca361ae1f4da806a1cb38dbcf3cc81433ea77647574f0174a081404b5737ca6",
+      "resultSha256": "7346bf9e771321654637c6fe95e917d88dc6c27de0e0d438bde39ecd10c502dc"
+    },
+    {
+      "fixture": "piggy",
+      "group": "registered-runes",
+      "status": "NativePassed",
+      "inputSha256": "ba52c8ded767f39d3e44627b90859f09edab9d9629d8344b3733c74d8e4b3578",
+      "nativeExitCode": -6,
+      "assertionLines": 8,
+      "requestSha256": "ceab8eb6237aa942ba96613f7ceb8cf53ebd2272f11a4a9c33efc9808a8415f4",
+      "resultSha256": "fb5d63cb83adf851f2d6ae5b77fe7a2eace4f5607a44a0e189626db48c26bb0a"
+    },
+    {
+      "fixture": "player-nature",
+      "group": "registered-runes",
+      "status": "NativePassed",
+      "inputSha256": "f5885f89ce25b8a3a9ec5be4585205be7747b65aada754201cc213fb4bf2b382",
+      "nativeExitCode": -6,
+      "assertionLines": 21,
+      "requestSha256": "21b09cf82dd5f4a067676386862213b98db9ec3368bd0b59fc635abbdea4d3d9",
+      "resultSha256": "631f5009db99774ca82516cb539a212e6dbc5ad14969b74bec1df43c567d0b16"
+    },
+    {
+      "fixture": "porcupine",
+      "group": "registered-runes",
+      "status": "NativePassed",
+      "inputSha256": "d1c35d09dacc2c6d874e780a76467aff39626601c9e9a92470d4dce494a66bf9",
+      "nativeExitCode": -6,
+      "assertionLines": 15,
+      "requestSha256": "dbc7f9488f92b27676d7bbbb164764411e68e33517158f18c18739e40533b65f",
+      "resultSha256": "4a6ccce0db82307b50c15d1ece70fb90f6269a43502dee524e341b1525e19076"
+    },
+    {
+      "fixture": "primitive-cancel",
+      "group": "registered-runes",
+      "status": "NativePassed",
+      "inputSha256": "6a2f6a046bbed8a33311a52024122776fa47a1cafae3a6d53fef59c1670fea21",
+      "nativeExitCode": -6,
+      "assertionLines": 16,
+      "requestSha256": "bb9ac10bdbf34211cba67ba84d82c577e26e3a5fbb657d37123455f658709588",
+      "resultSha256": "067e5a3524c42688087d251991b0e23585b66329f3447243cdcd30481a347758"
+    },
+    {
+      "fixture": "primitive-transform",
+      "group": "registered-runes",
+      "status": "NativePassed",
+      "inputSha256": "9d4329b496e5e6246459031abc9d5964b241dd815f046c40184e9ed72c4085fa",
+      "nativeExitCode": -6,
+      "assertionLines": 16,
+      "requestSha256": "28c0fda2a12447f32d16fcbe17ae4635fbebd90aef830289a822bc698ff6a2ce",
+      "resultSha256": "28a7fcd731dae08c39531728bde4f0af1969511b8b9f076374f058441f11230c"
+    },
+    {
+      "fixture": "regeneration-suppression",
+      "group": "registered-runes",
+      "status": "NativePassed",
+      "inputSha256": "93c96da4fa5619a2f829b5eead005842de6ee8265540cebbb504d619b1adda53",
+      "nativeExitCode": -6,
+      "assertionLines": 6,
+      "requestSha256": "7c754a0eb80d2cd2adbc68183380e15cfc0869ce8775f6c4a56fa264e1edc523",
+      "resultSha256": "8e3d9255b4ada969f0bbe4eb678b96c2035aaccaf59ef928aa03cd2399d8117d"
+    },
+    {
+      "fixture": "scapegoat",
+      "group": "registered-runes",
+      "status": "NativePassed",
+      "inputSha256": "496fb66210dafe9c535d3ead6543219d2828d98ef29391264bad610c13a1291e",
+      "nativeExitCode": -6,
+      "assertionLines": 16,
+      "requestSha256": "ca924adfd653f2a32c3c114a5473559f8a5283a0def50843dea1d0ec8fe60490",
+      "resultSha256": "5d00c1a0b542a93bc0adc8c4291c20ae796682706064a9d9dad9e4e667f38556"
+    },
+    {
+      "fixture": "shoulder",
+      "group": "registered-runes",
+      "status": "NativePassed",
+      "inputSha256": "c558b401bc531e7948e33fe7816a1a264f0196b8902dc034b04c47354c5b8984",
+      "nativeExitCode": -6,
+      "assertionLines": 16,
+      "requestSha256": "c94ff50c07eff1b393637f2153a971d5caf70f9434a578c8b3fb1f506ceb6037",
+      "resultSha256": "89d0044dafbd92982f6d69618eacfd8600742f3a02998270db74e324aa6f3388"
+    },
+    {
+      "fixture": "something-free",
+      "group": "registered-runes",
+      "status": "NativePassed",
+      "inputSha256": "cd10af853dd1c266d5779bc9b8e0af71e7d790e07fe1b6ce29dcc25dcf277c7a",
+      "nativeExitCode": -6,
+      "assertionLines": 17,
+      "requestSha256": "6bd22c1051136a4266854124954b7f61dc06aded2c334b64b9bf0174c8ef10ef",
+      "resultSha256": "ae7d15b82efae188d5063a506587e5b1137d94de3ea8d28d0bba4ff5c1d3cda3"
+    },
+    {
+      "fixture": "something-paid",
+      "group": "registered-runes",
+      "status": "NativePassed",
+      "inputSha256": "c0434e2fd559c8d91ad2b693d72c3425eedd3b0fcd68e41dd95a14cb461bed4d",
+      "nativeExitCode": -6,
+      "assertionLines": 16,
+      "requestSha256": "f863b112df307c4b3ee346c6bb26ac2e2b37bf9d1a66cf786479e7f21e34bcca",
+      "resultSha256": "7d826b0213a50db885e3914773d7356b04fb43fae87efd756189a797357df091"
+    },
+    {
+      "fixture": "soul-calling",
+      "group": "registered-runes",
+      "status": "NativePassed",
+      "inputSha256": "cf074ed8dea30f24c0237f288b682821efc48d664262bfe8384dd4a67f242dd9",
+      "nativeExitCode": -6,
+      "assertionLines": 16,
+      "requestSha256": "bf917e13eff3f54e2a9117e85d07aa8460110df0bc22a93c084bc1d340ffbe7a",
+      "resultSha256": "ea36586ad1d3c3186122826f12c546c7be756fb831dd9d2dca3ea8c6bd602445"
+    },
+    {
+      "fixture": "super-brain",
+      "group": "registered-runes",
+      "status": "NativePassed",
+      "inputSha256": "5953e3918f5fb6d6c254636b76e6ed9c59e1c289af4b00881e78be9f03950ff8",
+      "nativeExitCode": -6,
+      "assertionLines": 17,
+      "requestSha256": "6974229bc3a75e89368b62d31e45bc622866ca3ed3d43164333179e88ebfa376",
+      "resultSha256": "fb56c47c9f3195db176fd3c5debecd23893286a35cfb3019e847bf5f1eeaebc2"
+    },
+    {
+      "fixture": "sword-flight",
+      "group": "registered-runes",
+      "status": "NativePassed",
+      "inputSha256": "e7ce14bc38ae6a7bd13588a5a94d5086af2c6dd3b03d5f98df7aad3871004c69",
+      "nativeExitCode": -6,
+      "assertionLines": 16,
+      "requestSha256": "9b38076e8d4c75a4767f590afa05f5d620c87940c6d6ba512a2c0e32b4bc4d8d",
+      "resultSha256": "6e3b674b973b029e6ee64b3e13ecbd3ba231c0e6338814a0e19f25ea08eebc64"
+    },
+    {
+      "fixture": "twilight",
+      "group": "registered-runes",
+      "status": "NativePassed",
+      "inputSha256": "a2fc8d2cad1b59e10015c1417f568ef4241936b02c507abd450c1d05d20f2a3b",
+      "nativeExitCode": -6,
+      "assertionLines": 16,
+      "requestSha256": "8d8545ab6345b9fde9868e5bea76e224a8fbda6fb00abea60a6478d302165fa4",
+      "resultSha256": "f29fc8e04d8512dbc68806d8fe87943d10a0f8d8ea911c2c057fee80ca29fbe4"
+    },
+    {
+      "fixture": "twilight-buff-order",
+      "group": "combination-boundaries",
+      "status": "NativePassed",
+      "inputSha256": "ed2fd664c5e236842aac58c23a9b06b1d49f264b69668e187dcca2b600d70a7a",
+      "nativeExitCode": -6,
+      "assertionLines": 20,
+      "requestSha256": "243aa0e15099fff0403a87c4fdf4416c3d0b9efe5b8021f5b0b988b531e53598",
+      "resultSha256": "d050a7158977ba9cbfe0d8f9a71f3f44bac9296558f79d17557e9a1c9a6f58ad"
+    },
+    {
+      "fixture": "die-for-you-osty-death",
+      "group": "combination-boundaries",
+      "status": "NativePassed",
+      "inputSha256": "bd49a8ceb5b8e9d58d599baa911c54dee340819dbf266cc3301c9a55770643d0",
+      "nativeExitCode": -6,
+      "assertionLines": 20,
+      "requestSha256": "ebdec04ed29fdc76793abef37fafbd85e80c0ece18d0c5a1ac31bde5792bd376",
+      "resultSha256": "008b5a88c2cc2c6781440561096e6aa41fc15be97f06593ca61d0f4f30732795"
+    },
+    {
+      "fixture": "card-inspection-nested-draw",
+      "group": "combination-boundaries",
+      "status": "NativePassed",
+      "inputSha256": "e2465abc16e620d0b1d06115b57b66ef1f24d0065913726ffede7b714fe79548",
+      "nativeExitCode": -6,
+      "assertionLines": 20,
+      "requestSha256": "2742839749da94c45c94a084d64a40991ca73c5b94ec8ed4c8c5120b703b85c6",
+      "resultSha256": "82649d6682c4324ae8606c518c1081f57bd92b0b7521bd76955222ea2d72dcd7"
+    },
+    {
+      "fixture": "astral-max-hp-feed",
+      "group": "combination-boundaries",
+      "status": "NativePassed",
+      "inputSha256": "c5cfc5a20492a48e403eb1374df6caed9bde0d13fb76c8e92d3cc688bd3f8b20",
+      "nativeExitCode": -6,
+      "assertionLines": 16,
+      "requestSha256": "ac71f2806367edd138588689c58b674fb02490b8961d96a00a5e3116439b0c68",
+      "resultSha256": "a173125f2118081914d7fd72cb966b85a660fdf5fc0dc097f8b71f964cf3b9be"
+    },
+    {
+      "fixture": "scapegoat-existing-delayed",
+      "group": "combination-boundaries",
+      "status": "NativePassed",
+      "inputSha256": "f265936fe7c615ecefa4f0b74603c2644f10059db57495472301932a6c88eba3",
+      "nativeExitCode": -6,
+      "assertionLines": 20,
+      "requestSha256": "6afafb47b465a39d1e1777d961f0abcbc29896fc42353127791c723b02dc2877",
+      "resultSha256": "9ea2bd3a1c43f5abd4b1907f24ac6e14ba5991ccc6a35b83d7c2a0600ca80bf6"
+    },
+    {
+      "fixture": "ordinary-player-poison-control",
+      "group": "combination-boundaries",
+      "status": "NativePassed",
+      "inputSha256": "d129ea5eadb3462557e8e69985a1ed6cc14a4ebded562640fc375a96cf9613b3",
+      "nativeExitCode": -6,
+      "assertionLines": 19,
+      "requestSha256": "072b603b977f19875d8a5b587885c1de0aeb6d2f609ad5ee6adfd4942be6fcbc",
+      "resultSha256": "b7124f602eb3379b6cad6bb15db0822e514060e6c5b9300a93d5a727014b11cb"
+    },
+    {
+      "fixture": "scapegoat-mixed-artifact",
+      "group": "combination-boundaries",
+      "status": "NativePassed",
+      "inputSha256": "16662d2edf3406db07a3ec0d465aeeeec4b0d143493c751166e021ae511b4383",
+      "nativeExitCode": -6,
+      "assertionLines": 18,
+      "requestSha256": "1b2c8c45fa3a7dd2c8908243b3b6c776eabf1b5ed0eef144c8c43f04f3d1b785",
+      "resultSha256": "e9eed71cb0427494179e9b4205a43fe45cc6fb51bed59ff9025264d0dbe48c43"
+    },
+    {
+      "fixture": "kaka-manual-attack-gate",
+      "group": "combination-boundaries",
+      "status": "NativePassed",
+      "inputSha256": "0396f6ed8343f798b8d0c8e99638238ae188dd2a2dcd9494f4b978d95e5c75f0",
+      "nativeExitCode": -6,
+      "assertionLines": 18,
+      "requestSha256": "ba7bd7a22745cd33a417c754426c4db6c1495c28130049d5c0a6d40c13c2a56c",
+      "resultSha256": "6c3d93826cb917df2b52506c14849f7d2e2b65773cc4160e6b2e909792d8c540"
+    },
+    {
+      "fixture": "get-excited-kill-pending",
+      "group": "combination-boundaries",
+      "status": "NativePassed",
+      "inputSha256": "ed163557dec667a3970fc9617d257c981638298feb4dd68ae74999697e1c9639",
+      "nativeExitCode": -6,
+      "assertionLines": 18,
+      "requestSha256": "30aa49a6e4e4b4e51ee5a880f115638961ec1f7288a8116934187e57dff8c73b",
+      "resultSha256": "e0b50879167d2f5898024f619a44d262a5236a947a3b82db4c020da7ce7aca27"
+    },
+    {
+      "fixture": "porcupine-permanent-thorns",
+      "group": "combination-boundaries",
+      "status": "NativePassed",
+      "inputSha256": "6881cc3b93d02b2a0c7d8bb2c7592ac279f00e06f3bc656fbbc380167055ba69",
+      "nativeExitCode": -6,
+      "assertionLines": 17,
+      "requestSha256": "cc70b0dffbe2ed8675003beef04b08c3884552f4c2eb847d4bcc2a8ba654ede8",
+      "resultSha256": "5fcabb67aa6516751e27c284450e99ee65ec176c52f14c0a314d2e8a293668b3"
+    },
+    {
+      "fixture": "native-draw-warmogs-below",
+      "group": "affected-shared-mechanisms",
+      "status": "NativePassed",
+      "inputSha256": "38c2cb930e0719aae999d209152efd4f710ab218ab495eede7ed3d9644fc3296",
+      "nativeExitCode": -6,
+      "assertionLines": 18,
+      "requestSha256": "11387c3ae0a9add7ca12925d1a3a20aacbcc3c30ab5a86fba48cbe2036f1b686",
+      "resultSha256": "621c568e0dbdbe45480681ac9a476dc4a513872ec9308bf541dfa496da86ca97"
+    },
+    {
+      "fixture": "native-draw-warmogs-threshold",
+      "group": "affected-shared-mechanisms",
+      "status": "NativePassed",
+      "inputSha256": "8a1e7f060c8624bab146202835c1972ca09fb458b49f8c5d9aa7ff882b98963a",
+      "nativeExitCode": -6,
+      "assertionLines": 18,
+      "requestSha256": "864aa5c97f38230a34cac793ddee95339d38c1a44bfaf517d955f0a38277b419",
+      "resultSha256": "e1eb3ad35d80ae2ca36e0c0e9668286d1cb7ebb5a6ad5071fb202e081dc494c5"
+    },
+    {
+      "fixture": "native-draw-warmogs-multiple",
+      "group": "affected-shared-mechanisms",
+      "status": "NativePassed",
+      "inputSha256": "a4a232659d82ca27a5d8ef1634a00632b6e06973f37255714387764c29f2e367",
+      "nativeExitCode": -6,
+      "assertionLines": 30,
+      "requestSha256": "529d7aadfe15d32449626473dcd57706973d5d8f393c491073680fb49e57b80d",
+      "resultSha256": "739b7356ed200200f185a38d6a47403e323047621a9cdb3c4a0894ed4463ab28"
+    },
+    {
+      "fixture": "native-draw-warmogs-saved-progress",
+      "group": "affected-shared-mechanisms",
+      "status": "NativePassed",
+      "inputSha256": "96c57febcb756870f39eeea6d9d9df59538a991823d78985c71f9b22e63fccf4",
+      "nativeExitCode": -6,
+      "assertionLines": 18,
+      "requestSha256": "d95ea68da9f28d9ef6849a42d340d3cd36891785a3266d4f3d0814d483c5bbba",
+      "resultSha256": "43245ab097a9db8987caa6b3c9403af5f203cf4b482dfae9ceb8c424b9674451"
+    },
+    {
+      "fixture": "native-draw-warmogs-night-combined",
+      "group": "affected-shared-mechanisms",
+      "status": "NativePassed",
+      "inputSha256": "6d6db2de9274835d6e03c66f4715f0ec69ef11b9f8f09d6d07a420ccb70ea7c4",
+      "nativeExitCode": -6,
+      "assertionLines": 18,
+      "requestSha256": "cee32971e7ffbca1c99250223bd0ef01a369d68ad03baa86f02162d77f3b08ae",
+      "resultSha256": "46ae5fd37ec7871c52fd6e1c2e75ed52efdcaf9a0971464ba99d31ff7b268955"
+    },
+    {
+      "fixture": "native-draw-night-threshold",
+      "group": "affected-shared-mechanisms",
+      "status": "NativePassed",
+      "inputSha256": "6a6cee191ee2a71f7cdd435e8d1975b8d6f06a45655db3a8a65e010157cd6b37",
+      "nativeExitCode": -6,
+      "assertionLines": 18,
+      "requestSha256": "f295e462344a30e9fc0235fb4693d68533f3c0272ba32246e47f4ae644eccc54",
+      "resultSha256": "3af5c23d1f8030c646f25523d2b3431c98946b136659d6f5a5ea2a73498a1e8f"
+    },
+    {
+      "fixture": "native-draw-night-before",
+      "group": "affected-shared-mechanisms",
+      "status": "NativePassed",
+      "inputSha256": "6ef63189e061e1ddb9815ad6a860d760c26fb64f87056846d6f9e7e7cb73c0cb",
+      "nativeExitCode": -6,
+      "assertionLines": 18,
+      "requestSha256": "1d038e42651f7a199b174a8a8251dbd48335b8f0ffbbe5f880e8db336916e5b5",
+      "resultSha256": "b2b5a34dbcfb95f1a3b98fc167019917d2084f68f143efae255ed3783473cb5a"
+    },
+    {
+      "fixture": "native-draw-dizzy-shuffle",
+      "group": "affected-shared-mechanisms",
+      "status": "NativePassed",
+      "inputSha256": "3cea38ac3f7eb3df1aee9d5886495933d4c4cc5801854b5f27f0f5af8cd91f02",
+      "nativeExitCode": -6,
+      "assertionLines": 19,
+      "requestSha256": "e4c03be294d3dd4e3b2645d1363c004cb9d9ddaf1fba0f0b58f98566a7543b45",
+      "resultSha256": "8e726804a5705c7ce9ba0b25ed2d8c32624bc58458d3655ec22955a11e9692da"
+    },
+    {
+      "fixture": "native-draw-death-poison",
+      "group": "affected-shared-mechanisms",
+      "status": "NativePassed",
+      "inputSha256": "c018385167800e5822ad62d8def776045829a1c0d9df5e555eca0fc389eb978f",
+      "nativeExitCode": -6,
+      "assertionLines": 18,
+      "requestSha256": "c63f4c7da3b7d5b29cbbef481a6e38f5644c3eff3040172a822d47cadb8e937b",
+      "resultSha256": "8170932ef9642e2ea555a1866cc485ee283b0e88abcb880ce367cad248d046ed"
+    },
+    {
+      "fixture": "native-draw-death-terminal",
+      "group": "affected-shared-mechanisms",
+      "status": "NativePassed",
+      "inputSha256": "9b9fef240ad1b94bafb004e1ac02a06a2fa5a2b99f400355f013ca3d34f636e3",
+      "nativeExitCode": -6,
+      "assertionLines": 18,
+      "requestSha256": "3d208b11cff4c8c2142e44c2c7a9c3bdea9431dde0519b84459f4e35021a5db1",
+      "resultSha256": "2fb2aa0849a420d36b0d8ea284c3b209876143283b5670c3f66da2818bbe6c83"
+    },
+    {
+      "fixture": "native-exhaust-rekindle-four",
+      "group": "affected-shared-mechanisms",
+      "status": "NativePassed",
+      "inputSha256": "b9bfbfad6de8796c7a109a1b2ad43f7d6d7728e276812eb3ce68ef73e6dd34b2",
+      "nativeExitCode": -6,
+      "assertionLines": 30,
+      "requestSha256": "00a20a48a137d65b5c9004a2d00a5aa443a8358ab25cbd8ac762dd4989f4ce5c",
+      "resultSha256": "163785bc71d19a0f62c8f404f1864740890741fb893d030026076511222ad693"
+    },
+    {
+      "fixture": "native-exhaust-rekindle-three",
+      "group": "affected-shared-mechanisms",
+      "status": "NativePassed",
+      "inputSha256": "eb0061c72047aa5d35aa01b3d6e846d234c1cda89c9bc3fc8104a4237fefa6d8",
+      "nativeExitCode": -6,
+      "assertionLines": 27,
+      "requestSha256": "e3a1d3165670d92180f5eb228c72d52f39192d70994b9be9f279185ece8d7824",
+      "resultSha256": "6b9003d75e025078d821946ce319bf937dbd75d9de7e4a1d83b368f10b7c48fb"
+    },
+    {
+      "fixture": "native-exhaust-rekindle-ethereal",
+      "group": "affected-shared-mechanisms",
+      "status": "NativePassed",
+      "inputSha256": "1252995d137aff88be2383f3e8de836fc5c0ead86b073094d263014d665d9795",
+      "nativeExitCode": -6,
+      "assertionLines": 18,
+      "requestSha256": "5849a799849e38486222f11b85c29b4f187597dbf13ecc71463bf771fdeb3cdf",
+      "resultSha256": "b8bb0a454c025d7d6dbe516c55fa6605aa842af7bae22c300634d5a7e2d750b9"
+    },
+    {
+      "fixture": "native-turn-divine-period",
+      "group": "affected-shared-mechanisms",
+      "status": "NativePassed",
+      "inputSha256": "694c6119156a4392c422913fa75ce319ab7a32cb7e1322e09128b66dc5009eb5",
+      "nativeExitCode": -6,
+      "assertionLines": 27,
+      "requestSha256": "c5d414aa699677a64b7316001ec6b2bea18603c87c26e9b736311e79a42bf125",
+      "resultSha256": "4499cb84fea83e77a30029be80faeb8403051ccb987c038d204adfbb6ed1f098"
+    },
+    {
+      "fixture": "native-enemy-draw-warmogs-1",
+      "group": "affected-shared-mechanisms",
+      "status": "NativePassed",
+      "inputSha256": "e475c3ea29dc71a91bc9ba4ab792e592fa9f3442dae9fe06788abb6d7a96c8f2",
+      "nativeExitCode": -6,
+      "assertionLines": 17,
+      "requestSha256": "ff4f72b9b0fcb208ea39283a76541d033807477eefda43517660c032858c1a65",
+      "resultSha256": "021f48760a2c26670ce4c41afb87f972eae8fe8dd18dd4e2925b866635196821"
+    },
+    {
+      "fixture": "native-enemy-draw-warmogs-2",
+      "group": "affected-shared-mechanisms",
+      "status": "NativePassed",
+      "inputSha256": "715262ba24df35fd6bb16b598a062a17cfdf4e6cd2bd85867ce50eb5730c2368",
+      "nativeExitCode": -6,
+      "assertionLines": 17,
+      "requestSha256": "6e2c069ec255322aa615dd2281fd33adf1265bc19f314b10f9aee02416c8978f",
+      "resultSha256": "8ee95c5317ef7075d90531a3d7e839fbd4c5f9f374d473d26bea1d3e3f164020"
+    },
+    {
+      "fixture": "native-enemy-draw-warmogs-3",
+      "group": "affected-shared-mechanisms",
+      "status": "NativePassed",
+      "inputSha256": "eaa34099dec969aaa65a708909c91b2b32b662ae927dbb907ed2cbba825b6534",
+      "nativeExitCode": -6,
+      "assertionLines": 17,
+      "requestSha256": "fe67ad57e589e5541c001e8e3675381ec59bfa51545248a3368f1902714cb7f7",
+      "resultSha256": "aa3c9bb3e65cb319e4294873bb95168b1d6995cd446def80e2f89df97279c6e1"
+    },
+    {
+      "fixture": "native-nature-worker",
+      "group": "affected-shared-mechanisms",
+      "status": "NativePassed",
+      "inputSha256": "bddadba95bc2beb7a51bc1c2a43f750a61fdebbcd3bc00c329f130edd5319fed",
+      "nativeExitCode": -6,
+      "assertionLines": 14,
+      "requestSha256": "a7773bc19baa68e9327bbc1c8be6797a908ede338a4cec53c8a844091ae249c2",
+      "resultSha256": "d54678616a0dd31f50c91d32b731e5ae3343c24a987f8824d3332172cc3000f7"
+    },
+    {
+      "fixture": "native-nature-deployment",
+      "group": "affected-shared-mechanisms",
+      "status": "NativePassed",
+      "inputSha256": "825ccdf727ec461b2863ea82d1e69fac371ae8ec3e6b450e7b860d9dc19c8dd2",
+      "nativeExitCode": -6,
+      "assertionLines": 14,
+      "requestSha256": "4213c3ab6f19b90da65be06642c77c7cc0c6a0d48fa98d8488f01beaf7be82df",
+      "resultSha256": "9e0e86b3a42efb9ee9b750bf0e65f07d920dc10fdd738c08a49ad7856e15104f"
+    },
+    {
+      "fixture": "native-nature-multi",
+      "group": "affected-shared-mechanisms",
+      "status": "NativePassed",
+      "inputSha256": "8d674a74b0ccd43976867c860612725314f4fb9271a469e8a309ef98d9437ce2",
+      "nativeExitCode": -6,
+      "assertionLines": 15,
+      "requestSha256": "f04bf9426c22163b16fec5e4bce2b16881af71ed5724d265f677471daed51448",
+      "resultSha256": "78ed8af0e51e96f6610d76ffd686e0f661a97c0a4c01dc5eefb7f25659c08175"
+    },
+    {
+      "fixture": "native-nature-vital",
+      "group": "affected-shared-mechanisms",
+      "status": "NativePassed",
+      "inputSha256": "50ab09398fa5a00731010aab33ad477216113f408a478f575d022458efbccf18",
+      "nativeExitCode": -6,
+      "assertionLines": 15,
+      "requestSha256": "6c72cba2b16447d658c6fb66ace4a6e3b210464b42c8f9dcd4c958423cbc115c",
+      "resultSha256": "e5dc9291dc87f421c27391a57fae7ead53f0b5a516f2013b5df1666a48fd7ed1"
+    },
+    {
+      "fixture": "native-vakuu-nested",
+      "group": "affected-shared-mechanisms",
+      "status": "NativePassed",
+      "inputSha256": "83e2a04d698ceab8ef92408a3df1426765983bbb7a9fc2d5613481cada05c329",
+      "nativeExitCode": -6,
+      "assertionLines": 12,
+      "requestSha256": "01401fd3bfd88b991f0f4942e0f910b7923624b0063a5726627cd46c8c1c203c",
+      "resultSha256": "be3fa9b86f6e764e8ca39c6100c6ed1a37d90ae3f96b98ac2b8d92d4ded9d1bc"
+    },
+    {
+      "fixture": "native-vakuu-limit13",
+      "group": "affected-shared-mechanisms",
+      "status": "NativePassed",
+      "inputSha256": "fe08a1d5900dfc6cd2dfbfa22d4f40dd8fccf76b040eebf3607cbdc889f22936",
+      "nativeExitCode": -6,
+      "assertionLines": 22,
+      "requestSha256": "d4ac755854baecd7786ff4b65a982223205176e9c924b1b007b1fc4bdf5a2e58",
+      "resultSha256": "dda1915449913b023acd80364488b9b8a76f793c8b5dd6a676977324e3157210"
+    },
+    {
+      "fixture": "native-vakuu-vital",
+      "group": "affected-shared-mechanisms",
+      "status": "NativePassed",
+      "inputSha256": "08276d1b61257f8df838e3932415d997329164ce1ed602af26fbe36ccfd7f8e3",
+      "nativeExitCode": -6,
+      "assertionLines": 12,
+      "requestSha256": "ce4332423e0ce104dc82e1e7da701eea1563f408ab428ddce1c264d3738b9393",
+      "resultSha256": "d07af04564fa650a1b15c0356920a8de3f895915b393f858e729d1a88b52612d"
+    },
+    {
+      "fixture": "native-before-draw-stack",
+      "group": "affected-shared-mechanisms",
+      "status": "NativePassed",
+      "inputSha256": "7619eaf27dbfae5c8fc1877262976f312abbd8770bdc0853ecdece2e29532bbe",
+      "nativeExitCode": -6,
+      "assertionLines": 6,
+      "requestSha256": "b559dbd591fa68eb54215a3f1e7d60657923385373aeb44efa398b99c33c2f64",
+      "resultSha256": "91553fa86af4c4523d8634e7cf9026c41712639a5b1ee4412e3909fb24ee1c9a"
+    },
+    {
+      "fixture": "native-buff-chain",
+      "group": "affected-shared-mechanisms",
+      "status": "NativePassed",
+      "inputSha256": "18ad6e98eed1a6863c5a7d358542f79e9dfecb126cbb7bc407b8b5a6debc4d11",
+      "nativeExitCode": -6,
+      "assertionLines": 15,
+      "requestSha256": "57a9f358722268f8805769ecde0143685557dca967d855f7092e72e176ef567f",
+      "resultSha256": "da5798a1b35dc5a5b104f7b859c3b5bd326c2eedcfdc6eaa59e4fafe7c0c1663"
+    },
+    {
+      "fixture": "native-neurosurge-order",
+      "group": "affected-shared-mechanisms",
+      "status": "NativePassed",
+      "inputSha256": "d1c6a1fa7a061c09698dd49b346f17f9df55fee0649f8cf9802144d3ef6cb9d8",
+      "nativeExitCode": -6,
+      "assertionLines": 18,
+      "requestSha256": "04464ce365f90a2f13bc0a1f93fe78b04d9cd45084591734e80390c9cd3e476d",
+      "resultSha256": "2e57a1a146e2aa45870700b5a43469df30308a58320f1115a0e7dc6456d24c43"
+    },
+    {
+      "fixture": "native-death-feed-scaled",
+      "group": "affected-shared-mechanisms",
+      "status": "NativePassed",
+      "inputSha256": "38fe750686db04789155c1b190c20bd5ade01719f2d2d8ce98f5678faa5e9e73",
+      "nativeExitCode": -6,
+      "assertionLines": 16,
+      "requestSha256": "07f815cbc855a3df05572eab44b2b688ce05434f2673bebc49b2108d3f0cb34f",
+      "resultSha256": "57c73ffe90bc75763cef918db06b50c38db2fbf461beb87d313de8286392cf41"
+    },
+    {
+      "fixture": "native-received-negative-artifact",
+      "group": "affected-shared-mechanisms",
+      "status": "NativePassed",
+      "inputSha256": "320ffeaba6c723684d53b257b110fc40ba3683359d08544e301783af13e69390",
+      "nativeExitCode": -6,
+      "assertionLines": 16,
+      "requestSha256": "ee29c8304f1d303aed0a5bfca2be492dda123faae42c4b9241a55014b6a466b9",
+      "resultSha256": "c2a41deb48c8e2a661c26c7d2f14a815ec34efd428f7b9fbce872dfecd418f61"
+    }
+  ],
+  "registeredRuneWitnesses": {
+    "EscapePlanRune": [
+      "escape"
+    ],
+    "RegenerationSuppressionRune": [
+      "regeneration-suppression"
+    ],
+    "SoulCallingRune": [
+      "soul-calling"
+    ],
+    "KakaRune": [
+      "kaka"
+    ],
+    "AstralBodyRune": [
+      "astral"
+    ],
+    "PiggyBankRune": [
+      "piggy"
+    ],
+    "NeowsGrudgeRune": [
+      "neows-grudge"
+    ],
+    "SuperBrainRune": [
+      "super-brain"
+    ],
+    "OkBoomerangRune": [
+      "boomerang-acquisition"
+    ],
+    "NatureIsHealingRune": [
+      "player-nature"
+    ],
+    "PorcupineRune": [
+      "porcupine"
+    ],
+    "OmegaRune": [
+      "omega"
+    ],
+    "GetExcitedRune": [
+      "get-excited"
+    ],
+    "HardBonesRune": [
+      "hard-bones"
+    ],
+    "SwordFlightRune": [
+      "sword-flight"
+    ],
+    "DawnbringersResolveRune": [
+      "dawn"
+    ],
+    "TwilightVeilRune": [
+      "twilight"
+    ],
+    "EarthAwakensRune": [
+      "earth"
+    ],
+    "FeyMagicRune": [
+      "fey"
+    ],
+    "DieForYouRune": [
+      "die-for-you"
+    ],
+    "GhostFormRune": [
+      "ghost-form"
+    ],
+    "ShoulderVakuRune": [
+      "shoulder"
+    ],
+    "CardInspectionRune": [
+      "card-inspection",
+      "card-inspection-shuffle"
+    ],
+    "PrimitiveMadnessRune": [
+      "primitive-transform",
+      "primitive-cancel"
+    ],
+    "SomethingForNothingRune": [
+      "something-free",
+      "something-paid"
+    ],
+    "ScapegoatRune": [
+      "scapegoat"
+    ]
+  },
+  "scope": "All 26 omitted registered player runes, selected combination boundaries and affected shared native mechanisms. Local candidate acceptance, not a rerun of the historical full matrix.",
+  "baseline": {
+    "status": "Passed",
+    "total": 234,
+    "build": {
+      "HextechSolverCompat": "d589ae105d825019f8da1c1a7305aeb16be039f078f9e786e580292bd31e88ca",
+      "HextechCompatLab": "018de92b8234a712f620cd535fec65e9b18f9fb2d0f950eddc178f2ad6d6039c"
+    },
+    "retestedFullMatrix": false
+  },
+  "visibleSteamReceipt": "steam-save-acceptance/verification.json",
+  "headlessShutdownNote": "Native completion and quiescent Ready are checked before owned host cleanup. Exit -6 during headless shutdown remains recorded; this is not clean visible-game exit evidence.",
+  "publicReleaseAuthorized": false
+}

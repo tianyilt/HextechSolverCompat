@@ -28,4 +28,4 @@
 
 **EN:** All four measured searches per source build, including the tail; medians recomputed from retained samples. Timing gate NotPassed; machine-wide background load was not recorded, so no no-regression or causal-regression claim is made.
 
-复现两张图：`uv run --with matplotlib==3.10.7 python tools/render_pr_review_figures.py`。源文件和图片摘要见[图片摘要](../evidence/image-provenance.json)。/ Rebuild using the command above; source and image hashes are retained in the manifest.
+复现两张图：`uv run --with matplotlib==3.10.7 python tools/render_pr_review_figures.py`。源文件和图片摘要见[图片清单](images/manifest.json)。/ Rebuild using the command above; source and image hashes are retained in the manifest.

@@ -1,6 +1,6 @@
 {
-  "status": "InProgress",
-  "scope": "Completed evidence audit; not release acceptance",
+  "status": "Passed",
+  "scope": "Full reviewed mechanism matrix; not Steam UI, complete-run or Windows acceptance",
   "families": 98,
   "cases": [
     {
@@ -1654,6 +1654,66 @@
       "assertionLines": 6
     },
     {
+      "fixture": "native-lifecycle-revival",
+      "status": "NativePassed",
+      "nativeStatus": "Passed",
+      "nativeExitCode": -6,
+      "requestSha256": "6f3e5a7ca426b0ba677beeab9d790930d4bcb0c96fae4cdbaba7a432bd63aefd",
+      "resultSha256": "d194123dd9da91c252251f0cfc8cb02e073fcbffa00dc7e13ab128ad57827904",
+      "nativeMilliseconds": 41640.6092,
+      "assertionLines": 14
+    },
+    {
+      "fixture": "native-enemy-dual-ceremonial",
+      "status": "NativePassed",
+      "nativeStatus": "Passed",
+      "nativeExitCode": -6,
+      "requestSha256": "fa54002755f87abb49180cc6dcb146292e3aafedc686e4b61ded5bf6574f4fa0",
+      "resultSha256": "f05508e385fe41679bf906c400f332db541a6fc8974a566923533e5c1585a5b7",
+      "nativeMilliseconds": 25640.4382,
+      "assertionLines": 12
+    },
+    {
+      "fixture": "native-ceremonial-repeat-3",
+      "status": "NativePassed",
+      "nativeStatus": "Passed",
+      "nativeExitCode": -6,
+      "requestSha256": "8485762dd494522debe398da6a1022e4d60c7bfa85487acbc21d00f1c194d49d",
+      "resultSha256": "0181c3ce7f0e9e095160ef601b844f48598cf8e3859efb179bce6c58ca44a729",
+      "nativeMilliseconds": 14601.0182,
+      "assertionLines": 10
+    },
+    {
+      "fixture": "native-temp-positive-lifecycle",
+      "status": "NativePassed",
+      "nativeStatus": "Passed",
+      "nativeExitCode": -6,
+      "requestSha256": "83af6d8d87906013d8845d237e49e77378c14ca0d92e6fac1a26d0cbbca64ffa",
+      "resultSha256": "a252ab0de46ba39fa70f176d1d8b1c3780db9b7cadc1a269984e6b915eca5649",
+      "nativeMilliseconds": 25739.7872,
+      "assertionLines": 24
+    },
+    {
+      "fixture": "temporary-loss-artifact-2",
+      "status": "NativePassed",
+      "nativeStatus": "Passed",
+      "nativeExitCode": -6,
+      "requestSha256": "23efd35151ee093ac724b1cf8a72989719e04630caa572528fb85c73ea1e4e02",
+      "resultSha256": "1e5a921bb62a32e509881ac45cadc4a5b961d145eb46fe1b0602b274ff6bc374",
+      "nativeMilliseconds": 23390.3333,
+      "assertionLines": 17
+    },
+    {
+      "fixture": "native-duality-artifact-conversion",
+      "status": "NativePassed",
+      "nativeStatus": "Passed",
+      "nativeExitCode": -6,
+      "requestSha256": "ad4b9fa3cd74197cbf585c2b675f2fb9b0c518f515b7d4a2b1713ffb0f103e66",
+      "resultSha256": "df488482c3f5d945f1c606be85463b9797441a704e9930357caeb3df858d29ba",
+      "nativeMilliseconds": 29455.2967,
+      "assertionLines": 24
+    },
+    {
       "fixture": "native-nature-worker",
       "status": "NativePassed",
       "nativeStatus": "Passed",
@@ -1664,6 +1724,36 @@
       "assertionLines": 14
     },
     {
+      "fixture": "native-nature-budget",
+      "status": "NativePassed",
+      "nativeStatus": "Passed",
+      "nativeExitCode": -6,
+      "requestSha256": "9ff460e60f7eaffa0758c2d4ae378721e305387fb8d0dc591dc1675564b7c45b",
+      "resultSha256": "8f13307f42bca0312b2059b0e5d5ba469e7ae70092c138638d67b59966cbbd6d",
+      "nativeMilliseconds": 12542.9286,
+      "assertionLines": 17
+    },
+    {
+      "fixture": "native-nature-tier1",
+      "status": "NativePassed",
+      "nativeStatus": "Passed",
+      "nativeExitCode": -6,
+      "requestSha256": "ffc380a04de708c4fd8aaaae5f1b4b9b03a3405448c9d5c1d4e85654d25101d5",
+      "resultSha256": "01f6026b5d16d8c3dbde4ad48ac79437e2083bd8b8382e7df965b04b236167e9",
+      "nativeMilliseconds": 21341.8607,
+      "assertionLines": 15
+    },
+    {
+      "fixture": "native-nature-tier2",
+      "status": "NativePassed",
+      "nativeStatus": "Passed",
+      "nativeExitCode": -6,
+      "requestSha256": "30f2eca0b7893f63cdeae428a693fffdf1a12b1ceaf835c000c753d8eddf3b8b",
+      "resultSha256": "664a58e8ee09a130f7ca64ebdc2b71c890cbe6aff5f7079689d186559251267c",
+      "nativeMilliseconds": 15672.5031,
+      "assertionLines": 15
+    },
+    {
       "fixture": "native-nature-vital",
       "status": "NativePassed",
       "nativeStatus": "Passed",
@@ -1672,6 +1762,546 @@
       "resultSha256": "e5dc9291dc87f421c27391a57fae7ead53f0b5a516f2013b5df1666a48fd7ed1",
       "nativeMilliseconds": 29631.206,
       "assertionLines": 15
+    },
+    {
+      "fixture": "native-thieving-ceremonial",
+      "status": "NativePassed",
+      "nativeStatus": "Passed",
+      "nativeExitCode": -6,
+      "requestSha256": "e43e5134af13eebd546f2025e800432592f070534d59e8cdd16de1d51b409ebe",
+      "resultSha256": "750ca16a555433c21a9bfc0ee84f11cf5a8980d644a6168189a87c3ceb798ef6",
+      "nativeMilliseconds": 23246.3756,
+      "assertionLines": 16
+    },
+    {
+      "fixture": "native-thieving-coefficient",
+      "status": "NativePassed",
+      "nativeStatus": "Passed",
+      "nativeExitCode": -6,
+      "requestSha256": "4fa93573e9a55c61703fdfc680612c5b185e521ef09976baf4c645f34152b77a",
+      "resultSha256": "28ce26f0ecfe03b233aac183c8456688e40cdc1a592d78a03a9b7771b4c38c90",
+      "nativeMilliseconds": 23310.9271,
+      "assertionLines": 16
+    },
+    {
+      "fixture": "native-thieving-escape",
+      "status": "NativePassed",
+      "nativeStatus": "Passed",
+      "nativeExitCode": -6,
+      "requestSha256": "303889766917b4fa292f5bd92457f075914de0650096ccc9041b9afdcad201f7",
+      "resultSha256": "64e3bacba365944f28140dee17a1220a2f8dd743494cbe3e93586e5e8b7dacd7",
+      "nativeMilliseconds": 23085.587,
+      "assertionLines": 16
+    },
+    {
+      "fixture": "native-thieving-jeweled",
+      "status": "NativePassed",
+      "nativeStatus": "Passed",
+      "nativeExitCode": -6,
+      "requestSha256": "740a4196e3ce60b2cc2d548d2996cda27615680df59664e9a88351400e04a578",
+      "resultSha256": "cf040da957bc0553c87243621ccd492f6be586d3f6390e1d31585a269e24d755",
+      "nativeMilliseconds": 23606.2277,
+      "assertionLines": 16
+    },
+    {
+      "fixture": "native-thieving-minion",
+      "status": "NativePassed",
+      "nativeStatus": "Passed",
+      "nativeExitCode": -6,
+      "requestSha256": "1d03b907ae8c9e7b8f338c3a5049fe5f475f9975388c83e9f65f8f4b2b600719",
+      "resultSha256": "34e7cb3907a8cf20e08bcc15d2f5b59c4560a436aebc3d4afca0c8c12402978e",
+      "nativeMilliseconds": 22838.548,
+      "assertionLines": 16
+    },
+    {
+      "fixture": "native-thieving-payload",
+      "status": "NativePassed",
+      "nativeStatus": "Passed",
+      "nativeExitCode": -6,
+      "requestSha256": "04b590851cfcbfc6a324b0a31725e5a6061ab2ad367faa8442220f01f9f90f9a",
+      "resultSha256": "03303e860e68c3d9c17bd816203f4295bbdb50905bf2f2ccd4044f09f3afedbf",
+      "nativeMilliseconds": 16681.7709,
+      "assertionLines": 19
+    },
+    {
+      "fixture": "native-thieving-recover",
+      "status": "NativePassed",
+      "nativeStatus": "Passed",
+      "nativeExitCode": -6,
+      "requestSha256": "b6c18f2fd8e0a6a96c37cc6d3e652fc49b7662982d7a7da385587d0257260248",
+      "resultSha256": "6ad3510e86b8fffc6f5f5fb5d7fddc50e5234fb2e9b364e248befbaabc9f5e54",
+      "nativeMilliseconds": 16684.613,
+      "assertionLines": 19
+    },
+    {
+      "fixture": "native-thieving-sticky-heal",
+      "status": "NativePassed",
+      "nativeStatus": "Passed",
+      "nativeExitCode": -6,
+      "requestSha256": "b5d0d86a1f6a6bd0ce23652feee77997443c28cf654e27a327b91c69495b864c",
+      "resultSha256": "76db614d4c68b4eaae0e0f45a7747eeddb2a0f1a6e4f7227c25fd61608371f81",
+      "nativeMilliseconds": 23766.7832,
+      "assertionLines": 16
+    },
+    {
+      "fixture": "native-thieving-stock-escape",
+      "status": "NativePassed",
+      "nativeStatus": "Passed",
+      "nativeExitCode": -6,
+      "requestSha256": "eb11b274bcb9939b4fc5f0c923215dacdbd8219609168a66a8a8a70c5f48c110",
+      "resultSha256": "939aba51f1a5a35de888137b7be197b82d69b14c957c80a51ff02aa8f7ea07a9",
+      "nativeMilliseconds": 23079.5605,
+      "assertionLines": 16
+    },
+    {
+      "fixture": "native-thieving-stock-recover",
+      "status": "NativePassed",
+      "nativeStatus": "Passed",
+      "nativeExitCode": -6,
+      "requestSha256": "6c80d8dfcea5bd6d81d403767f10f48026b5d323b12200610c753ee4122957de",
+      "resultSha256": "0da9482c291996ff2c7ae6679fbd58d3c502e183f2878ee8568a72ea7e0db2ac",
+      "nativeMilliseconds": 17323.3435,
+      "assertionLines": 19
+    },
+    {
+      "fixture": "native-thieving-stunned",
+      "status": "NativePassed",
+      "nativeStatus": "Passed",
+      "nativeExitCode": -6,
+      "requestSha256": "cea72f2781e4dd62f6b910e1ab406e71d0b0e39fbe62e218d13f2e0ac381f062",
+      "resultSha256": "791e167e34753e6204d4815318a37219809d95fe53a41e1666c45a01b63daf3a",
+      "nativeMilliseconds": 16025.1528,
+      "assertionLines": 14
+    },
+    {
+      "fixture": "native-thieving-threshold-above",
+      "status": "NativePassed",
+      "nativeStatus": "Passed",
+      "nativeExitCode": -6,
+      "requestSha256": "ffeee684c2130a52a0230b9f0dffc4c49c6846ebf94ba0be3c05b5dfc1acd2e5",
+      "resultSha256": "63219402b4f72a3d75051cacf4bbdedea5d38300aa8c075a9b7da46d6039ec43",
+      "nativeMilliseconds": 41765.4208,
+      "assertionLines": 16
+    },
+    {
+      "fixture": "native-thieving-threshold-equal",
+      "status": "NativePassed",
+      "nativeStatus": "Passed",
+      "nativeExitCode": -6,
+      "requestSha256": "ee25f597cccc1f5b7f2d5cd679a030c1535e39840d63e707fe01db2158dee7a1",
+      "resultSha256": "09278bd07070722b1d62d54bd5ef52b50ff8fb7922bbcb4481e9b130660f6409",
+      "nativeMilliseconds": 22215.6956,
+      "assertionLines": 16
+    },
+    {
+      "fixture": "native-solid-time-deck-coefficient",
+      "status": "NativePassed",
+      "nativeStatus": "Passed",
+      "nativeExitCode": -6,
+      "requestSha256": "ede06f2c99afea0645160dea86deea6346e0f0e3e71740053e10e88648b2beff",
+      "resultSha256": "107d844b4f62839c41a1371edd31fbf5276fd8259852541ad1ec1456b248eeed",
+      "nativeMilliseconds": 23621.5126,
+      "assertionLines": 19
+    },
+    {
+      "fixture": "native-solid-time-echo-store",
+      "status": "NativePassed",
+      "nativeStatus": "Passed",
+      "nativeExitCode": -6,
+      "requestSha256": "022cb0049d33c87271c7d3269e199b4b95e632732b99ba6c250b1934e0403563",
+      "resultSha256": "f46b37256ce35e9d93eb276ef53d4f60cc0a9cf8475c41bd560e9923a4dc7e15",
+      "nativeMilliseconds": 26469.792,
+      "assertionLines": 16
+    },
+    {
+      "fixture": "native-solid-time-generated",
+      "status": "NativePassed",
+      "nativeStatus": "Passed",
+      "nativeExitCode": -6,
+      "requestSha256": "f8b6e68e8f19f8d1cc292b3dc3845c689a0e7a3813de9b5c07ea18cf46ee24f4",
+      "resultSha256": "39a831e395e0d98f0a7d1423084051fd9494c7a274a698a10df6c377c6e09419",
+      "nativeMilliseconds": 23682.9732,
+      "assertionLines": 16
+    },
+    {
+      "fixture": "native-solid-time-madscience",
+      "status": "NativePassed",
+      "nativeStatus": "Passed",
+      "nativeExitCode": -6,
+      "requestSha256": "33f828bb96413195c602e9659ea687aaeace8e34cec1239300cbb5e4b6302481",
+      "resultSha256": "a9e1f7289e0a5421e3490abb51ce590a484b4be768e740117316b65cacc43678",
+      "nativeMilliseconds": 22592.8353,
+      "assertionLines": 18
+    },
+    {
+      "fixture": "native-solid-time-replay-orbs",
+      "status": "NativePassed",
+      "nativeStatus": "Passed",
+      "nativeExitCode": -6,
+      "requestSha256": "6b72962f8d5187da92682bfa265bde99d909d08735c4afd784ba5a9b640acfb7",
+      "resultSha256": "7503cc88acafc4c74549c3a2f3347d6b19170fa66b19a717a74e6510e9a3e549",
+      "nativeMilliseconds": 26498.1204,
+      "assertionLines": 18
+    },
+    {
+      "fixture": "native-solid-time-replay-void",
+      "status": "NativePassed",
+      "nativeStatus": "Passed",
+      "nativeExitCode": -6,
+      "requestSha256": "f579bb8127e773fb44f5628ed2fb0fed90a4a52f7fd00083709909bad55acb5f",
+      "resultSha256": "2c1c53f8fedec26ea9c79539380fa53cce6b3f452468aa122f8a3b73b2da8a13",
+      "nativeMilliseconds": 22315.4634,
+      "assertionLines": 18
+    },
+    {
+      "fixture": "native-solid-time-replay",
+      "status": "NativePassed",
+      "nativeStatus": "Passed",
+      "nativeExitCode": -6,
+      "requestSha256": "cc8b488fb0fa803a7213c4eeab245cf6e786c1796f8a68929f932efc32c81247",
+      "resultSha256": "cc647dc2ad2059203d2744186eab63e85b99f5a514d1d5c26bd188ed4e13f05a",
+      "nativeMilliseconds": 24463.2315,
+      "assertionLines": 18
+    },
+    {
+      "fixture": "native-solid-time-store",
+      "status": "NativePassed",
+      "nativeStatus": "Passed",
+      "nativeExitCode": -6,
+      "requestSha256": "332800ed9ac9864bd7a16ee1669cd2270153f3400f7b6501adbdf10ff63b33ee",
+      "resultSha256": "fa5e137da8fe84819d3af75f610b474b768fe6b34f169fa07cbb1adc44546f4a",
+      "nativeMilliseconds": 23077.4912,
+      "assertionLines": 16
+    },
+    {
+      "fixture": "native-pending-comp-outbreak",
+      "status": "NativePassed",
+      "nativeStatus": "Passed",
+      "nativeExitCode": -6,
+      "requestSha256": "74f99509336c95796253d226324d6d18053f8958661e04277093a596f34db65e",
+      "resultSha256": "22ba8e40c7fec292c7969ee289045bdad54974fccc43d2a67c2628565a11abe3",
+      "nativeMilliseconds": 21605.3009,
+      "assertionLines": 12
+    },
+    {
+      "fixture": "native-pending-comp-player",
+      "status": "NativePassed",
+      "nativeStatus": "Passed",
+      "nativeExitCode": -6,
+      "requestSha256": "e683c4240e8ff57079924877b887a786fc9512522b8be4b6b79c714b50547474",
+      "resultSha256": "20a32abd4e8a3c116fb586dba96c3d8614d2c02cc42b085c7b5088c61d0bca30",
+      "nativeMilliseconds": 19305.975,
+      "assertionLines": 11
+    },
+    {
+      "fixture": "native-pending-comp-slippery-overkill",
+      "status": "NativePassed",
+      "nativeStatus": "Passed",
+      "nativeExitCode": -6,
+      "requestSha256": "aa2bf68287c67f25f8f0b45b22d6830daa04ea250f009b608420801b1b457876",
+      "resultSha256": "1510526eaa358d8374cbd3acb82f30f19985479080222cce2a07b46dd769cf9b",
+      "nativeMilliseconds": 21376.7852,
+      "assertionLines": 11
+    },
+    {
+      "fixture": "native-pending-piercing-odd",
+      "status": "NativePassed",
+      "nativeStatus": "Passed",
+      "nativeExitCode": -6,
+      "requestSha256": "99fe417119f283e88e37b2c8307518f902ec669d33186b62fc7302704ab8251e",
+      "resultSha256": "288b8f598c99425b6d2913a0988247c4fcbe635726481f714b2b7666c5e514f9",
+      "nativeMilliseconds": 17940.524,
+      "assertionLines": 12
+    },
+    {
+      "fixture": "native-sweeping-artifact-secondary",
+      "status": "NativePassed",
+      "nativeStatus": "Passed",
+      "nativeExitCode": -6,
+      "requestSha256": "9f843d36aba2167a7550fea510df4d87eba5ca1c2460b20e48b7947e1876d005",
+      "resultSha256": "ab58ab9f758c0a49558c22e5142226819175026234e954103557404e1645dbad",
+      "nativeMilliseconds": 25320.37,
+      "assertionLines": 16
+    },
+    {
+      "fixture": "native-sweeping-blight",
+      "status": "NativePassed",
+      "nativeStatus": "Passed",
+      "nativeExitCode": -6,
+      "requestSha256": "562794b84d785c97ee201f8ffb5adcfe03eacea9271812cd1ca585cbe3e88ee5",
+      "resultSha256": "b1b1aadbb06021ee62f7a7a414c75c9fbca540d6b98af9ca4c6c5faf97bc47d6",
+      "nativeMilliseconds": 24262.7478,
+      "assertionLines": 16
+    },
+    {
+      "fixture": "native-auxiliary-early",
+      "status": "NativePassed",
+      "nativeStatus": "Passed",
+      "nativeExitCode": -6,
+      "requestSha256": "1e3280cc50730f058be8e349c55a25e2dd7d154b4fecc3f4278f2d92658fc082",
+      "resultSha256": "f2a19fdfc03af35c2b3895e97da28fadc048a74970b9e51fdafeb669f41afb10",
+      "nativeMilliseconds": 29225.4907,
+      "assertionLines": 15
+    },
+    {
+      "fixture": "native-auxiliary-entry",
+      "status": "NativePassed",
+      "nativeStatus": "Passed",
+      "nativeExitCode": -6,
+      "requestSha256": "665ae1c07d8d25266e7a8fdbe9d49f98d61cd4ba06c87edffd1ef6eab1706a9a",
+      "resultSha256": "601786259c371bdb468c7a74835ec344e128e50969fdecc364d4406d78b358bd",
+      "nativeMilliseconds": 32581.4355,
+      "assertionLines": 15
+    },
+    {
+      "fixture": "native-auxiliary-legacy-plating",
+      "status": "NativePassed",
+      "nativeStatus": "Passed",
+      "nativeExitCode": -6,
+      "requestSha256": "5675825f65c75b9768a1722a33ac1f0e9dc7355b87a88115a95d788b1ba118ae",
+      "resultSha256": "9e52298da88e68d08e9fcdcc76ab042f903e89b45e92e74b81aee7acf8f198c0",
+      "nativeMilliseconds": 23335.7907,
+      "assertionLines": 16
+    },
+    {
+      "fixture": "native-auxiliary-maxhp",
+      "status": "NativePassed",
+      "nativeStatus": "Passed",
+      "nativeExitCode": -6,
+      "requestSha256": "915aed21b8f3cf549d103515840a81380dc423433ab4683556b4d0ba978ecd7b",
+      "resultSha256": "34a6e1b9191c4a39fbac1592d0be51894bb66a5fba850b6fe8d4b6a7e8df9bbf",
+      "nativeMilliseconds": 16415.8784,
+      "assertionLines": 16
+    },
+    {
+      "fixture": "native-auxiliary-orbs",
+      "status": "NativePassed",
+      "nativeStatus": "Passed",
+      "nativeExitCode": -6,
+      "requestSha256": "959d8005bf207d5ae6399b8ec1249b0431ef87c24d5f16f99f55c03d0389edab",
+      "resultSha256": "d3ecf47d8be3aa7c9fc0d97df277d970b13681ee2ef340f1387368cbca63725f",
+      "nativeMilliseconds": 50525.7715,
+      "assertionLines": 16
+    },
+    {
+      "fixture": "native-auxiliary-orobas-orbs",
+      "status": "NativePassed",
+      "nativeStatus": "Passed",
+      "nativeExitCode": -6,
+      "requestSha256": "7739485d887fe47f06b111e32fbccd21b6cff6562ddcb0bcfcfaa594e7f7c141",
+      "resultSha256": "f5c1aabde9f525a22c37a79e34502956e9f6fbe95093a6a5a927faa4e87d0bc6",
+      "nativeMilliseconds": 67522.0268,
+      "assertionLines": 24
+    },
+    {
+      "fixture": "native-auxiliary-orobas-osty",
+      "status": "NativePassed",
+      "nativeStatus": "Passed",
+      "nativeExitCode": -6,
+      "requestSha256": "cb08b77ab94463f7bb6139b8cc176af9c2b761a921234d644a42dfbe48808ee4",
+      "resultSha256": "632cb92c0b540ce4e2e03caf4bc2f6911af58f96c799ebaee0fb708d581bcc50",
+      "nativeMilliseconds": 24527.1648,
+      "assertionLines": 16
+    },
+    {
+      "fixture": "native-auxiliary-orobas-stars",
+      "status": "NativePassed",
+      "nativeStatus": "Passed",
+      "nativeExitCode": -6,
+      "requestSha256": "dd4e2e14f3a987dcf0fb78d0f2ddf65a1427bc5d0f330f2b9c7cd0f0a4e5f031",
+      "resultSha256": "866af33751f97f92273178f3d1d43117ffbf26efe235a49b70e3365afd23b9f7",
+      "nativeMilliseconds": 22682.645,
+      "assertionLines": 16
+    },
+    {
+      "fixture": "native-auxiliary-osty",
+      "status": "NativePassed",
+      "nativeStatus": "Passed",
+      "nativeExitCode": -6,
+      "requestSha256": "d76fa863b7ee739fcca64e92dbc85442b51bb9d036b6e4e6a51dd0ae7ebb8a9d",
+      "resultSha256": "06e11ac7cd53ee04f11a33478c7aa201988fbad9e80886945f21cad049fdd54a",
+      "nativeMilliseconds": 24113.9835,
+      "assertionLines": 15
+    },
+    {
+      "fixture": "native-auxiliary-regent",
+      "status": "NativePassed",
+      "nativeStatus": "Passed",
+      "nativeExitCode": -6,
+      "requestSha256": "3d95bbcf700e83873ba3d61e9723da74d80f3a515eb7f50c1071d9feabd4e15f",
+      "resultSha256": "2614124b442579735a1c0cecb2a6af9230de676f3a73a1ca4ac831f91f17a82c",
+      "nativeMilliseconds": 23007.493,
+      "assertionLines": 16
+    },
+    {
+      "fixture": "native-auxiliary-spiral",
+      "status": "NativePassed",
+      "nativeStatus": "Passed",
+      "nativeExitCode": -6,
+      "requestSha256": "b446e3bf54a21a8dd9d319cebba4f2dd3d6817b0d8255254d10b0130b945105a",
+      "resultSha256": "23b815e6e64abb300bd6101d4017c8d18d33bafd25be46ca18bf1669075c2013",
+      "nativeMilliseconds": 23299.0658,
+      "assertionLines": 15
+    },
+    {
+      "fixture": "native-generated-boomerang-up",
+      "status": "NativePassed",
+      "nativeStatus": "Passed",
+      "nativeExitCode": -6,
+      "requestSha256": "5055e2c095f7c5c27f0e63f987a090c526092009bea3c055ae8639c595b916a3",
+      "resultSha256": "febae5172ccf647973e1dedb170eff36d62497ad11a3aef8cf16fca25688419b",
+      "nativeMilliseconds": 24713.8386,
+      "assertionLines": 21
+    },
+    {
+      "fixture": "native-generated-chemtech",
+      "status": "NativePassed",
+      "nativeStatus": "Passed",
+      "nativeExitCode": -6,
+      "requestSha256": "ef9eab07ecbbfa991d8a33312869c8d5ebb32e12a8905f4b82d29ce7dabbda1c",
+      "resultSha256": "92b65cc36866be6ca86aab2f54aac1c08f5f31fb72cf18cb566d275cf46dca07",
+      "nativeMilliseconds": 22964.3415,
+      "assertionLines": 18
+    },
+    {
+      "fixture": "native-generated-chemtech-full",
+      "status": "NativePassed",
+      "nativeStatus": "Passed",
+      "nativeExitCode": -6,
+      "requestSha256": "c845e0e2c4c2764c2415e8e50b7b1932795412d49a43a1d04c81c4c7806a92c7",
+      "resultSha256": "a8005feb965210ee7e832cf585f851ee4b4725ad454f6c4150cd0a73ad73001e",
+      "nativeMilliseconds": 23135.0248,
+      "assertionLines": 18
+    },
+    {
+      "fixture": "native-generated-wish",
+      "status": "NativePassed",
+      "nativeStatus": "Passed",
+      "nativeExitCode": -6,
+      "requestSha256": "7a60658ea4cd40169a91bb4f73620a5dcefedeb9889d31efc3d223c28fa9a254",
+      "resultSha256": "3e16edf401475fa60b8ad01701c972aa2ca53a17512489ac6322f999a0d75534",
+      "nativeMilliseconds": 23953.0225,
+      "assertionLines": 18
+    },
+    {
+      "fixture": "opening-effects",
+      "status": "NativePassed",
+      "nativeStatus": "Passed",
+      "nativeExitCode": -6,
+      "requestSha256": "db4ea97569b0dab0ed965f156dbb783e7a86bcbc513a4d9e53bc84845a60fcaa",
+      "resultSha256": "95e159fec5698055894c1cfa7537d5cc3e48bd7bad180b4fd845219ad662d901",
+      "nativeMilliseconds": 12683.2193,
+      "assertionLines": 8
+    },
+    {
+      "fixture": "enemy-sustain-stack",
+      "status": "NativePassed",
+      "nativeStatus": "Passed",
+      "nativeExitCode": -6,
+      "requestSha256": "9ce58f258f5b4318d9b7ecb22a1d46c45cd2d019c0a1a40b9a84d036dff75aa4",
+      "resultSha256": "ff64c6e86b1af1939b9e3a507c4bec35ca5a3807536da69e5cb9de368aa73e34",
+      "nativeMilliseconds": 12737.9473,
+      "assertionLines": 7
+    },
+    {
+      "fixture": "native-rune-stack",
+      "status": "NativePassed",
+      "nativeStatus": "Passed",
+      "nativeExitCode": -6,
+      "requestSha256": "ab1ae04e09b19ac53282ecce23f36cdde634a7642435afbf2ad7b91b1c224de4",
+      "resultSha256": "92b0286e241725923c32194971fa927bc9b3f96f271b28fa51f132b3b64d31af",
+      "nativeMilliseconds": 9972.8722,
+      "assertionLines": 8
+    },
+    {
+      "fixture": "advice",
+      "status": "NativePassed",
+      "nativeStatus": "Passed",
+      "nativeExitCode": -6,
+      "requestSha256": "4a1077a16d6e242234afac8f18cfd2361e0aa60ec6a8b7b31287846729f9460c",
+      "resultSha256": "5b9d4ba2bea6ce7c9e61d7422b27d717d5b1e8185aae6f61beba51064f425b69",
+      "nativeMilliseconds": 8206.6369,
+      "assertionLines": 5
+    },
+    {
+      "fixture": "owner-debuff-stack",
+      "status": "NativePassed",
+      "nativeStatus": "Passed",
+      "nativeExitCode": -6,
+      "requestSha256": "05560ecf65306ef91c02749a80d485f2683bb9df455fe2dfdca546a3086e1fb3",
+      "resultSha256": "e4a2d162a7390cb4d29a22ca1b404cd9c225868327489fabbe2aafb0fd18c73a",
+      "nativeMilliseconds": 11618.9275,
+      "assertionLines": 9
+    },
+    {
+      "fixture": "reprogram-searing-stack",
+      "status": "NativePassed",
+      "nativeStatus": "Passed",
+      "nativeExitCode": -6,
+      "requestSha256": "0a45f42cff1a0583e232d828d285669d290ab6af7e3e67bbdb1adda200034470",
+      "resultSha256": "9f358951d92ccdda8344d2ae227d98d0cd9350774dffbb789ba7ec6ded8c53c1",
+      "nativeMilliseconds": 7912.7962,
+      "assertionLines": 8
+    },
+    {
+      "fixture": "native-infernal-tormentor",
+      "status": "NativePassed",
+      "nativeStatus": "Passed",
+      "nativeExitCode": -6,
+      "requestSha256": "b0bcf68139480fd65959d18de16f8e7972718c90a6d44fc00a192596a01ba5c3",
+      "resultSha256": "18467f0e90f139aaf826302ac24adaec07871e9205827ca9a4512fad1526110c",
+      "nativeMilliseconds": 14251.4762,
+      "assertionLines": 17
+    },
+    {
+      "fixture": "native-soul-cloud",
+      "status": "NativePassed",
+      "nativeStatus": "Passed",
+      "nativeExitCode": -6,
+      "requestSha256": "78c9f604786d4bf18fd17b0f4d2c999919c653ebfea22ca69eb28e3cf1ed5955",
+      "resultSha256": "8a0e9076c4e559bdd423560384c82b52fb085b05d3e957af0fc600ff6860ad6e",
+      "nativeMilliseconds": 13867.0259,
+      "assertionLines": 13
+    },
+    {
+      "fixture": "native-team-sustain-stack",
+      "status": "NativePassed",
+      "nativeStatus": "Passed",
+      "nativeExitCode": -6,
+      "requestSha256": "c16e8f13dd0e09fc9950107c3889665e9d81a7fb621e6feab66ca45792cf6316",
+      "resultSha256": "75de322f88d9738fe126e9f5fdac89b45d6df8a2b131ad4b7ddaf841d251587a",
+      "nativeMilliseconds": 19700.4256,
+      "assertionLines": 20
+    },
+    {
+      "fixture": "summon-stack",
+      "status": "NativePassed",
+      "nativeStatus": "Passed",
+      "nativeExitCode": -6,
+      "requestSha256": "400e2e726f3f39b50998d2a0c3feaece011d8ab18c5d9050280654c442fce598",
+      "resultSha256": "7ffbf19dc3e41deb823f9d346a503a0f11005f6f78d5fd191c43a01850446256",
+      "nativeMilliseconds": 29258.8655,
+      "assertionLines": 9
+    },
+    {
+      "fixture": "blade-waltz-card",
+      "status": "NativePassed",
+      "nativeStatus": "Passed",
+      "nativeExitCode": -6,
+      "requestSha256": "1f3883db331ae0a29651546cdc7596c5aa3285c006ea8aba6b2f3c3133fd1967",
+      "resultSha256": "71b43369936cf9dbfbcc227391d79afb02f43c89ed97371f8fb9959faf11e538",
+      "nativeMilliseconds": 10733.7976,
+      "assertionLines": 12
+    },
+    {
+      "fixture": "quantum-computing-card",
+      "status": "NativePassed",
+      "nativeStatus": "Passed",
+      "nativeExitCode": -6,
+      "requestSha256": "1675ee2fd0d93fb5a667ffa8c4576d75d75c291a3b6ab1d35611f767932d632e",
+      "resultSha256": "e9fc2910cc83cfe44b431bdf11cb5c9d7fcb271953ec6d83e02322baa35a6c56",
+      "nativeMilliseconds": 7947.1203,
+      "assertionLines": 12
     },
     {
       "fixture": "unknown-rune",
@@ -1714,75 +2344,11 @@
       "assertionLines": 6
     }
   ],
-  "total": 171,
+  "total": 234,
   "expectedTotal": 234,
-  "missingFixtures": [
-    "advice",
-    "blade-waltz-card",
-    "enemy-sustain-stack",
-    "native-auxiliary-early",
-    "native-auxiliary-entry",
-    "native-auxiliary-legacy-plating",
-    "native-auxiliary-maxhp",
-    "native-auxiliary-orbs",
-    "native-auxiliary-orobas-orbs",
-    "native-auxiliary-orobas-osty",
-    "native-auxiliary-orobas-stars",
-    "native-auxiliary-osty",
-    "native-auxiliary-regent",
-    "native-auxiliary-spiral",
-    "native-ceremonial-repeat-3",
-    "native-duality-artifact-conversion",
-    "native-enemy-dual-ceremonial",
-    "native-generated-boomerang-up",
-    "native-generated-chemtech",
-    "native-generated-chemtech-full",
-    "native-generated-wish",
-    "native-infernal-tormentor",
-    "native-lifecycle-revival",
-    "native-nature-budget",
-    "native-nature-tier1",
-    "native-nature-tier2",
-    "native-pending-comp-outbreak",
-    "native-pending-comp-player",
-    "native-pending-comp-slippery-overkill",
-    "native-pending-piercing-odd",
-    "native-rune-stack",
-    "native-solid-time-deck-coefficient",
-    "native-solid-time-echo-store",
-    "native-solid-time-generated",
-    "native-solid-time-madscience",
-    "native-solid-time-replay",
-    "native-solid-time-replay-orbs",
-    "native-solid-time-replay-void",
-    "native-solid-time-store",
-    "native-soul-cloud",
-    "native-sweeping-artifact-secondary",
-    "native-sweeping-blight",
-    "native-team-sustain-stack",
-    "native-temp-positive-lifecycle",
-    "native-thieving-ceremonial",
-    "native-thieving-coefficient",
-    "native-thieving-escape",
-    "native-thieving-jeweled",
-    "native-thieving-minion",
-    "native-thieving-payload",
-    "native-thieving-recover",
-    "native-thieving-sticky-heal",
-    "native-thieving-stock-escape",
-    "native-thieving-stock-recover",
-    "native-thieving-stunned",
-    "native-thieving-threshold-above",
-    "native-thieving-threshold-equal",
-    "opening-effects",
-    "owner-debuff-stack",
-    "quantum-computing-card",
-    "reprogram-searing-stack",
-    "summon-stack",
-    "temporary-loss-artifact-2"
-  ],
+  "missingFixtures": [],
   "counts": {
-    "NativePassed": 169,
+    "NativePassed": 232,
     "ExpectedRejectionVerified": 2
   },
   "build": {

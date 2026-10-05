@@ -6,7 +6,7 @@ Requires **game0.111.0 / CombatSolver0.48.1 / HextechRunes0.9.7 / RitsuLib0.6.5*
 
 必须使用 **游戏0.111.0 / 求解器0.48.1 / 海克斯0.9.7 / RitsuLib0.6.5**。补丁会拒绝未经审阅的新版程序集。工坊依赖会自动更新，单纯订阅最新版不足以满足要求：请从作者的[官方0.48.1发行页](https://github.com/Torch1230/CombatSolver/releases/tag/v0.48.1)获取求解器，启用本地0.48.1并停用其工坊重复来源。海克斯/RitsuLib也须匹配锁定版本和摘要。Windows与当前候选全新整局尚未验证。
 
-**Native mechanism acceptance / 原生机制验收：171/234 strictly verified; remaining checks pending**, plus68 targeted checks and four guards (overlap kept separate).
+**Native mechanism acceptance / 原生机制验收：234/234 Passed**, plus68 targeted checks and four guards (overlap kept separate).
 
 ![Actual native route](docs/images/visible-registered-route-0481.png)
 
@@ -20,7 +20,7 @@ The implementation covers all registered player runes, including default-disable
 
 ### Required subscriptions and installation
 
-Subscribe to and enable all four items, then restart the game:
+Enable the matching versions of all four Mods, then restart. Use the pinned official Solver local installation described above and disable its duplicate Workshop source:
 
 - [CombatSolver](https://steamcommunity.com/sharedfiles/filedetails/?id=3790899961)
 - [HextechRunes](https://steamcommunity.com/sharedfiles/filedetails/?id=3747501308)
@@ -56,9 +56,9 @@ An earlier installed 0.47.3/0.6.3 build completed Steam combat, normal exit, res
 
 **Current candidate:** adapter8ae924 passed68 targeted native checks (29 registered-rune inputs,10 combination boundaries,29 affected shared checks), plus four refusal/manual-continuation guards. A genuine isolated save copy completed combat in five native turns with21card plays and no HP loss (67/70), all11Mods/noLab/Steam off. Ordinary-Steam install, startup, normal exit/restart and resume preserve the original save and unclaimed rewards.
 
-The current full release matrix has **171 of234 inputs strictly verified**. This count is separate from the68 targeted checks; overlapping inputs are not added into a single total. The remaining matrix inputs are unverified. Visible games were closed on the user's request; the fresh run's first battle and saved reward checkpoint do not establish full-run completion.
+The current full release matrix has **234 of234 inputs strictly verified**. This count is separate from the68 targeted checks; overlapping inputs are not added into a single total. The complete reviewed mechanism matrix has passed. Visible games were closed on the user's request; the fresh run's first battle and saved reward checkpoint do not establish full-run completion.
 
-**Release validation pending:** the remaining current-build matrix, a fresh complete single-player run and Windows testing. This is a pinned-version macOS preview, not Windows acceptance. The exact supported versions and public native assertions are linked above and in the testing report. Failed inputs and subsequent corrections are retained in the testing report.
+**Release validation pending:** a fresh complete single-player run and Windows testing. This is a pinned-version macOS preview, not Windows acceptance. The exact supported versions and public native assertions are linked above and in the testing report. Failed inputs and subsequent corrections are retained in the testing report.
 
 ### Reporting a problem
 
@@ -81,7 +81,7 @@ HextechSolverCompat 是独立的 **海克斯与战斗求解器兼容 Mod**，让
 
 ### 需要订阅什么、怎么安装
 
-订阅并启用以下四项，然后重新启动游戏：
+启用上述锁定版本的四项，然后重新启动游戏。求解器按顶部说明使用官方0.48.1本地安装，并停用其重复工坊来源：
 
 - [战斗求解器 CombatSolver](https://steamcommunity.com/sharedfiles/filedetails/?id=3790899961)
 - [海克斯 HextechRunes](https://steamcommunity.com/sharedfiles/filedetails/?id=3747501308)
@@ -117,9 +117,9 @@ HextechSolverCompat 是独立的 **海克斯与战斗求解器兼容 Mod**，让
 
 **当前候选：** 8ae924通过68专项原生检查（29登记符文输入、10组合边界、29共享回归），另4项拒绝/手动续玩守卫通过；真实存档独立副本5回合21次出牌无伤67/70，全11Mod/无Lab/Steam关闭。普通Steam安装、启动、正常退出重开及原奖励读档均通过，原角色、牌组、遗物、地图与未领取奖励保持。
 
-当前完整发行矩阵已有 **171/234项严格核验通过**，与68专项分开记录，不将重叠输入累加。其余矩阵输入尚未验完。可见游戏已按用户要求关闭；新局首战及保存的奖励检查点不能代替完整整局验收。
+当前完整发行矩阵已有 **234/234项严格核验通过**，与68专项分开记录，不将重叠输入累加。当前完整机制矩阵已通过。可见游戏已按用户要求关闭；新局首战及保存的奖励检查点不能代替完整整局验收。
 
-**发布验收待完成：** 剩余当前机制矩阵、全新完整单人局及Windows测试。本页是固定版本macOS预览版，不承诺Windows支持；确切版本和公开证据已提供，测试报告保留失败输入与后续修正。
+**发布验收待完成：** 全新完整单人局及Windows测试。本页是固定版本macOS预览版，不承诺Windows支持；确切版本和公开证据已提供，测试报告保留失败输入与后续修正。
 
 ### 怎么反馈问题
 

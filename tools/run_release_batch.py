@@ -22,6 +22,8 @@ def main():
     batches = plan['normalBatches'] + [plan['coldGuards']]
     if args.index < 0 or args.index >= len(batches):
         parser.error('Batch index outside reviewed plan')
+    if not batches[args.index]:
+        parser.error('Empty batch: refusing an implicit run of the entire fixture library')
     journal = PREPARATION / 'native-batches.json'
     state = json.loads(journal.read_text()) if journal.exists() else {'completed': []}
     if args.index in {row['index'] for row in state['completed']}:

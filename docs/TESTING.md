@@ -12,11 +12,20 @@ The11 daily Mods are CombatSolver, HextechRunes, RitsuLib, this adapter, BaseLib
 
 Each native test compares original-callback results against solver branch state, including ordered card instances, powers, relic private fields, HP/resources, RNG, fingerprint and continuation. Fork checks verify parent/sibling isolation. Unknown effects must produce the exact recorded rejection. Two excluded enemy Hexes additionally exercise native manual Strike/EndTurn continuation. A result is accepted only after request identity, input hash, actual process/result, Ready completion, full Mod hashes, all required assertions and process reclamation agree.
 
-Full reviewed matrix: **171/234 strictly verified; remaining checks pending**,98 mechanism families. [Machine-readable receipt and per-input native assertions](../evidence/native-matrix/verification.json); [mechanism-to-fixture mapping](release-matrix.json). Targeted newly registered content:68/68 (29 basic,10 combination/boundary,29 affected shared inputs), plus4 guards. Overlapping inputs are not summed. All371 registered player runes are implemented (333 default-selectable);136 enabled enemy Hexes after the two exclusions. Catalogue counts are code scope, not exhaustive combination testing. [Registered evidence](../evidence/registered/native-verification.json).
+Full reviewed matrix: **234/234 Passed**,98 mechanism families. [Machine-readable receipt and per-input native assertions](../evidence/native-matrix/verification.json); [mechanism-to-fixture mapping](release-matrix.json). Targeted newly registered content:68/68 (29 basic,10 combination/boundary,29 affected shared inputs), plus4 guards. Overlapping inputs are not summed. All371 registered player runes are implemented (333 default-selectable);136 enabled enemy Hexes after the two exclusions. Catalogue counts are code scope, not exhaustive combination testing. [Registered evidence](../evidence/registered/native-verification.json).
 
 ## Reproduction / 复现
 
-Obtain your own game and official pinned dependencies. Do not distribute them. Install .NET9 SDK, copy `local.props.example` to `local.props`, fill the three dependency directories, and point `.work/dotnet/dotnet` at your installed dotnet executable. Build the adapter and Lab with `python3 tools/build.py --lab`; use `python3 tools/prepare_lab.py` to create the verified isolated Mac copy. Retain all11 daily Mods in that copy, plus Lab, matching the input's `expectedLoadedMods`. Never install Lab in daily gameplay.
+Obtain your own game and official pinned dependencies. Do not distribute them. Install .NET9 SDK, copy `local.props.example` to `local.props`, fill the three dependency directories, and point `.work/dotnet/dotnet` at your installed dotnet executable. Restore packages before the build script's `--no-restore` builds:
+
+```sh
+dotnet restore HextechSolverCompat.csproj
+dotnet restore tests/LabMod/HextechCompatLab.csproj
+python3 tools/build.py
+python3 tools/prepare_lab.py
+```
+
+`prepare_lab.py` creates an isolated Mac copy and verifies its independent user directory. It initially copies Workshop dependency folders; these may now be newer than the pinned versions. Before deploying, use its `.local/headless-instances/hextech/paths.json` to locate the isolated `mods` directory. Put the official pinned CombatSolver/HextechRunes/RitsuLib bundles there (preserving loader/runtime/PCK assets), and copy the seven additional pinned Mod folders listed above into that same isolated directory. Rename a bundle's `mod_manifest.json` to its `<id>.json` if that is its only manifest. Each input explicitly lists the required12 Mod IDs/versions; do not weaken that list. This setup requires your own legally obtained copies of those exact versions. Then run `python3 tools/build.py --lab` to deploy only the adapter and test Lab. Never install Lab in daily gameplay.
 
 Run individual source fixtures, for example:
 

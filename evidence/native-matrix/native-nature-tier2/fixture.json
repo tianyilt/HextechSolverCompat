@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "NATIVE-NATURE-TIER2-RELEASE-RITSU065-FULL-MODS-SOLVER0481",
+  "seed": "HEXTECHCOMPAT",
+  "expectedLoadedMods": [
+    "CombatSolver@0.48.1",
+    "HextechRunes@0.9.7",
+    "STS2-RitsuLib@0.6.5",
+    "HextechCompatLab@0.1.0",
+    "HextechSolverCompat@0.1.0",
+    "BaseLib@v3.4.7",
+    "MintySpire2@v1.2.0",
+    "QuickRestart@v2.0.0",
+    "RelicRewardChoices@0.3.9",
+    "ImportVanillaSaves@v0.2.1",
+    "sts2_god_mod@1.7.10",
+    "RandomForeseer@0.13.18"
+  ],
+  "characterId": "SILENT",
+  "encounterId": "FUZZY_WURM_CRAWLER_WEAK",
+  "enemyCurrentHp": 2000,
+  "clearPlayerPiles": true,
+  "cards": [
+    {
+      "cardId": "DEFEND_SILENT",
+      "pile": "Hand",
+      "count": 1
+    }
+  ],
+  "fixedSearchBudget": true,
+  "searchBudgetOverrideMilliseconds": 1000,
+  "timeoutSeconds": 90,
+  "initialEnemyMaxHps": [
+    3000
+  ],
+  "initialEnemyCurrentHps": [
+    2000
+  ],
+  "initialEnemyMoveIds": [
+    "FIRST_ACID_GOOP"
+  ],
+  "initialPlayerEnergy": 3,
+  "initialPlayerHp": 800,
+  "initialPlayerMaxHp": 1000,
+  "clearAllPowers": true,
+  "relics": [],
+  "hextechEnemyHexes": [
+    "NatureIsHealing"
+  ],
+  "hextechExpected": {},
+  "initialPlayerBlock": 0,
+  "hextechEnemyTierFloor": 2,
+  "fixtureNotes": "Original real Godot timer remains running/unpaused and tier interval unchanged. Wait for real tick, actual living roster HP+1, frozen parent/sibling/key/stamp isolation, fresh root changed key/stamp, rejected old controller route and actual fresh advice search, native Defend full snapshot. Wall-clock events are external roots, not turn-count forecasts. Does not yet exercise a timer arriving during native deployment or a long worker search.",
+  "initialPlayerStars": 0,
+  "hextechNativeNatureProbe": true,
+  "hextechNativeNatureInterval": 10,
+  "hextechNativePlaySequence": [
+    {
+      "cardId": "DEFEND_SILENT",
+      "enemy": false,
+      "expectedPlays": 1
+    }
+  ]
+}
