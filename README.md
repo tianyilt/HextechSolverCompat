@@ -2,7 +2,7 @@
 
 **Pinned-version macOS preview / 固定版本 macOS 预览版**
 
-[Download / 下载](https://github.com/tianyilt/HextechSolverCompat/releases/tag/v0.1.0-preview-macos) · [Workshop / 工坊](https://steamcommunity.com/sharedfiles/filedetails/?id=3814083983) · [Draft PR224](https://github.com/Torch1230/CombatSolver/pull/224) · [Publication verification / 发布状态](docs/PUBLICATION.md)
+[Download / 下载](https://github.com/tianyilt/HextechSolverCompat/releases/tag/v0.1.0-preview-macos) · [Workshop / 工坊](https://steamcommunity.com/sharedfiles/filedetails/?id=3814083983) · [PR224（Ready for review）](https://github.com/Torch1230/CombatSolver/pull/224) · [Publication verification / 发布状态](docs/PUBLICATION.md)
 
 **Steam public visibility pending / 工坊公开可见性待确认：** upload, metadata, images and package verified; unauthenticated page currently reports hidden/no permission. / 上传、属性、图片与文件已核对，匿名页面目前仍显示隐藏或无权限。
 

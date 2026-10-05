@@ -33,18 +33,21 @@
     "publicWebVisibility": "Pending: unauthenticated Steam page reports hidden or no permission",
     "publicAvailabilityNotClaimed": true,
     "cause": "Not established: owner UI unavailable. Email confirmation or moderation are possible according to Steam Support; neither is asserted as the actual cause.",
-    "workshopEulaStatusQuery": "InvalidParam; cannot establish agreement status."
+    "workshopEulaStatusQuery": "InvalidParam; cannot establish agreement status.",
+    "ownerUi": "Visible Steam Helper child-process windows found; macOS graphical session is locked, screenshot black; waiting for unlock, no login reset requested."
   },
   "pr": {
     "url": "https://github.com/Torch1230/CombatSolver/pull/224",
-    "status": "Draft",
+    "status": "ReadyForReviewWithValidationGaps",
     "head": "89798a78418e72e5f75b066dce163aea778db3a0",
     "bodyAndTwoImagesVerified": true,
     "rebasedBase": "CombatSolver0.50.0",
     "build": "Passed,0warnings0errors",
     "nativeEvidenceVersion": "0.48.1 historical",
     "performanceAcceptance": "NotPassed",
-    "current050NativeAndPerformance": "Pending"
+    "current050NativeAndPerformance": "Pending",
+    "upstreamTemplateAndIssue171Reviewed": true,
+    "readyStatusAndUpdatedBodyReadBack": true
   },
   "publicBinary": {
     "nativeTestedSha256": "8ae924216c665a6c4e7957cf508e3039f97d5f9ffdfce9be72947d49d4fe7ddf",
@@ -57,5 +60,6 @@
     "Fresh complete run on the final candidate",
     "Newer dependency acceptance",
     "Upstream PR native/performance validation on0.50.0"
-  ]
+  ],
+  "lastStatusUpdate": "2026-10-06"
 }
