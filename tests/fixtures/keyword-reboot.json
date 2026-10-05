@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "REPORT-CARDS-HEXTECH-KEYWORD-REBOOT",
+  "seed": "HEXTECHCOMPAT",
+  "expectedLoadedMods": [
+    "CombatSolver@0.47.3",
+    "HextechRunes@0.9.7",
+    "STS2-RitsuLib@0.6.3",
+    "HextechCompatLab@0.1.0",
+    "HextechSolverCompat@0.1.0"
+  ],
+  "characterId": "DEFECT",
+  "encounterId": "FUZZY_WURM_CRAWLER_WEAK",
+  "enemyCurrentHp": 2000,
+  "clearPlayerPiles": true,
+  "cards": [
+    {
+      "cardId": "REBOOT",
+      "pile": "Hand",
+      "count": 2
+    },
+    {
+      "cardId": "REBOOT",
+      "pile": "Draw",
+      "count": 10
+    }
+  ],
+  "fixedSearchBudget": true,
+  "searchBudgetOverrideMilliseconds": 0,
+  "timeoutSeconds": 60,
+  "initialEnemyMaxHps": [
+    2000
+  ],
+  "initialEnemyCurrentHps": [
+    1600
+  ],
+  "initialEnemyMoveIds": [
+    "FIRST_ACID_GOOP"
+  ],
+  "initialPlayerEnergy": 20,
+  "initialPlayerHp": 70,
+  "initialPlayerMaxHp": 100,
+  "clearAllPowers": true,
+  "relics": [
+    {
+      "relicId": "REBOOT_UPGRADE_RUNE",
+      "addWithoutObtainedEffects": true
+    }
+  ],
+  "hextechEnemyHexes": [],
+  "hextechExpected": {
+    "exhaustCount": 0
+  },
+  "initialEnemyBlocks": [
+    0
+  ],
+  "hextechNativeTokenForkProbe": true,
+  "hextechNativeTokenActualProbe": true,
+  "hextechNativePlayEnemy": false,
+  "hextechNativePlaySequence": [
+    {
+      "cardId": "REBOOT",
+      "enemy": false
+    },
+    {
+      "cardId": "REBOOT",
+      "enemy": false
+    }
+  ],
+  "fixtureNotes": "Original keyword removes Exhaust; two real Reboots shuffle/draw four and return to discard with full native RNG/pile snapshots. Native next rounds compare unchanged keyword semantics.",
+  "initialPlayerBlock": 0,
+  "hextechNativeRoundsAfterPlay": 2
+}

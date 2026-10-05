@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "REPORT-CARDS-HEXTECH-GENERATION-REACTIONS-REGENT-STACK",
+  "seed": "HEXTECHCOMPAT",
+  "expectedLoadedMods": [
+    "CombatSolver@0.47.3",
+    "HextechRunes@0.9.7",
+    "STS2-RitsuLib@0.6.3",
+    "HextechCompatLab@0.1.0",
+    "HextechSolverCompat@0.1.0"
+  ],
+  "characterId": "REGENT",
+  "encounterId": "FUZZY_WURM_CRAWLER_WEAK",
+  "enemyCurrentHp": 200,
+  "clearPlayerPiles": true,
+  "cards": [
+    {
+      "cardId": "DEFEND_REGENT",
+      "pile": "Draw",
+      "count": 12
+    }
+  ],
+  "fixedSearchBudget": true,
+  "searchBudgetOverrideMilliseconds": 0,
+  "timeoutSeconds": 75,
+  "initialEnemyMaxHps": [
+    200
+  ],
+  "initialEnemyCurrentHps": [
+    180
+  ],
+  "initialEnemyMoveIds": [
+    "FIRST_ACID_GOOP"
+  ],
+  "initialPlayerEnergy": 20,
+  "initialPlayerHp": 800,
+  "initialPlayerMaxHp": 1000,
+  "clearAllPowers": true,
+  "relics": [
+    {
+      "relicId": "CONDENSED_RADIANCE_RUNE",
+      "addWithoutObtainedEffects": true
+    },
+    {
+      "relicId": "ECHO_RUNE",
+      "addWithoutObtainedEffects": true
+    },
+    {
+      "relicId": "MANIPULATE_REALITY_RUNE",
+      "addWithoutObtainedEffects": true
+    }
+  ],
+  "hextechEnemyHexes": [],
+  "hextechExpected": {},
+  "initialEnemyBlocks": [
+    0
+  ],
+  "initialPlayerStars": 20,
+  "fixtureNotes": "Native generation in Hand/Draw/Discard, creator-null contrast, upgrade-before/after clone ordering, Echo raw-add has no recursive generated stars, full fork/dead-owner freeze, two rounds and actual next-turn card. Original listener order Echo then ManipulateReality: clone is made before the original card upgrades, so one upgraded original per step, not two.",
+  "hextechGeneratedReactionRounds": 2,
+  "hextechGeneratedReactionPlayDefend": true,
+  "hextechGeneratedReactionSteps": [
+    {
+      "cardId": "SHIV",
+      "pile": "Hand",
+      "creator": "Player",
+      "checkCardId": "SHIV",
+      "expectedCardCount": 2,
+      "expectedUpgradedCount": 1,
+      "expectedEtherealCount": 1,
+      "expectedStarsDelta": 1
+    },
+    {
+      "cardId": "SHIV",
+      "pile": "Draw",
+      "creator": "Player",
+      "checkCardId": "SHIV",
+      "expectedCardCount": 4,
+      "expectedUpgradedCount": 2,
+      "expectedEtherealCount": 2,
+      "expectedStarsDelta": 2
+    },
+    {
+      "cardId": "SHIV",
+      "pile": "Discard",
+      "creator": "None",
+      "checkCardId": "SHIV",
+      "expectedCardCount": 5,
+      "expectedUpgradedCount": 3,
+      "expectedEtherealCount": 2,
+      "expectedStarsDelta": 2
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "REPORT-CARDS-HEXTECH-NATIVE-EVENTS-POWER-COPY-STOCK",
+  "seed": "HEXTECHCOMPAT",
+  "expectedLoadedMods": [
+    "CombatSolver@0.47.3",
+    "HextechRunes@0.9.7",
+    "STS2-RitsuLib@0.6.3",
+    "HextechCompatLab@0.1.0",
+    "HextechSolverCompat@0.1.0"
+  ],
+  "characterId": "IRONCLAD",
+  "encounterId": "FUZZY_WURM_CRAWLER_WEAK",
+  "enemyCurrentHp": 2000,
+  "clearPlayerPiles": true,
+  "cards": [
+    {
+      "cardId": "DEMON_FORM",
+      "pile": "Hand",
+      "count": 2
+    },
+    {
+      "cardId": "DEFEND_IRONCLAD",
+      "pile": "Draw",
+      "count": 12
+    }
+  ],
+  "fixedSearchBudget": true,
+  "searchBudgetOverrideMilliseconds": 0,
+  "timeoutSeconds": 60,
+  "initialEnemyMaxHps": [
+    2000
+  ],
+  "initialEnemyCurrentHps": [
+    1600
+  ],
+  "initialEnemyMoveIds": [
+    "FIRST_ACID_GOOP"
+  ],
+  "initialPlayerEnergy": 20,
+  "initialPlayerHp": 800,
+  "initialPlayerMaxHp": 1000,
+  "clearAllPowers": true,
+  "relics": [],
+  "hextechEnemyHexes": [],
+  "hextechExpected": {},
+  "initialEnemyBlocks": [
+    0
+  ],
+  "hextechNativeTokenForkProbe": true,
+  "hextechNativeTokenActualProbe": true,
+  "hextechNativePlayEnemy": false,
+  "initialPlayerStars": 20,
+  "hextechNativePlaySequence": [
+    {
+      "cardId": "DEMON_FORM",
+      "enemy": false,
+      "expectedPlays": 1
+    },
+    {
+      "cardId": "DEMON_FORM",
+      "enemy": false,
+      "expectedPlays": 1
+    }
+  ],
+  "fixtureNotes": "Native combat clone after played Power finally leaves Play to None; raw discard insertion has no generated callback recursion; native clone reset differs from CreateClone. Two actual rounds and next-turn card.",
+  "hextechNativeRoundsAfterPlay": 2,
+  "hextechNativePlaySequenceAfterRounds": [
+    {
+      "cardId": "DEFEND_IRONCLAD",
+      "enemy": false,
+      "expectedPlays": 1
+    }
+  ],
+  "hextechNativeEventContractProbe": true,
+  "hextechNativeExpectedAfterSequence": {
+    "discardCount": 0,
+    "power:DEMON_FORM_POWER": 6
+  }
+}

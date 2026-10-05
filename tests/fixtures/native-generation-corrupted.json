@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "REPORT-CARDS-HEXTECH-NATIVE-GENERATION-CORRUPTED",
+  "seed": "HEXTECHCOMPAT",
+  "expectedLoadedMods": [
+    "CombatSolver@0.47.3",
+    "HextechRunes@0.9.7",
+    "STS2-RitsuLib@0.6.3",
+    "HextechCompatLab@0.1.0",
+    "HextechSolverCompat@0.1.0"
+  ],
+  "characterId": "NECROBINDER",
+  "encounterId": "FUZZY_WURM_CRAWLER_WEAK",
+  "enemyCurrentHp": 200,
+  "clearPlayerPiles": true,
+  "cards": [
+    {
+      "cardId": "CORRUPTION",
+      "pile": "Hand"
+    },
+    {
+      "cardId": "DEFEND_NECROBINDER",
+      "pile": "Hand",
+      "count": 2
+    }
+  ],
+  "fixedSearchBudget": true,
+  "searchBudgetOverrideMilliseconds": 0,
+  "timeoutSeconds": 60,
+  "initialEnemyMaxHps": [
+    200
+  ],
+  "initialEnemyCurrentHps": [
+    130
+  ],
+  "initialEnemyMoveIds": [
+    "FIRST_ACID_GOOP"
+  ],
+  "initialPlayerEnergy": 20,
+  "initialPlayerHp": 70,
+  "initialPlayerMaxHp": 100,
+  "clearAllPowers": true,
+  "relics": [
+    {
+      "relicId": "CORRUPTED_BRANCH_RUNE",
+      "addWithoutObtainedEffects": true
+    }
+  ],
+  "hextechEnemyHexes": [],
+  "hextechExpected": {},
+  "initialEnemyBlocks": [
+    0
+  ],
+  "hextechNativeTokenForkProbe": true,
+  "hextechNativeTokenActualProbe": true,
+  "hextechNativePlayEnemy": false,
+  "initialPlayerStars": 20,
+  "hextechNativePlaySequence": [
+    {
+      "cardId": "CORRUPTION",
+      "enemy": false,
+      "expectedPlays": 1
+    },
+    {
+      "cardId": "DEFEND_NECROBINDER",
+      "enemy": false,
+      "expectedPlays": 1
+    },
+    {
+      "cardId": "DEFEND_NECROBINDER",
+      "enemy": false,
+      "expectedPlays": 1
+    }
+  ],
+  "hextechNativeScalarProbe": {
+    "relicId": "CORRUPTED_BRANCH_RUNE",
+    "field": "_generatedCardsThisCombat"
+  },
+  "fixtureNotes": "Original native weighted selection, two successive exhaust proc ordinals, branch isolation and full native hand/pile/power/RNG snapshots; character unlock pool captured at root."
+}

@@ -1,0 +1,14 @@
+{
+  "id": "HextechCompatLab",
+  "name": "Hextech compatibility fixtures (isolated tests only)",
+  "author": "Local development",
+  "version": "0.1.0",
+  "has_dll": true,
+  "has_pck": false,
+  "affects_gameplay": true,
+  "min_game_version": "0.111.0",
+  "dependencies": [
+    {"id": "HextechRunes", "min_version": "0.9.6"},
+    {"id": "CombatSolver", "min_version": "0.47.1"}
+  ]
+}

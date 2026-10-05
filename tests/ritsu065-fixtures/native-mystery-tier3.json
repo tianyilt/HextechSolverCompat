@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "NATIVE-MYSTERY-TIER3-FULL-MOD-MIX-RITSU065-SOLVER0481",
+  "seed": "HEXTECHCOMPAT",
+  "expectedLoadedMods": [
+    "CombatSolver@0.48.1",
+    "HextechRunes@0.9.7",
+    "STS2-RitsuLib@0.6.5",
+    "HextechCompatLab@0.1.0",
+    "HextechSolverCompat@0.1.0",
+    "BaseLib@v3.4.7",
+    "MintySpire2@v1.2.0",
+    "QuickRestart@v2.0.0",
+    "RelicRewardChoices@0.3.9",
+    "ImportVanillaSaves@v0.2.1",
+    "sts2_god_mod@1.7.10",
+    "RandomForeseer@0.13.18"
+  ],
+  "characterId": "SILENT",
+  "encounterId": "FUZZY_WURM_CRAWLER_WEAK",
+  "enemyCurrentHp": 2000,
+  "clearPlayerPiles": true,
+  "cards": [
+    {
+      "cardId": "ACROBATICS",
+      "pile": "Draw",
+      "count": 1,
+      "upgradeLevels": 1
+    },
+    {
+      "cardId": "BACKFLIP",
+      "pile": "Draw",
+      "count": 1,
+      "upgradeLevels": 1
+    },
+    {
+      "cardId": "SURVIVOR",
+      "pile": "Draw",
+      "count": 1,
+      "upgradeLevels": 1
+    },
+    {
+      "cardId": "STRIKE_SILENT",
+      "pile": "Hand",
+      "count": 1
+    },
+    {
+      "cardId": "DEFEND_SILENT",
+      "pile": "Draw",
+      "count": 30
+    }
+  ],
+  "fixedSearchBudget": true,
+  "searchBudgetOverrideMilliseconds": 0,
+  "timeoutSeconds": 60,
+  "initialEnemyMaxHps": [
+    3000
+  ],
+  "initialEnemyCurrentHps": [
+    2000
+  ],
+  "initialEnemyMoveIds": [
+    "FIRST_ACID_GOOP"
+  ],
+  "initialPlayerEnergy": 20,
+  "initialPlayerHp": 800,
+  "initialPlayerMaxHp": 1000,
+  "clearAllPowers": true,
+  "relics": [],
+  "hextechEnemyHexes": [
+    "Mystery"
+  ],
+  "hextechExpected": {},
+  "initialPlayerBlock": 0,
+  "hextechEnemyTierFloor": 3,
+  "fixtureNotes": "Source32/32 original Mystery/transform helper; exact chosen-card and replacement order, upgraded cards, frozen canonical unlock pools/seed, branch global-proc counters, count2/4/6 or actual candidate clamp, Exhaust excluded, full snapshots/key/stamp/fork/live isolation and two native future rounds. Only test opening proc re-armed after fixture pile reconstruction; original opening callback remains. Same eleven original daily Mods plus test-only Lab, isolated native host; root contents explicitly injected by fixture; user saves unaffected.",
+  "hextechNativeMysteryProbe": true,
+  "hextechNativeMysteryExpectedCount": 6
+}

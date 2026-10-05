@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "REPORT-CARDS-HEXTECH-NATIVE-WHIRLWIND-X-2",
+  "seed": "HEXTECHCOMPAT",
+  "expectedLoadedMods": [
+    "CombatSolver@0.47.3",
+    "HextechRunes@0.9.7",
+    "STS2-RitsuLib@0.6.3",
+    "HextechCompatLab@0.1.0",
+    "HextechSolverCompat@0.1.0"
+  ],
+  "characterId": "IRONCLAD",
+  "encounterId": "FUZZY_WURM_CRAWLER_WEAK",
+  "enemyCurrentHp": 2000,
+  "clearPlayerPiles": true,
+  "cards": [
+    {
+      "cardId": "WHIRLWIND",
+      "pile": "Hand",
+      "count": 1
+    },
+    {
+      "cardId": "DEFEND_IRONCLAD",
+      "pile": "Draw",
+      "count": 40
+    }
+  ],
+  "fixedSearchBudget": true,
+  "searchBudgetOverrideMilliseconds": 0,
+  "timeoutSeconds": 60,
+  "initialEnemyMaxHps": [
+    2000
+  ],
+  "initialEnemyCurrentHps": [
+    1600
+  ],
+  "initialEnemyMoveIds": [
+    "INHALE"
+  ],
+  "initialPlayerEnergy": 2,
+  "initialPlayerHp": 800,
+  "initialPlayerMaxHp": 1000,
+  "clearAllPowers": true,
+  "relics": [
+    {
+      "relicId": "WHIRLWIND_UPGRADE_RUNE",
+      "addWithoutObtainedEffects": true
+    }
+  ],
+  "hextechEnemyHexes": [],
+  "hextechExpected": {},
+  "initialEnemyBlocks": [
+    0
+  ],
+  "hextechNativeTokenForkProbe": true,
+  "hextechNativeTokenActualProbe": true,
+  "hextechNativePlayEnemy": false,
+  "initialPlayerStars": 20,
+  "hextechNativePlaySequence": [
+    {
+      "cardId": "WHIRLWIND",
+      "enemy": false,
+      "expectedPlays": 1
+    }
+  ],
+  "fixtureNotes": "Original 0.9.7 upgraded callbacks, precise native and SDK composition guard. Full play/turn snapshots with key/stamp/RNG/fork isolation.",
+  "hextechNativeRoundsAfterPlay": 1,
+  "powers": [],
+  "hextechNativeExpectedAfterSequence": {
+    "enemyHp": 1590
+  },
+  "hextechNativeEndTurnOnlyRounds": true,
+  "initialPlayerBlock": 0
+}

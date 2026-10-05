@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "REPORT-CARDS-HEXTECH-MORE-THE-MERRIER",
+  "seed": "HEXTECHCOMPAT",
+  "expectedLoadedMods": [
+    "CombatSolver@0.47.3",
+    "HextechRunes@0.9.7",
+    "STS2-RitsuLib@0.6.3",
+    "HextechCompatLab@0.1.0",
+    "HextechSolverCompat@0.1.0"
+  ],
+  "characterId": "IRONCLAD",
+  "encounterId": "FUZZY_WURM_CRAWLER_WEAK",
+  "enemyCurrentHp": 200,
+  "clearPlayerPiles": true,
+  "cards": [
+    {
+      "cardId": "STRIKE_IRONCLAD",
+      "pile": "Hand",
+      "dynamicVars": {
+        "Damage": 100
+      }
+    },
+    {
+      "cardId": "DEFEND_IRONCLAD",
+      "pile": "Hand",
+      "dynamicVars": {
+        "Block": 50
+      }
+    },
+    {
+      "cardId": "NOT_YET",
+      "pile": "Hand",
+      "dynamicVars": {
+        "Heal": 50
+      }
+    }
+  ],
+  "fixedSearchBudget": true,
+  "searchBudgetOverrideMilliseconds": 0,
+  "timeoutSeconds": 60,
+  "initialEnemyMaxHps": [
+    200
+  ],
+  "initialEnemyCurrentHps": [
+    130
+  ],
+  "initialEnemyMoveIds": [
+    "FIRST_ACID_GOOP"
+  ],
+  "initialPlayerEnergy": 20,
+  "initialPlayerHp": 10,
+  "initialPlayerMaxHp": 100,
+  "clearAllPowers": true,
+  "relics": [
+    {
+      "relicId": "MORE_THE_MERRIER_RUNE"
+    }
+  ],
+  "hextechEnemyHexes": [],
+  "hextechExpected": {
+    "playerHp": 61,
+    "playerBlock": 51,
+    "enemyHp": 27
+  }
+}

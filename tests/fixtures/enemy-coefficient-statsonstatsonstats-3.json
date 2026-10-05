@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "REPORT-ROUND-HEXTECH-ENEMY-COEFFICIENT-STATSONSTATSONSTATS-3",
+  "seed": "HEXTECHCOMPAT",
+  "expectedLoadedMods": [
+    "CombatSolver@0.47.3",
+    "HextechRunes@0.9.7",
+    "STS2-RitsuLib@0.6.3",
+    "HextechCompatLab@0.1.0",
+    "HextechSolverCompat@0.1.0"
+  ],
+  "characterId": "IRONCLAD",
+  "encounterId": "FUZZY_WURM_CRAWLER_WEAK",
+  "enemyCurrentHp": 200,
+  "clearPlayerPiles": true,
+  "cards": [
+    {
+      "cardId": "STRIKE_IRONCLAD",
+      "pile": "Hand",
+      "count": 1
+    },
+    {
+      "cardId": "DEFEND_IRONCLAD",
+      "pile": "Draw",
+      "count": 6
+    }
+  ],
+  "fixedSearchBudget": true,
+  "searchBudgetOverrideMilliseconds": 0,
+  "timeoutSeconds": 60,
+  "initialEnemyMaxHps": [
+    200
+  ],
+  "initialEnemyCurrentHps": [
+    70
+  ],
+  "initialEnemyMoveIds": [
+    "FIRST_ACID_GOOP"
+  ],
+  "initialPlayerEnergy": 20,
+  "initialPlayerHp": 400,
+  "initialPlayerMaxHp": 500,
+  "clearAllPowers": true,
+  "hextechEnemyHexes": [
+    "StatsOnStatsOnStats"
+  ],
+  "initialEnemyBlocks": [
+    0
+  ],
+  "initialPlayerBlock": 0,
+  "hextechEnemyCoefficientProbe": true,
+  "relics": [],
+  "hextechEnemyTierFloor": 3,
+  "hextechExpected": {
+    "playerHp": 374,
+    "enemyHp": 96,
+    "enemyBlock": 26
+  }
+}

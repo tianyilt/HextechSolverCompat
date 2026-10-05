@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "HEXTECH-CORRUPTED-NEUROSURGE-SEARCH",
+  "seed": "0F0PWTSN14FP",
+  "expectedLoadedMods": [
+    "CombatSolver@0.47.3",
+    "HextechRunes@0.9.7",
+    "STS2-RitsuLib@0.6.3",
+    "HextechCompatLab@0.1.0",
+    "HextechSolverCompat@0.1.0"
+  ],
+  "characterId": "NECROBINDER",
+  "encounterId": "FUZZY_WURM_CRAWLER_WEAK",
+  "enemyCurrentHp": 200,
+  "clearPlayerPiles": true,
+  "cards": [
+    {
+      "cardId": "CORRUPTION",
+      "pile": "Hand",
+      "upgradeLevels": 1
+    },
+    {
+      "cardId": "DEFEND_NECROBINDER",
+      "pile": "Hand"
+    },
+    {
+      "cardId": "STRIKE_NECROBINDER",
+      "pile": "Hand"
+    },
+    {
+      "cardId": "NEUROSURGE",
+      "pile": "Hand"
+    },
+    {
+      "cardId": "SCOURGE",
+      "pile": "Draw",
+      "count": 2
+    },
+    {
+      "cardId": "DEFEND_NECROBINDER",
+      "pile": "Draw",
+      "count": 8
+    }
+  ],
+  "fixedSearchBudget": true,
+  "searchBudgetOverrideMilliseconds": 2500,
+  "timeoutSeconds": 60,
+  "initialEnemyMaxHps": [
+    200
+  ],
+  "initialEnemyCurrentHps": [
+    130
+  ],
+  "initialEnemyMoveIds": [
+    "FIRST_ACID_GOOP"
+  ],
+  "initialPlayerEnergy": 3,
+  "initialPlayerHp": 70,
+  "initialPlayerMaxHp": 100,
+  "clearAllPowers": true,
+  "relics": [
+    {
+      "relicId": "CORRUPTED_BRANCH_RUNE",
+      "addWithoutObtainedEffects": true
+    }
+  ],
+  "hextechEnemyHexes": [
+    "AncientStatue"
+  ],
+  "hextechExpected": {},
+  "initialEnemyBlocks": [
+    0
+  ],
+  "hextechNativePlayEnemy": false,
+  "initialPlayerStars": 20,
+  "fixtureNotes": "Visible-game failure reproduction: original CorruptedBranch with AncientStatue, generated Neurosurge and draw/exhaust chain; run actual beam search rather than only prescribed manual transitions.",
+  "hextechEnemyTierFloor": 1,
+  "stopAfterInitialSolverResultAssertion": true,
+  "verifyIncrementalSearch": true,
+  "expectedInitialUnmirroredCount": 0
+}

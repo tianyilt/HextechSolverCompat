@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "REPORT-CARDS-HEXTECH-NATIVE-BEFORE-DRAW-SNAKE-REPEAT",
+  "seed": "HEXTECHCOMPAT",
+  "expectedLoadedMods": [
+    "CombatSolver@0.47.3",
+    "HextechRunes@0.9.7",
+    "STS2-RitsuLib@0.6.3",
+    "HextechCompatLab@0.1.0",
+    "HextechSolverCompat@0.1.0"
+  ],
+  "characterId": "SILENT",
+  "encounterId": "FUZZY_WURM_CRAWLER_WEAK",
+  "enemyCurrentHp": 2000,
+  "clearPlayerPiles": true,
+  "cards": [
+    {
+      "cardId": "DEFEND_SILENT",
+      "pile": "Hand"
+    },
+    {
+      "cardId": "DEFEND_SILENT",
+      "pile": "Draw",
+      "count": 30
+    }
+  ],
+  "fixedSearchBudget": true,
+  "searchBudgetOverrideMilliseconds": 0,
+  "timeoutSeconds": 60,
+  "initialEnemyMaxHps": [
+    2000
+  ],
+  "initialEnemyCurrentHps": [
+    1600
+  ],
+  "initialEnemyMoveIds": [
+    "FIRST_ACID_GOOP"
+  ],
+  "initialPlayerEnergy": 20,
+  "initialPlayerHp": 800,
+  "initialPlayerMaxHp": 1000,
+  "clearAllPowers": true,
+  "relics": [
+    {
+      "relicId": "SNAKEBITE_RUNE",
+      "addWithoutObtainedEffects": true
+    }
+  ],
+  "hextechEnemyHexes": [],
+  "hextechExpected": {},
+  "initialEnemyBlocks": [
+    0
+  ],
+  "initialPlayerStars": 20,
+  "fixtureNotes": "Original Snakebite first-round generation and once-per-round guard. First case invokes native BeforeCombatStart reset before capturing root; repeat preserves original native combat entry including its already-generated first card; later verifies no second-round generation.",
+  "initialPlayerBlock": 0,
+  "hextechNativeBeforeHandDrawProbe": {
+    "generated": 0,
+    "movedFromDraw": 0,
+    "rounds": 2,
+    "resetSnakeFirstTurn": false
+  },
+  "preserveNativeCombatStateForTest": true
+}

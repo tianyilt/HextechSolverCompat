@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "REPORT-CARDS-HEXTECH-NATIVE-NATIVE-REPLAY-TRICK",
+  "seed": "HEXTECHCOMPAT",
+  "expectedLoadedMods": [
+    "CombatSolver@0.47.3",
+    "HextechRunes@0.9.7",
+    "STS2-RitsuLib@0.6.3",
+    "HextechCompatLab@0.1.0",
+    "HextechSolverCompat@0.1.0"
+  ],
+  "characterId": "SILENT",
+  "encounterId": "FUZZY_WURM_CRAWLER_WEAK",
+  "enemyCurrentHp": 2000,
+  "clearPlayerPiles": true,
+  "cards": [
+    {
+      "cardId": "TRICK_MAGIC_CARD",
+      "pile": "Hand",
+      "count": 1,
+      "upgradeLevels": 0
+    },
+    {
+      "cardId": "DEFEND_SILENT",
+      "pile": "Hand",
+      "count": 1,
+      "upgradeLevels": 0
+    },
+    {
+      "cardId": "STRIKE_SILENT",
+      "pile": "Hand",
+      "count": 2,
+      "upgradeLevels": 0
+    },
+    {
+      "cardId": "DEFEND_SILENT",
+      "pile": "Draw",
+      "count": 40,
+      "upgradeLevels": 0
+    }
+  ],
+  "fixedSearchBudget": true,
+  "searchBudgetOverrideMilliseconds": 0,
+  "timeoutSeconds": 60,
+  "initialEnemyMaxHps": [
+    2000
+  ],
+  "initialEnemyCurrentHps": [
+    1600
+  ],
+  "initialEnemyMoveIds": [
+    "INHALE"
+  ],
+  "initialPlayerEnergy": 30,
+  "initialPlayerHp": 800,
+  "initialPlayerMaxHp": 1000,
+  "clearAllPowers": true,
+  "relics": [],
+  "hextechEnemyHexes": [],
+  "hextechExpected": {},
+  "initialEnemyBlocks": [
+    0
+  ],
+  "hextechNativeTokenForkProbe": true,
+  "hextechNativeTokenActualProbe": true,
+  "hextechNativePlayEnemy": false,
+  "initialPlayerStars": 20,
+  "hextechNativePlaySequence": [
+    {
+      "cardId": "TRICK_MAGIC_CARD",
+      "enemy": false,
+      "expectedPlays": 1
+    },
+    {
+      "cardId": "DEFEND_SILENT",
+      "enemy": false,
+      "expectedPlays": 1
+    },
+    {
+      "cardId": "STRIKE_SILENT",
+      "enemy": true,
+      "expectedPlays": 2
+    },
+    {
+      "cardId": "STRIKE_SILENT",
+      "enemy": true,
+      "expectedPlays": 1
+    }
+  ],
+  "fixtureNotes": "Original pinned Burn/Replay/Infernal/Tormentor callbacks. Full actual-native vs branch snapshots after each play/round, original replay count assertions, root/fork/sibling/live/RNG isolation; not final release acceptance.",
+  "hextechNativeRoundsAfterPlay": 1,
+  "powers": [],
+  "hextechNativeExpectedAfterSequence": {
+    "power:HEXTECH_ATTACK_REPLAY_POWER": 0,
+    "power:BUFFER_POWER": 1,
+    "enemyHp": 1582,
+    "exhaustCount": 1
+  },
+  "hextechNativeExpectedAfterRounds": {}
+}

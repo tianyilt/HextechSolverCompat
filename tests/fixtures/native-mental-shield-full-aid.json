@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "REPORT-CARDS-HEXTECH-NATIVE-MENTAL-SHIELD-FULL-AID",
+  "seed": "HEXTECHCOMPAT",
+  "expectedLoadedMods": [
+    "CombatSolver@0.47.3",
+    "HextechRunes@0.9.7",
+    "STS2-RitsuLib@0.6.3",
+    "HextechCompatLab@0.1.0",
+    "HextechSolverCompat@0.1.0"
+  ],
+  "characterId": "IRONCLAD",
+  "encounterId": "FUZZY_WURM_CRAWLER_WEAK",
+  "enemyCurrentHp": 2000,
+  "clearPlayerPiles": true,
+  "cards": [
+    {
+      "cardId": "DEFEND_IRONCLAD",
+      "pile": "Hand",
+      "count": 10
+    },
+    {
+      "cardId": "DEFEND_IRONCLAD",
+      "pile": "Draw",
+      "count": 12
+    }
+  ],
+  "fixedSearchBudget": true,
+  "searchBudgetOverrideMilliseconds": 0,
+  "timeoutSeconds": 60,
+  "initialEnemyMaxHps": [
+    2000
+  ],
+  "initialEnemyCurrentHps": [
+    1600
+  ],
+  "initialEnemyMoveIds": [
+    "FIRST_ACID_GOOP"
+  ],
+  "initialPlayerEnergy": 20,
+  "initialPlayerHp": 800,
+  "initialPlayerMaxHp": 1000,
+  "clearAllPowers": true,
+  "relics": [
+    {
+      "relicId": "MENTAL_SHIELD_RUNE",
+      "addWithoutObtainedEffects": true
+    },
+    {
+      "relicId": "FIRST_AID_KIT_RUNE",
+      "addWithoutObtainedEffects": true
+    }
+  ],
+  "hextechEnemyHexes": [],
+  "hextechExpected": {},
+  "initialEnemyBlocks": [
+    0
+  ],
+  "hextechNativeTokenForkProbe": true,
+  "hextechNativeTokenActualProbe": true,
+  "hextechNativePlayEnemy": false,
+  "initialPlayerStars": 20,
+  "hextechNativePlaySequence": [
+    {
+      "cardId": "DEFEND_IRONCLAD",
+      "enemy": false,
+      "expectedPlays": 1
+    }
+  ],
+  "fixtureNotes": "Original native BeforeSideTurnEnd versus registered branch mirror, wrong-side guard, remaining-hand boundary, FirstAid multiplication/flooring; full real rounds afterward.",
+  "hextechNativeRoundsAfterPlay": 2,
+  "hextechNativePlaySequenceAfterRounds": [
+    {
+      "cardId": "DEFEND_IRONCLAD",
+      "enemy": false,
+      "expectedPlays": 1
+    }
+  ],
+  "initialPlayerBlock": 0,
+  "hextechNativeMentalShieldProbe": 22
+}

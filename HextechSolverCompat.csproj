@@ -1,0 +1,8 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>HextechSolverCompat</AssemblyName>
+    <Version>0.1.0</Version>
+    <EnableDefaultItems>false</EnableDefaultItems>
+  </PropertyGroup>
+  <ItemGroup><Compile Include="src/**/*.cs" /></ItemGroup>
+</Project>

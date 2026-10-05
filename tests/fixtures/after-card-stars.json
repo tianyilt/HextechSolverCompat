@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "REPORT-CARDS-HEXTECH-AFTER-CARD-STARS",
+  "seed": "HEXTECHCOMPAT",
+  "expectedLoadedMods": [
+    "CombatSolver@0.47.3",
+    "HextechRunes@0.9.7",
+    "STS2-RitsuLib@0.6.3",
+    "HextechCompatLab@0.1.0",
+    "HextechSolverCompat@0.1.0"
+  ],
+  "characterId": "REGENT",
+  "encounterId": "FUZZY_WURM_CRAWLER_WEAK",
+  "enemyCurrentHp": 2000,
+  "clearPlayerPiles": true,
+  "cards": [
+    {
+      "cardId": "VENERATE",
+      "pile": "Hand",
+      "count": 2
+    }
+  ],
+  "fixedSearchBudget": true,
+  "searchBudgetOverrideMilliseconds": 0,
+  "timeoutSeconds": 60,
+  "initialEnemyMaxHps": [
+    2000
+  ],
+  "initialEnemyCurrentHps": [
+    1600
+  ],
+  "initialEnemyMoveIds": [
+    "FIRST_ACID_GOOP"
+  ],
+  "initialPlayerEnergy": 20,
+  "initialPlayerHp": 70,
+  "initialPlayerMaxHp": 100,
+  "clearAllPowers": true,
+  "relics": [
+    {
+      "relicId": "VENERATE_UPGRADE_RUNE",
+      "addWithoutObtainedEffects": true
+    }
+  ],
+  "hextechEnemyHexes": [],
+  "hextechExpected": {
+    "stars": 24
+  },
+  "initialEnemyBlocks": [
+    0
+  ],
+  "hextechNativeTokenForkProbe": true,
+  "hextechNativeTokenActualProbe": true,
+  "hextechNativePlayEnemy": false,
+  "initialPlayerStars": 3,
+  "hextechNativePlaySequence": [
+    {
+      "cardId": "VENERATE",
+      "enemy": false,
+      "expectedPlays": 1
+    },
+    {
+      "cardId": "VENERATE",
+      "enemy": false,
+      "expectedPlays": 1
+    }
+  ],
+  "fixtureNotes": "Native Venerate gives two stars then upgrade doubles current stars; initial3 ->10 ->24. Branch star queries cannot read original live stars."
+}

@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "REPORT-CARDS-HEXTECH-NATIVE-OPENING-SERVANT-STACK",
+  "seed": "HEXTECHCOMPAT",
+  "expectedLoadedMods": [
+    "CombatSolver@0.47.3",
+    "HextechRunes@0.9.7",
+    "STS2-RitsuLib@0.6.3",
+    "HextechCompatLab@0.1.0",
+    "HextechSolverCompat@0.1.0"
+  ],
+  "characterId": "NECROBINDER",
+  "encounterId": "FUZZY_WURM_CRAWLER_WEAK",
+  "enemyCurrentHp": 2000,
+  "clearPlayerPiles": true,
+  "cards": [
+    {
+      "cardId": "STRIKE_NECROBINDER",
+      "pile": "Hand"
+    },
+    {
+      "cardId": "DEFEND_NECROBINDER",
+      "pile": "Draw",
+      "count": 40
+    }
+  ],
+  "fixedSearchBudget": true,
+  "searchBudgetOverrideMilliseconds": 0,
+  "timeoutSeconds": 60,
+  "initialEnemyMaxHps": [
+    2000
+  ],
+  "initialEnemyCurrentHps": [
+    1600
+  ],
+  "initialEnemyMoveIds": [
+    "INHALE"
+  ],
+  "initialPlayerEnergy": 30,
+  "initialPlayerHp": 800,
+  "initialPlayerMaxHp": 1000,
+  "clearAllPowers": true,
+  "relics": [
+    {
+      "relicId": "BIG_HANDS_RUNE",
+      "addWithoutObtainedEffects": true
+    },
+    {
+      "relicId": "DRAIN_RUNE",
+      "addWithoutObtainedEffects": true
+    },
+    {
+      "relicId": "BONE_GUARD_RUNE",
+      "addWithoutObtainedEffects": true
+    },
+    {
+      "relicId": "PLASTER_RUNE",
+      "addWithoutObtainedEffects": true
+    }
+  ],
+  "hextechEnemyHexes": [],
+  "hextechExpected": {},
+  "initialEnemyBlocks": [
+    0
+  ],
+  "hextechNativeTokenForkProbe": true,
+  "hextechNativeTokenActualProbe": true,
+  "hextechNativePlayEnemy": false,
+  "initialPlayerStars": 20,
+  "hextechNativePlaySequence": [
+    {
+      "cardId": "STRIKE_NECROBINDER",
+      "enemy": true,
+      "expectedPlays": 1
+    }
+  ],
+  "fixtureNotes": "Original opening commands applied to reconstructed real fixture before root capture; native full snapshots, stock power/pet lifecycle and explicit replayed turn-start choices.",
+  "powers": [],
+  "hextechNativeExpectedAfterSequence": {},
+  "initialPlayerBlock": 0,
+  "hextechNativeOpeningProbe": {
+    "expected": {
+      "power:NECRO_MASTERY_POWER": 1
+    },
+    "rounds": 2,
+    "relicIds": [
+      "SERVANT_MASTER_RUNE"
+    ]
+  }
+}

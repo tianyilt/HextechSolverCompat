@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "REPORT-CARDS-HEXTECH-NATIVE-DRAW-SUSTAIN-LIFE-FLOW-CORRUPTED",
+  "seed": "HEXTECHCOMPAT",
+  "expectedLoadedMods": [
+    "CombatSolver@0.47.3",
+    "HextechRunes@0.9.7",
+    "STS2-RitsuLib@0.6.3",
+    "HextechCompatLab@0.1.0",
+    "HextechSolverCompat@0.1.0"
+  ],
+  "characterId": "IRONCLAD",
+  "encounterId": "FUZZY_WURM_CRAWLER_WEAK",
+  "enemyCurrentHp": 2000,
+  "clearPlayerPiles": true,
+  "cards": [
+    {
+      "cardId": "BLADE_DANCE",
+      "pile": "Hand",
+      "upgradeLevels": 1
+    },
+    {
+      "cardId": "DEFEND_IRONCLAD",
+      "pile": "Draw",
+      "count": 20
+    }
+  ],
+  "fixedSearchBudget": true,
+  "searchBudgetOverrideMilliseconds": 0,
+  "timeoutSeconds": 60,
+  "initialEnemyMaxHps": [
+    2000
+  ],
+  "initialEnemyCurrentHps": [
+    1600
+  ],
+  "initialEnemyMoveIds": [
+    "FIRST_ACID_GOOP"
+  ],
+  "initialPlayerEnergy": 20,
+  "initialPlayerHp": 800,
+  "initialPlayerMaxHp": 1000,
+  "clearAllPowers": true,
+  "relics": [
+    {
+      "relicId": "LIFE_FLOW_RUNE",
+      "addWithoutObtainedEffects": true
+    },
+    {
+      "relicId": "CORRUPTED_BRANCH_RUNE",
+      "addWithoutObtainedEffects": true
+    }
+  ],
+  "hextechEnemyHexes": [],
+  "hextechExpected": {},
+  "initialEnemyBlocks": [
+    0
+  ],
+  "hextechNativeTokenForkProbe": true,
+  "hextechNativeTokenActualProbe": true,
+  "hextechNativePlayEnemy": false,
+  "initialPlayerStars": 20,
+  "hextechNativePlaySequence": [
+    {
+      "cardId": "BLADE_DANCE",
+      "enemy": false,
+      "expectedPlays": 1
+    },
+    {
+      "cardId": "SHIV",
+      "enemy": true,
+      "expectedPlays": 1
+    },
+    {
+      "cardId": "SHIV",
+      "enemy": true,
+      "expectedPlays": 1
+    },
+    {
+      "cardId": "SHIV",
+      "enemy": true,
+      "expectedPlays": 1
+    },
+    {
+      "cardId": "SHIV",
+      "enemy": true,
+      "expectedPlays": 1
+    }
+  ],
+  "fixtureNotes": "Original native draw/heal callbacks; upgraded BladeDance4 exhausts test cap3 then two actual turn resets, or native turn-start fill to maximum hand. Full snapshots, RNG/forks/native manual command sequence; corrupted-generation reaction ordering.",
+  "hextechNativeRoundsAfterPlay": 2,
+  "hextechNativePlaySequenceAfterRounds": [
+    {
+      "cardId": "DEFEND_IRONCLAD",
+      "enemy": false,
+      "expectedPlays": 1
+    }
+  ],
+  "hextechNativeExpectedAfterSequence": {
+    "playerHp": 950,
+    "exhaustCount": 5
+  }
+}

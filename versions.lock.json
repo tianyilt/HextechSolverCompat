@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-03",
+  "platform": "macOS arm64",
+  "game": "0.111.0",
+  "CombatSolver": "0.48.1",
+  "HextechRunes": "0.9.7",
+  "HextechOrigin": "official Steam workshop bundle 3747501308; selected lib/0.111.0 variant",
+  "RitsuLib": "0.6.5",
+  "dotnetSdk": "9.0.318",
+  "Publicizer": "2.3.0",
+  "sha256": {
+    "sts2": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4",
+    "CombatSolver": "47b96a372d4f62d65fad1e31c7b1edac73b01b8c29ba02a70c52b8dd9135310c",
+    "HextechRunes": "274eebc2513a501fbbb654fc6100d47c6dbba9bf2088137293d234cb6f1ed56f",
+    "HextechLoader": "b62192b8001bad3f900941b6f94c5eca65f9d9473227c3632f822c05b1b6b39d",
+    "HextechPck": "3cc84b62ec13792b65ccb7206a6359910e3ec8deed88e3616595a874a444b7a4",
+    "RitsuRuntime": "383f86873509c76579ea3c6881ff0e021c25b82269b83a80cc918ee51b224594"
+  },
+  "sources": {
+    "CombatSolver": {
+      "url": "https://github.com/Torch1230/CombatSolver",
+      "commit": "2ead87d9c9e35b1588a760efff0bd6154545a77c"
+    },
+    "HextechRunes": {
+      "url": "https://github.com/s1f102500012/HextechRunes",
+      "commit": "e0bfcf526aeae43e601a5060829212a870f6893f"
+    }
+  },
+  "validationScope": "Current official Workshop0481/Hex097/Ritsu065 candidate under source and runtime review; native matrix and final Steam/platform acceptance pending. Historical0473 receipts remain separate.",
+  "reviewedRitsuRuntimes": {
+    "0.6.3": "1453444c546564026250faf0a0581174521244af550db7b5c37c4541512a3424",
+    "0.6.5": "383f86873509c76579ea3c6881ff0e021c25b82269b83a80cc918ee51b224594"
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "REPORT-CARDS-HEXTECH-ORB-PASSIVE-LOOP-STOCK",
+  "seed": "HEXTECHCOMPAT",
+  "expectedLoadedMods": [
+    "CombatSolver@0.47.3",
+    "HextechRunes@0.9.7",
+    "STS2-RitsuLib@0.6.3",
+    "HextechCompatLab@0.1.0",
+    "HextechSolverCompat@0.1.0"
+  ],
+  "characterId": "DEFECT",
+  "encounterId": "FUZZY_WURM_CRAWLER_WEAK",
+  "enemyCurrentHp": 200,
+  "clearPlayerPiles": true,
+  "cards": [
+    {
+      "cardId": "LOOP",
+      "pile": "Hand",
+      "count": 2
+    },
+    {
+      "cardId": "DEFEND_DEFECT",
+      "pile": "Draw",
+      "count": 12
+    }
+  ],
+  "fixedSearchBudget": true,
+  "searchBudgetOverrideMilliseconds": 0,
+  "timeoutSeconds": 60,
+  "initialEnemyMaxHps": [
+    200
+  ],
+  "initialEnemyCurrentHps": [
+    130
+  ],
+  "initialEnemyMoveIds": [
+    "FIRST_ACID_GOOP"
+  ],
+  "initialPlayerEnergy": 20,
+  "initialPlayerHp": 70,
+  "initialPlayerMaxHp": 100,
+  "clearAllPowers": true,
+  "relics": [],
+  "hextechEnemyHexes": [],
+  "hextechExpected": {},
+  "initialEnemyBlocks": [
+    0
+  ],
+  "hextechNativeTokenForkProbe": true,
+  "hextechNativeTokenActualProbe": true,
+  "hextechNativePlayEnemy": false,
+  "initialPlayerStars": 20,
+  "hextechNativePlaySequence": [
+    {
+      "cardId": "LOOP",
+      "enemy": false,
+      "expectedPlays": 1
+    },
+    {
+      "cardId": "LOOP",
+      "enemy": false,
+      "expectedPlays": 1
+    }
+  ],
+  "hextechNativeRoundsAfterPlay": 2,
+  "fixtureNotes": "Original Zap/Loop native callbacks read branch orb queue and invoke direct passive count. Mixed focused queue, full-queue channel/evoke, Dark growth, actual rounds/next-turn play and complete RNG/card/power/orb native snapshots; paired stock fallback.",
+  "hextechNativePlaySequenceAfterRounds": [
+    {
+      "cardId": "DEFEND_DEFECT",
+      "enemy": false,
+      "expectedPlays": 1
+    }
+  ],
+  "powers": [
+    {
+      "powerId": "FOCUS_POWER",
+      "amount": 2,
+      "target": "Player",
+      "applier": "Player"
+    }
+  ],
+  "hextechNativeOrbSetup": [
+    "Lightning",
+    "Dark",
+    "Frost"
+  ]
+}

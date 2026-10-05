@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "REPORT-CARDS-HEXTECH-NATIVE-EVENTS-DISCARD-ACTIVE",
+  "seed": "HEXTECHCOMPAT",
+  "expectedLoadedMods": [
+    "CombatSolver@0.47.3",
+    "HextechRunes@0.9.7",
+    "STS2-RitsuLib@0.6.3",
+    "HextechCompatLab@0.1.0",
+    "HextechSolverCompat@0.1.0"
+  ],
+  "characterId": "SILENT",
+  "encounterId": "FUZZY_WURM_CRAWLER_WEAK",
+  "enemyCurrentHp": 2000,
+  "clearPlayerPiles": true,
+  "cards": [
+    {
+      "cardId": "CALCULATED_GAMBLE",
+      "pile": "Hand"
+    },
+    {
+      "cardId": "DAZED",
+      "pile": "Hand"
+    },
+    {
+      "cardId": "INJURY",
+      "pile": "Hand"
+    },
+    {
+      "cardId": "STRIKE_SILENT",
+      "pile": "Hand"
+    },
+    {
+      "cardId": "DEFEND_SILENT",
+      "pile": "Draw",
+      "count": 20
+    }
+  ],
+  "fixedSearchBudget": true,
+  "searchBudgetOverrideMilliseconds": 0,
+  "timeoutSeconds": 60,
+  "initialEnemyMaxHps": [
+    2000
+  ],
+  "initialEnemyCurrentHps": [
+    1600
+  ],
+  "initialEnemyMoveIds": [
+    "FIRST_ACID_GOOP"
+  ],
+  "initialPlayerEnergy": 20,
+  "initialPlayerHp": 800,
+  "initialPlayerMaxHp": 1000,
+  "clearAllPowers": true,
+  "relics": [
+    {
+      "relicId": "NOW_YOU_SEE_ME_RUNE",
+      "addWithoutObtainedEffects": true
+    },
+    {
+      "relicId": "RENEWAL_RUNE",
+      "addWithoutObtainedEffects": true
+    },
+    {
+      "relicId": "CORRUPTED_BRANCH_RUNE",
+      "addWithoutObtainedEffects": true
+    }
+  ],
+  "hextechEnemyHexes": [],
+  "hextechExpected": {},
+  "initialEnemyBlocks": [
+    0
+  ],
+  "hextechNativeTokenForkProbe": true,
+  "hextechNativeTokenActualProbe": true,
+  "hextechNativePlayEnemy": false,
+  "initialPlayerStars": 20,
+  "hextechNativePlaySequence": [
+    {
+      "cardId": "CALCULATED_GAMBLE",
+      "enemy": false,
+      "expectedPlays": 1
+    }
+  ],
+  "fixtureNotes": "Actual bulk discard, statuses/curse native immediate exhaust during player turn, Renewal draws per discarded card, CorruptedBranch follows each exhaustion, owner/pile queries, native full snapshots/fork and two actual rounds.",
+  "hextechNativeRoundsAfterPlay": 2,
+  "hextechNativePlaySequenceAfterRounds": [
+    {
+      "cardId": "DEFEND_SILENT",
+      "enemy": false,
+      "expectedPlays": 1
+    }
+  ],
+  "hextechNativeEventContractProbe": true
+}

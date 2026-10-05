@@ -1,0 +1,23 @@
+<Project>
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <LangVersion>13.0</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <EnableDynamicLoading>true</EnableDynamicLoading>
+    <NoWarn>$(NoWarn);CS0436</NoWarn>
+    <RootDir>$(MSBuildThisFileDirectory)</RootDir>
+  </PropertyGroup>
+  <Import Project="$(RootDir)local.props" Condition="Exists('$(RootDir)local.props')" />
+  <ItemGroup>
+    <PackageReference Include="Krafs.Publicizer" Version="2.3.0" PrivateAssets="all" />
+    <Publicize Include="sts2" IncludeVirtualMembers="false" IncludeCompilerGeneratedMembers="false" />
+    <Publicize Include="CombatSolver" IncludeVirtualMembers="false" IncludeCompilerGeneratedMembers="false" />
+    <Publicize Include="HextechRunes" IncludeVirtualMembers="false" IncludeCompilerGeneratedMembers="false" />
+    <Reference Include="sts2" HintPath="$(GameDataDir)/sts2.dll" Private="false" />
+    <Reference Include="GodotSharp" HintPath="$(GameDataDir)/GodotSharp.dll" Private="false" />
+    <Reference Include="0Harmony" HintPath="$(GameDataDir)/0Harmony.dll" Private="false" />
+    <Reference Include="CombatSolver" HintPath="$(SolverDir)/CombatSolver.dll" Private="false" />
+    <Reference Include="HextechRunes" HintPath="$(HextechDir)/HextechRunes.dll" Private="false" />
+  </ItemGroup>
+</Project>

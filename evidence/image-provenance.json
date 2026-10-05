@@ -1,0 +1,24 @@
+{
+  "images": [
+    {
+      "file": "docs/images/visible-registered-reward-0481.png",
+      "sha256": "85a84b965f4bc87a60cc72f44826bf57600e249e6c1e75753c62ca5bc21becac",
+      "source": "original native screenshot (8ae924 isolated gameplay)"
+    },
+    {
+      "file": "docs/images/visible-registered-route-0481.png",
+      "sha256": "366438758db21a5c5a154604a2ab867b275c6b033c4c39d6d1021e65ab1d9f4f",
+      "source": "original native screenshot (8ae924 isolated gameplay)"
+    },
+    {
+      "file": "docs/images/pr-hand-limit-timing-0481.png",
+      "sha256": "e0ea069ea992fbbdcc48bf867d0b85281b7e51156159369061a3ce1e63147b27",
+      "source": "figure derived from independently built 0.48.1 native evidence"
+    },
+    {
+      "file": "docs/images/pr-hand-limit-native-0481.png",
+      "sha256": "37148dd8ae2b10092b598ad282056991e7a326b8587c0f75a4d899ce3a18ae9c",
+      "source": "figure derived from independently built 0.48.1 native evidence"
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "NATIVE-ORBPHASE-MYRIAD-DISTINCT-RELEASE-RITSU065-FULL-MODS-SOLVER0481",
+  "seed": "HEXTECHCOMPAT",
+  "expectedLoadedMods": [
+    "CombatSolver@0.48.1",
+    "HextechRunes@0.9.7",
+    "STS2-RitsuLib@0.6.5",
+    "HextechCompatLab@0.1.0",
+    "HextechSolverCompat@0.1.0",
+    "BaseLib@v3.4.7",
+    "MintySpire2@v1.2.0",
+    "QuickRestart@v2.0.0",
+    "RelicRewardChoices@0.3.9",
+    "ImportVanillaSaves@v0.2.1",
+    "sts2_god_mod@1.7.10",
+    "RandomForeseer@0.13.18"
+  ],
+  "characterId": "DEFECT",
+  "encounterId": "FUZZY_WURM_CRAWLER_WEAK",
+  "enemyCurrentHp": 2000,
+  "clearPlayerPiles": true,
+  "cards": [
+    {
+      "cardId": "DEFEND_DEFECT",
+      "pile": "Hand",
+      "count": 1
+    },
+    {
+      "cardId": "DEFEND_DEFECT",
+      "pile": "Draw",
+      "count": 40
+    }
+  ],
+  "fixedSearchBudget": true,
+  "searchBudgetOverrideMilliseconds": 0,
+  "timeoutSeconds": 60,
+  "initialEnemyMaxHps": [
+    5000,
+    5000
+  ],
+  "initialEnemyCurrentHps": [
+    5000,
+    5000
+  ],
+  "initialEnemyMoveIds": [
+    "INHALE"
+  ],
+  "initialPlayerEnergy": 30,
+  "initialPlayerHp": 800,
+  "initialPlayerMaxHp": 1000,
+  "clearAllPowers": true,
+  "relics": [
+    {
+      "relicId": "MYRIAD_MANIFESTATIONS_RUNE",
+      "addWithoutObtainedEffects": true
+    }
+  ],
+  "hextechExpected": {},
+  "initialEnemyBlocks": [
+    0,
+    0
+  ],
+  "hextechNativeTokenForkProbe": true,
+  "hextechNativeTokenActualProbe": true,
+  "hextechNativePlayEnemy": false,
+  "initialPlayerStars": 20,
+  "hextechNativePlaySequence": [
+    {
+      "cardId": "DEFEND_DEFECT",
+      "enemy": false,
+      "expectedPlays": 1
+    }
+  ],
+  "fixtureNotes": "Original orb phases40/40. Native end-early passive cardinality/frozen iteration and all five vanilla orb evoke replacement; exact converters/hooks/branch-copy/fingerprint and two future-round full-state differential. Omni original opening separately asserted before battle root, not pre-combat forecast support.",
+  "hextechNativeRoundsAfterPlay": 2,
+  "powers": [],
+  "hextechNativeEndTurnOnlyRounds": true,
+  "initialPlayerBlock": 0,
+  "hextechEnemyTierFloor": 1,
+  "initialPlayerGold": 100,
+  "hextechNativeScopeCounterProbe": true,
+  "additionalMonsterIds": [
+    "BigDummy"
+  ],
+  "hextechNativeOrbSetup": [
+    "Lightning",
+    "Frost",
+    "Dark"
+  ],
+  "hextechNativeOrbExpectedSetup": [
+    "Lightning",
+    "Frost",
+    "Dark"
+  ]
+}

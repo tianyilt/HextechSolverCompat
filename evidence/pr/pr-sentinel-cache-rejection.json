@@ -1,0 +1,6 @@
+{
+  "status": "ExcludedFromTimingEvidence",
+  "report": ".work/upstream-pr-native/artifacts/20261003-192642-reuse-session-suite.json",
+  "reason": "Repeated search metrics were identical; source confirms solved-route file cache reused first result. These are native deployment successes, not independent search timings.",
+  "correction": "Delete only owned PR Lab combat-solver-routes/*.json before each native request. Both baseline and candidate use identical cache policy; quiescent protocol prevents concurrent writer."
+}

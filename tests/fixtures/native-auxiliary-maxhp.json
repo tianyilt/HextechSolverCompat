@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "NATIVE-AUXILIARY-MAXHP",
+  "seed": "HEXTECHCOMPAT",
+  "expectedLoadedMods": [
+    "CombatSolver@0.47.3",
+    "HextechRunes@0.9.7",
+    "STS2-RitsuLib@0.6.3",
+    "HextechCompatLab@0.1.0",
+    "HextechSolverCompat@0.1.0"
+  ],
+  "characterId": "IRONCLAD",
+  "encounterId": "FUZZY_WURM_CRAWLER_WEAK",
+  "enemyCurrentHp": 2000,
+  "clearPlayerPiles": true,
+  "cards": [
+    {
+      "cardId": "FEED",
+      "pile": "Hand"
+    },
+    {
+      "cardId": "DEFEND_SILENT",
+      "pile": "Draw",
+      "count": 40
+    }
+  ],
+  "fixedSearchBudget": true,
+  "searchBudgetOverrideMilliseconds": 0,
+  "timeoutSeconds": 60,
+  "initialEnemyMaxHps": [
+    100,
+    100
+  ],
+  "initialEnemyCurrentHps": [
+    5,
+    100
+  ],
+  "initialEnemyMoveIds": [
+    "INHALE"
+  ],
+  "initialPlayerEnergy": 30,
+  "initialPlayerHp": 1500,
+  "initialPlayerMaxHp": 2050,
+  "clearAllPowers": true,
+  "relics": [
+    {
+      "relicId": "SILVER_HP_FORGE",
+      "addWithoutObtainedEffects": true,
+      "integerMembers": {
+        "SavedStackCount": 2
+      }
+    },
+    {
+      "relicId": "GOLD_HP_FORGE",
+      "addWithoutObtainedEffects": true,
+      "integerMembers": {
+        "SavedStackCount": 2
+      }
+    },
+    {
+      "relicId": "PRISMATIC_LIFE_FORGE",
+      "addWithoutObtainedEffects": true,
+      "integerMembers": {
+        "SavedStackCount": 2
+      }
+    }
+  ],
+  "hextechExpected": {},
+  "initialEnemyBlocks": [
+    0,
+    0
+  ],
+  "hextechNativePlayEnemy": false,
+  "initialPlayerStars": 20,
+  "hextechNativePlaySequence": [
+    {
+      "cardId": "FEED",
+      "enemy": true,
+      "expectedPlays": 1
+    }
+  ],
+  "fixtureNotes": "Original additive percent-HP forge grouping: two stacks of 7.5%,15%,30% gives 2.05 total multiplier, root base1000/actual2050. Native fatal Feed gain, original base updates/rounding and healing; complete branch/native snapshots, keys/stamps/forks and two future rounds.",
+  "hextechNativeRoundsAfterPlay": 2,
+  "powers": [],
+  "hextechNativeEndTurnOnlyRounds": true,
+  "initialPlayerBlock": 0,
+  "hextechEnemyTierFloor": 1,
+  "initialPlayerGold": 100,
+  "hextechNativeScopeCounterProbe": true,
+  "additionalMonsterIds": [
+    "BigDummy"
+  ],
+  "hextechInitialMaxHpBases": {
+    "SILVER_HP_FORGE": 1000,
+    "GOLD_HP_FORGE": 1000,
+    "PRISMATIC_LIFE_FORGE": 1000
+  },
+  "hextechNativeAuxiliaryProbe": true
+}

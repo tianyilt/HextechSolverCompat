@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "REPORT-CARDS-HEXTECH-HP-CHANGE-SELF",
+  "seed": "HEXTECHCOMPAT",
+  "expectedLoadedMods": [
+    "CombatSolver@0.47.3",
+    "HextechRunes@0.9.7",
+    "STS2-RitsuLib@0.6.3",
+    "HextechCompatLab@0.1.0",
+    "HextechSolverCompat@0.1.0"
+  ],
+  "characterId": "IRONCLAD",
+  "encounterId": "FUZZY_WURM_CRAWLER_WEAK",
+  "enemyCurrentHp": 200,
+  "clearPlayerPiles": true,
+  "cards": [
+    {
+      "cardId": "BLOODLETTING",
+      "pile": "Hand",
+      "count": 2
+    }
+  ],
+  "fixedSearchBudget": true,
+  "searchBudgetOverrideMilliseconds": 0,
+  "timeoutSeconds": 60,
+  "initialEnemyMaxHps": [
+    200
+  ],
+  "initialEnemyCurrentHps": [
+    130
+  ],
+  "initialEnemyMoveIds": [
+    "FIRST_ACID_GOOP"
+  ],
+  "initialPlayerEnergy": 20,
+  "initialPlayerHp": 70,
+  "initialPlayerMaxHp": 100,
+  "clearAllPowers": true,
+  "relics": [
+    {
+      "relicId": "PLATELET_RUNE",
+      "addWithoutObtainedEffects": true
+    },
+    {
+      "relicId": "BLOOD_ARMOR_RUNE",
+      "addWithoutObtainedEffects": true
+    },
+    {
+      "relicId": "FIRST_AID_KIT_RUNE",
+      "addWithoutObtainedEffects": true
+    }
+  ],
+  "hextechEnemyHexes": [],
+  "hextechExpected": {
+    "playerHp": 64,
+    "playerBlock": 22,
+    "power:PLATING_POWER": 6
+  },
+  "initialEnemyBlocks": [
+    0
+  ],
+  "hextechNativeTokenForkProbe": true,
+  "hextechNativeTokenActualProbe": true,
+  "hextechNativePlayEnemy": false,
+  "initialPlayerStars": 20,
+  "hextechNativePlaySequence": [
+    {
+      "cardId": "BLOODLETTING",
+      "enemy": false,
+      "expectedPlays": 1
+    },
+    {
+      "cardId": "BLOODLETTING",
+      "enemy": false,
+      "expectedPlays": 1
+    }
+  ],
+  "hextechNativeRoundsAfterPlay": 0,
+  "fixtureNotes": "Original HP-change callbacks on self loss: 3HP*3 block, each FirstAidKit truncates11, Plating3 each; native full snapshot and fork isolation. Explicit block0 after initial HP injection prevents its native HP-change reaction from contaminating the root expectation.",
+  "powers": [],
+  "initialPlayerBlock": 0
+}

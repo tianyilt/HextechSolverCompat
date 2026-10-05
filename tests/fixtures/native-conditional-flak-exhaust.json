@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "NATIVE-CONDITIONAL-FLAK-EXHAUST",
+  "seed": "HEXTECHCOMPAT",
+  "expectedLoadedMods": [
+    "CombatSolver@0.47.3",
+    "HextechRunes@0.9.7",
+    "STS2-RitsuLib@0.6.3",
+    "HextechCompatLab@0.1.0",
+    "HextechSolverCompat@0.1.0"
+  ],
+  "characterId": "DEFECT",
+  "encounterId": "FUZZY_WURM_CRAWLER_WEAK",
+  "enemyCurrentHp": 2000,
+  "clearPlayerPiles": true,
+  "cards": [
+    {
+      "cardId": "FLAK_CANNON",
+      "pile": "Hand",
+      "count": 1,
+      "upgradeLevels": 1
+    },
+    {
+      "cardId": "BURN",
+      "pile": "Exhaust",
+      "count": 1,
+      "upgradeLevels": 0
+    },
+    {
+      "cardId": "WOUND",
+      "pile": "Exhaust",
+      "count": 1,
+      "upgradeLevels": 0
+    },
+    {
+      "cardId": "DEFEND_DEFECT",
+      "pile": "Draw",
+      "count": 40
+    }
+  ],
+  "fixedSearchBudget": true,
+  "searchBudgetOverrideMilliseconds": 0,
+  "timeoutSeconds": 60,
+  "initialEnemyMaxHps": [
+    5000,
+    5000
+  ],
+  "initialEnemyCurrentHps": [
+    5000,
+    5000
+  ],
+  "initialEnemyMoveIds": [
+    "INHALE"
+  ],
+  "initialPlayerEnergy": 30,
+  "initialPlayerHp": 800,
+  "initialPlayerMaxHp": 1000,
+  "clearAllPowers": true,
+  "relics": [
+    {
+      "relicId": "FLAK_CANNON_UPGRADE_RUNE",
+      "addWithoutObtainedEffects": true
+    },
+    {
+      "relicId": "CORRUPTED_BRANCH_RUNE",
+      "addWithoutObtainedEffects": true
+    }
+  ],
+  "hextechExpected": {},
+  "initialEnemyBlocks": [
+    0,
+    0
+  ],
+  "hextechNativeTokenForkProbe": true,
+  "hextechNativeTokenActualProbe": true,
+  "hextechNativePlayEnemy": false,
+  "initialPlayerStars": 20,
+  "hextechNativePlaySequence": [
+    {
+      "cardId": "FLAK_CANNON",
+      "enemy": false,
+      "expectedPlays": 1
+    }
+  ],
+  "fixtureNotes": "Native conditional upgrade family85/85. Shared owned card generation/RNG, fixed transformation, variable discard choice, immediate Nightmare, frozen orb history and upgraded Creative AI. Full native snapshot and fork probes, single-player only.",
+  "hextechNativeRoundsAfterPlay": 2,
+  "powers": [],
+  "hextechNativeEndTurnOnlyRounds": true,
+  "initialPlayerBlock": 0,
+  "hextechEnemyTierFloor": 1,
+  "initialPlayerGold": 100,
+  "hextechNativeScopeCounterProbe": true,
+  "additionalMonsterIds": [
+    "BigDummy"
+  ]
+}

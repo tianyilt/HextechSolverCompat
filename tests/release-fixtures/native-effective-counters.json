@@ -1,0 +1,149 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "NATIVE-EFFECTIVE-ATTACK-COUNTERS-RELEASE-RITSU065-FULL-MODS-SOLVER0481",
+  "seed": "HEXTECHCOMPAT",
+  "expectedLoadedMods": [
+    "CombatSolver@0.48.1",
+    "HextechRunes@0.9.7",
+    "STS2-RitsuLib@0.6.5",
+    "HextechCompatLab@0.1.0",
+    "HextechSolverCompat@0.1.0",
+    "BaseLib@v3.4.7",
+    "MintySpire2@v1.2.0",
+    "QuickRestart@v2.0.0",
+    "RelicRewardChoices@0.3.9",
+    "ImportVanillaSaves@v0.2.1",
+    "sts2_god_mod@1.7.10",
+    "RandomForeseer@0.13.18"
+  ],
+  "characterId": "SILENT",
+  "encounterId": "FUZZY_WURM_CRAWLER_WEAK",
+  "enemyCurrentHp": 2000,
+  "clearPlayerPiles": true,
+  "cards": [
+    {
+      "cardId": "DEFEND_SILENT",
+      "count": 10,
+      "pile": "Hand"
+    },
+    {
+      "cardId": "DEFEND_SILENT",
+      "pile": "Draw",
+      "count": 40
+    }
+  ],
+  "fixedSearchBudget": true,
+  "searchBudgetOverrideMilliseconds": 0,
+  "timeoutSeconds": 60,
+  "initialEnemyMaxHps": [
+    2000
+  ],
+  "initialEnemyCurrentHps": [
+    1600
+  ],
+  "initialEnemyMoveIds": [
+    "INHALE"
+  ],
+  "initialPlayerEnergy": 30,
+  "initialPlayerHp": 800,
+  "initialPlayerMaxHp": 1000,
+  "clearAllPowers": true,
+  "relics": [
+    {
+      "relicId": "ILLUSORY_WEAPON_RUNE",
+      "addWithoutObtainedEffects": true
+    },
+    {
+      "relicId": "KUNAI",
+      "addWithoutObtainedEffects": true
+    },
+    {
+      "relicId": "SHURIKEN",
+      "addWithoutObtainedEffects": true
+    },
+    {
+      "relicId": "ORNAMENTAL_FAN",
+      "addWithoutObtainedEffects": true
+    },
+    {
+      "relicId": "NUNCHAKU",
+      "addWithoutObtainedEffects": true
+    }
+  ],
+  "hextechEnemyHexes": [],
+  "hextechExpected": {},
+  "initialEnemyBlocks": [
+    0
+  ],
+  "hextechNativeTokenForkProbe": true,
+  "hextechNativeTokenActualProbe": true,
+  "hextechNativePlayEnemy": false,
+  "initialPlayerStars": 20,
+  "hextechNativePlaySequence": [
+    {
+      "cardId": "DEFEND_SILENT",
+      "enemy": false,
+      "expectedPlays": 1
+    },
+    {
+      "cardId": "DEFEND_SILENT",
+      "enemy": false,
+      "expectedPlays": 1
+    },
+    {
+      "cardId": "DEFEND_SILENT",
+      "enemy": false,
+      "expectedPlays": 1
+    },
+    {
+      "cardId": "DEFEND_SILENT",
+      "enemy": false,
+      "expectedPlays": 1
+    },
+    {
+      "cardId": "DEFEND_SILENT",
+      "enemy": false,
+      "expectedPlays": 1
+    },
+    {
+      "cardId": "DEFEND_SILENT",
+      "enemy": false,
+      "expectedPlays": 1
+    },
+    {
+      "cardId": "DEFEND_SILENT",
+      "enemy": false,
+      "expectedPlays": 1
+    },
+    {
+      "cardId": "DEFEND_SILENT",
+      "enemy": false,
+      "expectedPlays": 1
+    },
+    {
+      "cardId": "DEFEND_SILENT",
+      "enemy": false,
+      "expectedPlays": 1
+    },
+    {
+      "cardId": "DEFEND_SILENT",
+      "enemy": false,
+      "expectedPlays": 1
+    }
+  ],
+  "fixtureNotes": "Original CircleOfDeath block and actual-heal delta share one captured proc ordinal and original stable target choice with unsorted HittableEnemies. Full native snapshots, scalar key/stamp, fork, RNG and subsequent turns.",
+  "hextechNativeRoundsAfterPlay": 2,
+  "powers": [],
+  "hextechNativeExpectedAfterSequence": {
+    "strength": 3
+  },
+  "hextechNativeEndTurnOnlyRounds": true,
+  "initialPlayerBlock": 0,
+  "hextechNativeExpectedAfterRounds": {},
+  "hextechNativeScopeCounterProbe": true,
+  "hextechEnemyTierFloor": 1,
+  "hextechNativeScalarProbe": {
+    "relicId": "ILLUSORY_WEAPON_RUNE",
+    "field": "_localDamageTargetOrdinal"
+  }
+}

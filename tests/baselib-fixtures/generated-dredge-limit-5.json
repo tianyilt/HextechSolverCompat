@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "BASELIB-GENERATED-DREDGE-LIMIT-5",
+  "seed": "HEXTECHCOMPAT",
+  "expectedLoadedMods": [
+    "CombatSolver@0.47.3",
+    "HextechRunes@0.9.7",
+    "STS2-RitsuLib@0.6.3",
+    "HextechCompatLab@0.1.0",
+    "HextechSolverCompat@0.1.0",
+    "BaseLib@v3.4.7"
+  ],
+  "characterId": "IRONCLAD",
+  "encounterId": "FUZZY_WURM_CRAWLER_WEAK",
+  "enemyCurrentHp": 2000,
+  "clearPlayerPiles": true,
+  "cards": [
+    {
+      "cardId": "DEFEND_IRONCLAD",
+      "pile": "Hand",
+      "count": 3
+    },
+    {
+      "cardId": "STRIKE_IRONCLAD",
+      "pile": "Draw",
+      "count": 30
+    },
+    {
+      "cardId": "STRIKE_IRONCLAD",
+      "pile": "Discard",
+      "count": 16
+    }
+  ],
+  "fixedSearchBudget": true,
+  "searchBudgetOverrideMilliseconds": 0,
+  "timeoutSeconds": 60,
+  "initialEnemyMaxHps": [
+    2000
+  ],
+  "initialEnemyCurrentHps": [
+    1600
+  ],
+  "initialEnemyMoveIds": [
+    "FIRST_ACID_GOOP"
+  ],
+  "initialPlayerEnergy": 20,
+  "initialPlayerHp": 70,
+  "initialPlayerMaxHp": 100,
+  "clearAllPowers": true,
+  "relics": [],
+  "hextechEnemyHexes": [],
+  "hextechExpected": {},
+  "initialEnemyBlocks": [
+    0
+  ],
+  "initialPlayerStars": 20,
+  "fixtureNotes": "Actual BaseLib IMaxHandSizeModifier registered as a test-only ModHelper listener. Native query changes to requested limit; frozen root/sibling keep old limit, new root and live stamp change, restore exact live stamp; card absent at root, generated then played with full actual/predicted snapshots. Not a patch of the hand-size query.",
+  "hextechGeneratedOnPlayProbe": true,
+  "hextechNativePlaySequence": [
+    {
+      "cardId": "DREDGE",
+      "enemy": false,
+      "choiceCardIds": [
+        "STRIKE_IRONCLAD",
+        "STRIKE_IRONCLAD"
+      ]
+    }
+  ],
+  "hextechNativeMaxHandSize": 5,
+  "hextechNativeExpectedGeneratedHandCount": 5
+}

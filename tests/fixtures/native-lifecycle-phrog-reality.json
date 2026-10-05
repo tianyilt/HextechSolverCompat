@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "NATIVE-LIFECYCLE-PHROG-REALITY",
+  "seed": "HEXTECHCOMPAT",
+  "expectedLoadedMods": [
+    "CombatSolver@0.47.3",
+    "HextechRunes@0.9.7",
+    "STS2-RitsuLib@0.6.3",
+    "HextechCompatLab@0.1.0",
+    "HextechSolverCompat@0.1.0"
+  ],
+  "characterId": "SILENT",
+  "encounterId": "FUZZY_WURM_CRAWLER_WEAK",
+  "enemyCurrentHp": 2000,
+  "clearPlayerPiles": true,
+  "cards": [
+    {
+      "cardId": "DEFEND_SILENT",
+      "pile": "Hand",
+      "count": 2
+    },
+    {
+      "cardId": "NEUTRALIZE",
+      "pile": "Hand",
+      "count": 2
+    },
+    {
+      "cardId": "DEFEND_SILENT",
+      "pile": "Draw",
+      "count": 30
+    }
+  ],
+  "fixedSearchBudget": true,
+  "searchBudgetOverrideMilliseconds": 0,
+  "timeoutSeconds": 90,
+  "initialEnemyMaxHps": [
+    5000,
+    5000
+  ],
+  "initialEnemyCurrentHps": [
+    3000,
+    3000
+  ],
+  "initialEnemyMoveIds": [
+    "INHALE"
+  ],
+  "initialPlayerEnergy": 30,
+  "initialPlayerHp": 800,
+  "initialPlayerMaxHp": 1000,
+  "clearAllPowers": true,
+  "relics": [],
+  "hextechExpected": {},
+  "initialEnemyBlocks": [
+    0,
+    0
+  ],
+  "hextechNativeTokenForkProbe": true,
+  "hextechNativeTokenActualProbe": true,
+  "hextechNativePlayEnemy": false,
+  "initialPlayerStars": 20,
+  "hextechNativePlaySequence": [
+    {
+      "cardId": "NEUTRALIZE",
+      "enemy": true,
+      "expectedPlays": 1
+    }
+  ],
+  "fixtureNotes": "Source lifecycle 56/56. Genuine native actions vs owned simulation, complete snapshots, RNG and isolated forks.",
+  "hextechNativeRoundsAfterPlay": 3,
+  "powers": [],
+  "hextechNativeEndTurnOnlyRounds": true,
+  "initialPlayerBlock": 0,
+  "hextechEnemyTierFloor": 3,
+  "initialPlayerGold": 100,
+  "hextechNativeScopeCounterProbe": false,
+  "additionalMonsterIds": [
+    "BigDummy"
+  ],
+  "hextechEnemyHexes": [
+    "PhrogParasite",
+    "ManipulateReality"
+  ],
+  "hextechNativeEnemyLifecycleProbe": true
+}

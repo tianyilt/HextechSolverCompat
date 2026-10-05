@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "NATIVE-INSTANT-EQUAL",
+  "seed": "HEXTECHCOMPAT",
+  "expectedLoadedMods": [
+    "CombatSolver@0.47.3",
+    "HextechRunes@0.9.7",
+    "STS2-RitsuLib@0.6.3",
+    "HextechCompatLab@0.1.0",
+    "HextechSolverCompat@0.1.0"
+  ],
+  "characterId": "NECROBINDER",
+  "encounterId": "FUZZY_WURM_CRAWLER_WEAK",
+  "enemyCurrentHp": 2000,
+  "clearPlayerPiles": true,
+  "cards": [
+    {
+      "cardId": "NO_ESCAPE",
+      "pile": "Hand",
+      "count": 1
+    },
+    {
+      "cardId": "DEFEND_NECROBINDER",
+      "pile": "Draw",
+      "count": 30
+    }
+  ],
+  "fixedSearchBudget": true,
+  "searchBudgetOverrideMilliseconds": 0,
+  "timeoutSeconds": 60,
+  "initialEnemyMaxHps": [
+    2000,
+    2000
+  ],
+  "initialEnemyCurrentHps": [
+    10,
+    1600
+  ],
+  "initialEnemyMoveIds": [
+    "INHALE"
+  ],
+  "initialPlayerEnergy": 30,
+  "initialPlayerHp": 800,
+  "initialPlayerMaxHp": 1000,
+  "clearAllPowers": true,
+  "relics": [
+    {
+      "relicId": "INSTANT_DEATH_RUNE",
+      "addWithoutObtainedEffects": true
+    }
+  ],
+  "hextechEnemyHexes": [],
+  "hextechExpected": {},
+  "initialEnemyBlocks": [
+    0,
+    0
+  ],
+  "hextechNativeTokenForkProbe": true,
+  "hextechNativeTokenActualProbe": true,
+  "hextechNativePlayEnemy": false,
+  "initialPlayerStars": 20,
+  "hextechNativePlaySequence": [
+    {
+      "cardId": "NO_ESCAPE",
+      "enemy": true,
+      "expectedPlays": 1
+    }
+  ],
+  "fixtureNotes": "Complete original Neurosurge upgrade OnPlay, positive Hextech power stacking and original per-target native Doom callback on future turns, detached forks, full snapshots/key/stamp/RNG.",
+  "hextechNativeRoundsAfterPlay": 2,
+  "powers": [],
+  "hextechNativeScopeCounterProbe": false,
+  "additionalMonsterIds": [
+    "LeafSlimeM"
+  ],
+  "hextechNativeEndTurnOnlyRounds": true,
+  "hextechNativeInstantExpectedAlive": true,
+  "hextechNativeInstantProbe": true,
+  "hextechNativeInstantDeferredProbe": false
+}

@@ -1,0 +1,3002 @@
+{
+  "schemaVersion": 1,
+  "scope": "Incremental development regression selection; not full release acceptance",
+  "policy": "Review every rune's callbacks, external patches and state. Validate shared mechanisms and meaningful differences rather than exhaustively repeating every variant or enumerating every combination. Unlisted effects remain pending.",
+  "families": {
+    "native-queries": {
+      "implementation": "src/NativeRuneBridge.QueryFamilies.cs",
+      "types": [
+        "SwordIntentRune",
+        "TrickLicenseRune",
+        "EnlightenmentRune",
+        "BrandUpgradeRune"
+      ],
+      "mechanisms": [
+        "early energy query",
+        "late energy query",
+        "star payment query",
+        "branch card pile lookup",
+        "temporary Sly predicate",
+        "scalar counter capture/fork/hash",
+        "native damage multiplier query"
+      ],
+      "fixtures": [
+        "native-query-counter",
+        "native-query-sword",
+        "native-query-sly",
+        "native-query-late-stack",
+        "card-upgrade-soul-0",
+        "enemy-blue-relative-up",
+        "enemy-reforged-slap",
+        "enemy-eight-autoplay",
+        "native-rune-stack"
+      ],
+      "reviewEvidence": [
+        "artifacts/20261001-native-query-family-il-comparison.json",
+        "artifacts/20261001-query-family-conditional-patch-il-comparison.json"
+      ],
+      "limits": "Eligibility is manually audited for these exact pinned types. A method name or scalar fields alone do not prove all external behavior is supported. Runtime contract rejects additional overrides; command/choice/RNG/deck-write bridges remain separate mechanisms."
+    },
+    "generated-cards": {
+      "implementation": "src/NativeRuneBridge.StableGeneration.cs; src/ConditionalCardPatches.cs; src/ConditionalCardPatches.HandSize.cs",
+      "mechanisms": [
+        "frozen unlocked pools and stable seed",
+        "exhaust proc ordinal",
+        "native generation and full-hand handling",
+        "generated card absent in root",
+        "frozen inactive OnPlay patch compositions",
+        "reviewed Ritsu maximum hand size transpiler",
+        "unknown state-machine patch rejection"
+      ],
+      "fixtures": [
+        "native-generation-corrupted",
+        "native-generation-blank",
+        "generated-onplay-necro",
+        "generated-onplay-regent",
+        "native-generation-neurosurge-search",
+        "native-query-counter"
+      ],
+      "limits": "Incremental reports at 144928/145400. Active upgrade effects remain separate mechanisms. Pending-choice generated reactions still need continuation support."
+    },
+    "side-start": {
+      "implementation": "src/NativeRuneBridge.SideStart.cs",
+      "types": [
+        "MiserableFateRune",
+        "MirageRune",
+        "DecayRune"
+      ],
+      "mechanisms": [
+        "ordered native side-start dispatch",
+        "branch power queries",
+        "block modifiers",
+        "hidden temporary Strength and Artifact visibility"
+      ],
+      "fixtures": [
+        "side-start-block-doom",
+        "side-start-block-combined",
+        "side-start-decay",
+        "side-start-decay-no-artifact"
+      ],
+      "limits": "Native block and three-round hidden Strength comparisons pass150005/151803/152225. Still incremental, not final binary/full-run acceptance."
+    },
+    "after-card-commands": {
+      "implementation": "src/NativeRuneBridge.AfterCardCommands.cs",
+      "types": [
+        "MoltenFistUpgradeRune",
+        "VenerateUpgradeRune",
+        "SkyDrillUpgradeRune"
+      ],
+      "mechanisms": [
+        "fixed card creation and insertion",
+        "branch stars reads and gain",
+        "captured paid X resource",
+        "native AttackCommand",
+        "ordered AfterCardPlayed scope"
+      ],
+      "fixtures": [
+        "after-card-fixed-generation",
+        "after-card-stars",
+        "after-card-x-5",
+        "after-card-x-6",
+        "side-start-decay-no-artifact",
+        "native-query-counter"
+      ],
+      "reviewEvidence": [
+        "artifacts/20261001-after-card-command-family-il.json",
+        "artifacts/20261001-after-card-vanilla-il.json"
+      ],
+      "limits": "17/17 original/source IL equal; native 152225 six cases passed. Generated-card and star reactions requiring pending choices remain a separate continuation task."
+    },
+    "hp-change": {
+      "implementation": "src/NativeRuneBridge.DamageHooks.cs",
+      "types": [
+        "PlateletRune",
+        "BloodArmorRune"
+      ],
+      "mechanisms": [
+        "original HP-loss callbacks",
+        "branch death and current-side queries",
+        "block modifier truncation",
+        "native Plating application",
+        "self loss vs enemy attack"
+      ],
+      "fixtures": [
+        "hp-change-self",
+        "hp-change-enemy-turn",
+        "blood-pact-player-self",
+        "blood-pact-player-hit",
+        "side-start-decay"
+      ],
+      "reviewEvidence": [
+        "artifacts/20261001-hp-change-family-il.json",
+        "artifacts/20261001-player-turn-query-native-il.json"
+      ],
+      "limits": "Single-player turn query; exact original native callback/power bridges.153741 migration10/10 passed, not final release."
+    },
+    "doom-reactions": {
+      "implementation": "src/NativeRuneBridge.DoomReactions.cs",
+      "types": [
+        "TauntRune",
+        "OminousPactRune",
+        "DoomsdayRune"
+      ],
+      "mechanisms": [
+        "native power insertion order",
+        "blocked Doom and draw reaction",
+        "detached Osty create/grow/revive",
+        "hidden summon recursion depth deep fork/key/continuation"
+      ],
+      "fixtures": [
+        "doom-reactions-stack",
+        "doom-reactions-artifact",
+        "doom-reactions-revive",
+        "summon-revive",
+        "enemy-reforged-slap",
+        "doomsday-99-0",
+        "doomsday-200-0",
+        "doomsday-200-2"
+      ],
+      "reviewEvidence": [
+        "artifacts/20261001-doom-reactions-il-comparison.json",
+        "artifacts/20261001-doom-reactions-native-il.json"
+      ],
+      "limits": "Original summons ignore SummonResult; bridge is restricted to audited callers. Current0.47.3 three native cases passed154301; full-pool/visible/Steam/full-run remains incomplete."
+    },
+    "enemy-repeat": {
+      "implementation": "src/EnemyMoveRepeatBridge.cs",
+      "types": [
+        "JeweledGauntletEnemyHex"
+      ],
+      "mechanisms": [
+        "immutable native seed/act/floor and branch rounds",
+        "captured MoveState reference",
+        "native intent/special-move predicates",
+        "same delegate repeats without AI advance",
+        "dynamic repeated hits",
+        "explicit-choice full action replay",
+        "seed search-key/continuation separation"
+      ],
+      "fixtures": [
+        "enemy-repeat-attack",
+        "enemy-repeat-tier-1",
+        "enemy-repeat-tier-2",
+        "enemy-repeat-tier-3",
+        "enemy-repeat-knowledge-0",
+        "enemy-repeat-knowledge-1",
+        "enemy-repeat-revival"
+      ],
+      "reviewEvidence": [
+        "artifacts/20261001-jeweled-repeat-family-il.json"
+      ],
+      "limits": "Seven native fixtures passed across current0.47.3 batches; full-pool/visible/Steam/full-run pending. Multi-enemy death and current-move-forced-stun integration still require representative proof."
+    },
+    "persistent-keywords": {
+      "implementation": "src/PowerExpiryBridge.cs",
+      "types": [
+        "RageUpgradeRune",
+        "CorrosiveWaveUpgradeRune",
+        "RebootUpgradeRune",
+        "OblivionUpgradeRune",
+        "ReflectUpgradeRune"
+      ],
+      "mechanisms": [
+        "native owner/type keyword dispatch",
+        "per-power expiry command interception",
+        "exact foreign Harmony composition contracts",
+        "frozen and live patch stamps",
+        "persistent stacked power after two rounds",
+        "stock control",
+        "native shuffle/draw/pile RNG",
+        "side-start decrement skip",
+        "original applier identity vs target identity"
+      ],
+      "fixtures": [
+        "persistent-rage-active",
+        "persistent-rage-stock",
+        "persistent-corrosive-wave",
+        "keyword-reboot",
+        "enemy-repeat-knowledge-0",
+        "persistent-reflect-active",
+        "persistent-reflect-stock",
+        "persistent-oblivion-player",
+        "persistent-oblivion-enemy"
+      ],
+      "reviewEvidence": [
+        "artifacts/20261001-persistent-keyword-family-il.json",
+        "artifacts/20261001-persistent-keyword-native-card-il.json",
+        "artifacts/20261001-persistent-oblivion-reflect-il.json"
+      ],
+      "limits": "162217 five-case current0.47.3 batch passed. No blanket power lifecycle bypass; final full-pool/visible/Steam/full-run incomplete. Expansion1648437/7 current0.47.3 passed."
+    },
+    "opening-forms": {
+      "implementation": "src/OpeningFormBoundary.cs",
+      "types": [
+        "DemonFormUpgradeRune",
+        "EchoFormUpgradeRune",
+        "VoidFormUpgradeRune",
+        "SerpentFormUpgradeRune",
+        "ReaperFormUpgradeRune"
+      ],
+      "mechanisms": [
+        "original native first-turn batch before root capture",
+        "completed/in-progress and character predicates",
+        "forked once-per-combat flags",
+        "native late callback exits on original completed flag",
+        "manual card after native combined contribution",
+        "two-round power behaviour",
+        "wrong-character inactive branch"
+      ],
+      "fixtures": [
+        "opening-form-demon",
+        "opening-form-echo",
+        "opening-form-void",
+        "opening-form-serpent",
+        "opening-form-reaper",
+        "opening-form-inactive"
+      ],
+      "reviewEvidence": [
+        "artifacts/20261001-opening-form-family-il.json",
+        "artifacts/20261001-opening-form-native-card-il.json"
+      ],
+      "limits": "163825 six native cases passed current0.47.3; first native setup must finish before in-combat root (pre-combat forecast API remains outside scope). Full-pool/visible/Steam/full-run pending."
+    },
+    "temporary-stats": {
+      "implementation": "src/TemporaryDexterityBridge.cs",
+      "types": [
+        "KillerHunterRune",
+        "HextechTemporaryDexterityLossPower",
+        "HextechTemporaryStrengthLossPower"
+      ],
+      "mechanisms": [
+        "native hidden stat wrapper vs visible Artifact gate",
+        "positive and negative Dexterity expiry per wrapper",
+        "owner participant boundary",
+        "fork/key/continuation native play probe"
+      ],
+      "fixtures": [
+        "temporary-loss-artifact-0",
+        "temporary-loss-artifact-1",
+        "temporary-loss-artifact-2",
+        "temporary-dexterity-mixed",
+        "side-start-decay",
+        "side-start-decay-no-artifact"
+      ],
+      "reviewEvidence": [
+        "artifacts/20261001-native-temporary-stat-doomsday-il.json",
+        "artifacts/20261001-temporary-dexterity-native-il.json",
+        "artifacts/20261001-temporary-dexterity-sign-il.json"
+      ],
+      "limits": "Native comparison batches passed; full-pool/visible/Steam/full-run pending."
+    },
+    "power-given-no-draw": {
+      "implementation": "src/NativeRuneBridge.PowerGivenQueries.cs",
+      "types": [
+        "BattleTranceUpgradeRune",
+        "BulletTimeUpgradeRune"
+      ],
+      "mechanisms": [
+        "original source-card/owner predicate",
+        "binary multiplier before native power application",
+        "captured inventory",
+        "existing foreign-origin power retained"
+      ],
+      "fixtures": [
+        "no-draw-battle-trance-active",
+        "no-draw-battle-trance-stock",
+        "no-draw-battle-trance-active-other-source",
+        "no-draw-bullet-time-active",
+        "no-draw-bullet-time-stock",
+        "no-draw-bullet-time-active-other-source"
+      ],
+      "reviewEvidence": [
+        "artifacts/20261001-native-no-draw-queries-il.json"
+      ],
+      "limits": "Restricted to the audited pure binary NoDraw multipliers. Native cases and regressions pass172408; full-pool/visible/Steam/full-run pending."
+    },
+    "orb-passive-native": {
+      "implementation": "src/NativeRuneBridge.OrbPassives.cs",
+      "types": [
+        "ZapUpgradeRune",
+        "LoopUpgradeRune"
+      ],
+      "mechanisms": [
+        "original scoped callback",
+        "branch queue identity and order",
+        "direct passive count vs modified turn-end count",
+        "full channel and evoke",
+        "Dark growth and Focus"
+      ],
+      "fixtures": [
+        "orb-passive-zap-mixed",
+        "orb-passive-zap-stock",
+        "orb-passive-loop-mixed",
+        "orb-passive-loop-stock",
+        "orb-passive-loop-empty",
+        "happy-accident"
+      ],
+      "reviewEvidence": [
+        "artifacts/20261001-native-orb-passive-family-il.json",
+        "artifacts/20261001-native-orb-passive-callbacks-il.json"
+      ],
+      "limits": "Native batch1733088/8 passed. Inner pending-choice outer replay representative still needed; full-pool/visible/Steam/full-run pending."
+    },
+    "native-enemy-turns": {
+      "implementation": "src/NativeRuneBridge.EnemyTurns.cs",
+      "enemyHexes": [
+        "Sturdy",
+        "Sonata",
+        "MiserableFate"
+      ],
+      "mechanisms": [
+        "original ordered stateless callbacks",
+        "explicit branch HP and MaxHP reads",
+        "frozen native tier query",
+        "alive branch membership",
+        "strict patch composition",
+        "heal then missing-HP block across four actual rounds"
+      ],
+      "fixtures": [
+        "native-enemy-turns-tier-1",
+        "native-enemy-turns-tier-2",
+        "native-enemy-turns-tier-3",
+        "skulking-heal-queue-stack",
+        "enemy-repeat-knowledge-0",
+        "orb-passive-loop-mixed"
+      ],
+      "reviewEvidence": [
+        "artifacts/20261001-native-enemy-turn-family-il.json",
+        "artifacts/20261001-native-enemy-turn-callback-il.json",
+        "artifacts/20261001-181551-reuse-session-suite.json"
+      ],
+      "limits": "Only three audited handlers. Full compatibility not completed. Old native getter prefix alone gave live-state 26 vs native24 block; explicit callback read rewrites fix this and freeze-live-HP tests pass."
+    },
+    "generated-reactions": {
+      "implementation": "src/NativeRuneBridge.GeneratedReactions.cs",
+      "types": [
+        "CondensedRadianceRune",
+        "EchoRune",
+        "ManipulateRealityRune",
+        "ByproductRune"
+      ],
+      "mechanisms": [
+        "creator/owner predicates",
+        "native listener order upgrade before/after clone",
+        "branch owner death and pile query",
+        "native generated upgrade",
+        "native CreateClone reset vs raw insertion",
+        "no recursive generation/stars",
+        "draw-on-status generation",
+        "full-hand discard redirection",
+        "strict frozen patches and unknown mutation rejection"
+      ],
+      "fixtures": [
+        "generation-reactions-regent-stack",
+        "generation-reactions-upgrade-first",
+        "generation-reactions-regent-stock",
+        "generation-reactions-full-hand",
+        "generation-reactions-blade-dance",
+        "generation-reactions-byproduct-active",
+        "generation-reactions-byproduct-stock",
+        "native-generation-corrupted",
+        "orb-passive-loop-mixed",
+        "native-enemy-turns-tier-3"
+      ],
+      "reviewEvidence": [
+        "artifacts/20261001-native-generation-reactions-il.json",
+        "artifacts/20261001-native-generation-reactions-callback-il.json",
+        "artifacts/20261001-183108-reuse-session-suite.json",
+        "artifacts/20261001-183434-reuse-session-suite.json"
+      ],
+      "limits": "These four pinned types only. Setup generates initial cards and upgrades BladeDance before the action. Reports have fixture-assertion failures retained; six command cases + corrected native manual action and regressions pass on same adapter. Pending inner choices need shared native callback suspension/replay support; full pool and UI acceptance remain."
+    },
+    "native-events": {
+      "implementation": "src/NativeRuneBridge.Events.cs",
+      "types": [
+        "RenewalRune",
+        "NowYouSeeMeRune",
+        "AdaptiveCapacitorRune",
+        "UnsealedThroneRune",
+        "RoyalCommandRune",
+        "ChargeUpRune",
+        "VampireCrawlerRune"
+      ],
+      "mechanisms": [
+        "native ordered stars gained/spent",
+        "forge/energy/vigor interleaved with vanilla listeners",
+        "discard draw and immediate status/curse exhaust",
+        "native CombatState.CloneCard reset semantics",
+        "copy only after final replay",
+        "per-turn orb slots",
+        "frozen callback composition",
+        "inner choices replay complete enclosing action"
+      ],
+      "fixtures": [
+        "native-events-discard-active",
+        "native-events-discard-stock",
+        "native-callback-choice-renewal",
+        "native-events-orb-slots",
+        "native-events-stars-active",
+        "native-events-stars-stock",
+        "native-events-stars-mixed",
+        "native-events-power-copy-active",
+        "native-events-power-copy-stock",
+        "native-events-power-copy-repeat",
+        "native-callback-choice-white-hole",
+        "native-callback-choice-byproduct"
+      ],
+      "reviewEvidence": [
+        "artifacts/20261001-native-resource-discard-family-il.json",
+        "artifacts/20261001-185137-reuse-session-suite.json",
+        "artifacts/20261001-190851-reuse-session-suite.json",
+        "artifacts/20261001-191205-reuse-session-suite.json"
+      ],
+      "limits": "Pinned reviewed callbacks only. Corrected repeat fixture accounts for persistent EchoForm on next turn; prior failure retained. All three nested choice paths tested against original native CardSelectCmd API, complete snapshots and RNG. Not full-game acceptance."
+    },
+    "native-autoplay": {
+      "implementation": "src/NativeRuneBridge.AutoPlay.cs",
+      "types": [
+        "RallyingCallRune",
+        "ScaredStiffRune",
+        "GroundedRune",
+        "DoubleExistenceRune"
+      ],
+      "mechanisms": [
+        "native callback order and recursion guard",
+        "autoplay from draw, hand and turn end",
+        "original stable target/proc ordinals frozen",
+        "branch-owned mutable previews",
+        "free resources and unplayable result handling",
+        "end-turn block doubling and EchoForm stacking",
+        "whole-action replay for inner choices"
+      ],
+      "fixtures": [
+        "native-autoplay-rallying",
+        "native-autoplay-mixed",
+        "native-autoplay-scared",
+        "native-autoplay-grounded",
+        "native-autoplay-double",
+        "native-callback-choice-rallying",
+        "native-callback-choice-renewal",
+        "native-events-power-copy-repeat"
+      ],
+      "reviewEvidence": [
+        "artifacts/20261001-native-autoplay-family-comparison.json",
+        "artifacts/20261001-191855-reuse-session-suite.json",
+        "artifacts/20261001-193225-reuse-session-suite.json"
+      ],
+      "limits": "Four reviewed scalar-state native callbacks. Native RallyingCall→WhiteHole→Hellraiser→SeekerStrike nested selection verified193225. Queue-backed SellOff/transient cleanup and full acceptance remain pending."
+    },
+    "native-enemy-periodic": {
+      "implementation": "src/NativeRuneBridge.EnemyPeriodic.cs",
+      "types": [
+        "DivineInterventionEnemyHex",
+        "CerberusEnemyHex",
+        "LeafSlimeEnemyHex",
+        "SlimedBerserkerEnemyHex",
+        "MyteEnemyHex",
+        "HauntedShipEnemyHex"
+      ],
+      "mechanisms": [
+        "native N+1 round interval",
+        "once per combat and first round generation",
+        "full native listener order",
+        "branch counter dictionaries key/stamp/deep fork",
+        "frozen tier/alive LINQ reads",
+        "original status generation and Vigor application",
+        "original Intangible duration"
+      ],
+      "fixtures": [
+        "native-enemy-periodic-tier-1",
+        "native-enemy-periodic-tier-2",
+        "native-enemy-periodic-tier-3",
+        "native-enemy-periodic-divine",
+        "native-callback-choice-rallying",
+        "native-autoplay-mixed"
+      ],
+      "reviewEvidence": [
+        "artifacts/20261001-native-enemy-periodic-comparison.json",
+        "artifacts/20261001-193225-reuse-session-suite.json"
+      ],
+      "limits": "Six reviewed stateless handler types; exposed tracking fields limited to global/once-in-combat counters. Original opening callbacks explicitly replayed in Lab before prediction root because report builder clears piles. Initial registration predicate ambiguity192937 preserved, repaired bool return match; 193225 all pass. Not full-game acceptance."
+    },
+    "native-draw-sustain": {
+      "implementation": "src/NativeRuneBridge.DrawSustain.cs",
+      "types": [
+        "HastyScribbleRune",
+        "LifeFlowRune"
+      ],
+      "mechanisms": [
+        "native fill-to-hand-limit late phase",
+        "branch-owned hand query",
+        "native exhaust heal and cap3",
+        "reset on native player-side turn boundary",
+        "whole-round replay for nested fill-draw choice",
+        "actual generated card playback",
+        "corrupted generation reaction order"
+      ],
+      "fixtures": [
+        "native-draw-sustain-hasty",
+        "native-draw-sustain-hasty-choice",
+        "native-draw-sustain-life-flow",
+        "native-draw-sustain-life-flow-corrupted",
+        "native-enemy-periodic-tier-3",
+        "native-callback-choice-rallying"
+      ],
+      "reviewEvidence": [
+        "artifacts/20261001-native-draw-sustain-comparison.json",
+        "artifacts/20261001-194802-reuse-session-suite.json"
+      ],
+      "limits": "Two exact pinned types. Prior Lab generated-reference NRE193935 and wrong exhaust-count assertion194456 retained; native BladeDance itself also exhausts so total5. Shared native play helper fixes generated-card identity with verified hand sequence. No full pool/UI/Steam/run acceptance."
+    },
+    "native-transient-autoplay": {
+      "implementation": "src/NativeRuneBridge.TransientAutoPlay.cs",
+      "types": [
+        "AutoPatrolRune"
+      ],
+      "mechanisms": [
+        "frozen Osty HP boundaries",
+        "branch-only transient membership",
+        "native autoplay and None destination",
+        "no global live transient set mutation"
+      ],
+      "fixtures": [
+        "native-transient-autoplay-0",
+        "native-transient-autoplay-10",
+        "native-transient-autoplay-20",
+        "native-transient-autoplay-9",
+        "native-scope-transient"
+      ],
+      "reviewEvidence": [
+        "artifacts/20261001-native-transient-autoplay-comparison.json"
+      ],
+      "limits": "Full release/UI/Steam/full-run verification remains pending."
+    },
+    "native-scope-return": {
+      "implementation": "src/NativeRuneBridge.ScopeReturn.cs",
+      "types": [
+        "UniversalScopeRune",
+        "MoreUniversalScopeRune",
+        "MostUniversalScopeRune"
+      ],
+      "mechanisms": [
+        "combined original stable chance and first-active listener",
+        "final repeated play only",
+        "manual versus free autoplay energy refund",
+        "star refund callbacks",
+        "full-hand redirect",
+        "exclude transient generated cards before ordinal"
+      ],
+      "fixtures": [
+        "native-scope-full-hand-auto",
+        "native-scope-manual",
+        "native-scope-replay",
+        "native-scope-stars",
+        "native-scope-transient"
+      ],
+      "reviewEvidence": [
+        "artifacts/20261001-native-scope-return-comparison.json"
+      ],
+      "limits": "Native scope private counters compared. Full release gates pending."
+    },
+    "native-discard-queue": {
+      "implementation": "src/NativeRuneBridge.SellOff.cs; src/NativeRuneBridge.cs",
+      "types": [
+        "SellOffRune"
+      ],
+      "mechanisms": [
+        "original queued discard autoplay",
+        "deep queue and branch card remapping",
+        "ordered reference positions in key/stamp",
+        "native reentrancy and proc ordinal",
+        "exhaust-on-next-play",
+        "recursive discard",
+        "whole-action choice replay"
+      ],
+      "fixtures": [
+        "native-sell-off-choice",
+        "native-sell-off-corrupted",
+        "native-sell-off-discard",
+        "native-sell-off-reentrant"
+      ],
+      "reviewEvidence": [
+        "artifacts/20261001-native-sell-off-comparison.json"
+      ],
+      "limits": "Only the precise SellOff pending queue is allowed; arbitrary native reference fields remain rejected. Full release gates pending."
+    },
+    "native-projection": {
+      "implementation": "src/NativeRuneBridge.ProjectionFamily.cs; src/RuneMirrors.cs",
+      "types": [
+        "GoliathRune",
+        "GoldenSpatulaRune",
+        "AnthonyBiasRune",
+        "GiantSlayerRune",
+        "EightPennyGateRune"
+      ],
+      "mechanisms": [
+        "original damage/block/heal coefficients",
+        "root-frozen deck count",
+        "captured saved-stack 10/11 boundary",
+        "frozen enemy max HP",
+        "stock hand draw",
+        "original replay and None result"
+      ],
+      "fixtures": [
+        "native-projection-stack-0",
+        "native-projection-stack-10",
+        "native-projection-stack-11",
+        "native-eight-penny-gate",
+        "native-eight-penny-none"
+      ],
+      "reviewEvidence": [
+        "artifacts/20261001-native-projection-family-comparison.json"
+      ],
+      "limits": "72/72 audited official/source methods agree. Full release gates pending."
+    },
+    "native-enemy-debuff-turns": {
+      "implementation": "src/NativeRuneBridge.EnemyDebuffTurns.cs; src/EnemyTurnTrackingState.cs",
+      "enemyHexes": [
+        "Omega",
+        "LagavulinMatriarch",
+        "FrostWraith",
+        "Doomsday"
+      ],
+      "mechanisms": [
+        "0.9.7 native sequential debuff commands with branch-owned once-per-round tracking",
+        "ordered negative Strength/Dexterity and Artifact",
+        "fourth-round once trigger",
+        "third-round temporary slow and expiry",
+        "five actual turns",
+        "post-trigger capture/fork"
+      ],
+      "fixtures": [
+        "native-enemy-debuff-turn-artifact",
+        "native-enemy-debuff-turn-tier-1",
+        "native-enemy-debuff-turn-tier-2",
+        "native-enemy-debuff-turn-tier-3"
+      ],
+      "reviewEvidence": [
+        "artifacts/20261001-native-enemy-debuff-turn-comparison.json"
+      ],
+      "limits": "0.9.7 removed grouped burst guards; original sequential power command bodies are reused. Full release gates pending."
+    },
+    "native-cost-gates": {
+      "implementation": "src/NativeRuneBridge.CostGates.cs; src/NativeRuneBridge.FinalForm.cs; src/NativeCallbackContracts.cs",
+      "types": [
+        "UltimateRefreshRune",
+        "BackToBasicsRune"
+      ],
+      "mechanisms": [
+        "exact captured OnPlayWrapper resource scope with finalizer",
+        "nested original active-cost semantics",
+        "X0/1/2 threshold",
+        "consumed SetUntilPlayed cost",
+        "native CanPlay effective3cost gate",
+        "autoplay exemption",
+        "native damage/block/heal coefficients"
+      ],
+      "fixtures": [
+        "native-ultimate-refresh-spent-cost",
+        "native-ultimate-refresh-x-0",
+        "native-ultimate-refresh-x-1",
+        "native-ultimate-refresh-x-2",
+        "native-back-to-basics-auto",
+        "native-back-to-basics-discount"
+      ],
+      "reviewEvidence": [
+        "artifacts/20261001-native-cost-gates-comparison.json"
+      ],
+      "limits": "9/9 rune methods agree; original play-cost helper source reviewed. Exact own prefix/finalizer composition required; unknown scope patches rejected. Full release gates pending."
+    },
+    "native-permanent-growth": {
+      "implementation": "src/NativeSelfUpgradeState.cs; src/NativeRuneBridge.SelfUpgrade.cs",
+      "types": [
+        "ClawUpgradeRune",
+        "SowUpgradeRune",
+        "ReapUpgradeRune",
+        "IronWaveUpgradeRune"
+      ],
+      "mechanisms": [
+        "original native typed CWT increments",
+        "detached persistent deck identities",
+        "deep shared store fork",
+        "hidden counter fingerprint/continuation",
+        "frozen real deck/counter inputs",
+        "same-name instances/shared deck combat copies",
+        "native Dampen downgrade/restore",
+        "future turns"
+      ],
+      "fixtures": [
+        "native-growth-self",
+        "native-growth-claw",
+        "native-growth-dampen",
+        "native-growth-self-dampen"
+      ],
+      "reviewEvidence": [
+        "artifacts/20261001-native-self-upgrade-comparison.json"
+      ],
+      "limits": "51/51 original methods match. Native source increments/group predicates/downgrade kept unchanged; only audited reads redirected. Full acceptance pending."
+    },
+    "native-complete-card-body": {
+      "implementation": "src/NativeRuneBridge.UpgradedAttacks.cs; src/NativeRuneBridge.PowerLifecycle.cs; src/ConditionalCardPatches.cs",
+      "types": [
+        "GrandFinaleUpgradeRune",
+        "CrashLandingUpgradeRune",
+        "HangUpgradeRune",
+        "WroughtInWarUpgradeRune"
+      ],
+      "mechanisms": [
+        "complete original native OnPlay replacement",
+        "exact captured rune gate",
+        "original GrandFinale draw-pile playability postfix",
+        "generated-card batch ordering/hand cap",
+        "original Hang multiplier/Artifact/exhaust",
+        "original attack/block/forge",
+        "skip only vanilla compensation, preserve shared lifecycle"
+      ],
+      "fixtures": [
+        "native-grand-finale-gate",
+        "native-crash-landing-open",
+        "native-crash-landing-full",
+        "native-hang-growth",
+        "native-hang-artifact",
+        "native-wrought-in-war"
+      ],
+      "reviewEvidence": [
+        "artifacts/20261001-native-upgraded-attacks-and-forge-comparison.json",
+        "artifacts/20261001-core-card-powers-il.json",
+        "artifacts/20261001-223116-reuse-session-suite.json"
+      ],
+      "limits": "40/40 original methods match. 223116 batch8/8. New side-power work not included in that tested binary; final release/Steam/full-run pending."
+    },
+    "native-side-power-dispatch": {
+      "implementation": "src/NativeRuneBridge.PowerSideStart.cs",
+      "types": [
+        "NeurosurgeUpgradeRune",
+        "HextechNeurosurgePower"
+      ],
+      "mechanisms": [
+        "original complete native energy/draw/power OnPlay",
+        "positive power/owner Artifact",
+        "captured native power acquisition order",
+        "reuse SDK vanilla commands via individual-power scope",
+        "participant/side/alive guards",
+        "sequential Doom/Shroud reactions",
+        "original Reflect expiry composition",
+        "reentrant phase reset/finalizer"
+      ],
+      "fixtures": [
+        "native-neurosurge",
+        "native-neurosurge-artifact",
+        "native-neurosurge-order",
+        "persistent-reflect-active",
+        "persistent-reflect-stock",
+        "native-generation-neurosurge-search"
+      ],
+      "reviewEvidence": [
+        "artifacts/20261001-native-neurosurge-comparison.json",
+        "artifacts/20261001-native-neurosurge-reviewed-il.json",
+        "artifacts/20261001-persistent-side-start-il.json",
+        "artifacts/20261001-225130-reuse-session-suite.json"
+      ],
+      "limits": "17/17 original methods match; batch8/8 including Hang/growth regressions. Not visible game or full release acceptance."
+    },
+    "native-received-power": {
+      "description": "Original received amount queries and deferred callbacks, reciprocal conversion, doubling acquisition order, Artifact, direct-change fallback and exact source identity. Native scalar state and existing regressions.",
+      "fixtures": [
+        "native-received-dex-strength",
+        "native-received-double-after",
+        "native-received-double-before",
+        "native-received-fallback",
+        "native-received-fallback-artifact",
+        "native-received-negative-artifact",
+        "native-received-reciprocal",
+        "native-received-reforged",
+        "native-received-strength-dex",
+        "native-received-to-focus"
+      ]
+    },
+    "native-simple-hooks": {
+      "implementation": "src/NativeRuneBridge.SimpleHooks.cs",
+      "types": [
+        "MentalShieldRune",
+        "PactsEndUpgradeRune"
+      ],
+      "fixtures": [
+        "native-mental-shield-empty",
+        "native-mental-shield-hand",
+        "native-mental-shield-full-aid",
+        "native-pacts-end-empty",
+        "native-pacts-end-below",
+        "native-pacts-end-threshold",
+        "native-pacts-end-above",
+        "native-pacts-end-stock-below",
+        "native-pacts-end-stock-threshold"
+      ],
+      "mechanisms": [
+        "original end-turn remaining-hand block and native multiplier/floor",
+        "original exhaustive-pile damage additive",
+        "captured rune membership at stock damage threshold",
+        "native actual rounds; root/fork/sibling/RNG isolation"
+      ],
+      "reviewEvidence": [
+        "artifacts/20261002-native-simple-hook-comparison.json",
+        "artifacts/20261002-024039-reuse-session-suite.json"
+      ],
+      "limits": "Incremental 0.9.7 validation; full release/visible/Steam/run acceptance remains outstanding."
+    },
+    "native-before-hand-draw": {
+      "implementation": "src/NativeRuneBridge.BeforeHandDraw.cs",
+      "types": [
+        "ViolenceRune",
+        "SingularityAIRune",
+        "MindOverMatterRune"
+      ],
+      "fixtures": [
+        "native-before-draw-mask-before",
+        "native-before-draw-mask-after",
+        "native-before-draw-full",
+        "native-before-draw-violence-empty",
+        "native-before-draw-violence",
+        "native-before-draw-echo",
+        "native-before-draw-mind",
+        "native-before-draw-stack",
+        "native-before-draw-singularity"
+      ],
+      "mechanisms": [
+        "ordered original callbacks at stock SDK per-relic join",
+        "frozen root and branch owned draw history",
+        "frozen pools/stable seed and salts",
+        "full hand and empty candidate handling",
+        "original free cost and ethereal keywords",
+        "Echo generation and stock JeweledMask order",
+        "native future rounds; parent/sibling/live/RNG isolation"
+      ],
+      "reviewEvidence": [
+        "artifacts/20261002-before-hand-draw-comparison.json",
+        "artifacts/20261002-sdk-before-hand-draw-il.json",
+        "artifacts/20261002-024927-reuse-session-suite.json"
+      ],
+      "limits": "Incremental 10/10 with regeneration/Neurosurge regression; not final full pool or visible/Steam/run acceptance."
+    },
+    "native-buff-reactions": {
+      "implementation": "src/NativeRuneBridge.BuffReactions.cs; src/NativeRuneBridge.PowerLifecycle.cs",
+      "types": [
+        "FuriousGlareRune",
+        "GrowingStrongerRune"
+      ],
+      "fixtures": [
+        "native-buff-x",
+        "native-buff-chain",
+        "native-buff-reverse",
+        "native-buff-sly",
+        "native-buff-artifact",
+        "native-buff-growing",
+        "native-buff-helmet",
+        "native-buff-furious",
+        "native-buff-overflow",
+        "native-buff-adamant"
+      ],
+      "mechanisms": [
+        "original vulnerable-to-strength-to-free-card callbacks",
+        "ordered and reentrant source-card-aware power dispatch",
+        "frozen stable seed and native four-tier cost picker",
+        "Artifact zero event and Reforged multiplier",
+        "X exclusion and Sly/global cost priority",
+        "native later rounds; parent/sibling/live/RNG isolation"
+      ],
+      "reviewEvidence": [
+        "artifacts/20261002-native-buff-reactions-comparison.json",
+        "artifacts/20261002-native-free-card-picker-il.json",
+        "artifacts/20261002-025713-reuse-session-suite.json",
+        "artifacts/20261002-030233-reuse-session-suite.json"
+      ],
+      "limits": "025713 first eight passed then NonX observation error; 030233 six repaired/remainder/regression cases passed. Original failures kept. Still incremental, not full pool or visible/Steam/fullrun acceptance."
+    },
+    "native-turn-resources": {
+      "implementation": "src/NativeRuneBridge.TurnResources.cs",
+      "types": [
+        "BrutalityRune",
+        "SonataRune",
+        "BrokenGoldenCrownRune",
+        "BerserkRune",
+        "SnakebiteRune"
+      ],
+      "fixtures": [
+        "native-turn-resource-brutality-low",
+        "native-turn-resource-sonata-odd",
+        "native-turn-resource-berserk",
+        "native-turn-resource-bound-first",
+        "native-turn-resource-brutality-platelet",
+        "native-turn-resource-brutality",
+        "native-turn-resource-sonata-even",
+        "native-turn-resource-energy-blocked",
+        "native-turn-resource-energy-stack",
+        "native-turn-resource-bound-last",
+        "native-turn-resource-crown",
+        "native-before-draw-snake-repeat",
+        "native-before-draw-snake-first",
+        "native-before-draw-snake-later"
+      ],
+      "mechanisms": [
+        "original early draw/non-damage loss, heal/block",
+        "odd/even once-per-round Sonata guard",
+        "ordered native late energy with stock BoundPhylactery",
+        "NoEnergyGain and Platelet interactions",
+        "Snakebite first/later/repeated before-draw callbacks",
+        "full native rounds/branch/RNG isolation"
+      ],
+      "reviewEvidence": [
+        "artifacts/20261002-native-turn-resources-comparison.json",
+        "artifacts/20261002-031123-reuse-session-suite.json",
+        "artifacts/20261002-031302-reuse-session-suite.json",
+        "artifacts/20261002-032617-reuse-session-suite.json"
+      ],
+      "limits": "Incremental cases span batches; low player HP tests two original early callbacks without future enemy turns. Final full pool and actual Steam/run pending."
+    },
+    "native-catalyst-dragon-souls": {
+      "implementation": "src/NativeRuneBridge.DragonSouls.cs",
+      "types": [
+        "CatalystRune",
+        "OceanDragonSoulRune",
+        "HextechDragonSoulRune"
+      ],
+      "fixtures": [
+        "native-catalyst-acquire-combat",
+        "native-catalyst-acquire-deck",
+        "native-catalyst-artifact",
+        "native-catalyst-base",
+        "native-catalyst-empty",
+        "native-catalyst-reforged",
+        "native-catalyst-upgrade",
+        "native-soul-cloud",
+        "native-soul-hextech-acquire-combat",
+        "native-soul-hextech-acquire-deck",
+        "native-soul-hextech",
+        "native-soul-late-energy-blocked",
+        "native-soul-late-energy-stack",
+        "native-soul-mountain",
+        "native-soul-ocean-acquire-combat",
+        "native-soul-ocean-acquire-deck",
+        "native-soul-ocean",
+        "native-soul-stack-blocked",
+        "native-soul-stack"
+      ],
+      "reviewEvidence": [
+        "artifacts/20261002-native-catalyst-dragon-soul-comparison.json",
+        "artifacts/20261002-033856-reuse-session-suite.json",
+        "artifacts/20261002-034330-reuse-session-suite.json",
+        "artifacts/20261002-035258-reuse-session-suite.json"
+      ],
+      "limits": "Incremental batches; erroneous test expectations preserved. Full pool/UI/Steam/run acceptance outstanding."
+    },
+    "native-burn-replay": {
+      "implementation": "src/NativeRuneBridge.BurnReplay.cs",
+      "types": [
+        "TormentorRune",
+        "ClownCollegeRune",
+        "InfernalDragonSoulRune"
+      ],
+      "fixtures": [
+        "native-burn-blocked",
+        "native-burn-buffer",
+        "native-burn-enemy-one",
+        "native-burn-enemy",
+        "native-burn-player",
+        "native-burn-unblockable",
+        "native-replay-clown-acquire-combat",
+        "native-replay-clown-acquire-deck",
+        "native-replay-echo",
+        "native-replay-one-two-punch",
+        "native-replay-stack",
+        "native-replay-trick",
+        "native-replay-upgrade",
+        "native-infernal-acquire-combat",
+        "native-infernal-acquire-deck",
+        "native-infernal-all-enemies",
+        "native-infernal-card",
+        "native-infernal-once",
+        "native-infernal-replay",
+        "native-infernal-reset",
+        "native-infernal-tormentor",
+        "native-tormentor-bash"
+      ],
+      "reviewEvidence": [
+        "artifacts/20261002-native-burn-replay-comparison.json",
+        "artifacts/20261002-native-burn-replay-comparison-review.json",
+        "artifacts/20261002-040743-reuse-session-suite.json",
+        "artifacts/20261002-041332-reuse-session-suite.json",
+        "artifacts/20261002-041920-reuse-session-suite.json"
+      ],
+      "limits": "Incremental only. Initial Tormentor async site missed, invalid STS1 DoubleTap ID and stock -CARD test naming convention failures preserved. Full pool, visible UI, Steam and fullrun pending."
+    },
+    "native-burn-reactions": {
+      "implementation": "src/NativeRuneBridge.BurnReactions.cs",
+      "types": [
+        "FirebrandRune",
+        "SpeedDemonRune"
+      ],
+      "enemyHexes": [
+        "Tormentor",
+        "Firebrand"
+      ],
+      "fixtures": [
+        "native-firebrand-blocked",
+        "native-firebrand-strike",
+        "native-firebrand-tormentor",
+        "native-speed-demon-blocked",
+        "native-speed-demon-full",
+        "native-speed-demon-once",
+        "native-speed-demon-replay",
+        "native-speed-demon-reset",
+        "native-enemy-tormentor-artifact",
+        "native-enemy-tormentor-captured",
+        "native-enemy-tormentor-repeat",
+        "native-enemy-tormentor-round",
+        "native-enemy-firebrand-blocked",
+        "native-enemy-firebrand"
+      ],
+      "reviewEvidence": [
+        "artifacts/20261002-native-burn-damage-reactions-comparison.json",
+        "artifacts/20261002-native-burn-replay-comparison.json",
+        "artifacts/20261002-043153-reuse-session-suite.json",
+        "artifacts/20261002-043741-reuse-session-suite.json"
+      ],
+      "limits": "Incremental; first registration missed native SpeedDemon inherited reset, fixed. Enemy fully blocked attack cannot trigger Firebrand, positive case now attacks with zero player block. Full release pending."
+    },
+    "native-captured-awards": {
+      "implementation": "src/NativeRuneBridge.CapturedAwards.cs",
+      "fixtures": [
+        "native-captured-awards-stack"
+      ],
+      "reviewEvidence": [
+        "artifacts/20261002-native-captured-awards-comparison.json",
+        "artifacts/20261002-043741-reuse-session-suite.json"
+      ],
+      "limits": "Native grants/rewards/UI unmodified and not accepted here. Every acquired effect still requires separate implementation. Two actual battle rounds validate held-rune no-op lifecycle."
+    },
+    "native-burn-upgrades": {
+      "implementation": "src/NativeRuneBridge.BurnUpgrades.cs",
+      "types": [
+        "BashUpgradeRune",
+        "WhirlwindUpgradeRune",
+        "FlameBarrierUpgradeRune",
+        "InfernoUpgradeRune"
+      ],
+      "mechanisms": [
+        "native Bash strength source",
+        "original final X doubling after Chemical X",
+        "original Burn retaliation instead of stock Flame Barrier damage",
+        "original Inferno damage/Burn using total damage",
+        "exact native/SDK prefix and postfix composition"
+      ],
+      "fixtures": [
+        "native-whirlwind-x-0",
+        "native-whirlwind-x-1",
+        "native-whirlwind-x-2",
+        "native-whirlwind-x-3",
+        "native-whirlwind-chemical-x-0",
+        "native-whirlwind-chemical-x-1",
+        "native-whirlwind-stock",
+        "native-bash-upgrade",
+        "native-bash-reforged",
+        "native-flame-barrier",
+        "native-flame-barrier-blocked",
+        "native-flame-barrier-stock",
+        "native-inferno-self",
+        "native-inferno-enemy-block",
+        "native-inferno-artifact",
+        "native-inferno-stock",
+        "native-inferno-burn"
+      ],
+      "reviewEvidence": [
+        "artifacts/20261002-native-burn-upgrades-comparison.json"
+      ],
+      "limits": "19/19 incremental suite on pinned official 0.9.7/0.47.3. Full release acceptance pending."
+    },
+    "native-turn-flags": {
+      "implementation": "src/NativeRuneBridge.TurnFlags.cs",
+      "types": [
+        "HomeguardRune",
+        "RepulsorRune",
+        "SlowCookRune"
+      ],
+      "mechanisms": [
+        "captured native private booleans",
+        "future hit/full-block trigger",
+        "once-per-combat state",
+        "MaxHp floor Burn"
+      ],
+      "fixtures": [
+        "native-homeguard-blocked",
+        "native-homeguard-hit",
+        "native-homeguard-reset",
+        "native-homeguard-safe",
+        "native-repulsor-blocked",
+        "native-repulsor-hit",
+        "native-repulsor-once",
+        "native-slow-cook",
+        "native-slow-cook-zero"
+      ],
+      "reviewEvidence": [
+        "artifacts/20261002-native-resource-pet-poison-comparison.json",
+        "artifacts/20261002-native-summon-legacy-replacement-comparison.json",
+        "artifacts/20261002-vanilla-summon-listener-metadata.json"
+      ],
+      "limits": "Incremental native-game comparisons. Full release acceptance pending."
+    },
+    "native-poison-energy": {
+      "implementation": "src/NativeRuneBridge.NativeResources.cs",
+      "types": [
+        "TerminalIllnessRune",
+        "TrinityRune"
+      ],
+      "mechanisms": [
+        "original poison received veto with null applier",
+        "exact SDK poison decrement site",
+        "ordered Orbit and Trinity energy-spent",
+        "ordered star-spent forge"
+      ],
+      "fixtures": [
+        "native-terminal-accelerant",
+        "native-terminal-one",
+        "native-terminal-poison",
+        "native-terminal-stock",
+        "native-trinity-energy",
+        "native-trinity-orbit",
+        "native-trinity-stack",
+        "native-trinity-stars",
+        "native-trinity-zero"
+      ],
+      "reviewEvidence": [
+        "artifacts/20261002-native-resource-pet-poison-comparison.json",
+        "artifacts/20261002-native-summon-legacy-replacement-comparison.json",
+        "artifacts/20261002-vanilla-summon-listener-metadata.json"
+      ],
+      "limits": "Incremental native-game comparisons. Full release acceptance pending."
+    },
+    "native-summon-resources": {
+      "implementation": "src/NativeRuneBridge.SummonResources.cs; src/SummonRuneMirrors.cs",
+      "types": [
+        "DrainRune",
+        "BigHandsRune"
+      ],
+      "mechanisms": [
+        "native decimal summon modifier",
+        "integer HP write and retained raw callbacks",
+        "original BoneGuard/Plaster/Drain listeners",
+        "Doom rounding and Artifact"
+      ],
+      "fixtures": [
+        "native-summon-big-hands",
+        "native-summon-drain",
+        "native-summon-drain-artifact",
+        "native-summon-resource-revive",
+        "native-summon-resource-stack",
+        "native-summon-resource-zero"
+      ],
+      "reviewEvidence": [
+        "artifacts/20261002-native-resource-pet-poison-comparison.json",
+        "artifacts/20261002-native-summon-legacy-replacement-comparison.json",
+        "artifacts/20261002-vanilla-summon-listener-metadata.json"
+      ],
+      "limits": "Incremental native-game comparisons. Full release acceptance pending."
+    },
+    "native-orb-reactions": {
+      "implementation": "src/NativeRuneBridge.OrbReactions.cs",
+      "types": [
+        "CoreOverloadRune",
+        "MadScientistRune",
+        "OrbSymbiosisRune"
+      ],
+      "mechanisms": [
+        "native focus after evoking including Dualcast",
+        "original duplicate guard and queue eviction",
+        "original uncapped slots vs SDK cap",
+        "composition of channel/evoke/capacitor",
+        "root capture after native setup"
+      ],
+      "fixtures": [
+        "native-orb-core-dualcast",
+        "native-orb-core-overflow",
+        "native-orb-scientist",
+        "native-orb-scientist-stack",
+        "native-orb-symbiosis",
+        "native-orb-symbiosis-core",
+        "native-trinity-orbit-trigger",
+        "orb-passive-zap-mixed",
+        "native-generation-neurosurge-search"
+      ],
+      "reviewEvidence": [
+        "artifacts/20261002-native-orb-reactions-comparison.json"
+      ],
+      "limits": "Incremental native-game tests. Actual native setup order and initial CrackedCore channel are retained. Full release/visible/Steam/fullrun pending."
+    },
+    "native-block-sustain": {
+      "implementation": "src/NativeRuneBridge.BlockSustain.cs; src/MysteryMirrors.cs",
+      "types": [
+        "PowerShieldRune",
+        "AllForYouRune",
+        "OurHealingRune"
+      ],
+      "mechanisms": [
+        "original first block callback and private reset flag",
+        "exact original act scaling including endless snapshot",
+        "original invisible temporary strength",
+        "native team coefficient using captured players/alive/relic membership",
+        "single-player empty teammate share"
+      ],
+      "fixtures": [
+        "native-power-shield-buffs",
+        "native-power-shield-once",
+        "native-power-shield-reforged",
+        "native-power-shield-zero",
+        "native-share-heal-single",
+        "native-team-sustain-single",
+        "native-team-sustain-stack",
+        "native-trinity-stack",
+        "native-orb-scientist-stack",
+        "native-generation-neurosurge-search"
+      ],
+      "reviewEvidence": [
+        "artifacts/20261002-native-block-act-sustain-comparison.json",
+        "artifacts/20261002-native-single-share-heal-comparison.json",
+        "artifacts/20261002-native-act-scaling-il.json"
+      ],
+      "limits": "Initial genuine simulation error in054117 is preserved, corrected by exact capture of original getter. 054746 eight-case remainder passes. Full release/visible/Steam/fullrun pending."
+    },
+    "native-enemy-health-thresholds": {
+      "implementation": "src/NativeRuneBridge.EnemyHealthThresholds.cs; src/EnemyTurnTrackingState.cs",
+      "types": [
+        "EscapePlanEnemyHex",
+        "RepulsorEnemyHex",
+        "DawnbringersResolveEnemyHex",
+        "FeelTheBurnEnemyHex"
+      ],
+      "mechanisms": [
+        "original threshold dispatch after damage handlers",
+        "exact-half versus below-half boundary",
+        "native duplicate guard key for all captured periodic states",
+        "once-only sets and deferred burn pending set",
+        "branch power scaling/read/clamp",
+        "native player-turn fallback and dead-enemy marker handling"
+      ],
+      "fixtures": [
+        "native-health-blocked",
+        "native-health-dawnbringersresolve-1",
+        "native-health-dawnbringersresolve-2",
+        "native-health-dawnbringersresolve-3",
+        "native-health-death",
+        "native-health-escape-opening",
+        "native-health-escapeplan-1",
+        "native-health-exact-half",
+        "native-health-feeltheburn-1",
+        "native-health-feeltheburn-2",
+        "native-health-feeltheburn-3",
+        "native-health-mixed",
+        "native-health-repulsor-1",
+        "native-health-repulsor-2",
+        "native-health-repulsor-3",
+        "native-enemy-periodic-tier-1",
+        "native-enemy-tormentor-captured",
+        "native-firebrand-tormentor",
+        "native-generation-neurosurge-search"
+      ],
+      "reviewEvidence": [
+        "artifacts/20261002-native-enemy-threshold-comparison.json"
+      ],
+      "limits": "Single-player only; preserved failed fixture assertion061259 (Shrink expires after two native rounds), corrected061750. Last guard bookkeeping change reran six representative/new/adjacent regressions062103; full pool/visible/Steam/fullrun pending."
+    },
+    "native-cleanse-removal": {
+      "implementation": "src/NativeRuneBridge.Cleanse.cs; src/NativeRuneBridge.EnemyHealthThresholds.cs",
+      "types": [
+        "MikaelsBlessingRune",
+        "FeelTheBurnRune",
+        "ExposeUpgradeRune",
+        "MikaelsBlessingEnemyHex",
+        "MikaelsBlessingCard",
+        "FeelTheBurnCard"
+      ],
+      "mechanisms": [
+        "original lifecycle removal including afflictions and native Dampen data",
+        "protected monster buff policy",
+        "actual healing plus two-trigger counter and native duplicate guard",
+        "frozen HP/tier/counter regression"
+      ],
+      "fixtures": [
+        "native-cleanse-afflictions",
+        "native-cleanse-burn-0",
+        "native-cleanse-burn-1",
+        "native-cleanse-dampen",
+        "native-cleanse-enemy-duplicate",
+        "native-cleanse-enemy-limit",
+        "native-cleanse-enemy-mikael-1",
+        "native-cleanse-enemy-mikael-2",
+        "native-cleanse-enemy-mikael-3",
+        "native-cleanse-expose",
+        "native-cleanse-mikael-0",
+        "native-cleanse-mikael-1"
+      ],
+      "reviewEvidence": [
+        "artifacts/20261002-native-cleanse-comparison.json",
+        "artifacts/20261002-native-vital-removed-compat-comparison.json",
+        "artifacts/20261002-native-power-afterremoved-callbacks.json"
+      ],
+      "limits": "Original cleanup/removal callbacks and six native AfterRemoved lifecycle overrides; captured combat cards, affliction clearing, Dampen upgrade restoration, protected monster buffs, enemy two-trigger cap and duplicate guard. IL64/64 plus VitalSpark compatibility6/6. Incremental batches0650208/8 and0655228/8; full-pool/visible/Steam/fullrun pending."
+    },
+    "native-circle-sustain": {
+      "implementation": "src/NativeRuneBridge.CircleOfDeath.cs; src/RuneMirrors.cs",
+      "types": [
+        "CircleOfDeathRune"
+      ],
+      "mechanisms": [
+        "shared original ordinal for healing and block",
+        "post-command actual heal delta",
+        "original unsorted enemy targets and stable salts",
+        "fork/hash/live stamp scalar and native equality"
+      ],
+      "fixtures": [
+        "native-circle-block",
+        "native-circle-heal",
+        "native-circle-heal-cap",
+        "native-circle-heal-full",
+        "native-circle-heal-glass",
+        "native-circle-heal-stack",
+        "native-circle-mixed",
+        "native-circle-stack",
+        "native-circle-two-enemies"
+      ],
+      "reviewEvidence": [
+        "artifacts/20261002-native-circle-healing-comparison.json",
+        "artifacts/20261002-native-circle-callback-il.json"
+      ],
+      "limits": "Original shared block/actual-heal handler and stable target ordering with captured local proc ordinal; full key/stamp and native scalar equality. IL344/344 original helpers. 070733 first7 pass; last fixture used wrong monster identifier and was fixed (BIG_DUMMY to actual BigDummy). Final0711156/6 includes two enemies, mixed block/heal, cap, health and Neurosurge regressions. Full-pool/visible/Steam/fullrun pending."
+    },
+    "native-opening-generation": {
+      "implementation": "src/NativeRuneBridge.OpeningAndGeneration.cs; src/NativeRuneBridge.BeforeHandDraw.cs",
+      "types": [
+        "BeginningAndEndRune",
+        "KeystoneHunterRune",
+        "FleshAndBoneRune",
+        "LingeringMightRune",
+        "ServantMasterRune",
+        "WraithRune",
+        "ExplosionArtRune",
+        "SummonForthRune"
+      ],
+      "mechanisms": [
+        "actual original opening callbacks before root",
+        "native stock power/pet and planned turn-start selections",
+        "original carried buff state",
+        "native many-card generation and captured all-card/pile reads",
+        "original exhausted-soul multiplier and resulting card play"
+      ],
+      "fixtures": [
+        "native-opening-beginning",
+        "native-opening-flesh",
+        "native-opening-flesh-one",
+        "native-opening-flesh-two",
+        "native-opening-keystone",
+        "native-opening-lingering",
+        "native-opening-lingering-empty",
+        "native-opening-servant",
+        "native-opening-servant-stack",
+        "native-before-draw-wraith",
+        "native-before-draw-wraith-exhaust",
+        "native-before-draw-explosion",
+        "native-before-draw-summonforth"
+      ],
+      "reviewEvidence": [
+        "artifacts/20261002-native-generated-opening-comparison.json",
+        "artifacts/20261002-native-opening-auxiliary-comparison.json",
+        "artifacts/20261002-native-soul-create-il.json"
+      ],
+      "limits": "Original opening commands retained before capture with stock power/pet lifecycle, carried buff string captured/consumed, ordered native generated batch/membership/movement callbacks, actual resulting card plays and exhausted-soul damage query. Source39/39 generated plus168/168 auxiliary review. After preserving071738 real initial-choice fixture timeout, setup obtains opening relic after builder-ready then invokes original callbacks before capture;07213513/13 passes real turn-start selections, low HP, pets, carry, two future rounds. End-of-combat UI/full-run acceptance remains pending."
+    },
+    "native-draw-exhaust-period": {
+      "implementation": "src/NativeRuneBridge.DrawExhaustPeriod.cs",
+      "types": [
+        "NightstalkingRune",
+        "DeathWarrantRune",
+        "RekindleRune",
+        "DizzySpinningRune",
+        "DivineInterventionRune"
+      ],
+      "mechanisms": [
+        "shared original draw-threshold callbacks and branch counters",
+        "native exhaust energy loop including ethereal cards",
+        "original shuffle generation with branch RNG",
+        "periodic round claim",
+        "native positive poison filter and captured stock poison tick"
+      ],
+      "fixtures": [
+        "native-draw-night-threshold",
+        "native-draw-night-before",
+        "native-draw-dizzy-shuffle",
+        "native-draw-death-poison",
+        "native-draw-death-terminal",
+        "native-exhaust-rekindle-four",
+        "native-exhaust-rekindle-three",
+        "native-exhaust-rekindle-ethereal",
+        "native-turn-divine-period"
+      ],
+      "reviewEvidence": [
+        "artifacts/20261002-native-draw-exhaust-period-comparison.json",
+        "artifacts/20261002-native-death-warrant-comparison.json"
+      ],
+      "limits": "Original shared draw-threshold base, native exhaust counters and rewards, original periodic claim and shuffle generation. Source65/65 plus DeathWarrant review, owned poison reads/ticks reuse stock SDK and original TerminalIllness decrement bridge. 07423911/11 native differential passes exact/below threshold, ordinary/ethereal exhaust, repeated shuffle, periodic rounds3/6, poison/Terminal interactions, Circle and Neurosurge regression. Full release pending."
+    },
+    "native-enemy-draw": {
+      "implementation": "src/NativeRuneBridge.EnemyDraw.cs",
+      "types": [
+        "Nightstalking",
+        "WarmogsSpirit",
+        "SwiftAndSafe",
+        "DizzySpinning"
+      ],
+      "mechanisms": [
+        "original shared draw progress callbacks and threshold/reward loops",
+        "frozen enemy tier and deep-cloned per-player dictionaries",
+        "original shuffle generation and random draw insertion",
+        "multi-enemy exact reward application"
+      ],
+      "fixtures": [
+        "native-enemy-draw-dizzy-1",
+        "native-enemy-draw-dizzy-3",
+        "native-enemy-draw-mixed",
+        "native-enemy-draw-night-1",
+        "native-enemy-draw-night-2",
+        "native-enemy-draw-night-3",
+        "native-enemy-draw-swift-1",
+        "native-enemy-draw-swift-2",
+        "native-enemy-draw-swift-3",
+        "native-enemy-draw-two",
+        "native-enemy-draw-warmogs-1",
+        "native-enemy-draw-warmogs-2",
+        "native-enemy-draw-warmogs-3"
+      ],
+      "reviewEvidence": [
+        "artifacts/20261002-native-enemy-draw-comparison.json"
+      ],
+      "limits": "080144 native16/16. Earlier075837 tier key was unrecognized and corrected; only corrected suite establishes tiers1/2/3. Full release pending."
+    },
+    "native-resource-upgrades": {
+      "implementation": "src/NativeRuneBridge.ResourceUpgrades.cs",
+      "types": [
+        "StardustUpgradeRune",
+        "JuggernautUpgradeRune"
+      ],
+      "fixtures": [
+        "native-upgrade-juggernaut",
+        "native-upgrade-juggernaut-mixed",
+        "native-upgrade-juggernaut-two",
+        "native-upgrade-juggernaut-upgraded",
+        "native-upgrade-stardust",
+        "native-upgrade-stardust-mixed",
+        "native-upgrade-stardust-scope",
+        "native-upgrade-stardust-two",
+        "native-upgrade-stardust-upgraded",
+        "native-upgrade-stardust-zero"
+      ],
+      "reviewEvidence": [
+        "artifacts/20261002-native-resource-upgrades-comparison.json",
+        "artifacts/20261002-native-stardust-sdk-payment-il.json",
+        "artifacts/20261002-native-juggernaut-upgrade-il.json"
+      ],
+      "limits": "60/60 original source, exact payment and all-target block response; native082211 first5 and0825057/7. Initial fixture stale Circle probe and incorrectly guessed SDK star receiver were caught, corrected before accepted runs. Incremental validation; full release pending."
+    },
+    "native-hand-rules": {
+      "implementation": "src/NativeRuneBridge.HandRules.cs",
+      "types": [
+        "DuffsVintageRune",
+        "SmokestackUpgradeRune",
+        "BlueCandleMedkitRune"
+      ],
+      "fixtures": [
+        "native-hand-blue-enemy",
+        "native-hand-blue-late",
+        "native-hand-blue-status",
+        "native-hand-duffs-energy",
+        "native-hand-duffs-stars",
+        "native-hand-duffs-x",
+        "native-hand-smoke-ordinary",
+        "native-hand-smoke-status",
+        "native-hand-smoke-two"
+      ],
+      "reviewEvidence": [
+        "artifacts/20261002-native-hand-rules-comparison.json",
+        "artifacts/20261002-native-hand-rules-il.json"
+      ],
+      "limits": "17/17 source and08342312/12 native; retain reduction, smoke status draws, pure keyword and late cost ordering. Full release pending."
+    },
+    "native-card-reactions": {
+      "implementation": [
+        "src/NativeRuneBridge.EnemyPlayed.cs",
+        "src/NativeRuneBridge.MissileStars.cs"
+      ],
+      "types": [
+        "TanksShield",
+        "AncientWine",
+        "MonarchsGaze",
+        "MirrorReflection",
+        "GalacticGiftRune",
+        "LightEmUpRune",
+        "TwinFlamesRune"
+      ],
+      "fixtures": [
+        "native-react-enemy-gaze-1",
+        "native-react-enemy-gaze-2",
+        "native-react-enemy-gaze-3",
+        "native-react-enemy-mirror",
+        "native-react-enemy-played-replay",
+        "native-react-enemy-played-two",
+        "native-react-enemy-shield-1",
+        "native-react-enemy-shield-2",
+        "native-react-enemy-shield-3",
+        "native-react-enemy-wine-1",
+        "native-react-enemy-wine-2",
+        "native-react-enemy-wine-3",
+        "native-react-gift-mixed",
+        "native-react-gift-preserved",
+        "native-react-gift-threshold",
+        "native-react-light-aoe",
+        "native-react-light-free",
+        "native-react-light-threshold",
+        "native-react-twin-light-mixed",
+        "native-react-twin-light-supported-mix",
+        "native-react-twin-two",
+        "native-react-twin-x"
+      ],
+      "reviewEvidence": [
+        "artifacts/20261002-native-card-reactions-comparison.json",
+        "artifacts/20261002-native-card-reactions-il.json"
+      ],
+      "limits": "101/101 original source,21/22 family inputs passed across specified native batches; retained Illusory-dependent fixture requires pending external attack semantics. Fixture errors (old STS1 names, expected replay1 instead of2) corrected before accepting evidence. Full release pending."
+    },
+    "native-effective-attack": {
+      "implementation": [
+        "src/NativeRuneBridge.EffectiveAttack.cs",
+        "src/ModifierMirrors.cs"
+      ],
+      "types": [
+        "IllusoryWeaponRune"
+      ],
+      "fixtures": [
+        "native-effective-counter-controls",
+        "native-effective-counters",
+        "native-effective-enemy-attack-counts",
+        "native-effective-finisher-nested",
+        "native-effective-finisher-new-turn",
+        "native-effective-finisher-ordinary",
+        "native-effective-finisher-replay",
+        "native-effective-pen-after",
+        "native-effective-pen-before",
+        "native-effective-skill",
+        "native-effective-two"
+      ],
+      "evidence": [
+        "artifacts/20261002-native-effective-attack-comparison.json",
+        "artifacts/20261002-093334-reuse-session-suite.json",
+        "artifacts/20261002-093612-reuse-session-suite.json",
+        "artifacts/20261002-094928-reuse-session-suite.json"
+      ],
+      "status": "incremental native differential passed; full release pending"
+    },
+    "native-gold-lifecycle": {
+      "implementation": [
+        "src/NativeRuneBridge.Gold.cs",
+        "src/NativeRuneBridge.MaxHp.cs",
+        "src/NativeRuneBridge.PowerLifecycle.cs"
+      ],
+      "types": [
+        "BloodIdolRune",
+        "SacrificeRune",
+        "GoldrendRune",
+        "BurningInterestRune",
+        "CollectorRune",
+        "BloodIdol"
+      ],
+      "fixtures": [
+        "native-gold-bowler",
+        "native-gold-burn",
+        "native-gold-burn-feedback",
+        "native-gold-collector-below",
+        "native-gold-collector-boundary",
+        "native-gold-collector-fatal",
+        "native-gold-collector-flying-first",
+        "native-gold-collector-flying-last",
+        "native-gold-ecto",
+        "native-gold-enemy-feedback",
+        "native-gold-enemy-victory",
+        "native-gold-feed-scale",
+        "native-gold-healing",
+        "native-gold-hoard",
+        "native-gold-per-hit",
+        "native-gold-sacrifice"
+      ],
+      "evidence": [
+        "artifacts/20261002-native-gold-family-comparison.json",
+        "artifacts/20261002-native-max-hp-family-comparison.json",
+        "artifacts/20261002-101107-reuse-session-suite.json",
+        "artifacts/20261002-102330-reuse-session-suite.json"
+      ],
+      "status": "Incremental 15 complete continuing-battle cases + separate post-victory outcome; full release pending. Failed101711 pile/history comparison kept as different native cleanup phase, not a solver mechanics failure."
+    },
+    "native-death-growth": {
+      "implementation": [
+        "src/NativeRuneBridge.DeathGrowth.cs",
+        "src/NativeRuneBridge.StackGrowth.cs",
+        "src/NativeRuneBridge.cs"
+      ],
+      "types": [
+        "SoulEaterRune",
+        "JudicatorRune",
+        "CorpseExplosionRune",
+        "DiveBomberRune",
+        "FeedUpgradeRune",
+        "NineDragonPowerRune"
+      ],
+      "fixtures": [
+        "native-death-corpse",
+        "native-death-corpse-artifact",
+        "native-death-death-chain",
+        "native-death-dive-death",
+        "native-death-dive-ordinary",
+        "native-death-feed",
+        "native-death-feed-control",
+        "native-death-feed-scaled",
+        "native-death-judge-half-below",
+        "native-death-judge-half-boundary",
+        "native-death-judge-kill",
+        "native-death-judge-no-kill",
+        "native-death-nine-opening",
+        "native-death-nine-potion",
+        "native-death-nine-potion-mixed",
+        "native-death-soul-collector",
+        "native-death-soul-infinite",
+        "native-death-soul-normal",
+        "native-death-soul-scaled"
+      ],
+      "evidence": [
+        "artifacts/20261002-native-death-growth-comparison.json",
+        "artifacts/20261002-112450-reuse-session-suite.json",
+        "artifacts/20261002-112702-reuse-session-suite.json",
+        "artifacts/20261002-113431-reuse-session-suite.json"
+      ],
+      "status": "Original death/stack/maxHP family89/89. 1124504/4 soul scenarios;112702 first10 strict continuing-battle cases;1134315/5 potion/opening/death. Leaf display patch must precede reward/caller compilation to prevent native JIT inlining live reads. Frozen birth metadata, full action/round state, maxHP base/stack/scalar isolation tested. Dive death asserts actual terminal enemy HP outcome separately from cleanup piles. Full release/visible/Steam/full-run acceptance pending."
+    },
+    "native-turn-cost-replay": {
+      "implementation": [
+        "src/NativeRuneBridge.TurnCostReplay.cs",
+        "src/NativeRuneBridge.cs",
+        "src/NativeRuneBridge.PowerLifecycle.cs"
+      ],
+      "types": [
+        "MagicMissileRune",
+        "SpinToWinRune",
+        "BlossomBladeRune",
+        "CerberusRune",
+        "TriPrismRune",
+        "LubricantRune",
+        "JeweledGauntletRune",
+        "FanTheHammerRune"
+      ],
+      "fixtures": [
+        "native-turn-cerberus",
+        "native-turn-cerberus-star",
+        "native-turn-cerberus-illusory",
+        "native-turn-cerberus-x",
+        "native-turn-lubricant",
+        "native-turn-lubricant-control",
+        "native-turn-tri-prism",
+        "native-turn-tri-control",
+        "native-turn-magic-missile",
+        "native-turn-magic-illusory",
+        "native-turn-spin-energy",
+        "native-turn-spin-draw",
+        "native-turn-spin-summon",
+        "native-turn-spin-stars",
+        "native-turn-blossom-solo",
+        "native-turn-fan",
+        "native-turn-fan-illusory",
+        "native-turn-fan-nested",
+        "native-turn-jeweled",
+        "native-turn-jeweled-mixed",
+        "native-turn-jeweled-pending",
+        "native-turn-jeweled-mixed-pending",
+        "native-turn-cerberus-reset",
+        "native-turn-lubricant-reset",
+        "native-turn-tri-prism-reset",
+        "native-turn-fan-reset",
+        "native-turn-magic-missile-reset"
+      ],
+      "evidence": [
+        "artifacts/20261002-native-turn-cost-replay-comparison.json",
+        "artifacts/20261002-114636-reuse-session-suite.json",
+        "artifacts/20261002-115854-reuse-session-suite.json"
+      ],
+      "status": "Original turn cost/replay/resource family90/90. 11463620/20 full native continuing-battle snapshots plus scalar counters/fork/RNG/live isolation. Pending replay dictionary deep cloned/remapped with paired true/false unordered card-reference sets. Original Fan damage card clears at game-corresponding final result tail. Multiple pending query and future-turn-reset probes being verified separately. Single-player no-teammate Blossom case does not claim multiplayer support. Full release/visible/Steam/full-run acceptance pending. Additional1158547/7 pending-card-dictionary freeze and five next-turn-reset native fixtures passed."
+    },
+    "native-damage-upgrades": {
+      "implementation": [
+        "src/NativeRuneBridge.DamageUpgrades.cs",
+        "src/SummonRuneMirrors.cs",
+        "src/NativeRuneBridge.PowerLifecycle.cs",
+        "src/ConditionalCardPatches.cs"
+      ],
+      "types": [
+        "SerpentsFangRune",
+        "InfernalConduitRune",
+        "BoneBreakUpgradeRune",
+        "BorrowedTimeUpgradeRune",
+        "UnleashUpgradeRune",
+        "FallingStarUpgradeRune",
+        "MiseryUpgradeRune",
+        "SnakebiteUpgradeRune",
+        "NeutralizeUpgradeRune",
+        "StrikeUpgradeRune",
+        "DefendUpgradeRune"
+      ],
+      "fixtures": [
+        "native-upgrade-bone",
+        "native-upgrade-bone-dead",
+        "native-upgrade-borrowed",
+        "native-upgrade-falling",
+        "native-upgrade-falling-all",
+        "native-upgrade-infernal",
+        "native-upgrade-infernal-blocked",
+        "native-upgrade-infernal-mixed",
+        "native-upgrade-juggernaut",
+        "native-upgrade-juggernaut-mixed",
+        "native-upgrade-juggernaut-two",
+        "native-upgrade-juggernaut-upgraded",
+        "native-upgrade-misery-multiple",
+        "native-upgrade-misery-single",
+        "native-upgrade-neutralize",
+        "native-upgrade-serpent",
+        "native-upgrade-serpent-artifact",
+        "native-upgrade-serpent-blocked",
+        "native-upgrade-serpent-outbreak",
+        "native-upgrade-serpent-sleight",
+        "native-upgrade-snake-retained",
+        "native-upgrade-stardust",
+        "native-upgrade-stardust-mixed",
+        "native-upgrade-stardust-scope",
+        "native-upgrade-stardust-two",
+        "native-upgrade-stardust-upgraded",
+        "native-upgrade-stardust-zero",
+        "native-upgrade-starter",
+        "native-upgrade-starter-victory",
+        "native-upgrade-starter-victory-repeat",
+        "native-upgrade-unleash",
+        "native-upgrade-unleash-protector"
+      ],
+      "evidence": [
+        "artifacts/20261002-native-damage-upgrade-comparison.json",
+        "artifacts/20261002-native-response-guards-comparison.json",
+        "artifacts/20261002-121954-reuse-session-suite.json",
+        "artifacts/20261002-123347-reuse-session-suite.json",
+        "artifacts/20261002-124049-reuse-session-suite.json",
+        "artifacts/20261002-125442-reuse-session-suite.json",
+        "artifacts/20261002-125727-reuse-session-suite.json"
+      ],
+      "status": "Original damage/upgrade family117/117 and Outbreak/Sleight guards246/246. 20 native battle fixtures passed incrementally across builds; original AsyncLocal response guards retained. Removed Osty now recreated from branch roster, with new combat ID; original failure retained. Nonempty native discard selection verified. Two native victory deck probes verify existing multi-level basic cards upgrade once, repeated plays deduplicate, untouched deck cards stay unchanged. Native Burning Blood and cleanup are separate from solver scoring terminal. Full release/visible/Steam/full-run acceptance pending."
+    },
+    "native-outside-battle-enemy": {
+      "implementation": "src/NativeRuneBridge.OutsideBattleEnemy.cs",
+      "enemyHexes": [
+        "CuttingEdgeAlchemist",
+        "JinlianBox",
+        "HastyScribble",
+        "PandorasBox",
+        "TezcatarasMercy",
+        "ForbiddenGrimoire"
+      ],
+      "fixtures": [
+        "native-enemy-outside-cards",
+        "native-enemy-outside-rewards"
+      ],
+      "evidence": [
+        "artifacts/20261002-native-outside-battle-enemy-comparison.json",
+        "artifacts/20261002-125727-reuse-session-suite.json"
+      ],
+      "status": "Six upstream outside-battle effects accepted at captured battle root. Grouped battle tests pass; no separate map/reward/drop acceptance claim."
+    },
+    "native-conditional-upgrades": {
+      "implementation": "src/NativeRuneBridge.ConditionalUpgrades.cs",
+      "playerRunes": [
+        "HiddenGemUpgradeRune",
+        "JackpotUpgradeRune",
+        "CompactUpgradeRune",
+        "FlakCannonUpgradeRune",
+        "SurvivorUpgradeRune",
+        "NightmareUpgradeRune",
+        "VoltaicUpgradeRune",
+        "CreativeAiUpgradeRune"
+      ],
+      "fixtures": [
+        "native-conditional-compact",
+        "native-conditional-compact-upgraded",
+        "native-conditional-creative",
+        "native-conditional-creative-upgraded",
+        "native-conditional-flak",
+        "native-conditional-flak-exhaust",
+        "native-conditional-hidden",
+        "native-conditional-hidden-repeat",
+        "native-conditional-jackpot",
+        "native-conditional-jackpot-upgraded",
+        "native-conditional-nightmare",
+        "native-conditional-nightmare-many",
+        "native-conditional-survivor-empty",
+        "native-conditional-survivor-many",
+        "native-conditional-survivor-trigger",
+        "native-conditional-voltaic",
+        "native-conditional-voltaic-empty"
+      ],
+      "evidence": [
+        "artifacts/20261002-native-conditional-upgrades-comparison.json",
+        "artifacts/20261002-131945-reuse-session-suite.json",
+        "artifacts/20261002-133045-reuse-session-suite.json",
+        "artifacts/20261002-133315-reuse-session-suite.json",
+        "artifacts/20261002-134158-reuse-session-suite.json",
+        "artifacts/20261002-134606-reuse-session-suite.json"
+      ],
+      "status": "Original conditional upgrades85/85. 17 native inputs passed incrementally across builds, including zero/multiple discard, immediate repeated Nightmare, fixed Compact transformations, Flak exhausted status count, ordered branch-owned Voltaic history, and Creative AI upgraded generation. Latest1346065/5 regression. Explicit empty native choice selector now installed; one-option Nightmare input has a second distinct option to exercise native selection. Full release/visible/Steam/full-run acceptance pending."
+    },
+    "native-orb-shuffle": {
+      "implementation": "src/NativeRuneBridge.OrbShuffle.cs",
+      "playerRunes": [
+        "MarkovBabbleRune",
+        "NightmareRune",
+        "ElectrodynamicsRune",
+        "RecycleBinRune"
+      ],
+      "fixtures": [
+        "native-orb-markov",
+        "native-orb-markov-capacity",
+        "native-orb-nightmare",
+        "native-orb-nightmare-loop",
+        "native-orb-electrodynamics",
+        "native-orb-electrodynamics-core",
+        "native-shuffle-recycle",
+        "native-shuffle-recycle-draw"
+      ],
+      "evidence": [
+        "artifacts/20261002-native-orb-shuffle-forge-comparison.json",
+        "artifacts/20261002-native-orb-shuffle-build3.log",
+        "artifacts/20261002-135442-reuse-session-suite.json"
+      ],
+      "status": "Original orb/shuffle family98/98. Eight new native differentials plus three Core/Symbiosis/Neurosurge regressions passed13544211/11 on one adapter/Lab build. Original stable candidate/salt mapping, multi-dark passive weakest target after branch HP changes, repeated Loop/Gloomy triggers, all-enemy lightning without consuming random-target RNG, and excluded discard statuses vs draw statuses in shuffle. Full release/visible/Steam/full-run acceptance pending."
+    },
+    "native-enemy-hit-memory": {
+      "implementation": "src/NativeRuneBridge.EnemyHitMemory.cs",
+      "enemyHexes": [
+        "MountainSoul",
+        "SpeedDemon",
+        "DevilsDance",
+        "Queen",
+        "HandOfBaron"
+      ],
+      "fixtures": [
+        "native-enemy-hit-blocked",
+        "native-enemy-hit-devilsdance-1",
+        "native-enemy-hit-devilsdance-2",
+        "native-enemy-hit-devilsdance-3",
+        "native-enemy-hit-handofbaron-1",
+        "native-enemy-hit-handofbaron-2",
+        "native-enemy-hit-handofbaron-3",
+        "native-enemy-hit-mixed",
+        "native-enemy-hit-mountainsoul-1",
+        "native-enemy-hit-mountainsoul-2",
+        "native-enemy-hit-mountainsoul-3",
+        "native-enemy-hit-queen-1",
+        "native-enemy-hit-queen-2",
+        "native-enemy-hit-queen-3",
+        "native-enemy-hit-speeddemon-1",
+        "native-enemy-hit-speeddemon-2",
+        "native-enemy-hit-speeddemon-3"
+      ],
+      "evidence": [
+        "artifacts/20261002-native-enemy-hit-memory-comparison.json",
+        "artifacts/20261002-140458-reuse-session-suite.json",
+        "artifacts/20261002-native-enemy-hit-memory-build2.log"
+      ],
+      "status": "Original enemy hit/turn bookkeeping136/136 audit. 140458 same-build19/19: five enemy types at each of three strength tiers, mixed ordered native Buffer/heal/mark callbacks, fully blocked damage exclusion, four future rounds plus Outbreak/Neurosurge regressions. Four tracking sets deep-copied and included in both signatures; Devil once-per-turn set resets at original player-turn boundary. Full release/visible/Steam/full-run acceptance pending."
+    },
+    "native-progress-start-upgrades": {
+      "implementation": "src/NativeRuneBridge.ProgressStartUpgrades.cs",
+      "playerRunes": [
+        "ArcanePunchRune",
+        "DevilsDanceRune",
+        "MakeItMineRune",
+        "TranscendentEvilRune",
+        "RoyaltiesUpgradeRune",
+        "SubroutineUpgradeRune",
+        "SendThemInRune",
+        "RoyalTrialRune",
+        "ReanimateUpgradeRune",
+        "EternalArmorUpgradeRune"
+      ],
+      "fixtures": [
+        "native-progress-arcane",
+        "native-progress-arcane-replay",
+        "native-progress-devil",
+        "native-progress-devil-mixed",
+        "native-progress-eternal",
+        "native-progress-eternal-inactive",
+        "native-progress-make-0",
+        "native-progress-make-2",
+        "native-progress-reanimate-enemy",
+        "native-progress-reanimate-pet",
+        "native-progress-royal",
+        "native-progress-royal-replay",
+        "native-progress-royalties",
+        "native-progress-royalties-blood",
+        "native-progress-send",
+        "native-progress-send-royal",
+        "native-progress-subroutine",
+        "native-progress-transcendent-0",
+        "native-progress-transcendent-8"
+      ],
+      "evidence": [
+        "artifacts/20261002-native-progress-start-upgrades-comparison.json",
+        "artifacts/20261002-143243-reuse-session-suite.json",
+        "artifacts/20261002-144423-reuse-session-suite.json",
+        "artifacts/20261002-native-progress-start-upgrades-build4.log",
+        "artifacts/20261002-150807-reuse-session-suite.json"
+      ],
+      "status": "Original progress/start upgrades124/124. All19 new native differential inputs passed incrementally:143243 first16,144423 remaining3 plus zero-stack/reentrant and Neurosurge regressions5/5. Test opening player-start uses the actual HookMirrors entry, not the vanilla-only internal relic helper; failed original report preserved. Native callbacks, scalar progression, saved stacks, stable minions, death-based costs, plating retention and future rounds compared; opening probes check live/parent/sibling isolation. Not a full-suite same-build or visible/Steam/full-run acceptance. Correction: inactive Plating fixture previously used an unknown owner key (default Enemy); explicitly target Player and repeat passed145812 and150807. Previous result is not evidence for player plating decay."
+    },
+    "native-enemy-card-cost": {
+      "implementation": "src/NativeRuneBridge.EnemyCardCosts.cs",
+      "enemyHexes": [
+        "Archmage",
+        "Upgrade",
+        "IGrip",
+        "CorruptHeart",
+        "OmniDragonSoul"
+      ],
+      "fixtures": [
+        "native-enemy-cardcost-archmage-1",
+        "native-enemy-cardcost-archmage-2",
+        "native-enemy-cardcost-archmage-3",
+        "native-enemy-cardcost-corruptheart-1",
+        "native-enemy-cardcost-corruptheart-2",
+        "native-enemy-cardcost-corruptheart-3",
+        "native-enemy-cardcost-igrip-1",
+        "native-enemy-cardcost-igrip-2",
+        "native-enemy-cardcost-igrip-3",
+        "native-enemy-cardcost-mixed",
+        "native-enemy-cardcost-omnidragonsoul-1",
+        "native-enemy-cardcost-omnidragonsoul-2",
+        "native-enemy-cardcost-omnidragonsoul-3",
+        "native-enemy-cardcost-upgrade-1",
+        "native-enemy-cardcost-upgrade-2",
+        "native-enemy-cardcost-upgrade-3",
+        "native-enemy-cardcost-upgrade-growth"
+      ],
+      "evidence": [
+        "artifacts/20261002-native-enemy-card-cost-comparison.json",
+        "artifacts/20261002-145812-reuse-session-suite.json",
+        "artifacts/20261002-150807-reuse-session-suite.json",
+        "artifacts/20261002-native-enemy-card-cost-build1.log"
+      ],
+      "status": "Original enemy card/cost25/25. Three-tier15 inputs and mixed17th sequence passed145812; corrected growth fixture plus Neurosurge and explicitly Player-targeted inactive Plating passed1508073/3. All17 new inputs incrementally passed; wrong relic-ID setup failure preserved. Original stable chance/pick with frozen run seed and branch proc counts, owned downgrade retaining audited self-upgrade postfix, per-player first-card energy loss deep-copy/key/stamp/reset, blocked source-less damage and future-turn random debuffs. No complete same-build/full pool/visible/Steam/full-run acceptance."
+    },
+    "native-orb-phases": {
+      "implementation": "src/NativeRuneBridge.OrbPhases.cs",
+      "playerRunes": [
+        "DrawYourSwordRune",
+        "MyriadManifestationsRune",
+        "OmniDragonSoulRune"
+      ],
+      "fixtures": [
+        "native-orbphase-myriad-distinct",
+        "native-orbphase-myriad-nightmare",
+        "native-orbphase-myriad-one",
+        "native-orbphase-myriad-same",
+        "native-orbphase-omni-defect",
+        "native-orbphase-omni-ironclad",
+        "native-orbphase-sword-conflict",
+        "native-orbphase-sword-core",
+        "native-orbphase-sword-dark",
+        "native-orbphase-sword-frost",
+        "native-orbphase-sword-glass",
+        "native-orbphase-sword-lightning",
+        "native-orbphase-sword-plasma"
+      ],
+      "evidence": [
+        "artifacts/20261002-native-orb-phases-comparison.json",
+        "artifacts/20261002-151727-reuse-session-suite.json",
+        "artifacts/20261002-native-orb-phases-build3.log"
+      ],
+      "status": "Original orb phases40/40.151727 same-build17/17:13 new cases plus4 related regressions. All five vanilla orb evoke replacements, conversion conflict and CoreOverload; early passive count from frozen distinct types/queue, three identical vs three distinct and Nightmare overlap; original Omni opening generates three distinct upgraded owned cards before the battle root, then play/power/future-round differential. Omni does not claim pre-combat forecast support. Full pool/visible/Steam/full-run acceptance pending."
+    },
+    "native-enemy-card-flow": {
+      "implementation": "src/NativeRuneBridge.EnemyCardFlow.cs",
+      "enemyHexes": [
+        "SoulFysh",
+        "EndlessRotation",
+        "CorruptedBranch",
+        "MindOverMatter",
+        "TwilightVeil",
+        "HundredRefinements"
+      ],
+      "fixtures": [
+        "native-enemy-cardflow-corruptedbranch-1",
+        "native-enemy-cardflow-corruptedbranch-2",
+        "native-enemy-cardflow-corruptedbranch-3",
+        "native-enemy-cardflow-endlessrotation-1",
+        "native-enemy-cardflow-endlessrotation-2",
+        "native-enemy-cardflow-endlessrotation-3",
+        "native-enemy-cardflow-hundredrefinements-1",
+        "native-enemy-cardflow-hundredrefinements-2",
+        "native-enemy-cardflow-hundredrefinements-3",
+        "native-enemy-cardflow-mindovermatter-1",
+        "native-enemy-cardflow-mindovermatter-2",
+        "native-enemy-cardflow-mindovermatter-3",
+        "native-enemy-cardflow-mixed",
+        "native-enemy-cardflow-soulfysh-1",
+        "native-enemy-cardflow-soulfysh-2",
+        "native-enemy-cardflow-soulfysh-3",
+        "native-enemy-cardflow-twilightveil-1",
+        "native-enemy-cardflow-twilightveil-2",
+        "native-enemy-cardflow-twilightveil-3"
+      ],
+      "evidence": [
+        "artifacts/20261002-native-enemy-card-flow-comparison.json",
+        "artifacts/20261002-153044-reuse-session-suite.json",
+        "artifacts/20261002-native-enemy-card-flow-build1.log"
+      ],
+      "status": "Original enemy card flow28/28.153044 same-build20/20:19 new inputs including all three tiers for six effects and a mixed Fan/Cloak/Shiv shuffle-draw-exhaust-block-hit sequence, plus Neurosurge search. Original Beckon/status-card candidate order and random pile position, turn-boundary first-draw resets, all enemy block mirrors, negative temporary Slow and exact after-damage phase ordering; tracking deep copied into both signatures. Full release/visible/Steam/full-run acceptance pending."
+    },
+    "native-enemy-hp-lifecycle": {
+      "implementation": "src/NativeRuneBridge.EnemyHpLifecycle.cs",
+      "enemyHexes": [
+        "TankEngine",
+        "GoldenSpatula",
+        "MadScientist",
+        "UnmovableMountain"
+      ],
+      "fixtures": [
+        "native-enemy-hplife-tankengine-1",
+        "native-enemy-hplife-tankengine-2",
+        "native-enemy-hplife-tankengine-3",
+        "native-enemy-hplife-goldenspatula-1",
+        "native-enemy-hplife-goldenspatula-2",
+        "native-enemy-hplife-goldenspatula-3",
+        "native-enemy-hplife-madscientist-1",
+        "native-enemy-hplife-madscientist-2",
+        "native-enemy-hplife-madscientist-3",
+        "native-enemy-hplife-unmovablemountain-1",
+        "native-enemy-hplife-unmovablemountain-2",
+        "native-enemy-hplife-unmovablemountain-3",
+        "native-enemy-hplife-mixed",
+        "native-enemy-hplife-spawn-madscientist",
+        "native-enemy-hplife-spawn-goldenspatula",
+        "native-enemy-hplife-revival-mixed"
+      ],
+      "evidence": [
+        "artifacts/20261002-native-enemy-hp-lifecycle-comparison.json",
+        "artifacts/20261002-185607-reuse-session-suite.json",
+        "artifacts/20261002-native-enemy-hp-lifecycle-build3.log"
+      ],
+      "status": "Original HP lifecycle63/63.185607 same-build17/17: all three tiers for four effects, mixed growth/block/heal, two native GasBomb spawns preserving PersonalHive and avoiding opening Barricade replay, two TestSubject native revival phases, Neurosurge search. Tank stack/base/projected dictionaries share only branch-owned tracking; all four HP maps and turn guard enter both signatures. Full release/visible/Steam/full-run acceptance pending."
+    },
+    "native-card-instance-ledgers": {
+      "implementation": "src/NativeRuneBridge.CardInstanceLedgers.cs",
+      "playerRunes": [
+        "BloodDebtRune",
+        "EndlessRotationRune",
+        "StormUpgradeRune"
+      ],
+      "fixtures": [
+        "native-cardledger-blooddebt-core",
+        "native-cardledger-blooddebt-mixed",
+        "native-cardledger-endless-energy",
+        "native-cardledger-endless-stars",
+        "native-cardledger-endless-enemy-cost",
+        "native-cardledger-storm-upgrade",
+        "native-cardledger-storm-stock",
+        "native-cardledger-endless-sword"
+      ],
+      "evidence": [
+        "artifacts/20261002-native-card-instance-ledgers-comparison.json",
+        "artifacts/20261002-native-card-instance-ledgers-build4.log",
+        "artifacts/20261002-191742-reuse-session-suite.json",
+        "artifacts/20261002-192256-reuse-session-suite.json",
+        "artifacts/20261002-native-card-instance-ledgers-star-cost-il.json"
+      ],
+      "status": "Original card-instance ledger26/26;191742 same-build10/10 plus corrected real FallingStar star-cost and sword1922562/2.8 physical new inputs, not a full-suite claim. Per-instance decimal/int/set associations remapped on fork and refreshed before callbacks after preview COW; same associations enter both signatures. Native Bloodletting and TwinStrike, Fan/BloodArmor combinations, shuffle free energy and actual star-cost2 at stars0, enemy cost interaction, original pre-play Storm snapshots and modifier-late channels vs stock Storm, future round/fork associations and existing Fan/Jeweled/Neurosurge regressions. Full release/visible/Steam/full-run pending."
+    },
+    "native-enemy-hit-effects": {
+      "implementation": "src/NativeRuneBridge.EnemyHitEffects.cs",
+      "enemyHexes": [
+        "ShrinkRay",
+        "BloodArmor",
+        "FinalForm",
+        "FeyMagic",
+        "Porcupine",
+        "Goldrend",
+        "BackToBasics"
+      ],
+      "fixtures": [
+        "native-enemy-hiteffect-shrinkray",
+        "native-enemy-hiteffect-bloodarmor",
+        "native-enemy-hiteffect-finalform",
+        "native-enemy-hiteffect-feymagic",
+        "native-enemy-hiteffect-porcupine",
+        "native-enemy-hiteffect-goldrend",
+        "native-enemy-hiteffect-backtobasics",
+        "native-enemy-hiteffect-mixed",
+        "native-enemy-hiteffect-blocked"
+      ],
+      "evidence": [
+        "artifacts/20261002-native-enemy-hit-effects-comparison.json",
+        "artifacts/20261002-native-enemy-hit-effects-gold-loss-il.json",
+        "artifacts/20261002-native-enemy-hit-effects-build2.log",
+        "artifacts/20261002-193434-reuse-session-suite.json"
+      ],
+      "status": "Enemy hit-effects audited80/80 including still-unimplemented MasterOfDuality; this implementation covers seven types only.193434 same-build10/10:seven effect inputs, mixed/fully-blocked cases and Neurosurge search. Three native future rounds, exact per-side and per-player tracking resets, deferred Shrink/NoDraw sources, native temporary Thorns removal before boundary clearing, partial wallet Goldrend and game111 LoseGold semantics (no gold hook; history/UI excluded), and native manual card-limit block/autoplay exemption. Six tracking maps/sets deep copied and written to both signatures. Full release/visible/Steam/full-run pending."
+    },
+    "native-keyword-persistence": {
+      "implementation": "src/NativeRuneBridge.KeywordPersistence.cs",
+      "playerRunes": [
+        "CurtainCallRune",
+        "UndyingUpgradeRune",
+        "ThoughtOverwriteRune"
+      ],
+      "fixtures": [
+        "native-keyword-thought",
+        "native-keyword-thought-downgrade",
+        "native-keyword-curtain",
+        "native-keyword-undying"
+      ],
+      "evidence": [
+        "artifacts/20261002-native-keyword-persistence-comparison.json",
+        "artifacts/20261002-native-keyword-persistence-dispose-review.json",
+        "artifacts/20261002-native-keyword-persistence-build2.log",
+        "artifacts/20261002-195433-reuse-session-suite.json"
+      ],
+      "status": "Keyword source94/95: only compiler iterator Dispose state bookkeeping differs and is separately reviewed; do not claim95/95.195433 same-build6/6: four new inputs plus BloodDebt/Neurosurge. Actual original deck marker restoration and entered-card callbacks for two identical IDs with only one marked, native Thought replay and enemy downgrade persistence, retained GrandFinale and end-turn Ethereal Undeath; marker-only mutation changes both signatures without changing keywords, and fork/COW preserves metadata while parent/sibling/live stay unchanged. Five native per-model weak-table memberships copied on prediction clone without replaying gameplay Restore; root deck memberships frozen before delayed COW. Full release/visible/Steam/full-run pending."
+    },
+    "native-forge": {
+      "implementation": "src/NativeRuneBridge.Forge.cs",
+      "playerRunes": [
+        "BigHammerRune",
+        "KingdomArmyRune"
+      ],
+      "fixtures": [
+        "native-forge-hammer-new",
+        "native-forge-hammer-existing",
+        "native-forge-army",
+        "native-forge-army-chain"
+      ],
+      "evidence": [
+        "artifacts/20261002-native-forge-minions-comparison.json",
+        "artifacts/20261002-native-forge-build2.log",
+        "artifacts/20261002-201448-reuse-session-suite.json"
+      ],
+      "status": "Source17/17.201448 same-build6/6: decimal BigHammer growth on new/existing/exhausted blades; original KingdomArmy AfterForge, stable minion ordinal and recursion guard with CondensedRadiance/RoyalCommand; Trinity and Neurosurge regressions. Original native prefix executes on captured BigHammer model. SDK stock Forge and native rune Forge share decimal command and original ordered AfterForge listeners. Full release/visible/Steam/full-run pending."
+    },
+    "native-enemy-pile-boundaries": {
+      "implementation": "src/NativeRuneBridge.EnemyPileBoundaries.cs",
+      "enemyHexes": [
+        "DuffsVintage",
+        "ForgottenSoul",
+        "Aeonglass",
+        "IInspect"
+      ],
+      "fixtures": [
+        "native-enemy-pile-duffs",
+        "native-enemy-pile-forgotten",
+        "native-enemy-pile-aeonglass",
+        "native-enemy-pile-inspect"
+      ],
+      "evidence": [
+        "artifacts/20261002-native-enemy-pile-boundaries-comparison.json",
+        "artifacts/20261002-native-enemy-pile-boundaries-build3.log",
+        "artifacts/20261002-202842-reuse-session-suite.json"
+      ],
+      "status": "Source22/22.202842 same-build6/6 after correcting DuffsVintage captured ShouldFlush: native hand cost until played AND retained hand, status/curse-only Exhaust-to-Discard, Wither fake upgrades and late-start generation, Inspect draw counters and startup/play-phase boundaries. Owned counters and phase membership clone into both signatures; native source callbacks execute on branch piles. Failed reports202450 invalid generic DEFEND input and202546 missing Duffs retain preserved. Forge-chain and Neurosurge regression passed. Full release/visible/Steam/full-run pending."
+    },
+    "native-enemy-flow-limits": {
+      "implementation": "src/NativeRuneBridge.EnemyFlowLimits.cs",
+      "enemyHexes": [
+        "ShrinkEngine",
+        "SingularityAI",
+        "LivingFog"
+      ],
+      "fixtures": [
+        "native-enemy-flow-shrink",
+        "native-enemy-flow-singularity",
+        "native-enemy-flow-living",
+        "native-enemy-flow-mixed"
+      ],
+      "evidence": [
+        "artifacts/20261002-native-enemy-flow-limits-comparison.json",
+        "artifacts/20261002-native-enemy-flow-limits-build1.log",
+        "artifacts/20261002-203342-reuse-session-suite.json"
+      ],
+      "status": "Source19/19.203342 same-build7/7: original ShrinkEngine slippery replenishment/body-scale-only counter, frozen stable SingularityAI statuses/random pile position, LivingFog skill slots consumed before OnPlay and all autoplay kinds denied at limit. Round counters deep-fork into both signatures, player start resets proc keys. Mixed Inspect plus prior Inspect/Forge-chain/Neurosurge regression passed. Full release/visible/Steam/full-run pending."
+    },
+    "native-finished-shiv-history": {
+      "implementation": "src/NativeRuneBridge.FinishedShivHistory.cs",
+      "playerRunes": [
+        "ChainInSleeveRune"
+      ],
+      "fixtures": [
+        "native-finished-shiv-plain",
+        "native-finished-shiv-replay",
+        "native-finished-shiv-nested"
+      ],
+      "evidence": [
+        "artifacts/20261002-native-finished-shiv-history-comparison.json",
+        "artifacts/20261002-native-finished-shiv-base-comparison.json",
+        "artifacts/20261002-native-finished-shiv-history-build2.log",
+        "artifacts/20261002-204941-reuse-session-suite.json"
+      ],
+      "status": "SourceChain/history46/46 and generation base95/95.204941 same-build5/5: ordinary Shiv threshold, native Thought replay, RallyingCall nested draw-pile Shivs with outer Finished already in history. Original source threshold/reward/Late logic; frozen root Shiv total plus SDK Finished events, aggregate updated before any after-play listener can nest/suspend. Aggregate, not root offset, enters both signatures for live/rebased equivalence. Owned model counter and card piles/RNG/full snapshots/next round; mixed-flow/Neurosurge regression. Full release/visible/Steam/full-run pending."
+    },
+    "native-nether-batch": {
+      "implementation": "src/NativeRuneBridge.NetherBatch.cs",
+      "playerRunes": [
+        "NetherSoulRune"
+      ],
+      "fixtures": [
+        "native-nether-batch-single",
+        "native-nether-batch-mixed",
+        "native-nether-batch-choice"
+      ],
+      "evidence": [
+        "artifacts/20261002-native-nether-batch-comparison.json",
+        "artifacts/20261002-native-nether-batch-build3.log",
+        "artifacts/20261002-211237-reuse-session-suite.json"
+      ],
+      "status": "Source10/10.211237 current original-callback build3 same-build5/5: late Ethereal exhaustion then autoplay, distinct snapshot/order, Status/Curse filter, native finally/reentry guard; real Acrobatics selections twice and subsequent exhausted attack match actual. Shared native choice relay rejects opaque async continuation and fully replays enclosing EndTurn using planned TurnStartChoices; optimized continued branches0, not claimed. Earlier dormant data-frame prototype is artifact only and removed from adapter.210001 failed pending ordinary Fork exposed missing Lab choice resolution, fixed with bounded choice planning/native PlannedCardSelector. Prior Chain/Neurosurge regression passed. Full release/visible/Steam/full-run pending."
+    },
+    "native-near-death": {
+      "implementation": "src/NativeRuneBridge.NearDeath.cs",
+      "playerRunes": [
+        "NearDeathFeastRune"
+      ],
+      "enemyHexes": [
+        "NearDeathFeast"
+      ],
+      "fixtures": [
+        "native-near-death-player",
+        "native-near-death-enemy1",
+        "native-near-death-enemy2",
+        "native-near-death-enemy3",
+        "native-near-death-recover",
+        "native-near-death-kill",
+        "native-near-death-spawn",
+        "native-near-death-revival",
+        "native-near-death-mixed"
+      ],
+      "evidence": [
+        "artifacts/20261002-native-near-death-comparison.json",
+        "artifacts/20261002-native-near-death-build11.log",
+        "artifacts/20261002-215726-reuse-session-suite.json",
+        "artifacts/20261002-220510-reuse-session-suite.json"
+      ],
+      "status": "Source79/79.215726 same-adapter7/7 and220510 boundary4/4: original shared Resolve on owned creature/model/tracking; original strength callbacks including reservation/rollback; player and three enemy tiers, debt-only key/stamp, fork/live isolation, blocked heal/block, negative setter, exact threshold, positive recovery, explicit kill, actual newborn GasBomb, two actual TestSubject phase recoveries, BloodArmor/TankEngine mix. Lab direct-command checks execute standard deferred enemy-death settlement before comparing native completed-command snapshots. First failed reports preserve Lab modifier-clone/property and premature cleanup errors. Full release/visible/Steam/full-run pending."
+    },
+    "native-autoplay-selection": {
+      "implementation": "src/NativeRuneBridge.AutoPlaySelection.cs",
+      "playerRunes": [
+        "MyriadSwordsRune",
+        "DecisionsDecisionsUpgradeRune"
+      ],
+      "fixtures": [
+        "native-autoplay-myriad-plain",
+        "native-autoplay-myriad-forge",
+        "native-autoplay-decisions-attack",
+        "native-autoplay-decisions-power",
+        "native-autoplay-decisions-skill",
+        "native-autoplay-decisions-empty",
+        "native-autoplay-decisions-nested"
+      ],
+      "evidence": [
+        "artifacts/20261002-native-autoplay-selection-comparison.json",
+        "artifacts/20261002-native-autoplay-game-selection-il.json",
+        "artifacts/20261002-native-autoplay-selection-build4.log",
+        "artifacts/20261002-221543-reuse-session-suite.json",
+        "artifacts/20261002-221754-reuse-session-suite.json",
+        "artifacts/20261002-222216-reuse-session-suite.json",
+        "artifacts/20261002-224002-reuse-session-suite.json"
+      ],
+      "status": "Source20/20. Myriad native original loop preserves Exhaust snapshot, native target order, result exhaustion/finally guard and forge chain. Decisions original callback preserves pending replay card/count; explicit Attack/Power/Skill and empty selection incrementally passed, final224002 build4 6/6 includes true nested Acrobatics discard choices, Power, empty, Myriad forge, Nether choices and Neurosurge. Game FromHand IL confirms candidate count<=MinSelect with no RequireManualConfirmation bypasses request; shared selector now resolves single candidate implicitly and uses TryTakeIfMatches so later nested choices are not consumed. Opaque CLR continuations still rejected; full action replay verified. Lab wrong RoyalCommand card token, array cardinality, stale marker flags and unconsumed forced/empty requests preserved in failed reports. Full release/visible/Steam/full-run pending."
+    },
+    "native-generated-tags": {
+      "implementation": "src/NativeRuneBridge.GeneratedTags.cs; src/NativeRuneBridge.KeywordPersistence.cs; src/NativeCallbackContracts.cs",
+      "playerRunes": [
+        "BigKnifeRune",
+        "InkshadowRune",
+        "DeviantCognitionRune"
+      ],
+      "enemyHexes": [
+        "ManipulateReality"
+      ],
+      "fixtures": [
+        "native-generation-tags-knife",
+        "native-generation-tags-ink",
+        "native-generation-tags-mixed",
+        "native-generation-tags-deviant",
+        "native-generation-tags-illusory",
+        "native-generation-tags-reality",
+        "native-autoplay-myriad-forge",
+        "native-generation-neurosurge-search"
+      ],
+      "evidence": [
+        "artifacts/20261002-native-generation-tags-comparison.json",
+        "artifacts/20261002-native-generation-tags-ritsu-il.json",
+        "artifacts/20261002-native-generation-tags-build9.log",
+        "artifacts/20261002-232438-reuse-session-suite.json",
+        "artifacts/20261002-233012-reuse-session-suite.json"
+      ],
+      "status": "Source90/90; Ritsu tag postfix IL reviewed separately with exact ordered two-postfix contract. Final233012 build9 same-binary 8/8 includes generation replacement, native Inkshadow/guarded BladeOfInk, Fan-of-Knives all-target Weak, Deviant+Illusory canonical skill tags, enemy-only status doubling with upgraded native clones/curse and player exclusions/random insertion, forks and future rounds; Myriad forge and Neurosurge regression. Root membership frozen; only BigKnife SovereignBlade forks materialize mutable combat bindings, other tags retain immutable COW membership. Failed reports retained: Harmony __result argument collision, initially omitted Ritsu postfix, SDK stock SovereignBlade GetTargetType missed Fan/Inky AoE. Full release/visible/Steam/full-run pending."
+    },
+    "native-duality": {
+      "implementation": "src/NativeRuneBridge.Duality.cs; src/NativeRuneBridge.EnemyPlayed.cs",
+      "playerRunes": [
+        "MasterOfDualityRune"
+      ],
+      "enemyHexes": [
+        "MasterOfDuality"
+      ],
+      "fixtures": [
+        "native-duality-enemy",
+        "native-duality-player",
+        "native-duality-mixed",
+        "native-duality-artifact",
+        "native-duality-illusory",
+        "native-duality-opposite",
+        "native-duality-autoplay",
+        "native-generation-neurosurge-search",
+        "native-temp-positive-lifecycle",
+        "native-duality-artifact-conversion"
+      ],
+      "evidence": [
+        "artifacts/20261002-native-duality-opening-comparison.json",
+        "artifacts/20261002-native-duality-build3.log",
+        "artifacts/20261002-234656-reuse-session-suite.json"
+      ],
+      "status": "Source18/18 (Duality callbacks/helper and separately audited, not enabled Hail). Final234656 build3 same-binary8/8: original player/enemy AfterCardPlayed, opposing temporary stat cancellation, Artifact exemption/full wrapper block, Illusory canonical skill, two preexisting negative counters, actual RallyingCall autoplay, isolated forks and two native future rounds; Neurosurge regression. Initial234029 Artifact mismatch retained: generic invisible-loss bridge was inappropriate here; shared helper now uses stock before-application Artifact dispatch and exact temporary stat amount-change sign. Hail remains pending. Full release/visible/Steam/full-run pending."
+    },
+    "native-enemy-lifecycle": {
+      "implementation": "src/NativeRuneBridge.EnemyLifecycle.cs; src/ModifierMirrors.cs; src/EnemyHpState.cs; src/EnemyTurnTrackingState.cs",
+      "playerRunes": [],
+      "enemyHexes": [
+        "PhrogParasite",
+        "ServantMaster",
+        "GetExcited",
+        "TestSubject",
+        "SoulEater"
+      ],
+      "fixtures": [
+        "native-lifecycle-retained-soul",
+        "native-lifecycle-servant-spawn",
+        "native-lifecycle-revival",
+        "native-lifecycle-death-soul",
+        "native-lifecycle-death-mixed",
+        "native-lifecycle-death-excited",
+        "native-lifecycle-phrog-reality",
+        "native-lifecycle-phrog-1",
+        "native-lifecycle-phrog-3",
+        "native-generation-neurosurge-search"
+      ],
+      "evidence": [
+        "artifacts/20261002-native-enemy-lifecycle-comparison.json",
+        "artifacts/20261003-native-enemy-lifecycle-dispatch-comparison.json",
+        "artifacts/20261003-native-painful-death-il.json",
+        "artifacts/20261003-native-enemy-lifecycle-build9.log",
+        "artifacts/20261003-005819-reuse-session-suite.json"
+      ],
+      "status": "Source56/56 and full modifier/death-policy511/511 match. Final005819 build9 same-binary10/10: native Phrog infection three rounds at tiers1/3, enemy status doubling, GetExcited/SoulEater/TestSubject death chains, exact true-death/phase/retention dispatcher gate, native newborn Minion->Illusion before PersonalHive entrance ordering, two actual TestSubject revival phases, fork/key/stamp/RNG and Neurosurge. Retained corpse control proves immediate suppression only: synthetic no-cleanup PainfulStabs Neutralize/dead-Wurm AI exposed baseline SDK omissions; preserved failed suites8/9 are not accepted future proof. Native normal GetExcited/TestSubject cleanup tested. Full release/visible/Steam/full-run pending."
+    },
+    "native-outside-rewards": {
+      "implementation": "src/NativeRuneBridge.OutsideRewards.cs",
+      "playerRunes": [
+        "DoubleVisionRune"
+      ],
+      "enemyHexes": [
+        "HailToTheKing"
+      ],
+      "fixtures": [
+        "native-outside-hail-elite-1",
+        "native-outside-hail-elite-3",
+        "native-outside-hail-boss-2",
+        "native-outside-hail-monster-1",
+        "native-outside-double-rewards",
+        "native-outside-double-gold",
+        "native-outside-double-mixed",
+        "native-generation-neurosurge-search"
+      ],
+      "evidence": [
+        "artifacts/20261003-native-double-vision-comparison.json",
+        "artifacts/20261003-native-double-vision-hooks-comparison.json",
+        "artifacts/20261002-native-duality-opening-comparison.json",
+        "artifacts/20261003-native-outside-rewards-build2.log",
+        "artifacts/20261003-012228-reuse-session-suite.json"
+      ],
+      "status": "DoubleVision source251/251 + reward-safety76/76; Hail included in prior18/18 comparison. Final012228 build2 same-binary8/8: original DoubleVision active-combat no-duplication, actual Strike victory, native direct gold and Reward.SelectUnsynchronized/AfterRewardTaken suppression exactly once, per-hit gold and mixed feedback forks/two native rounds, actual Elite Phrog and Boss TestSubject native room creation/readback plus opening Artifact/Plating/Regen and two native rounds, Monster negative control, Neurosurge. No gameplay reward queue is mirrored or suppressed. Failed stale inherited token markers and weak-encounter room type mismatch retained. Full release/visible/Steam/full-run pending."
+    },
+    "native-instant-death": {
+      "implementation": "src/NativeRuneBridge.InstantDeath.cs",
+      "playerRunes": [
+        "InstantDeathRune"
+      ],
+      "enemyHexes": [],
+      "fixtures": [
+        "native-instant-outbreak",
+        "native-instant-sleight",
+        "native-instant-sleight-equal",
+        "native-instant-below",
+        "native-instant-equal",
+        "native-instant-above",
+        "native-instant-hp-loss",
+        "native-upgrade-serpent-outbreak",
+        "native-upgrade-serpent-sleight",
+        "native-neurosurge"
+      ],
+      "evidence": [
+        "artifacts/20261003-native-instant-death-comparison.json",
+        "artifacts/20261003-native-instant-death-build10.log",
+        "artifacts/20261003-021446-reuse-session-suite.json"
+      ],
+      "status": "InstantDeath source27/27 including scoped guard. Final021446 build10 same-binary10/10: strict Doom below/equal/above thresholds, HP loss, Sleight/Outbreak deferred queues, queue-time HP9 matched native, queue quiescence and native global queue isolation, forks/full snapshots/RNG, two future rounds, serpent regressions and Neurosurge. Fixed premature Lab observer installation; original failed initialization is now rejected by runner/package. SDK Outbreak compensation now runs inside the original guard and resolves power reactions before poison, preserving native ordering. Earlier failures retained. Full release/visible/Steam/full-run pending."
+    },
+    "native-color-discovery": {
+      "implementation": "src/NativeRuneBridge.ColorDiscovery.cs",
+      "playerRunes": [
+        "ColorDiscoveryRune"
+      ],
+      "enemyHexes": [],
+      "fixtures": [
+        "native-color-discovery-0",
+        "native-color-discovery-1",
+        "native-color-discovery-2",
+        "native-instant-outbreak",
+        "native-neurosurge"
+      ],
+      "evidence": [
+        "artifacts/20261003-native-color-discovery-comparison.json",
+        "artifacts/20261003-native-color-discovery-source-review.json",
+        "artifacts/20261003-native-model-id-il.json",
+        "artifacts/20261003-native-color-discovery-build4.log",
+        "artifacts/20261003-022830-reuse-session-suite.json"
+      ],
+      "status": "ColorDiscovery source42/43 equal; the remaining iterator Dispose differs only by compiler state=-2 assignment, reviewed with both IL bodies. ModelId game IL has no setters and only immutable string identity; only the exact ColorDiscovery pending-ID field is allowed. Final022830 build4 same-binary5/5: all three explicit native selections, original stable options/free hand insertion/pending reward ID, whole-opening replay and rejected opaque continuation, parent/sibling/live and fork continuation-state isolation, repeated-opening no-duplication, two native rounds, actual Strike victory and a fresh selected-card reward with pending ID consumed/no duplicate, Outbreak and Neurosurge regressions. Fixture relic deferred until playable setup to avoid unplanned builder selection; initial timeout retained. Full release/visible/Steam/full-run pending."
+    },
+    "native-monster-upgrades": {
+      "implementation": "src/NativeRuneBridge.MonsterUpgrades.cs",
+      "playerRunes": [],
+      "enemyHexes": [
+        "CeremonialBeast"
+      ],
+      "fixtures": [
+        "native-ceremonial-attack-1",
+        "native-ceremonial-attack-2",
+        "native-ceremonial-attack-3",
+        "native-ceremonial-buff-1",
+        "native-ceremonial-buff-2",
+        "native-ceremonial-buff-3",
+        "native-ceremonial-repeat-1",
+        "native-ceremonial-repeat-3",
+        "native-color-discovery-0",
+        "native-color-discovery-2",
+        "native-instant-outbreak",
+        "native-neurosurge"
+      ],
+      "evidence": [
+        "artifacts/20261003-native-monster-upgrades-comparison.json",
+        "artifacts/20261003-native-monster-upgrades-hooks-comparison.json",
+        "artifacts/20261003-native-monster-upgrades-build4.log",
+        "artifacts/20261003-025440-reuse-session-suite.json"
+      ],
+      "status": "Ceremonial intent/effect included in source14/14 comparison with reviewed, not yet implemented, DualWield; full HextechCombatHooks231/231. Final025440 build4 same-binary12/12: three attack tiers/two native rounds, three nonattack controls/two native rounds, real Jeweled repeat tiers1/3 with Strength applied before repeat, actual isolated Ceremonial Strength command gains observed separately from stock monster Strength, fork/key/stamp/full snapshots/RNG, ColorDiscovery explicit key regressions, Instant Outbreak and Neurosurge. Original upgrade completion is retained with owned command/living-context boundaries. Earlier invalid native total-Strength assertion failed on the stock buff round and is retained, replaced with an observer of the exact Ceremonial command while full snapshots stay strict. Full release/visible/Steam/full-run pending."
+    },
+    "native-enemy-dual": {
+      "implementation": "src/NativeRuneBridge.EnemyDualWield.cs",
+      "playerRunes": [],
+      "enemyHexes": [
+        "DualWield"
+      ],
+      "fixtures": [
+        "native-enemy-dual-plain",
+        "native-enemy-dual-strength",
+        "native-enemy-dual-phrog",
+        "native-enemy-dual-ceremonial",
+        "native-enemy-dual-repeat",
+        "native-enemy-dual-testsubject",
+        "native-enemy-dual-pressure",
+        "native-color-discovery-0",
+        "native-instant-outbreak",
+        "native-neurosurge"
+      ],
+      "evidence": [
+        "artifacts/20261003-native-monster-upgrades-comparison.json",
+        "artifacts/20261003-native-monster-upgrades-hooks-comparison.json",
+        "artifacts/20261003-native-monster-attack-factories.json",
+        "artifacts/20261003-native-enemy-dual-build3.log",
+        "artifacts/20261003-031522-reuse-session-suite.json"
+      ],
+      "status": "Source-reviewed original DualWield intent: same-binary 031522 build3 10/10. Shared forecast/AdjustMonsterMoveDamage transforms raw monster damage before Strength/Weak/Vulnerable, doubles hits; all 211 stock monster Attack factories are decimal. Three native rounds for plain, Strength/Vulnerable, Phrog, Ceremonial, growing TestSubject and pressure damage; real Jeweled repeated action; full snapshots/RNG/fork/key/stamp; prediction leaves original native command CWT unchanged. ColorDiscovery, Instant Outbreak and Neurosurge regressions passed. Full release/visible/Steam/full-run pending."
+    },
+    "native-vital-spark": {
+      "implementation": "src/NativeRuneBridge.VitalSpark.cs",
+      "playerRunes": [],
+      "enemyHexes": [
+        "ArcanePunch"
+      ],
+      "fixtures": [
+        "native-vital-spark-tier1",
+        "native-vital-spark-tier2",
+        "native-vital-spark-tier3",
+        "native-vital-spark-mixed",
+        "native-vital-spark-remove-hex",
+        "native-vital-spark-remove-stock",
+        "native-enemy-dual-ceremonial",
+        "native-color-discovery-0",
+        "native-instant-outbreak",
+        "native-neurosurge"
+      ],
+      "evidence": [
+        "artifacts/20261003-native-vital-spark-comparison.json",
+        "artifacts/20261003-native-vital-spark-build3.log",
+        "artifacts/20261003-035429-reuse-session-suite.json"
+      ],
+      "status": "Source37/37. Final035429 build3 same-binary10/10: actual ArcanePunch opening tiers0/1/2, stock VitalSpark mixed total5, original generated skill/attack callbacks, source Tainted contribution, removal of Hex and stock powers with original compatibility refresh, full snapshots/scalars/fork/key/stamp/RNG/two native rounds; Dual/Ceremonial, ColorDiscovery, Instant Outbreak, Neurosurge regressions. SDK clearing relay preserves Hex-owned Tainted without changing vanilla behavior; stock amount normalization refreshes original Hex callback. Failed registration used wrong extension-method owner; failed expectation omitted FeelTheBurn Skill pollution, both retained; full snapshot assertions unchanged. Full release/visible/Steam/fullrun pending."
+    },
+    "native-mystery-opening": {
+      "implementation": "src/NativeRuneBridge.MysteryOpening.cs",
+      "playerRunes": [],
+      "enemyHexes": [
+        "Mystery"
+      ],
+      "fixtures": [
+        "native-mystery-diagnostic",
+        "native-mystery-tier1",
+        "native-mystery-tier2",
+        "native-mystery-tier3",
+        "native-mystery-small",
+        "native-mystery-exhaust",
+        "native-mystery-vital",
+        "native-mystery-echo",
+        "native-conditional-compact",
+        "native-conditional-compact-upgraded",
+        "native-vital-spark-remove-stock",
+        "native-enemy-dual-ceremonial",
+        "native-color-discovery-0",
+        "native-instant-outbreak",
+        "native-neurosurge"
+      ],
+      "evidence": [
+        "artifacts/20261003-native-mystery-comparison.json",
+        "artifacts/20261003-native-card-scope-il.json",
+        "artifacts/20261003-native-batch-transform-il.json",
+        "artifacts/20261003-native-pile-index-sort-il.json",
+        "artifacts/20261003-native-mystery-build6.log",
+        "artifacts/20261003-042903-reuse-session-suite.json"
+      ],
+      "status": "Source32/32 Mystery/transform helper. Final042903 build6 same-binary15/15: original opening count2/4/6, candidate clamp, upgrades, Exhaust exclusion, exact native chosen-card/replacement order, repeated opening no transform, frozen pools/seed/proc counters, full snapshots/fork/key/stamp/RNG/two native rounds. Shared native batch transform corrected to remove originals/capture current indices, original PileIndexSort and List.Sort, ordered inserts/entry callbacks, then complete-batch generation callbacks and original removal. Native ICardScope creation capability keeps replacements in the branch. Echo and ArcanePunch mixed fixtures, Compact normal/upgraded, VitalSpark removal, Dual/Ceremonial, Color, Instant Outbreak and Neurosurge regressions pass. Earlier route bypass, scope cast and pile-order failures retained; full snapshots unchanged. Full release/visible/Steam/fullrun pending."
+    },
+    "native-enemy-vakuu": {
+      "implementation": "src/NativeRuneBridge.VakuuControl.cs",
+      "types": [
+        "ShoulderVakuEnemyHex",
+        "VakuuTurnController"
+      ],
+      "mechanisms": [
+        "original late automatic-play phase",
+        "original first playable hand card and13 limit",
+        "normal energy/star resource payment",
+        "original first-max automatic choice policy",
+        "owned once marker and late tracking boundary",
+        "full native snapshots and future rounds"
+      ],
+      "fixtures": [
+        "native-vakuu-plain",
+        "native-vakuu-nested",
+        "native-vakuu-limit13",
+        "native-vakuu-unplayable",
+        "native-vakuu-inspect",
+        "native-vakuu-vital",
+        "native-enemy-pile-inspect",
+        "native-mystery-echo",
+        "native-vital-spark-remove-stock",
+        "native-enemy-dual-ceremonial",
+        "native-color-discovery-0",
+        "native-instant-outbreak",
+        "native-neurosurge"
+      ],
+      "reviewEvidence": [
+        "artifacts/20261003-native-remaining-mechanisms-comparison.json",
+        "artifacts/20261003-native-vakuu-controller-il.json",
+        "artifacts/20261003-native-vakuu-selector-il.json"
+      ],
+      "limits": "Incremental same-binary13/13, not final release or visible/full-run acceptance."
+    },
+    "native-enemy-nature": {
+      "implementation": "src/NativeRuneBridge.NatureHealing.cs",
+      "types": [
+        "NatureIsHealingEnemyHex"
+      ],
+      "mechanisms": [
+        "original wall-clock timer retained",
+        "external native events invalidate current advice",
+        "new native search at completed action boundary",
+        "immutable searched root and HP in keys/stamps",
+        "budget limited by actual remaining timer interval",
+        "Lab future stages unresolved to preserve original lifecycle"
+      ],
+      "fixtures": [
+        "native-nature-tier1",
+        "native-nature-tier2",
+        "native-nature-tier3",
+        "native-nature-multi",
+        "native-nature-vital",
+        "native-nature-budget",
+        "native-vakuu-limit13",
+        "native-vakuu-inspect",
+        "native-vakuu-vital",
+        "native-mystery-echo",
+        "native-vital-spark-remove-stock",
+        "native-enemy-dual-ceremonial",
+        "native-color-discovery-0",
+        "native-instant-outbreak",
+        "native-neurosurge",
+        "opening-effects",
+        "native-nature-worker",
+        "native-nature-deployment"
+      ],
+      "reviewEvidence": [
+        "artifacts/20261003-native-remaining-mechanisms-comparison.json",
+        "artifacts/20261003-native-enemy-roll-comparison.json"
+      ],
+      "limits": "Active worker/deployment cancellation accepted with actual native sessions and unchanged timer in102611 suite7/7; final matrix/visible Steam/full-run acceptance remains pending."
+    },
+    "native-pending-damage": {
+      "implementation": "src/NativeRuneBridge.PendingDamage.cs",
+      "types": [
+        "CompensationRune",
+        "PiercingThreadRune",
+        "CompensationEnemyHex",
+        "HextechNextTurnDamagePower"
+      ],
+      "mechanisms": [
+        "original pending lists and command-scoped static registries",
+        "nested commands and non-inlined target/result boundaries",
+        "floor50percent block bypass",
+        "post-Osty HP replacement and delayed-power phase",
+        "original response recursion guards",
+        "original Slippery reduction/Osty cleanup with owned queues",
+        "quiescent capture/fork/hash and global counter/queue isolation",
+        "full native action/two-round snapshots plus explicit rule witnesses"
+      ],
+      "fixtures": [
+        "native-pending-comp-enemy",
+        "native-pending-comp-hp-loss",
+        "native-pending-comp-multi",
+        "native-pending-comp-outbreak",
+        "native-pending-comp-piercing",
+        "native-pending-comp-player",
+        "native-pending-comp-player-blocked",
+        "native-pending-comp-sleight",
+        "native-pending-comp-slippery-direct",
+        "native-pending-comp-slippery-overkill",
+        "native-pending-comp-slippery-small",
+        "native-pending-comp-tungsten",
+        "native-pending-piercing-blocked",
+        "native-pending-piercing-clear",
+        "native-pending-piercing-multi",
+        "native-pending-piercing-odd",
+        "native-pending-piercing-thorns",
+        "native-neurosurge",
+        "native-instant-outbreak",
+        "native-nature-budget"
+      ],
+      "reviewEvidence": [
+        "artifacts/20261003-native-damage-command-comparison.json",
+        "artifacts/20261003-native-monster-upgrades-hooks-comparison.json"
+      ],
+      "limits": "Build11 same binary20/20; incremental acceptance, full release/visible/Steam/full-run pending."
+    },
+    "native-sweeping-blade": {
+      "implementation": "src/NativeRuneBridge.SweepingBlade.cs",
+      "types": [
+        "SweepingBladeRune"
+      ],
+      "fixtures": [
+        "native-sweeping-artifact-primary",
+        "native-sweeping-artifact-secondary",
+        "native-sweeping-blight",
+        "native-sweeping-compensation",
+        "native-sweeping-control",
+        "native-sweeping-piercing",
+        "native-sweeping-plain",
+        "native-sweeping-pommel",
+        "native-sweeping-twin"
+      ],
+      "mechanisms": [
+        "original card-scoped context and retarget",
+        "per-target attack results and Doom correction",
+        "Before/AfterPower replication before Artifact",
+        "null transient state at fork/hash",
+        "Compensation and Piercing nested damage",
+        "full multi-enemy native future-round snapshots"
+      ],
+      "reviewEvidence": [
+        "artifacts/20261003-native-sweeping-il.json",
+        "artifacts/20261003-native-sweeping-card-il.json",
+        "artifacts/20261003-071644-reuse-session-suite.json"
+      ],
+      "limits": "Incremental same-binary shared mechanism validation; not release/visible/Steam/full-run acceptance."
+    },
+    "native-generated-tokens": {
+      "implementation": "src/NativeRuneBridge.GeneratedTokens.cs; src/NativeRuneBridge.ChemtechDragon.cs; src/NativePotionGenerationState.cs",
+      "types": [
+        "OkBoomerangCard",
+        "OstyWishCard",
+        "ChemtechDragonSoulCard",
+        "HextechChemtechDragonSoulPower"
+      ],
+      "fixtures": [
+        "native-generated-boomerang",
+        "native-generated-boomerang-up",
+        "native-generated-chemtech",
+        "native-generated-chemtech-full",
+        "native-generated-chemtech-sozu",
+        "native-generated-chemtech-stack",
+        "native-generated-chemtech-up",
+        "native-generated-wish"
+      ],
+      "mechanisms": [
+        "original forward/reverse target order and Hand/Bottom return",
+        "native block/damage commands",
+        "frozen canonical potion pool/seed at root",
+        "original stable potion picker and owned slots",
+        "procurement hooks/full belt/Sozu",
+        "explicit potion slot equality and native counts",
+        "fork/key/stamp/RNG/native future rounds"
+      ],
+      "reviewEvidence": [
+        "artifacts/20261003-native-generated-dependents-comparison.json",
+        "artifacts/20261003-native-generated-dependents-il.json",
+        "artifacts/20261003-native-potion-procure-il.json",
+        "artifacts/20261003-073801-reuse-session-suite.json"
+      ],
+      "limits": "Incremental validation; remaining dependent Forge/Orobas/enchantment closure and release/visible/Steam/full-run acceptance remain pending."
+    },
+    "native-auxiliary": {
+      "fixtures": [
+        "native-auxiliary-coefficients",
+        "native-auxiliary-early",
+        "native-auxiliary-entry",
+        "native-auxiliary-maxhp",
+        "native-auxiliary-orbs",
+        "native-auxiliary-orobas-orbs",
+        "native-auxiliary-orobas-osty",
+        "native-auxiliary-orobas-stars",
+        "native-auxiliary-osty",
+        "native-auxiliary-regent",
+        "native-auxiliary-spiral",
+        "native-auxiliary-legacy-plating"
+      ],
+      "mechanisms": [
+        "original stack counts and grouped damage/block/healing coefficients",
+        "original early/side/normal/late listener ordering",
+        "first-turn resources versus future turns",
+        "owned percent-HP base updates and fatal Feed",
+        "original Orobas summon/stars/lightning and draw through turn5",
+        "UniversalSpiral original replay and key/stamp Times",
+        "native complete snapshots and fork/RNG isolation"
+      ],
+      "reviewEvidence": [
+        "artifacts/20261003-native-forge-full-comparison.json",
+        "artifacts/20261003-native-dependent-closure-comparison.json",
+        "artifacts/20261003-native-auxiliary-effects-il.json",
+        "artifacts/20261003-082038-reuse-session-suite.json",
+        "artifacts/20261003-082908-reuse-session-suite.json"
+      ],
+      "limits": "Legacy SilverPlatingForge accepted in102611 suite7/7; final matrix/visible Steam/full-run acceptance remains pending."
+    },
+    "native-solid-time": {
+      "fixtures": [
+        "native-solid-time-body-control",
+        "native-solid-time-deck-coefficient",
+        "native-solid-time-echo-store",
+        "native-solid-time-generated",
+        "native-solid-time-madscience",
+        "native-solid-time-replay",
+        "native-solid-time-replay-orbs",
+        "native-solid-time-replay-void",
+        "native-solid-time-store"
+      ],
+      "mechanisms": [
+        "owned permanent deck/removal and canonical index normalization",
+        "original stored JSON/canonical identity/upgrades/MadScience metadata",
+        "direct card-body effects without paid-play hooks/history",
+        "normal nested autoplay retains its hooks",
+        "once-per-combat replay versus repeat/future rounds",
+        "original VoidForm before-application counter without end-turn",
+        "generated cards ignored and Echo removes one permanent original",
+        "Anthony deck coefficient updates after removal",
+        "complete native snapshots/fork/key/stamp/RNG"
+      ],
+      "reviewEvidence": [
+        "artifacts/20261003-native-solid-time-comparison.json",
+        "artifacts/20261003-native-solid-time-dispose-audit.json",
+        "artifacts/20261003-native-solid-time-il.json",
+        "artifacts/20261003-native-void-power-il.json",
+        "artifacts/20261003-native-permanent-remove-il.json",
+        "artifacts/20261003-090538-reuse-session-suite.json"
+      ],
+      "limits": "Incremental mechanism acceptance; ThievingHopper, active Nature deployment, release/visible/Steam/full-run pending."
+    },
+    "native-thieving": {
+      "implementation": "src/NativeRuneBridge.ThievingHopper.cs; src/NativeTheftState.cs",
+      "enemyHexes": [
+        "ThievingHopper"
+      ],
+      "mechanisms": [
+        "frozen native monster machine and intents",
+        "shared owned permanent deck",
+        "native removal before Swipe",
+        "multi-owner stolen loot metadata",
+        "original stable candidate priority",
+        "sticky below-threshold intent versus later healing",
+        "native escape versus actual selectable return reward",
+        "ordered Ceremonial/Jeweled composition",
+        "complete fork/key/stamp/native snapshots"
+      ],
+      "fixtures": [
+        "native-thieving-ceremonial",
+        "native-thieving-coefficient",
+        "native-thieving-escape",
+        "native-thieving-jeweled",
+        "native-thieving-minion",
+        "native-thieving-multiple",
+        "native-thieving-payload",
+        "native-thieving-recover",
+        "native-thieving-sticky-heal",
+        "native-thieving-stock-escape",
+        "native-thieving-stock-recover",
+        "native-thieving-stunned",
+        "native-thieving-threshold-above",
+        "native-thieving-threshold-equal"
+      ],
+      "reviewEvidence": [
+        "artifacts/20261003-native-thieving-comparison.json",
+        "artifacts/20261003-native-theft-reward-machine-il.json"
+      ],
+      "limits": "Native incremental acceptance; final same-binary mechanism matrix and visible Steam/full run pending. No global callback or unknown-effect relaxation."
+    },
+    "basic-player-scalar-and-turn": {
+      "implementation": "src/RuneMirrors.cs; src/RuneMirrors.Damage.cs; src/RuneMirrors.Sustain.cs; src/RuneMirrors.Opening.cs; src/RuneMirrors.CardAndOrb.cs; src/RuneProjectionMirrors.cs",
+      "mechanisms": [
+        "Audit of the early direct mirrors: owner attribution, damage/block/heal coefficients and caps, HP/relic scaling, saved counters, turn boundaries, X costs and temporary powers. These are not covered merely by later native callback families."
+      ],
+      "fixtures": [
+        "player-damage-stack",
+        "relic-count-projection",
+        "protein-shake",
+        "glass-cannon-heal",
+        "mountain-soul-hit",
+        "mountain-soul-safe",
+        "speedster",
+        "hubris",
+        "ancient-wine",
+        "sturdy-low",
+        "precision-cognition",
+        "ultimate-unstoppable-overflow",
+        "ultimate-unstoppable-x",
+        "lethal-tempo-expiry-card",
+        "electric-surge",
+        "gloomy-clouds"
+      ],
+      "limits": "Shared-mechanism witnesses; not evidence that every parameter, rune or combination was individually played."
+    },
+    "basic-player-damage-and-card-body": {
+      "implementation": "src/ConditionalCardPatches.cs; src/RuneMirrors.Damage.cs; src/NativeRuneBridge.cs; src/NativeRuneBridge.NeutralPowers.cs",
+      "mechanisms": [
+        "Actual damage-result and block/HP boundaries, Artifact proc state, hidden temporary powers, custom WhiteHole/BladeWaltz/QuantumComputing card bodies and slow/corrosion commands require explicit early witnesses."
+      ],
+      "fixtures": [
+        "body-slam-upgrade-repeat",
+        "giant-serpents-fang-odd",
+        "death-harvest-partial",
+        "bad-taste-owner-artifact",
+        "courage-player-captured",
+        "protective-veil-rounds",
+        "advance-to-retreat-fully-blocked",
+        "flying-kick-boundary",
+        "white-hole-draw",
+        "blade-waltz-random-targets",
+        "quantum-computing-max-hp-rounding",
+        "native-neutral-frost",
+        "native-neutral-corrosion"
+      ],
+      "limits": "Shared-mechanism witnesses; not evidence that every parameter, rune or combination was individually played."
+    },
+    "basic-card-upgrade-and-result": {
+      "implementation": "src/ConditionalCardPatches.cs; src/AutomationUpgradeMirrors.cs; src/MysteryMirrors.cs",
+      "mechanisms": [
+        "Conditional patched vanilla card bodies, repeat/result placement, counters/reset, generated hand capacity, transformation RNG and captured acquisition-only runes."
+      ],
+      "fixtures": [
+        "card-upgrade-know-thy-place-artifact",
+        "card-upgrade-hotfix-round",
+        "result-dualcast-dupe",
+        "result-bloodletting-dupe",
+        "result-forgotten-soul-upgraded",
+        "bread-sandwich-assembly",
+        "dual-wield-bread",
+        "final-form-full-hand",
+        "mystery-alternate-seed-rounds",
+        "automation-upgrade-repeat",
+        "held-hattrick",
+        "held-red-envelope"
+      ],
+      "limits": "Shared-mechanism witnesses; not evidence that every parameter, rune or combination was individually played."
+    },
+    "basic-enemy-scalar-and-hit": {
+      "implementation": "src/ModifierMirrors.cs; src/EnemyHpState.cs; src/PowerSourceBridge.cs",
+      "mechanisms": [
+        "Shared enemy coefficients/startup/spawn/revival and real HP loss/proc/Artifact transitions with branch-owned modifier state."
+      ],
+      "fixtures": [
+        "enemy-coefficient-stack",
+        "enemy-coefficient-giant-slayer-101",
+        "enemy-spawn-stack",
+        "enemy-revival-statsonstats-2",
+        "enemy-hit-stack",
+        "enemy-hit-unpowered-stack",
+        "enemy-damage-proc-stack",
+        "enemy-serpents-fang-artifact",
+        "enemy-bad-taste-small-repeat",
+        "enemy-courage-stack",
+        "enemy-slap-round",
+        "enemy-blood-pact-round",
+        "enemy-opening-startuproutine-3",
+        "enemy-opening-shrinkerbeetle-3"
+      ],
+      "limits": "Shared-mechanism witnesses; not evidence that every parameter, rune or combination was individually played."
+    },
+    "basic-enemy-card-flow": {
+      "implementation": "src/ModifierMirrors.cs; src/EnemyTurnTrackingState.cs",
+      "mechanisms": [
+        "Enemy returned-card, energy payment/X and per-turn counts plus native slow dispatch and strongest repeated-attack tier."
+      ],
+      "fixtures": [
+        "enemy-loop-empty",
+        "enemy-something-enlightenment",
+        "enemy-enlightenment-x-zero",
+        "enemy-cost-combined-12th",
+        "native-generation-slow-combined-3",
+        "native-enemy-brutality-inhale-3"
+      ],
+      "limits": "Shared-mechanism witnesses; not evidence that every parameter, rune or combination was individually played."
+    }
+  }
+}

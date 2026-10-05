@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "NATIVE-AUTOPLAY-DECISIONS-ATTACK",
+  "seed": "HEXTECHCOMPAT",
+  "expectedLoadedMods": [
+    "CombatSolver@0.47.3",
+    "HextechRunes@0.9.7",
+    "STS2-RitsuLib@0.6.3",
+    "HextechCompatLab@0.1.0",
+    "HextechSolverCompat@0.1.0"
+  ],
+  "characterId": "REGENT",
+  "encounterId": "FUZZY_WURM_CRAWLER_WEAK",
+  "enemyCurrentHp": 2000,
+  "clearPlayerPiles": true,
+  "cards": [
+    {
+      "cardId": "DECISIONS_DECISIONS",
+      "pile": "Hand"
+    },
+    {
+      "cardId": "STRIKE_REGENT",
+      "pile": "Hand"
+    },
+    {
+      "cardId": "DEFEND_REGENT",
+      "pile": "Draw",
+      "count": 30
+    }
+  ],
+  "fixedSearchBudget": true,
+  "searchBudgetOverrideMilliseconds": 0,
+  "timeoutSeconds": 60,
+  "initialEnemyMaxHps": [
+    5000,
+    5000
+  ],
+  "initialEnemyCurrentHps": [
+    5000,
+    5000
+  ],
+  "initialEnemyMoveIds": [
+    "INHALE"
+  ],
+  "initialPlayerEnergy": 30,
+  "initialPlayerHp": 800,
+  "initialPlayerMaxHp": 1000,
+  "clearAllPowers": true,
+  "relics": [
+    {
+      "relicId": "DECISIONS_DECISIONS_UPGRADE_RUNE",
+      "addWithoutObtainedEffects": true
+    }
+  ],
+  "hextechExpected": {},
+  "initialEnemyBlocks": [
+    0,
+    0
+  ],
+  "hextechNativeTokenForkProbe": true,
+  "hextechNativeTokenActualProbe": true,
+  "hextechNativePlayEnemy": false,
+  "initialPlayerStars": 20,
+  "hextechNativePlaySequence": [
+    {
+      "cardId": "DECISIONS_DECISIONS",
+      "enemy": false,
+      "expectedPlays": 1,
+      "choiceCardIds": [
+        "STRIKE_REGENT"
+      ]
+    }
+  ],
+  "fixtureNotes": "Original autoplay/selection source20/20. Upgraded Decisions original callback draw/selection/replay includes Attack, Power and Skill or truly empty nonplayable candidates; owned pending replay reference and native counters/branches/full future snapshots.",
+  "hextechNativeRoundsAfterPlay": 1,
+  "powers": [],
+  "hextechNativeEndTurnOnlyRounds": true,
+  "initialPlayerBlock": 0,
+  "hextechEnemyTierFloor": 1,
+  "initialPlayerGold": 100,
+  "hextechNativeScopeCounterProbe": true,
+  "additionalMonsterIds": [
+    "BigDummy"
+  ]
+}

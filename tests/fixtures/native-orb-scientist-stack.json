@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "REPORT-CARDS-HEXTECH-NATIVE-ORB-SCIENTIST-STACK",
+  "seed": "HEXTECHCOMPAT",
+  "expectedLoadedMods": [
+    "CombatSolver@0.47.3",
+    "HextechRunes@0.9.7",
+    "STS2-RitsuLib@0.6.3",
+    "HextechCompatLab@0.1.0",
+    "HextechSolverCompat@0.1.0"
+  ],
+  "characterId": "DEFECT",
+  "encounterId": "FUZZY_WURM_CRAWLER_WEAK",
+  "enemyCurrentHp": 200,
+  "clearPlayerPiles": true,
+  "cards": [
+    {
+      "cardId": "ZAP",
+      "pile": "Hand",
+      "count": 2
+    },
+    {
+      "cardId": "DEFEND_DEFECT",
+      "pile": "Draw",
+      "count": 12
+    }
+  ],
+  "fixedSearchBudget": true,
+  "searchBudgetOverrideMilliseconds": 0,
+  "timeoutSeconds": 60,
+  "initialEnemyMaxHps": [
+    200
+  ],
+  "initialEnemyCurrentHps": [
+    130
+  ],
+  "initialEnemyMoveIds": [
+    "FIRST_ACID_GOOP"
+  ],
+  "initialPlayerEnergy": 20,
+  "initialPlayerHp": 70,
+  "initialPlayerMaxHp": 100,
+  "clearAllPowers": true,
+  "relics": [
+    {
+      "relicId": "MAD_SCIENTIST_RUNE",
+      "addWithoutObtainedEffects": true
+    },
+    {
+      "relicId": "ORB_SYMBIOSIS_RUNE",
+      "addWithoutObtainedEffects": true
+    },
+    {
+      "relicId": "CORE_OVERLOAD_RUNE",
+      "addWithoutObtainedEffects": true
+    },
+    {
+      "relicId": "ADAPTIVE_CAPACITOR_RUNE",
+      "addWithoutObtainedEffects": true
+    }
+  ],
+  "hextechEnemyHexes": [],
+  "hextechExpected": {},
+  "initialEnemyBlocks": [
+    0
+  ],
+  "hextechNativeTokenForkProbe": true,
+  "hextechNativeTokenActualProbe": true,
+  "hextechNativePlayEnemy": false,
+  "initialPlayerStars": 20,
+  "hextechNativePlaySequence": [
+    {
+      "cardId": "ZAP",
+      "enemy": false,
+      "expectedPlays": 1
+    },
+    {
+      "cardId": "ZAP",
+      "enemy": false,
+      "expectedPlays": 1
+    }
+  ],
+  "hextechNativeRoundsAfterPlay": 2,
+  "fixtureNotes": "20/20 pinned original/source orb reaction methods; native channel/evoke/duplicate guards and uncapped slot prefix composition. Original-runtime complete orb/focus/HP/pile/RNG snapshots, fork/key/stamp isolation and two native turns.",
+  "powers": [],
+  "hextechNativeOrbSetup": [
+    "Frost",
+    "Frost",
+    "Frost"
+  ],
+  "hextechNativeEndTurnOnlyRounds": true,
+  "hextechNativeExpectedAfterSequence": {},
+  "hextechNativeOrbExpectedSetup": [
+    "Frost",
+    "Frost",
+    "Frost",
+    "Frost",
+    "Frost",
+    "Frost"
+  ]
+}

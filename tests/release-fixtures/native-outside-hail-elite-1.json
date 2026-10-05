@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "NATIVE-OUTSIDE-HAIL-ELITE-1-RELEASE-RITSU065-FULL-MODS-SOLVER0481",
+  "seed": "HEXTECHCOMPAT",
+  "expectedLoadedMods": [
+    "CombatSolver@0.48.1",
+    "HextechRunes@0.9.7",
+    "STS2-RitsuLib@0.6.5",
+    "HextechCompatLab@0.1.0",
+    "HextechSolverCompat@0.1.0",
+    "BaseLib@v3.4.7",
+    "MintySpire2@v1.2.0",
+    "QuickRestart@v2.0.0",
+    "RelicRewardChoices@0.3.9",
+    "ImportVanillaSaves@v0.2.1",
+    "sts2_god_mod@1.7.10",
+    "RandomForeseer@0.13.18"
+  ],
+  "characterId": "IRONCLAD",
+  "encounterId": "PHROG_PARASITE_ELITE",
+  "enemyCurrentHp": 200,
+  "clearPlayerPiles": true,
+  "cards": [
+    {
+      "cardId": "BASH",
+      "pile": "Hand"
+    },
+    {
+      "cardId": "DEFEND_IRONCLAD",
+      "pile": "Draw",
+      "count": 12
+    }
+  ],
+  "fixedSearchBudget": true,
+  "searchBudgetOverrideMilliseconds": 0,
+  "timeoutSeconds": 60,
+  "initialPlayerEnergy": 20,
+  "initialPlayerHp": 70,
+  "initialPlayerMaxHp": 80,
+  "clearAllPowers": false,
+  "hextechEnemyHexes": [
+    "HailToTheKing"
+  ],
+  "relics": [],
+  "hextechEnemyTierFloor": 1,
+  "hextechExpected": {},
+  "hextechNativeOpeningRoomType": "Elite",
+  "hextechNativeHailOpeningProbe": true,
+  "fixtureNotes": "Hail source18/18. Native room factory derives combat room type from the encounter; use actual Elite/Boss encounters, read back actual RoomType, verify opening powers and two native rounds."
+}

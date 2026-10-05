@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "REPORT-CARDS-HEXTECH-DOOM-REACTIONS-STACK",
+  "seed": "HEXTECHCOMPAT",
+  "expectedLoadedMods": [
+    "CombatSolver@0.47.3",
+    "HextechRunes@0.9.7",
+    "STS2-RitsuLib@0.6.3",
+    "HextechCompatLab@0.1.0",
+    "HextechSolverCompat@0.1.0"
+  ],
+  "characterId": "NECROBINDER",
+  "encounterId": "FUZZY_WURM_CRAWLER_WEAK",
+  "enemyCurrentHp": 200,
+  "clearPlayerPiles": true,
+  "cards": [
+    {
+      "cardId": "SCOURGE",
+      "pile": "Hand",
+      "count": 2
+    },
+    {
+      "cardId": "DEFEND_NECROBINDER",
+      "pile": "Draw",
+      "count": 10
+    }
+  ],
+  "fixedSearchBudget": true,
+  "searchBudgetOverrideMilliseconds": 0,
+  "timeoutSeconds": 60,
+  "initialEnemyMaxHps": [
+    200
+  ],
+  "initialEnemyCurrentHps": [
+    130
+  ],
+  "initialEnemyMoveIds": [
+    "FIRST_ACID_GOOP"
+  ],
+  "initialPlayerEnergy": 20,
+  "initialPlayerHp": 70,
+  "initialPlayerMaxHp": 100,
+  "clearAllPowers": true,
+  "relics": [
+    {
+      "relicId": "TAUNT_RUNE",
+      "addWithoutObtainedEffects": true
+    },
+    {
+      "relicId": "OMINOUS_PACT_RUNE",
+      "addWithoutObtainedEffects": true
+    },
+    {
+      "relicId": "BONE_GUARD_RUNE",
+      "addWithoutObtainedEffects": true
+    },
+    {
+      "relicId": "PLASTER_RUNE",
+      "addWithoutObtainedEffects": true
+    }
+  ],
+  "hextechEnemyHexes": [],
+  "hextechExpected": {
+    "playerBlock": 18,
+    "handCount": 4,
+    "ostyMaxHp": 46,
+    "ostyHp": 46
+  },
+  "initialEnemyBlocks": [
+    0
+  ],
+  "hextechNativeTokenForkProbe": true,
+  "hextechNativeTokenActualProbe": true,
+  "hextechNativePlayEnemy": false,
+  "initialPlayerStars": 20,
+  "hextechNativePlaySequence": [
+    {
+      "cardId": "SCOURGE",
+      "enemy": true,
+      "expectedPlays": 1
+    },
+    {
+      "cardId": "SCOURGE",
+      "enemy": true,
+      "expectedPlays": 1
+    }
+  ],
+  "hextechNativeRoundsAfterPlay": 0,
+  "fixtureNotes": "Original Doom reactions in native power/relic order: Shroud block3, Taunt draw1, Ominous summon13, BoneGuard floor(13*.5)=6, Plaster heal13, Scourge own draw1. Artifact and dead Osty boundaries; all snapshots/RNG and scalar depth branch isolation.",
+  "powers": [
+    {
+      "powerId": "SHROUD_POWER",
+      "amount": 3,
+      "target": "Player",
+      "applier": "Player"
+    }
+  ],
+  "initialPlayerBlock": 0,
+  "hextechInitialOsty": {
+    "maxHp": 20,
+    "hp": 5
+  }
+}

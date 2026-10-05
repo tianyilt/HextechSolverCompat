@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "REPORT-CARDS-HEXTECH-REGISTERED-BOUNDARY-CARD-INSPECTION-NESTED-DRAW",
+  "seed": "HEXTECHCOMPAT",
+  "expectedLoadedMods": [
+    "CombatSolver@0.48.1",
+    "HextechRunes@0.9.7",
+    "STS2-RitsuLib@0.6.5",
+    "HextechCompatLab@0.1.0",
+    "HextechSolverCompat@0.1.0",
+    "BaseLib@v3.4.7",
+    "MintySpire2@v1.2.0",
+    "QuickRestart@v2.0.0",
+    "RelicRewardChoices@0.3.9",
+    "ImportVanillaSaves@v0.2.1",
+    "sts2_god_mod@1.7.10",
+    "RandomForeseer@0.13.18"
+  ],
+  "characterId": "NECROBINDER",
+  "encounterId": "FUZZY_WURM_CRAWLER_WEAK",
+  "enemyCurrentHp": 2000,
+  "clearPlayerPiles": true,
+  "cards": [
+    {
+      "cardId": "DEFEND_NECROBINDER",
+      "pile": "Hand",
+      "count": 1
+    },
+    {
+      "cardId": "STRIKE_NECROBINDER",
+      "pile": "Draw",
+      "count": 2
+    },
+    {
+      "cardId": "DEFEND_NECROBINDER",
+      "pile": "Discard",
+      "count": 7
+    }
+  ],
+  "fixedSearchBudget": true,
+  "searchBudgetOverrideMilliseconds": 0,
+  "timeoutSeconds": 60,
+  "initialEnemyMaxHps": [
+    2000
+  ],
+  "initialEnemyCurrentHps": [
+    1600
+  ],
+  "initialEnemyMoveIds": [
+    "INHALE"
+  ],
+  "initialPlayerEnergy": 30,
+  "initialPlayerHp": 800,
+  "initialPlayerMaxHp": 1000,
+  "clearAllPowers": true,
+  "relics": [
+    {
+      "relicId": "CARD_INSPECTION_RUNE",
+      "addWithoutObtainedEffects": true
+    },
+    {
+      "relicId": "WARMOGS_SPIRIT_RUNE",
+      "addWithoutObtainedEffects": true
+    },
+    {
+      "relicId": "AUTOMATION_UPGRADE_RUNE",
+      "addWithoutObtainedEffects": true
+    }
+  ],
+  "hextechEnemyHexes": [],
+  "hextechExpected": {},
+  "initialEnemyBlocks": [
+    0
+  ],
+  "initialPlayerStars": 20,
+  "powers": [
+    {
+      "powerId": "AUTOMATION_POWER",
+      "amount": 1,
+      "target": "Player"
+    }
+  ],
+  "initialPlayerBlock": 0,
+  "hextechNativeTokenForkProbe": true,
+  "hextechNativeTokenActualProbe": true,
+  "hextechNativeScopeCounterProbe": true,
+  "hextechNativePlayEnemy": false,
+  "hextechNativeRoundsAfterPlay": 3,
+  "hextechNativeEndTurnOnlyRounds": true,
+  "hextechNativePlaySequence": [
+    {
+      "cardId": "DEFEND_NECROBINDER",
+      "enemy": false,
+      "expectedPlays": 1
+    }
+  ],
+  "fixtureNotes": "Hand-draw selected cards advance real Automation counter; Upgrade Automation triggers nested non-hand draw at threshold10. Native shuffle, continuation forks, replay and actual EndTurn snapshots compared across three future rounds.",
+  "hextechSetupChoices": true
+}

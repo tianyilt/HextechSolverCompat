@@ -1,0 +1,117 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "REPORT-CARDS-HEXTECH-NATIVE-NEUROSURGE-POWER-ORDER",
+  "seed": "HEXTECHCOMPAT",
+  "expectedLoadedMods": [
+    "CombatSolver@0.47.3",
+    "HextechRunes@0.9.7",
+    "STS2-RitsuLib@0.6.3",
+    "HextechCompatLab@0.1.0",
+    "HextechSolverCompat@0.1.0"
+  ],
+  "characterId": "NECROBINDER",
+  "encounterId": "FUZZY_WURM_CRAWLER_WEAK",
+  "enemyCurrentHp": 2000,
+  "clearPlayerPiles": true,
+  "cards": [
+    {
+      "cardId": "NEUROSURGE",
+      "pile": "Hand",
+      "count": 2,
+      "upgradeLevels": 1
+    },
+    {
+      "cardId": "DEFEND_NECROBINDER",
+      "pile": "Draw",
+      "count": 30
+    }
+  ],
+  "fixedSearchBudget": true,
+  "searchBudgetOverrideMilliseconds": 0,
+  "timeoutSeconds": 60,
+  "initialEnemyMaxHps": [
+    2000
+  ],
+  "initialEnemyCurrentHps": [
+    1600
+  ],
+  "initialEnemyMoveIds": [
+    "FIRST_ACID_GOOP"
+  ],
+  "initialPlayerEnergy": 30,
+  "initialPlayerHp": 800,
+  "initialPlayerMaxHp": 1000,
+  "clearAllPowers": true,
+  "relics": [
+    {
+      "relicId": "NEUROSURGE_UPGRADE_RUNE",
+      "addWithoutObtainedEffects": true
+    }
+  ],
+  "hextechEnemyHexes": [],
+  "hextechExpected": {},
+  "initialEnemyBlocks": [
+    0
+  ],
+  "hextechNativeTokenForkProbe": true,
+  "hextechNativeTokenActualProbe": true,
+  "hextechNativePlayEnemy": false,
+  "initialPlayerStars": 20,
+  "hextechNativePlaySequence": [
+    {
+      "cardId": "NEUROSURGE",
+      "enemy": false,
+      "expectedPlays": 1
+    },
+    {
+      "cardId": "NEUROSURGE",
+      "enemy": false,
+      "expectedPlays": 1
+    }
+  ],
+  "fixtureNotes": "Original native acquired power order against Countdown, stock Neurosurge, Shroud, Noxious Fumes and Demon Form, exact future snapshots including power insertion order and native RNG.",
+  "hextechNativeRoundsAfterPlay": 2,
+  "hextechNativePlaySequenceAfterRounds": [
+    {
+      "cardId": "DEFEND_NECROBINDER",
+      "enemy": false,
+      "expectedPlays": 1
+    }
+  ],
+  "powers": [
+    {
+      "powerId": "COUNTDOWN_POWER",
+      "amount": 2,
+      "target": "Player"
+    },
+    {
+      "powerId": "SHROUD_POWER",
+      "amount": 2,
+      "target": "Player"
+    },
+    {
+      "powerId": "NEUROSURGE_POWER",
+      "amount": 2,
+      "target": "Player"
+    },
+    {
+      "powerId": "NOXIOUS_FUMES_POWER",
+      "amount": 2,
+      "target": "Player"
+    },
+    {
+      "powerId": "DEMON_FORM_POWER",
+      "amount": 2,
+      "target": "Player"
+    }
+  ],
+  "hextechNativeExpectedAfterSequence": {
+    "power:HEXTECH_NEUROSURGE_POWER": 6,
+    "power:NEUROSURGE_POWER": 2
+  },
+  "hextechNativeExpectedAfterRounds": {
+    "enemyPower:DOOM_POWER": 16,
+    "power:DOOM_POWER": 4,
+    "strength": 4
+  }
+}

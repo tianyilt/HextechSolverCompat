@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "NATIVE-NEAR-DEATH-ENEMY1",
+  "seed": "HEXTECHCOMPAT",
+  "expectedLoadedMods": [
+    "CombatSolver@0.47.3",
+    "HextechRunes@0.9.7",
+    "STS2-RitsuLib@0.6.3",
+    "HextechCompatLab@0.1.0",
+    "HextechSolverCompat@0.1.0"
+  ],
+  "characterId": "SILENT",
+  "encounterId": "FUZZY_WURM_CRAWLER_WEAK",
+  "enemyCurrentHp": 2000,
+  "clearPlayerPiles": true,
+  "cards": [
+    {
+      "cardId": "STRIKE_SILENT",
+      "pile": "Hand",
+      "count": 2
+    },
+    {
+      "cardId": "DEFEND_SILENT",
+      "pile": "Draw",
+      "count": 40
+    }
+  ],
+  "fixedSearchBudget": true,
+  "searchBudgetOverrideMilliseconds": 0,
+  "timeoutSeconds": 90,
+  "initialEnemyMaxHps": [
+    200,
+    5000
+  ],
+  "initialEnemyCurrentHps": [
+    5,
+    5000
+  ],
+  "initialEnemyMoveIds": [
+    "INHALE"
+  ],
+  "initialPlayerEnergy": 30,
+  "initialPlayerHp": 80,
+  "initialPlayerMaxHp": 100,
+  "clearAllPowers": true,
+  "relics": [],
+  "hextechExpected": {},
+  "initialEnemyBlocks": [
+    0,
+    0
+  ],
+  "hextechNativePlayEnemy": false,
+  "initialPlayerStars": 20,
+  "fixtureNotes": "Original shared NearDeath core79/79. Actual native commands, debt-only key/stamp change, fork isolation, strength sync, forbidden healing/block, direct negative setter; enemy tier thresholds/recovery/explicit kill.",
+  "powers": [],
+  "initialPlayerBlock": 0,
+  "hextechEnemyTierFloor": 1,
+  "initialPlayerGold": 100,
+  "hextechNativeScopeCounterProbe": false,
+  "additionalMonsterIds": [
+    "BigDummy"
+  ],
+  "hextechEnemyHexes": [
+    "NearDeathFeast"
+  ],
+  "hextechNativeNearDeathProbe": "enemy1"
+}

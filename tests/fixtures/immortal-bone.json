@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "REPORT-ROUND-HEXTECH-IMMORTAL-BONE",
+  "seed": "HEXTECHCOMPAT",
+  "expectedLoadedMods": [
+    "CombatSolver@0.47.3",
+    "HextechRunes@0.9.7",
+    "STS2-RitsuLib@0.6.3",
+    "HextechCompatLab@0.1.0",
+    "HextechSolverCompat@0.1.0"
+  ],
+  "characterId": "NECROBINDER",
+  "encounterId": "FUZZY_WURM_CRAWLER_WEAK",
+  "enemyCurrentHp": 200,
+  "clearPlayerPiles": true,
+  "cards": [
+    {
+      "cardId": "DEFEND_NECROBINDER",
+      "pile": "Draw",
+      "count": 10
+    }
+  ],
+  "fixedSearchBudget": true,
+  "searchBudgetOverrideMilliseconds": 0,
+  "timeoutSeconds": 60,
+  "initialEnemyMaxHps": [
+    200
+  ],
+  "initialEnemyCurrentHps": [
+    130
+  ],
+  "initialEnemyMoveIds": [
+    "FIRST_ACID_GOOP"
+  ],
+  "initialPlayerEnergy": 20,
+  "initialPlayerHp": 70,
+  "initialPlayerMaxHp": 80,
+  "clearAllPowers": true,
+  "hextechEnemyHexes": [],
+  "relics": [
+    {
+      "relicId": "IMMORTAL_BONE_RUNE"
+    }
+  ],
+  "initialPlayerBlock": 100,
+  "hextechExpected": {
+    "ostyHp": 16,
+    "ostyMaxHp": 21
+  },
+  "hextechInitialOsty": {
+    "hp": 5,
+    "maxHp": 20
+  }
+}

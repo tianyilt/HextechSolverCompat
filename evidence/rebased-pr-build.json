@@ -1,0 +1,10 @@
+{
+  "status": "BuildPassed",
+  "baseCommit": "0d290fbee7e2779d2cebd8b8f652d82d00b6e8fc",
+  "version": "0.50.0",
+  "candidateSha256": "e22713025cdc386246b91c1df4dc073fcb352590a6473e8071ab88bfb24a38e3",
+  "nativeAcceptance": "Pending; 0.48.1 evidence is separate",
+  "performanceAcceptance": "Pending; 0.48.1 sentinel NotPassed",
+  "warnings": 0,
+  "errors": 0
+}

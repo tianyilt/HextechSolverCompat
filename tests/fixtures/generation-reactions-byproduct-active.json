@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "REPORT-CARDS-HEXTECH-GENERATION-REACTIONS-BYPRODUCT-ACTIVE",
+  "seed": "HEXTECHCOMPAT",
+  "expectedLoadedMods": [
+    "CombatSolver@0.47.3",
+    "HextechRunes@0.9.7",
+    "STS2-RitsuLib@0.6.3",
+    "HextechCompatLab@0.1.0",
+    "HextechSolverCompat@0.1.0"
+  ],
+  "characterId": "DEFECT",
+  "encounterId": "FUZZY_WURM_CRAWLER_WEAK",
+  "enemyCurrentHp": 200,
+  "clearPlayerPiles": true,
+  "cards": [
+    {
+      "cardId": "DEFEND_DEFECT",
+      "pile": "Draw",
+      "count": 12
+    }
+  ],
+  "fixedSearchBudget": true,
+  "searchBudgetOverrideMilliseconds": 0,
+  "timeoutSeconds": 75,
+  "initialEnemyMaxHps": [
+    200
+  ],
+  "initialEnemyCurrentHps": [
+    180
+  ],
+  "initialEnemyMoveIds": [
+    "FIRST_ACID_GOOP"
+  ],
+  "initialPlayerEnergy": 20,
+  "initialPlayerHp": 800,
+  "initialPlayerMaxHp": 1000,
+  "clearAllPowers": true,
+  "relics": [
+    {
+      "relicId": "BYPRODUCT_RUNE",
+      "addWithoutObtainedEffects": true
+    }
+  ],
+  "hextechEnemyHexes": [],
+  "hextechExpected": {},
+  "initialEnemyBlocks": [
+    0
+  ],
+  "initialPlayerStars": 20,
+  "fixtureNotes": "Original stateless enemy dispatcher callbacks, native order and frozen strength tier. Sturdy below/equal-half HP; Sonata odd block/even heal; missing-HP Miserable Fate with retained Barricade block, four actual rounds and next-turn play. Parent/sibling/live and unknown callback composition assertions.",
+  "hextechGeneratedReactionRounds": 2,
+  "hextechGeneratedReactionPlayDefend": true,
+  "hextechGeneratedReactionSteps": [
+    {
+      "cardId": "DAZED",
+      "pile": "Draw",
+      "creator": "Player",
+      "expectedHandCount": 1
+    },
+    {
+      "cardId": "DAZED",
+      "pile": "Discard",
+      "creator": "None",
+      "expectedHandCount": 1
+    },
+    {
+      "cardId": "SHIV",
+      "pile": "Hand",
+      "creator": "Player",
+      "expectedHandCount": 2
+    },
+    {
+      "cardId": "DAZED",
+      "pile": "Hand",
+      "creator": "Player",
+      "expectedHandCount": 4
+    }
+  ]
+}

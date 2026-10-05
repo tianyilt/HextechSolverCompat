@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "NATIVE-UPGRADE-STARDUST-MIXED",
+  "seed": "HEXTECHCOMPAT",
+  "expectedLoadedMods": [
+    "CombatSolver@0.47.3",
+    "HextechRunes@0.9.7",
+    "STS2-RitsuLib@0.6.3",
+    "HextechCompatLab@0.1.0",
+    "HextechSolverCompat@0.1.0"
+  ],
+  "characterId": "REGENT",
+  "encounterId": "FUZZY_WURM_CRAWLER_WEAK",
+  "enemyCurrentHp": 2000,
+  "clearPlayerPiles": true,
+  "cards": [
+    {
+      "cardId": "STARDUST",
+      "pile": "Hand",
+      "upgradeLevels": 0
+    },
+    {
+      "cardId": "DEFEND_REGENT",
+      "pile": "Draw",
+      "count": 40
+    }
+  ],
+  "fixedSearchBudget": true,
+  "searchBudgetOverrideMilliseconds": 0,
+  "timeoutSeconds": 60,
+  "initialEnemyMaxHps": [
+    2000
+  ],
+  "initialEnemyCurrentHps": [
+    1600
+  ],
+  "initialEnemyMoveIds": [
+    "INHALE"
+  ],
+  "initialPlayerEnergy": 30,
+  "initialPlayerHp": 800,
+  "initialPlayerMaxHp": 1000,
+  "clearAllPowers": true,
+  "relics": [
+    {
+      "relicId": "STARDUST_UPGRADE_RUNE",
+      "addWithoutObtainedEffects": true
+    },
+    {
+      "relicId": "TRINITY_RUNE",
+      "addWithoutObtainedEffects": true
+    },
+    {
+      "relicId": "UNSEALED_THRONE_RUNE",
+      "addWithoutObtainedEffects": true
+    },
+    {
+      "relicId": "ROYAL_COMMAND_RUNE",
+      "addWithoutObtainedEffects": true
+    },
+    {
+      "relicId": "CHARGE_UP_RUNE",
+      "addWithoutObtainedEffects": true
+    },
+    {
+      "relicId": "MINI_REGENT",
+      "addWithoutObtainedEffects": true
+    },
+    {
+      "relicId": "GALACTIC_DUST",
+      "addWithoutObtainedEffects": true
+    }
+  ],
+  "hextechEnemyHexes": [],
+  "hextechExpected": {},
+  "initialEnemyBlocks": [
+    0
+  ],
+  "hextechNativeTokenForkProbe": true,
+  "hextechNativeTokenActualProbe": true,
+  "hextechNativePlayEnemy": false,
+  "initialPlayerStars": 8,
+  "hextechNativePlaySequence": [
+    {
+      "cardId": "STARDUST",
+      "enemy": false,
+      "expectedPlays": 1
+    }
+  ],
+  "fixtureNotes": "Original CircleOfDeath block and actual-heal delta share one captured proc ordinal and original stable target choice with unsorted HittableEnemies. Full native snapshots, scalar key/stamp, fork, RNG and subsequent turns.",
+  "hextechNativeRoundsAfterPlay": 2,
+  "powers": [],
+  "hextechNativeExpectedAfterSequence": {},
+  "hextechNativeEndTurnOnlyRounds": true,
+  "initialPlayerBlock": 0,
+  "hextechNativeExpectedAfterRounds": {},
+  "hextechNativePlaySequenceAfterRounds": [
+    {
+      "cardId": "DEFEND_REGENT",
+      "enemy": false,
+      "expectedPlays": 1
+    }
+  ],
+  "hextechNativeScopeCounterProbe": true
+}

@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "REPORT-CARDS-HEXTECH-NATIVE-SCOPE-STARS",
+  "seed": "HEXTECHCOMPAT",
+  "expectedLoadedMods": [
+    "CombatSolver@0.47.3",
+    "HextechRunes@0.9.7",
+    "STS2-RitsuLib@0.6.3",
+    "HextechCompatLab@0.1.0",
+    "HextechSolverCompat@0.1.0"
+  ],
+  "characterId": "REGENT",
+  "encounterId": "FUZZY_WURM_CRAWLER_WEAK",
+  "enemyCurrentHp": 2000,
+  "clearPlayerPiles": true,
+  "cards": [
+    {
+      "cardId": "FALLING_STAR",
+      "pile": "Hand"
+    },
+    {
+      "cardId": "DEFEND_REGENT",
+      "pile": "Draw",
+      "count": 15
+    }
+  ],
+  "fixedSearchBudget": true,
+  "searchBudgetOverrideMilliseconds": 0,
+  "timeoutSeconds": 60,
+  "initialEnemyMaxHps": [
+    2000
+  ],
+  "initialEnemyCurrentHps": [
+    1600
+  ],
+  "initialEnemyMoveIds": [
+    "FIRST_ACID_GOOP"
+  ],
+  "initialPlayerEnergy": 20,
+  "initialPlayerHp": 800,
+  "initialPlayerMaxHp": 1000,
+  "clearAllPowers": true,
+  "relics": [
+    {
+      "relicId": "UNIVERSAL_SCOPE_RUNE",
+      "addWithoutObtainedEffects": true
+    },
+    {
+      "relicId": "MORE_UNIVERSAL_SCOPE_RUNE",
+      "addWithoutObtainedEffects": true
+    },
+    {
+      "relicId": "MOST_UNIVERSAL_SCOPE_RUNE",
+      "addWithoutObtainedEffects": true
+    },
+    {
+      "relicId": "UNSEALED_THRONE_RUNE",
+      "addWithoutObtainedEffects": true
+    },
+    {
+      "relicId": "ROYAL_COMMAND_RUNE",
+      "addWithoutObtainedEffects": true
+    },
+    {
+      "relicId": "CHARGE_UP_RUNE",
+      "addWithoutObtainedEffects": true
+    }
+  ],
+  "hextechEnemyHexes": [],
+  "hextechExpected": {},
+  "initialEnemyBlocks": [
+    0
+  ],
+  "hextechNativeTokenForkProbe": true,
+  "hextechNativeTokenActualProbe": true,
+  "hextechNativePlayEnemy": false,
+  "initialPlayerStars": 20,
+  "hextechNativePlaySequence": [
+    {
+      "cardId": "FALLING_STAR",
+      "enemy": true,
+      "expectedPlays": 1
+    }
+  ],
+  "fixtureNotes": "Three original scope tiers combine to95 percent, original stable roll/ordinal and first active listener; actual manual/free-auto/replay/star refund, result piles, native scalar counter comparison and two native rounds/next turn card. No forced probability or patched native formula.",
+  "hextechNativeRoundsAfterPlay": 2,
+  "hextechNativePlaySequenceAfterRounds": [
+    {
+      "cardId": "DEFEND_REGENT",
+      "enemy": false,
+      "expectedPlays": 1
+    }
+  ],
+  "hextechNativeScopeCounterProbe": true,
+  "powers": []
+}

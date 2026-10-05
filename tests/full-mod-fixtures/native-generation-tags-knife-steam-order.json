@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "NATIVE-GENERATION-TAGS-KNIFE-STEAM-ORDER-FULL-MOD-MIX",
+  "seed": "HEXTECHCOMPAT",
+  "expectedLoadedMods": [
+    "CombatSolver@0.47.3",
+    "HextechRunes@0.9.7",
+    "STS2-RitsuLib@0.6.3",
+    "HextechCompatLab@0.1.0",
+    "HextechSolverCompat@0.1.0",
+    "BaseLib@v3.4.7",
+    "MintySpire2@v1.2.0",
+    "QuickRestart@v2.0.0",
+    "RelicRewardChoices@0.3.9",
+    "ImportVanillaSaves@v0.2.1",
+    "sts2_god_mod@1.7.10",
+    "RandomForeseer@0.13.18"
+  ],
+  "characterId": "SILENT",
+  "encounterId": "FUZZY_WURM_CRAWLER_WEAK",
+  "enemyCurrentHp": 2000,
+  "clearPlayerPiles": true,
+  "cards": [
+    {
+      "cardId": "BLADE_DANCE",
+      "pile": "Hand",
+      "count": 1
+    },
+    {
+      "cardId": "DEFEND_SILENT",
+      "pile": "Draw",
+      "count": 30
+    }
+  ],
+  "fixedSearchBudget": true,
+  "searchBudgetOverrideMilliseconds": 0,
+  "timeoutSeconds": 90,
+  "initialEnemyMaxHps": [
+    5000,
+    5000
+  ],
+  "initialEnemyCurrentHps": [
+    3000,
+    3000
+  ],
+  "initialEnemyMoveIds": [
+    "INHALE"
+  ],
+  "initialPlayerEnergy": 30,
+  "initialPlayerHp": 800,
+  "initialPlayerMaxHp": 1000,
+  "clearAllPowers": true,
+  "relics": [
+    {
+      "relicId": "BIG_KNIFE_RUNE",
+      "addWithoutObtainedEffects": true
+    }
+  ],
+  "hextechExpected": {},
+  "initialEnemyBlocks": [
+    0,
+    0
+  ],
+  "hextechNativeTokenForkProbe": true,
+  "hextechNativeTokenActualProbe": true,
+  "hextechNativePlayEnemy": false,
+  "initialPlayerStars": 20,
+  "hextechNativePlaySequence": [
+    {
+      "cardId": "BLADE_DANCE",
+      "enemy": false,
+      "expectedPlays": 1
+    },
+    {
+      "cardId": "SOVEREIGN_BLADE",
+      "enemy": true,
+      "expectedPlays": 1
+    },
+    {
+      "cardId": "SOVEREIGN_BLADE",
+      "enemy": true,
+      "expectedPlays": 1
+    },
+    {
+      "cardId": "SOVEREIGN_BLADE",
+      "enemy": true,
+      "expectedPlays": 1
+    }
+  ],
+  "fixtureNotes": "Reviewed generated replacement/tags source90/90. Native full snapshots, all-card tags/targets/enchantment equality, fork keys/stamps and future native round. Not whole-pool/visible/Steam acceptance. Same eleven original daily Mods plus test-only Lab, isolated native host; root contents explicitly injected by fixture; user saves unaffected.",
+  "hextechNativeRoundsAfterPlay": 1,
+  "powers": [],
+  "hextechNativeEndTurnOnlyRounds": true,
+  "initialPlayerBlock": 0,
+  "hextechEnemyTierFloor": 1,
+  "initialPlayerGold": 100,
+  "hextechNativeScopeCounterProbe": false,
+  "additionalMonsterIds": [
+    "BigDummy"
+  ],
+  "hextechEnemyHexes": [],
+  "hextechNativeGeneratedTagsProbe": true,
+  "hextechSteamTagOrder": true
+}

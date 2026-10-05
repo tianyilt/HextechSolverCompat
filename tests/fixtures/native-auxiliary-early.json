@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "NATIVE-AUXILIARY-EARLY",
+  "seed": "HEXTECHCOMPAT",
+  "expectedLoadedMods": [
+    "CombatSolver@0.47.3",
+    "HextechRunes@0.9.7",
+    "STS2-RitsuLib@0.6.3",
+    "HextechCompatLab@0.1.0",
+    "HextechSolverCompat@0.1.0"
+  ],
+  "characterId": "IRONCLAD",
+  "encounterId": "FUZZY_WURM_CRAWLER_WEAK",
+  "enemyCurrentHp": 2000,
+  "clearPlayerPiles": true,
+  "cards": [
+    {
+      "cardId": "DEFEND_IRONCLAD",
+      "pile": "Hand",
+      "count": 1
+    },
+    {
+      "cardId": "DEFEND_IRONCLAD",
+      "pile": "Draw",
+      "count": 50
+    }
+  ],
+  "fixedSearchBudget": true,
+  "searchBudgetOverrideMilliseconds": 0,
+  "timeoutSeconds": 90,
+  "initialEnemyMaxHps": [
+    3000,
+    3000
+  ],
+  "initialEnemyCurrentHps": [
+    2000,
+    2000
+  ],
+  "initialEnemyMoveIds": [
+    "FIRST_ACID_GOOP"
+  ],
+  "initialPlayerEnergy": 30,
+  "initialPlayerHp": 800,
+  "initialPlayerMaxHp": 1000,
+  "clearAllPowers": true,
+  "relics": [
+    {
+      "relicId": "VIGOR_FORGE",
+      "addWithoutObtainedEffects": true,
+      "integerMembers": {
+        "SavedStackCount": 2
+      }
+    },
+    {
+      "relicId": "BLOCK_FORGE",
+      "addWithoutObtainedEffects": true,
+      "integerMembers": {
+        "SavedStackCount": 2
+      }
+    },
+    {
+      "relicId": "RECOVERY_FORGE",
+      "addWithoutObtainedEffects": true,
+      "integerMembers": {
+        "SavedStackCount": 2
+      }
+    },
+    {
+      "relicId": "HOURGLASS_FORGE",
+      "addWithoutObtainedEffects": true,
+      "integerMembers": {
+        "SavedStackCount": 2
+      }
+    },
+    {
+      "relicId": "ENERGY_FORGE",
+      "addWithoutObtainedEffects": true,
+      "integerMembers": {
+        "SavedStackCount": 2
+      }
+    },
+    {
+      "relicId": "DRAW_FORGE",
+      "addWithoutObtainedEffects": true,
+      "integerMembers": {
+        "SavedStackCount": 2
+      }
+    },
+    {
+      "relicId": "PREPARED_FORGE",
+      "addWithoutObtainedEffects": true,
+      "integerMembers": {
+        "SavedStackCount": 2
+      }
+    }
+  ],
+  "hextechEnemyHexes": [],
+  "hextechExpected": {},
+  "initialPlayerBlock": 0,
+  "hextechEnemyTierFloor": 1,
+  "fixtureNotes": "Pinned original Forge/Orobas/UniversalSpiral callbacks. Source full Forge307/307 and dependent462/462 audited. Shared stacked coefficients, ordered opening and future turns, complete native snapshots and branch/key/stamp/RNG isolation.",
+  "initialPlayerStars": 0,
+  "powers": [],
+  "initialEnemyBlocks": [
+    0,
+    0
+  ],
+  "hextechNativePlaySequence": [
+    {
+      "cardId": "DEFEND_IRONCLAD",
+      "enemy": false,
+      "expectedPlays": 1
+    }
+  ],
+  "hextechNativeRoundsAfterPlay": 2,
+  "additionalMonsterIds": [
+    "LEAF_SLIME_M"
+  ],
+  "hextechNativeEndTurnOnlyRounds": true,
+  "hextechNativeAuxiliaryProbe": true
+}

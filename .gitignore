@@ -1,0 +1,9 @@
+bin/
+obj/
+.work/
+.local/
+artifacts/
+local.props
+__pycache__/
+*.pdb
+.DS_Store

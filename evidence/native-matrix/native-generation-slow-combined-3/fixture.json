@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "REPORT-CARDS-HEXTECH-GENERATION-SLOW-COMBINED-3-RELEASE-RITSU065-FULL-MODS-SOLVER0481",
+  "seed": "HEXTECHCOMPAT",
+  "expectedLoadedMods": [
+    "CombatSolver@0.48.1",
+    "HextechRunes@0.9.7",
+    "STS2-RitsuLib@0.6.5",
+    "HextechCompatLab@0.1.0",
+    "HextechSolverCompat@0.1.0",
+    "BaseLib@v3.4.7",
+    "MintySpire2@v1.2.0",
+    "QuickRestart@v2.0.0",
+    "RelicRewardChoices@0.3.9",
+    "ImportVanillaSaves@v0.2.1",
+    "sts2_god_mod@1.7.10",
+    "RandomForeseer@0.13.18"
+  ],
+  "characterId": "NECROBINDER",
+  "encounterId": "FUZZY_WURM_CRAWLER_WEAK",
+  "enemyCurrentHp": 200,
+  "clearPlayerPiles": true,
+  "cards": [
+    {
+      "cardId": "CORRUPTION",
+      "pile": "Hand"
+    },
+    {
+      "cardId": "DEFEND_NECROBINDER",
+      "pile": "Hand",
+      "count": 2
+    },
+    {
+      "cardId": "STRIKE_NECROBINDER",
+      "pile": "Draw",
+      "count": 16
+    }
+  ],
+  "fixedSearchBudget": true,
+  "searchBudgetOverrideMilliseconds": 0,
+  "timeoutSeconds": 60,
+  "initialEnemyMaxHps": [
+    200
+  ],
+  "initialEnemyCurrentHps": [
+    130
+  ],
+  "initialEnemyMoveIds": [
+    "FIRST_ACID_GOOP"
+  ],
+  "initialPlayerEnergy": 20,
+  "initialPlayerHp": 70,
+  "initialPlayerMaxHp": 100,
+  "clearAllPowers": true,
+  "relics": [
+    {
+      "relicId": "CORRUPTED_BRANCH_RUNE",
+      "addWithoutObtainedEffects": true
+    }
+  ],
+  "hextechEnemyHexes": [
+    "AncientStatue"
+  ],
+  "hextechExpected": {},
+  "initialEnemyBlocks": [
+    0
+  ],
+  "hextechNativeTokenForkProbe": true,
+  "hextechNativeTokenActualProbe": true,
+  "hextechNativePlayEnemy": false,
+  "initialPlayerStars": 20,
+  "hextechNativePlaySequence": [
+    {
+      "cardId": "CORRUPTION",
+      "enemy": false,
+      "expectedPlays": 1
+    },
+    {
+      "cardId": "DEFEND_NECROBINDER",
+      "enemy": false,
+      "expectedPlays": 1
+    },
+    {
+      "cardId": "DEFEND_NECROBINDER",
+      "enemy": false,
+      "expectedPlays": 1
+    }
+  ],
+  "hextechNativeScalarProbe": {
+    "relicId": "CORRUPTED_BRANCH_RUNE",
+    "field": "_generatedCardsThisCombat"
+  },
+  "fixtureNotes": "Original CorruptedBranch generator combined with AncientStatue neutral temporary Slow; repeated exhaustion plus enemy turn damage and next-round expiry compared to native snapshots.",
+  "hextechNativeRoundsAfterPlay": 1,
+  "hextechNativePlaySequenceAfterRounds": [
+    {
+      "cardId": "STRIKE_NECROBINDER",
+      "enemy": true,
+      "expectedPlays": 1
+    }
+  ],
+  "hextechEnemyTierFloor": 3
+}

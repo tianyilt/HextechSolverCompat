@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "REPORT-CARDS-HEXTECH-PERSISTENT-REFLECT-False",
+  "seed": "HEXTECHCOMPAT",
+  "expectedLoadedMods": [
+    "CombatSolver@0.47.3",
+    "HextechRunes@0.9.7",
+    "STS2-RitsuLib@0.6.3",
+    "HextechCompatLab@0.1.0",
+    "HextechSolverCompat@0.1.0"
+  ],
+  "characterId": "REGENT",
+  "encounterId": "FUZZY_WURM_CRAWLER_WEAK",
+  "enemyCurrentHp": 2000,
+  "clearPlayerPiles": true,
+  "cards": [
+    {
+      "cardId": "REFLECT",
+      "pile": "Hand"
+    },
+    {
+      "cardId": "DEFEND_REGENT",
+      "pile": "Hand"
+    },
+    {
+      "cardId": "STRIKE_REGENT",
+      "pile": "Hand"
+    },
+    {
+      "cardId": "STRIKE_REGENT",
+      "pile": "Draw",
+      "count": 20
+    }
+  ],
+  "fixedSearchBudget": true,
+  "searchBudgetOverrideMilliseconds": 0,
+  "timeoutSeconds": 60,
+  "initialEnemyMaxHps": [
+    2000
+  ],
+  "initialEnemyCurrentHps": [
+    1600
+  ],
+  "initialEnemyMoveIds": [
+    "FIRST_ACID_GOOP"
+  ],
+  "initialPlayerEnergy": 20,
+  "initialPlayerHp": 70,
+  "initialPlayerMaxHp": 100,
+  "clearAllPowers": true,
+  "relics": [],
+  "hextechEnemyHexes": [],
+  "hextechExpected": {
+    "power:REFLECT_POWER": 1
+  },
+  "initialEnemyBlocks": [
+    0
+  ],
+  "hextechNativeTokenForkProbe": true,
+  "hextechNativeTokenActualProbe": true,
+  "hextechNativePlayEnemy": false,
+  "hextechNativePlaySequence": [
+    {
+      "cardId": "REFLECT",
+      "enemy": false
+    },
+    {
+      "cardId": "DEFEND_REGENT",
+      "enemy": false
+    },
+    {
+      "cardId": "STRIKE_REGENT",
+      "enemy": true
+    }
+  ],
+  "fixtureNotes": "Original Reflect spec adds1 to injected3. Exact native upgrade suppresses side-start decrement, stock control decrements three times. Barricade retains native gained block to exercise reflection; full native comparisons across three rounds and next attack.",
+  "initialPlayerBlock": 0,
+  "hextechNativeRoundsAfterPlay": 3,
+  "hextechNativePlaySequenceAfterRounds": [
+    {
+      "cardId": "STRIKE_REGENT",
+      "enemy": true
+    }
+  ],
+  "powers": [
+    {
+      "powerId": "REFLECT_POWER",
+      "amount": 3,
+      "target": "Player",
+      "applier": "Player"
+    },
+    {
+      "powerId": "BARRICADE_POWER",
+      "amount": 1,
+      "target": "Player",
+      "applier": "Player"
+    }
+  ],
+  "initialPlayerStars": 20
+}

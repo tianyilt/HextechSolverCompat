@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "HEXTECH-BASELINE",
+  "seed": "HEXTECHCOMPAT",
+  "expectedLoadedMods": [
+    "CombatSolver@0.47.3",
+    "HextechRunes@0.9.7",
+    "STS2-RitsuLib@0.6.3",
+    "HextechCompatLab@0.1.0"
+  ],
+  "characterId": "IRONCLAD",
+  "encounterId": "FUZZY_WURM_CRAWLER_WEAK",
+  "enemyCurrentHp": 6,
+  "clearPlayerPiles": true,
+  "cards": [
+    {
+      "cardId": "STRIKE_IRONCLAD",
+      "pile": "Hand",
+      "count": 1
+    }
+  ],
+  "fixedSearchBudget": true,
+  "searchBudgetOverrideMilliseconds": 0,
+  "verifyIncrementalSearch": true,
+  "expectedInitialUnmirroredCount": 0,
+  "expectedFinishedTurn": 1,
+  "timeoutSeconds": 60
+}

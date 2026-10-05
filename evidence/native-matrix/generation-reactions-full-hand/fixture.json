@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "REPORT-CARDS-HEXTECH-GENERATION-REACTIONS-FULL-HAND-RELEASE-RITSU065-FULL-MODS-SOLVER0481",
+  "seed": "HEXTECHCOMPAT",
+  "expectedLoadedMods": [
+    "CombatSolver@0.48.1",
+    "HextechRunes@0.9.7",
+    "STS2-RitsuLib@0.6.5",
+    "HextechCompatLab@0.1.0",
+    "HextechSolverCompat@0.1.0",
+    "BaseLib@v3.4.7",
+    "MintySpire2@v1.2.0",
+    "QuickRestart@v2.0.0",
+    "RelicRewardChoices@0.3.9",
+    "ImportVanillaSaves@v0.2.1",
+    "sts2_god_mod@1.7.10",
+    "RandomForeseer@0.13.18"
+  ],
+  "characterId": "REGENT",
+  "encounterId": "FUZZY_WURM_CRAWLER_WEAK",
+  "enemyCurrentHp": 200,
+  "clearPlayerPiles": true,
+  "cards": [
+    {
+      "cardId": "DEFEND_REGENT",
+      "pile": "Hand",
+      "count": 10
+    },
+    {
+      "cardId": "DEFEND_REGENT",
+      "pile": "Draw",
+      "count": 12
+    }
+  ],
+  "fixedSearchBudget": true,
+  "searchBudgetOverrideMilliseconds": 0,
+  "timeoutSeconds": 75,
+  "initialEnemyMaxHps": [
+    200
+  ],
+  "initialEnemyCurrentHps": [
+    180
+  ],
+  "initialEnemyMoveIds": [
+    "FIRST_ACID_GOOP"
+  ],
+  "initialPlayerEnergy": 20,
+  "initialPlayerHp": 800,
+  "initialPlayerMaxHp": 1000,
+  "clearAllPowers": true,
+  "relics": [
+    {
+      "relicId": "CONDENSED_RADIANCE_RUNE",
+      "addWithoutObtainedEffects": true
+    },
+    {
+      "relicId": "ECHO_RUNE",
+      "addWithoutObtainedEffects": true
+    },
+    {
+      "relicId": "MANIPULATE_REALITY_RUNE",
+      "addWithoutObtainedEffects": true
+    }
+  ],
+  "hextechEnemyHexes": [],
+  "hextechExpected": {},
+  "initialEnemyBlocks": [
+    0
+  ],
+  "initialPlayerStars": 20,
+  "fixtureNotes": "Original stateless enemy dispatcher callbacks, native order and frozen strength tier. Sturdy below/equal-half HP; Sonata odd block/even heal; missing-HP Miserable Fate with retained Barricade block, four actual rounds and next-turn play. Parent/sibling/live and unknown callback composition assertions. Original listener order Echo then ManipulateReality: clone is made before the original card upgrades, so one upgraded original per step, not two.",
+  "hextechGeneratedReactionRounds": 2,
+  "hextechGeneratedReactionPlayDefend": true,
+  "hextechGeneratedReactionSteps": [
+    {
+      "cardId": "SHIV",
+      "pile": "Hand",
+      "creator": "Player",
+      "expectedHandCount": 10,
+      "checkCardId": "SHIV",
+      "expectedCardCount": 2,
+      "expectedUpgradedCount": 1,
+      "expectedEtherealCount": 1,
+      "expectedStarsDelta": 1
+    }
+  ]
+}

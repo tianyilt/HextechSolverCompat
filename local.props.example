@@ -1,0 +1,5 @@
+<Project><PropertyGroup>
+  <GameDataDir>/path/to/game/data_sts2_macos_arm64</GameDataDir>
+  <SolverDir>/path/to/official/CombatSolver-0.48.1</SolverDir>
+  <HextechDir>/path/to/HextechRunes/lib/0.111.0</HextechDir>
+</PropertyGroup></Project>

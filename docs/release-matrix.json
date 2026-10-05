@@ -1,0 +1,773 @@
+{
+  "schemaVersion": 1,
+  "scope": "Pinned single-player shared-mechanism regression and mandatory semantic boundaries; only authorized two enemy bans. Visible Steam gameplay and full-run validation remain separate requirements.",
+  "familiesSha256": "e3fdf7798e2f12e24f94b63be1c2f9ba787efd8b16e49527be95aae118153edb",
+  "dependencies": {
+    "sts2": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4",
+    "CombatSolver": "47b96a372d4f62d65fad1e31c7b1edac73b01b8c29ba02a70c52b8dd9135310c",
+    "HextechRunes": "274eebc2513a501fbbb654fc6100d47c6dbba9bf2088137293d234cb6f1ed56f",
+    "HextechLoader": "b62192b8001bad3f900941b6f94c5eca65f9d9473227c3632f822c05b1b6b39d",
+    "HextechPck": "3cc84b62ec13792b65ccb7206a6359910e3ec8deed88e3616595a874a444b7a4",
+    "RitsuRuntime": "383f86873509c76579ea3c6881ff0e021c25b82269b83a80cc918ee51b224594"
+  },
+  "policy": "Execute a primary effect witness for every reviewed mechanism family and the explicit cross-family/guard boundaries below on one adapter binary. The wider fixture library retains tier and parameter variants and historical failures; those are development evidence, not mandatory repeated release inputs. Original pinned callbacks, command ownership, complete snapshots, fork/key/stamp/RNG, unknown callback guards and UI/full-run gates remain required. A listed cross-family regression alone does not count as a primary family witness.",
+  "families": {
+    "native-queries": {
+      "witnesses": [
+        "native-query-counter"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "generated-cards": {
+      "witnesses": [
+        "native-generation-corrupted"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "side-start": {
+      "witnesses": [
+        "side-start-block-combined"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "after-card-commands": {
+      "witnesses": [
+        "after-card-x-6"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "hp-change": {
+      "witnesses": [
+        "hp-change-self"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "doom-reactions": {
+      "witnesses": [
+        "doom-reactions-stack"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "enemy-repeat": {
+      "witnesses": [
+        "enemy-repeat-attack"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "persistent-keywords": {
+      "witnesses": [
+        "persistent-rage-active"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "opening-forms": {
+      "witnesses": [
+        "opening-form-demon"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "temporary-stats": {
+      "witnesses": [
+        "temporary-loss-artifact-0"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "power-given-no-draw": {
+      "witnesses": [
+        "no-draw-battle-trance-active"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "orb-passive-native": {
+      "witnesses": [
+        "orb-passive-zap-mixed"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "native-enemy-turns": {
+      "witnesses": [
+        "native-enemy-turns-tier-1"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "generated-reactions": {
+      "witnesses": [
+        "generation-reactions-full-hand"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "native-events": {
+      "witnesses": [
+        "native-events-discard-active"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "native-autoplay": {
+      "witnesses": [
+        "native-autoplay-mixed"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "native-enemy-periodic": {
+      "witnesses": [
+        "native-enemy-periodic-tier-1"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "native-draw-sustain": {
+      "witnesses": [
+        "native-draw-sustain-hasty"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "native-transient-autoplay": {
+      "witnesses": [
+        "native-transient-autoplay-10"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "native-scope-return": {
+      "witnesses": [
+        "native-scope-full-hand-auto"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "native-discard-queue": {
+      "witnesses": [
+        "native-sell-off-choice"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "native-projection": {
+      "witnesses": [
+        "native-projection-stack-11"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "native-enemy-debuff-turns": {
+      "witnesses": [
+        "native-enemy-debuff-turn-artifact"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "native-cost-gates": {
+      "witnesses": [
+        "native-ultimate-refresh-spent-cost"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "native-permanent-growth": {
+      "witnesses": [
+        "native-growth-self"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "native-complete-card-body": {
+      "witnesses": [
+        "native-wrought-in-war"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "native-side-power-dispatch": {
+      "witnesses": [
+        "native-neurosurge"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "native-received-power": {
+      "witnesses": [
+        "native-received-dex-strength"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "native-simple-hooks": {
+      "witnesses": [
+        "native-pacts-end-threshold"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "native-before-hand-draw": {
+      "witnesses": [
+        "native-before-draw-full"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "native-buff-reactions": {
+      "witnesses": [
+        "native-buff-x"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "native-turn-resources": {
+      "witnesses": [
+        "native-turn-resource-brutality-low"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "native-catalyst-dragon-souls": {
+      "witnesses": [
+        "native-catalyst-acquire-combat"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "native-burn-replay": {
+      "witnesses": [
+        "native-burn-blocked"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "native-burn-reactions": {
+      "witnesses": [
+        "native-firebrand-blocked"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "native-captured-awards": {
+      "witnesses": [
+        "native-captured-awards-stack"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "native-burn-upgrades": {
+      "witnesses": [
+        "native-whirlwind-x-3"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "native-turn-flags": {
+      "witnesses": [
+        "native-homeguard-reset"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "native-poison-energy": {
+      "witnesses": [
+        "native-terminal-accelerant"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "native-summon-resources": {
+      "witnesses": [
+        "native-summon-big-hands"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "native-orb-reactions": {
+      "witnesses": [
+        "native-orb-core-dualcast"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "native-block-sustain": {
+      "witnesses": [
+        "native-power-shield-buffs"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "native-enemy-health-thresholds": {
+      "witnesses": [
+        "native-health-blocked"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "native-cleanse-removal": {
+      "witnesses": [
+        "native-cleanse-dampen"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "native-circle-sustain": {
+      "witnesses": [
+        "native-circle-block"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "native-opening-generation": {
+      "witnesses": [
+        "native-opening-beginning"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "native-draw-exhaust-period": {
+      "witnesses": [
+        "native-draw-night-threshold"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "native-enemy-draw": {
+      "witnesses": [
+        "native-enemy-draw-dizzy-1"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "native-resource-upgrades": {
+      "witnesses": [
+        "native-upgrade-juggernaut"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "native-hand-rules": {
+      "witnesses": [
+        "native-hand-blue-enemy"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "native-card-reactions": {
+      "witnesses": [
+        "native-react-enemy-gaze-1"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "native-effective-attack": {
+      "witnesses": [
+        "native-effective-counters"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "native-gold-lifecycle": {
+      "witnesses": [
+        "native-gold-bowler"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "native-death-growth": {
+      "witnesses": [
+        "native-death-death-chain"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "native-turn-cost-replay": {
+      "witnesses": [
+        "native-turn-cerberus"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "native-damage-upgrades": {
+      "witnesses": [
+        "native-upgrade-bone"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "native-outside-battle-enemy": {
+      "witnesses": [
+        "native-enemy-outside-cards"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "native-conditional-upgrades": {
+      "witnesses": [
+        "native-conditional-compact-upgraded"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "native-orb-shuffle": {
+      "witnesses": [
+        "native-orb-markov"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "native-enemy-hit-memory": {
+      "witnesses": [
+        "native-enemy-hit-devilsdance-3"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "native-progress-start-upgrades": {
+      "witnesses": [
+        "native-progress-arcane"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "native-enemy-card-cost": {
+      "witnesses": [
+        "native-enemy-cardcost-archmage-3"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "native-orb-phases": {
+      "witnesses": [
+        "native-orbphase-myriad-distinct"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "native-enemy-card-flow": {
+      "witnesses": [
+        "native-enemy-cardflow-corruptedbranch-3"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "native-enemy-hp-lifecycle": {
+      "witnesses": [
+        "native-enemy-hplife-tankengine-3"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "native-card-instance-ledgers": {
+      "witnesses": [
+        "native-cardledger-blooddebt-core"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "native-enemy-hit-effects": {
+      "witnesses": [
+        "native-enemy-hiteffect-finalform"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "native-keyword-persistence": {
+      "witnesses": [
+        "native-keyword-thought"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "native-forge": {
+      "witnesses": [
+        "native-forge-hammer-new"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "native-enemy-pile-boundaries": {
+      "witnesses": [
+        "native-enemy-pile-duffs"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "native-enemy-flow-limits": {
+      "witnesses": [
+        "native-enemy-flow-shrink"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "native-finished-shiv-history": {
+      "witnesses": [
+        "native-finished-shiv-plain"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "native-nether-batch": {
+      "witnesses": [
+        "native-nether-batch-single"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "native-near-death": {
+      "witnesses": [
+        "native-near-death-player"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "native-autoplay-selection": {
+      "witnesses": [
+        "native-autoplay-myriad-plain"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "native-generated-tags": {
+      "witnesses": [
+        "native-generation-tags-knife"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "native-duality": {
+      "witnesses": [
+        "native-duality-enemy"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "native-enemy-lifecycle": {
+      "witnesses": [
+        "native-lifecycle-death-mixed"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "native-outside-rewards": {
+      "witnesses": [
+        "native-outside-hail-elite-1"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "native-instant-death": {
+      "witnesses": [
+        "native-instant-outbreak"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "native-color-discovery": {
+      "witnesses": [
+        "native-color-discovery-0"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "native-monster-upgrades": {
+      "witnesses": [
+        "native-ceremonial-attack-1"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "native-enemy-dual": {
+      "witnesses": [
+        "native-enemy-dual-plain"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "native-vital-spark": {
+      "witnesses": [
+        "native-vital-spark-tier1"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "native-mystery-opening": {
+      "witnesses": [
+        "native-mystery-echo"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "native-enemy-vakuu": {
+      "witnesses": [
+        "native-vakuu-limit13"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "native-enemy-nature": {
+      "witnesses": [
+        "native-nature-deployment"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "native-pending-damage": {
+      "witnesses": [
+        "native-pending-comp-enemy"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "native-sweeping-blade": {
+      "witnesses": [
+        "native-sweeping-artifact-primary"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "native-generated-tokens": {
+      "witnesses": [
+        "native-generated-boomerang"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "native-auxiliary": {
+      "witnesses": [
+        "native-auxiliary-coefficients"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "native-solid-time": {
+      "witnesses": [
+        "native-solid-time-body-control"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "native-thieving": {
+      "witnesses": [
+        "native-thieving-multiple"
+      ],
+      "reason": "Primary native effect case for this reviewed family; additional edge cases selected below."
+    },
+    "basic-player-scalar-and-turn": {
+      "witnesses": [
+        "player-damage-stack",
+        "relic-count-projection",
+        "protein-shake",
+        "glass-cannon-heal",
+        "mountain-soul-hit",
+        "mountain-soul-safe",
+        "speedster",
+        "hubris",
+        "ancient-wine",
+        "sturdy-low",
+        "precision-cognition",
+        "ultimate-unstoppable-overflow",
+        "ultimate-unstoppable-x",
+        "lethal-tempo-expiry-card",
+        "electric-surge",
+        "gloomy-clouds"
+      ],
+      "reason": "Audit of the early direct mirrors: owner attribution, damage/block/heal coefficients and caps, HP/relic scaling, saved counters, turn boundaries, X costs and temporary powers. These are not covered merely by later native callback families."
+    },
+    "basic-player-damage-and-card-body": {
+      "witnesses": [
+        "body-slam-upgrade-repeat",
+        "giant-serpents-fang-odd",
+        "death-harvest-partial",
+        "bad-taste-owner-artifact",
+        "courage-player-captured",
+        "protective-veil-rounds",
+        "advance-to-retreat-fully-blocked",
+        "flying-kick-boundary",
+        "white-hole-draw",
+        "blade-waltz-random-targets",
+        "quantum-computing-max-hp-rounding",
+        "native-neutral-frost",
+        "native-neutral-corrosion"
+      ],
+      "reason": "Actual damage-result and block/HP boundaries, Artifact proc state, hidden temporary powers, custom WhiteHole/BladeWaltz/QuantumComputing card bodies and slow/corrosion commands require explicit early witnesses."
+    },
+    "basic-card-upgrade-and-result": {
+      "witnesses": [
+        "card-upgrade-know-thy-place-artifact",
+        "card-upgrade-hotfix-round",
+        "result-dualcast-dupe",
+        "result-bloodletting-dupe",
+        "result-forgotten-soul-upgraded",
+        "bread-sandwich-assembly",
+        "dual-wield-bread",
+        "final-form-full-hand",
+        "mystery-alternate-seed-rounds",
+        "automation-upgrade-repeat",
+        "held-hattrick",
+        "held-red-envelope"
+      ],
+      "reason": "Conditional patched vanilla card bodies, repeat/result placement, counters/reset, generated hand capacity, transformation RNG and captured acquisition-only runes."
+    },
+    "basic-enemy-scalar-and-hit": {
+      "witnesses": [
+        "enemy-coefficient-stack",
+        "enemy-coefficient-giant-slayer-101",
+        "enemy-spawn-stack",
+        "enemy-revival-statsonstats-2",
+        "enemy-hit-stack",
+        "enemy-hit-unpowered-stack",
+        "enemy-damage-proc-stack",
+        "enemy-serpents-fang-artifact",
+        "enemy-bad-taste-small-repeat",
+        "enemy-courage-stack",
+        "enemy-slap-round",
+        "enemy-blood-pact-round",
+        "enemy-opening-startuproutine-3",
+        "enemy-opening-shrinkerbeetle-3"
+      ],
+      "reason": "Shared enemy coefficients/startup/spawn/revival and real HP loss/proc/Artifact transitions with branch-owned modifier state."
+    },
+    "basic-enemy-card-flow": {
+      "witnesses": [
+        "enemy-loop-empty",
+        "enemy-something-enlightenment",
+        "enemy-enlightenment-x-zero",
+        "enemy-cost-combined-12th",
+        "native-generation-slow-combined-3",
+        "native-enemy-brutality-inhale-3"
+      ],
+      "reason": "Enemy returned-card, energy payment/X and per-turn counts plus native slow dispatch and strongest repeated-attack tier."
+    }
+  },
+  "boundaries": {
+    "original-user-failures": [
+      "native-generation-corrupted",
+      "native-neurosurge",
+      "native-neurosurge-order",
+      "native-generation-neurosurge-search"
+    ],
+    "choice-and-owned-card-flow": [
+      "native-callback-choice-renewal",
+      "native-sell-off-reentrant",
+      "native-nether-batch-choice",
+      "native-scope-full-hand-auto",
+      "native-growth-self-dampen",
+      "native-cardledger-blooddebt-mixed"
+    ],
+    "power-source-and-lifecycle": [
+      "temporary-loss-artifact-1",
+      "native-received-negative-artifact",
+      "native-instant-sleight-equal",
+      "native-instant-outbreak",
+      "native-lifecycle-servant-spawn",
+      "native-lifecycle-revival",
+      "native-enemy-dual-ceremonial",
+      "native-ceremonial-repeat-3",
+      "native-temp-positive-lifecycle",
+      "temporary-loss-artifact-2",
+      "native-duality-artifact-conversion"
+    ],
+    "owned-external-events": [
+      "native-nature-worker",
+      "native-nature-deployment",
+      "native-nature-budget",
+      "native-nature-tier1",
+      "native-nature-tier2",
+      "native-nature-vital"
+    ],
+    "permanent-deck-and-swipe": [
+      "native-thieving-ceremonial",
+      "native-thieving-coefficient",
+      "native-thieving-escape",
+      "native-thieving-jeweled",
+      "native-thieving-minion",
+      "native-thieving-multiple",
+      "native-thieving-payload",
+      "native-thieving-recover",
+      "native-thieving-sticky-heal",
+      "native-thieving-stock-escape",
+      "native-thieving-stock-recover",
+      "native-thieving-stunned",
+      "native-thieving-threshold-above",
+      "native-thieving-threshold-equal",
+      "native-solid-time-body-control",
+      "native-solid-time-deck-coefficient",
+      "native-solid-time-echo-store",
+      "native-solid-time-generated",
+      "native-solid-time-madscience",
+      "native-solid-time-replay-orbs",
+      "native-solid-time-replay-void",
+      "native-solid-time-replay",
+      "native-solid-time-store"
+    ],
+    "shared-damage-order": [
+      "native-pending-comp-outbreak",
+      "native-pending-comp-player",
+      "native-pending-comp-slippery-overkill",
+      "native-pending-piercing-odd",
+      "native-sweeping-artifact-secondary",
+      "native-sweeping-blight"
+    ],
+    "dependent-models": [
+      "native-auxiliary-coefficients",
+      "native-auxiliary-early",
+      "native-auxiliary-entry",
+      "native-auxiliary-legacy-plating",
+      "native-auxiliary-maxhp",
+      "native-auxiliary-orbs",
+      "native-auxiliary-orobas-orbs",
+      "native-auxiliary-orobas-osty",
+      "native-auxiliary-orobas-stars",
+      "native-auxiliary-osty",
+      "native-auxiliary-regent",
+      "native-auxiliary-spiral",
+      "native-generated-boomerang-up",
+      "native-generated-chemtech",
+      "native-generated-chemtech-full",
+      "native-generated-wish"
+    ],
+    "earlier-shared-ownership": [
+      "opening-effects",
+      "enemy-sustain-stack",
+      "enemy-spawn-stack",
+      "enemy-hit-stack",
+      "native-rune-stack",
+      "advice",
+      "owner-debuff-stack",
+      "reprogram-searing-stack",
+      "native-neutral-frost",
+      "native-infernal-tormentor",
+      "native-soul-cloud",
+      "native-team-sustain-stack",
+      "relic-count-projection",
+      "summon-stack",
+      "white-hole-draw",
+      "blade-waltz-card",
+      "quantum-computing-card"
+    ],
+    "fail-closed": [
+      "unknown-rune",
+      "unknown-enemy",
+      "banned-globe",
+      "banned-solid"
+    ]
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "HAND-LIMIT-PR-FIXED-SEARCH-SENTINEL",
+  "seed": "HEXTECHCOMPAT",
+  "expectedLoadedMods": [
+    "CombatSolver@0.48.1",
+    "HextechRunes@0.9.7",
+    "STS2-RitsuLib@0.6.5",
+    "HextechCompatLab@0.1.0",
+    "HextechSolverCompat@0.1.0",
+    "BaseLib@v3.4.7",
+    "MintySpire2@v1.2.0",
+    "QuickRestart@v2.0.0",
+    "RelicRewardChoices@0.3.9",
+    "ImportVanillaSaves@v0.2.1",
+    "sts2_god_mod@1.7.10",
+    "RandomForeseer@0.13.18"
+  ],
+  "characterId": "IRONCLAD",
+  "encounterId": "FUZZY_WURM_CRAWLER_WEAK",
+  "enemyCurrentHp": 48,
+  "clearPlayerPiles": true,
+  "cards": [
+    {
+      "cardId": "STRIKE_IRONCLAD",
+      "pile": "Hand",
+      "count": 3
+    },
+    {
+      "cardId": "DEFEND_IRONCLAD",
+      "pile": "Hand",
+      "count": 3
+    },
+    {
+      "cardId": "STRIKE_IRONCLAD",
+      "pile": "Draw",
+      "count": 6
+    },
+    {
+      "cardId": "DEFEND_IRONCLAD",
+      "pile": "Draw",
+      "count": 6
+    }
+  ],
+  "fixedSearchBudget": true,
+  "searchBudgetOverrideMilliseconds": 5000,
+  "verifyIncrementalSearch": false,
+  "expectedInitialUnmirroredCount": 0,
+  "timeoutSeconds": 60,
+  "relics": [
+    {
+      "relicId": "OVERFLOW_RUNE"
+    }
+  ],
+  "initialEnemyMoveIds": [
+    "INHALE"
+  ],
+  "expectedUnexpectedReplansAtMost": 0,
+  "enableNoGcRegionForTest": false,
+  "searchMaxDegreeOfParallelismForTest": 1,
+  "enableDetailedDiagnosticLogsForTest": false,
+  "useNoveltyPortfolioForTest": false,
+  "useBeamWidthPortfolioForTest": false,
+  "searchBeamWidthForTest": 40,
+  "searchMaxExpandedNodesForTest": 3000,
+  "fixtureNotes": "Normal baseline-successful cross-turn path, fixed root/seed/one worker/Beam40/3000 nodes, fixed5000ms budget; incremental diagnostics and NoGC disabled. All three names intentionally share identical semantic input; first is warmup. Route cache files in this owned PR Lab are cleared before every request to force real search; no game/adapter semantics patched."
+}

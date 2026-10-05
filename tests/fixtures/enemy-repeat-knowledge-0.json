@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "REPORT-ROUND-HEXTECH-ENEMY-REPEAT-KNOWLEDGE-0",
+  "seed": "HEXJ1",
+  "expectedLoadedMods": [
+    "CombatSolver@0.47.3",
+    "HextechRunes@0.9.7",
+    "STS2-RitsuLib@0.6.3",
+    "HextechCompatLab@0.1.0",
+    "HextechSolverCompat@0.1.0"
+  ],
+  "characterId": "IRONCLAD",
+  "encounterId": "KNOWLEDGE_DEMON_BOSS",
+  "enemyCurrentHp": 200,
+  "clearPlayerPiles": true,
+  "cards": [
+    {
+      "cardId": "DEFEND_IRONCLAD",
+      "pile": "Draw",
+      "count": 10
+    }
+  ],
+  "fixedSearchBudget": true,
+  "searchBudgetOverrideMilliseconds": 0,
+  "timeoutSeconds": 60,
+  "initialEnemyMaxHps": [
+    200
+  ],
+  "initialEnemyCurrentHps": [
+    130
+  ],
+  "initialEnemyMoveIds": [
+    "CURSE_OF_KNOWLEDGE_MOVE"
+  ],
+  "initialPlayerEnergy": 20,
+  "initialPlayerHp": 150,
+  "initialPlayerMaxHp": 150,
+  "clearAllPowers": true,
+  "relics": [],
+  "hextechEnemyHexes": [
+    "JeweledGauntlet"
+  ],
+  "hextechExpected": {},
+  "initialPlayerBlock": 0,
+  "hextechEnemyTierFloor": 3,
+  "hextechEnemyRepeatProbe": {
+    "repeat": true,
+    "nativeCalls": [
+      2
+    ]
+  },
+  "hextechNativeRounds": 1,
+  "hextechKnowledgeCounter": 0,
+  "hextechMinimumRoundChoices": 2
+}

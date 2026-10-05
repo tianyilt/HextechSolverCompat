@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "NATIVE-SWEEPING-POMMEL",
+  "seed": "HEXTECHCOMPAT",
+  "expectedLoadedMods": [
+    "CombatSolver@0.47.3",
+    "HextechRunes@0.9.7",
+    "STS2-RitsuLib@0.6.3",
+    "HextechCompatLab@0.1.0",
+    "HextechSolverCompat@0.1.0"
+  ],
+  "characterId": "IRONCLAD",
+  "encounterId": "FUZZY_WURM_CRAWLER_WEAK",
+  "enemyCurrentHp": 2000,
+  "clearPlayerPiles": true,
+  "cards": [
+    {
+      "cardId": "POMMEL_STRIKE",
+      "pile": "Hand",
+      "count": 1
+    },
+    {
+      "cardId": "DEFEND_IRONCLAD",
+      "pile": "Draw",
+      "count": 40
+    }
+  ],
+  "fixedSearchBudget": true,
+  "searchBudgetOverrideMilliseconds": 0,
+  "timeoutSeconds": 90,
+  "initialEnemyMaxHps": [
+    3000,
+    3000
+  ],
+  "initialEnemyCurrentHps": [
+    2000,
+    2000
+  ],
+  "initialEnemyMoveIds": [
+    "FIRST_ACID_GOOP"
+  ],
+  "initialPlayerEnergy": 30,
+  "initialPlayerHp": 800,
+  "initialPlayerMaxHp": 1000,
+  "clearAllPowers": true,
+  "relics": [
+    {
+      "relicId": "SWEEPING_BLADE_RUNE",
+      "addWithoutObtainedEffects": true
+    }
+  ],
+  "hextechEnemyHexes": [],
+  "hextechExpected": {},
+  "initialPlayerBlock": 0,
+  "hextechEnemyTierFloor": 1,
+  "fixtureNotes": "Sweeping source audited in remaining-mechanisms193/193. Original BeforeAttack retarget/AfterAttack per-target results, Before/AfterPower replication and Doom correction with Artifact ordering, transient card context rejects mid-action capture; full native snapshots/fork/key/stamp/RNG/two rounds. No flattened AOE bonus.",
+  "initialPlayerStars": 0,
+  "powers": [],
+  "initialEnemyBlocks": [
+    0,
+    0
+  ],
+  "hextechNativePlaySequence": [
+    {
+      "cardId": "POMMEL_STRIKE",
+      "enemy": true,
+      "expectedPlays": 1
+    }
+  ],
+  "hextechNativeRoundsAfterPlay": 2,
+  "additionalMonsterIds": [
+    "LEAF_SLIME_M"
+  ],
+  "hextechNativeSweepingProbe": true,
+  "hextechNativeEndTurnOnlyRounds": true
+}

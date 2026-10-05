@@ -1,0 +1,8 @@
+{
+  "status": "Recorded",
+  "report": ".work/upstream-pr-native/artifacts/20261003-192501-reuse-session-suite.json",
+  "firstError": "BeamWidthPortfolioGate.RejectRefinement rejects zero time budget on this nontrivial sentinel",
+  "classification": "Fixture budget unsuitable for this upstream search path; no timeout extension or semantic assertion removal",
+  "correction": "Use positive fixed5000ms search budget for both variants; same3000 node cap and unchanged60s fixture timeout",
+  "countedAsPRRegression": false
+}

@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "REPORT-ROUND-HEXTECH-REVIVAL-STATSONSTATSONSTATS-2",
+  "seed": "HEXTECHCOMPAT",
+  "expectedLoadedMods": [
+    "CombatSolver@0.47.3",
+    "HextechRunes@0.9.7",
+    "STS2-RitsuLib@0.6.3",
+    "HextechCompatLab@0.1.0",
+    "HextechSolverCompat@0.1.0"
+  ],
+  "characterId": "IRONCLAD",
+  "encounterId": "TEST_SUBJECT_BOSS",
+  "enemyCurrentHp": 200,
+  "clearPlayerPiles": true,
+  "cards": [
+    {
+      "cardId": "DEFEND_IRONCLAD",
+      "pile": "Draw",
+      "count": 16
+    }
+  ],
+  "fixedSearchBudget": true,
+  "searchBudgetOverrideMilliseconds": 0,
+  "timeoutSeconds": 60,
+  "initialPlayerEnergy": 20,
+  "initialPlayerHp": 70,
+  "initialPlayerMaxHp": 80,
+  "clearAllPowers": false,
+  "hextechEnemyHexes": [
+    "StatsOnStatsOnStats"
+  ],
+  "relics": [],
+  "hextechEnemyTierFloor": 2,
+  "hextechExpected": {},
+  "hextechEnemyRevivalProbe": true
+}

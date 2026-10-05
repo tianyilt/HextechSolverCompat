@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "REPORT-CARDS-HEXTECH-OPENING-FORM-SERPENT",
+  "seed": "HEXTECHCOMPAT",
+  "expectedLoadedMods": [
+    "CombatSolver@0.47.3",
+    "HextechRunes@0.9.7",
+    "STS2-RitsuLib@0.6.3",
+    "HextechCompatLab@0.1.0",
+    "HextechSolverCompat@0.1.0"
+  ],
+  "characterId": "SILENT",
+  "encounterId": "FUZZY_WURM_CRAWLER_WEAK",
+  "enemyCurrentHp": 2000,
+  "clearPlayerPiles": true,
+  "cards": [
+    {
+      "cardId": "STRIKE_SILENT",
+      "pile": "Hand"
+    },
+    {
+      "cardId": "STRIKE_SILENT",
+      "pile": "Draw",
+      "count": 20
+    }
+  ],
+  "fixedSearchBudget": true,
+  "searchBudgetOverrideMilliseconds": 0,
+  "timeoutSeconds": 60,
+  "initialEnemyMaxHps": [
+    2000
+  ],
+  "initialEnemyCurrentHps": [
+    1600
+  ],
+  "initialEnemyMoveIds": [
+    "FIRST_ACID_GOOP"
+  ],
+  "initialPlayerEnergy": 20,
+  "initialPlayerHp": 70,
+  "initialPlayerMaxHp": 100,
+  "clearAllPowers": false,
+  "relics": [
+    {
+      "relicId": "SERPENT_FORM_UPGRADE_RUNE",
+      "addWithoutObtainedEffects": true
+    }
+  ],
+  "hextechEnemyHexes": [],
+  "hextechExpected": {},
+  "initialEnemyBlocks": [
+    0
+  ],
+  "hextechNativeTokenForkProbe": true,
+  "hextechNativeTokenActualProbe": true,
+  "hextechNativePlayEnemy": false,
+  "hextechNativePlaySequence": [
+    {
+      "cardId": "STRIKE_SILENT",
+      "enemy": true
+    }
+  ],
+  "fixtureNotes": "Real pre-combat run deck cards trigger original opening batch. Assert original first-turn autoplay and native power, reject unsettled roots; compare manual play, two native rounds and next-round manual play. Target forms added after opening are handled by stock card semantics.",
+  "initialPlayerBlock": 0,
+  "hextechNativeRoundsAfterPlay": 2,
+  "hextechNativePlaySequenceAfterRounds": [
+    {
+      "cardId": "STRIKE_SILENT",
+      "enemy": true
+    }
+  ],
+  "clearRunDeck": true,
+  "runCards": [
+    {
+      "cardId": "SERPENT_FORM",
+      "count": 1
+    },
+    {
+      "cardId": "STRIKE_SILENT",
+      "count": 12
+    }
+  ],
+  "hextechOpeningFormProbe": {
+    "rune": "SERPENT_FORM_UPGRADE_RUNE",
+    "card": "SERPENT_FORM",
+    "minimumNativePlays": 1,
+    "initialPower": {
+      "id": "SERPENT_FORM_POWER",
+      "amount": 4
+    }
+  }
+}

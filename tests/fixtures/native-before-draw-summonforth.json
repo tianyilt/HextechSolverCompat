@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "REPORT-CARDS-HEXTECH-NATIVE-BEFORE-DRAW-SUMMONFORTH",
+  "seed": "HEXTECHCOMPAT",
+  "expectedLoadedMods": [
+    "CombatSolver@0.47.3",
+    "HextechRunes@0.9.7",
+    "STS2-RitsuLib@0.6.3",
+    "HextechCompatLab@0.1.0",
+    "HextechSolverCompat@0.1.0"
+  ],
+  "characterId": "REGENT",
+  "encounterId": "FUZZY_WURM_CRAWLER_WEAK",
+  "enemyCurrentHp": 2000,
+  "clearPlayerPiles": true,
+  "cards": [
+    {
+      "cardId": "STRIKE_REGENT",
+      "pile": "Hand"
+    },
+    {
+      "cardId": "DEFEND_REGENT",
+      "pile": "Draw",
+      "count": 40
+    },
+    {
+      "cardId": "SOVEREIGN_BLADE",
+      "pile": "Hand"
+    },
+    {
+      "cardId": "SOVEREIGN_BLADE",
+      "pile": "Draw"
+    },
+    {
+      "cardId": "SOVEREIGN_BLADE",
+      "pile": "Discard"
+    },
+    {
+      "cardId": "SOVEREIGN_BLADE",
+      "pile": "Exhaust"
+    }
+  ],
+  "fixedSearchBudget": true,
+  "searchBudgetOverrideMilliseconds": 0,
+  "timeoutSeconds": 60,
+  "initialEnemyMaxHps": [
+    2000
+  ],
+  "initialEnemyCurrentHps": [
+    1600
+  ],
+  "initialEnemyMoveIds": [
+    "FIRST_ACID_GOOP"
+  ],
+  "initialPlayerEnergy": 20,
+  "initialPlayerHp": 800,
+  "initialPlayerMaxHp": 1000,
+  "clearAllPowers": true,
+  "relics": [],
+  "hextechEnemyHexes": [],
+  "hextechExpected": {},
+  "initialEnemyBlocks": [
+    0
+  ],
+  "initialPlayerStars": 20,
+  "initialPlayerBlock": 0,
+  "hextechNativeBeforeHandDrawProbe": {
+    "generated": 0,
+    "movedFromDraw": 1,
+    "rounds": 2,
+    "playSequence": true,
+    "opening": {
+      "expected": {},
+      "relicIds": [
+        "SUMMON_FORTH_RUNE"
+      ]
+    }
+  },
+  "fixtureNotes": "Original ordered native before-draw generation/movement with captured card membership and pile getters; play resulting cards and compare native snapshots, RNG, fork and two future rounds. Wraith exhausted-soul multiplier and SummonForth original opening forge included.",
+  "hextechNativePlaySequence": [
+    {
+      "cardId": "SOVEREIGN_BLADE",
+      "enemy": true,
+      "expectedPlays": 1
+    }
+  ]
+}

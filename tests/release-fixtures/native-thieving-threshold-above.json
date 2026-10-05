@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "NATIVE-THIEVING-THRESHOLD-ABOVE-RELEASE-RITSU065-FULL-MODS-SOLVER0481",
+  "seed": "HEXTECHCOMPAT",
+  "expectedLoadedMods": [
+    "CombatSolver@0.48.1",
+    "HextechRunes@0.9.7",
+    "STS2-RitsuLib@0.6.5",
+    "HextechCompatLab@0.1.0",
+    "HextechSolverCompat@0.1.0",
+    "BaseLib@v3.4.7",
+    "MintySpire2@v1.2.0",
+    "QuickRestart@v2.0.0",
+    "RelicRewardChoices@0.3.9",
+    "ImportVanillaSaves@v0.2.1",
+    "sts2_god_mod@1.7.10",
+    "RandomForeseer@0.13.18"
+  ],
+  "characterId": "IRONCLAD",
+  "encounterId": "FUZZY_WURM_CRAWLER_WEAK",
+  "enemyCurrentHp": 27,
+  "clearPlayerPiles": true,
+  "cards": [
+    {
+      "cardId": "STRIKE_IRONCLAD",
+      "pile": "Hand"
+    },
+    {
+      "cardId": "STRIKE_IRONCLAD",
+      "pile": "Draw",
+      "count": 45,
+      "dynamicVars": {
+        "Damage": 25
+      }
+    },
+    {
+      "cardId": "CORRUPTION",
+      "pile": "Draw",
+      "treatAsDeckCard": true
+    }
+  ],
+  "fixedSearchBudget": true,
+  "searchBudgetOverrideMilliseconds": 0,
+  "timeoutSeconds": 90,
+  "initialEnemyMaxHps": [
+    100,
+    3000
+  ],
+  "initialEnemyCurrentHps": [
+    27,
+    2000
+  ],
+  "initialEnemyMoveIds": [
+    "FIRST_ACID_GOOP"
+  ],
+  "initialPlayerEnergy": 30,
+  "initialPlayerHp": 800,
+  "initialPlayerMaxHp": 1000,
+  "clearAllPowers": true,
+  "relics": [],
+  "hextechEnemyHexes": [
+    "ThievingHopper"
+  ],
+  "hextechExpected": {},
+  "initialPlayerBlock": 0,
+  "hextechEnemyTierFloor": 1,
+  "fixtureNotes": "Original ThievingHopperEnemyHex 34/34 source. Original priority and frozen stable seed, owned permanent removal, sticky intent/escape AI COW, death creates pending reward, exact native selection restores original card; full native snapshots/fork/key/stamp/RNG.",
+  "initialPlayerStars": 0,
+  "powers": [],
+  "initialEnemyBlocks": [
+    0,
+    0
+  ],
+  "hextechNativePlaySequence": [
+    {
+      "cardId": "STRIKE_IRONCLAD",
+      "enemy": true,
+      "expectedPlays": 1
+    }
+  ],
+  "hextechNativeRoundsAfterPlay": 2,
+  "additionalMonsterIds": [
+    "LEAF_SLIME_M"
+  ],
+  "hextechNativeEndTurnOnlyRounds": true,
+  "hextechNativeScopeCounterProbe": true,
+  "hextechNativeTheftProbe": true,
+  "hextechNativeTheftExpectedRemoved": 0,
+  "hextechNativeTheftExpectedCard": "CORRUPTION"
+}

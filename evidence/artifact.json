@@ -1,0 +1,23 @@
+{
+  "status": "Staged",
+  "channel": "Pinned-version macOS preview",
+  "nativeValidatedSha256": "8ae924216c665a6c4e7957cf508e3039f97d5f9ffdfce9be72947d49d4fe7ddf",
+  "publishedSha256": "e83ccf3c625c0f612f6c34cfc377f5b64c032868d27be7e19385e371cb076c52",
+  "debugPathPrivacyAdjustment": {
+    "changedBytes": 128,
+    "changedRanges": [
+      [
+        840204,
+        840333
+      ]
+    ],
+    "scope": "External PDB link filename only; all other PE bytes unchanged"
+  },
+  "pending": [
+    "fresh complete single-player run",
+    "Windows",
+    "newer solver versions"
+  ],
+  "fullReleaseGateBypassed": false,
+  "note": "Separate preview artifact; tools/package.py complete-release gates remain unchanged."
+}

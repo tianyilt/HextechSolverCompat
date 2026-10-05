@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "REPORT-HEXTECH-SPAWN-STATSONSTATSONSTATS-3",
+  "seed": "HEXTECHCOMPAT",
+  "expectedLoadedMods": [
+    "CombatSolver@0.47.3",
+    "HextechRunes@0.9.7",
+    "STS2-RitsuLib@0.6.3",
+    "HextechCompatLab@0.1.0",
+    "HextechSolverCompat@0.1.0"
+  ],
+  "characterId": "IRONCLAD",
+  "encounterId": "FUZZY_WURM_CRAWLER_WEAK",
+  "enemyCurrentHp": 200,
+  "clearPlayerPiles": true,
+  "cards": [
+    {
+      "cardId": "DEFEND_IRONCLAD",
+      "pile": "Draw",
+      "count": 16
+    }
+  ],
+  "fixedSearchBudget": true,
+  "searchBudgetOverrideMilliseconds": 0,
+  "timeoutSeconds": 60,
+  "initialPlayerEnergy": 20,
+  "initialPlayerHp": 70,
+  "initialPlayerMaxHp": 80,
+  "clearAllPowers": false,
+  "hextechEnemyHexes": [
+    "StatsOnStatsOnStats"
+  ],
+  "relics": [],
+  "hextechEnemyTierFloor": 3,
+  "hextechExpected": {},
+  "hextechEnemySpawnProbe": true,
+  "initialEnemyCurrentHps": [
+    130
+  ],
+  "initialEnemyMaxHps": [
+    200
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "NATIVE-LIFECYCLE-RETAINED-SOUL",
+  "seed": "HEXTECHCOMPAT",
+  "expectedLoadedMods": [
+    "CombatSolver@0.47.3",
+    "HextechRunes@0.9.7",
+    "STS2-RitsuLib@0.6.3",
+    "HextechCompatLab@0.1.0",
+    "HextechSolverCompat@0.1.0"
+  ],
+  "characterId": "SILENT",
+  "encounterId": "FUZZY_WURM_CRAWLER_WEAK",
+  "enemyCurrentHp": 2000,
+  "clearPlayerPiles": true,
+  "cards": [
+    {
+      "cardId": "STRIKE_SILENT",
+      "pile": "Hand",
+      "count": 1
+    },
+    {
+      "cardId": "DEFEND_SILENT",
+      "pile": "Draw",
+      "count": 30
+    }
+  ],
+  "fixedSearchBudget": true,
+  "searchBudgetOverrideMilliseconds": 0,
+  "timeoutSeconds": 90,
+  "initialEnemyMaxHps": [
+    5000,
+    5000
+  ],
+  "initialEnemyCurrentHps": [
+    1,
+    3000
+  ],
+  "initialEnemyMoveIds": [
+    "INHALE"
+  ],
+  "initialPlayerEnergy": 30,
+  "initialPlayerHp": 800,
+  "initialPlayerMaxHp": 1000,
+  "clearAllPowers": true,
+  "relics": [],
+  "hextechExpected": {},
+  "initialEnemyBlocks": [
+    0,
+    0
+  ],
+  "hextechNativeTokenForkProbe": true,
+  "hextechNativeTokenActualProbe": true,
+  "hextechNativePlayEnemy": false,
+  "initialPlayerStars": 20,
+  "hextechNativePlaySequence": [
+    {
+      "cardId": "STRIKE_SILENT",
+      "enemy": true,
+      "expectedPlays": 1
+    }
+  ],
+  "fixtureNotes": "Source lifecycle 56/56. Genuine native actions vs owned simulation, complete snapshots, RNG and isolated forks. Use an actual second combatant rather than BIG_DUMMY, which vanilla excludes from victory and therefore suppresses enemy heals after the last real monster dies. Retained-corpse control isolates the modifier death filter with a plain Strike; the preceding Neutralize version additionally exposed a baseline SDK postlethal debuff omission (failure retained). This synthetic no-cleanup PainfulStabs corpse only validates immediate AfterDeath suppression. Future corpse AI is not accepted: stock SDK skips dead Wurm AI, preserved suite9 fails INHALE vs ACID_GOOP. Normal GetExcited/TestSubject source cleanup removes this corpse before that boundary.",
+  "hextechNativeRoundsAfterPlay": 0,
+  "powers": [
+    {
+      "powerId": "PAINFUL_STABS_POWER",
+      "amount": 2,
+      "target": "Enemy"
+    }
+  ],
+  "hextechNativeEndTurnOnlyRounds": true,
+  "initialPlayerBlock": 0,
+  "hextechEnemyTierFloor": 1,
+  "initialPlayerGold": 100,
+  "hextechNativeScopeCounterProbe": false,
+  "additionalMonsterIds": [
+    "LeafSlimeM"
+  ],
+  "hextechEnemyHexes": [
+    "SoulEater"
+  ],
+  "hextechNativeEnemyLifecycleProbe": true
+}

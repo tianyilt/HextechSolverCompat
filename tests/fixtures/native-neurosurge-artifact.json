@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "REPORT-CARDS-HEXTECH-NATIVE-NEUROSURGE-ARTIFACT",
+  "seed": "HEXTECHCOMPAT",
+  "expectedLoadedMods": [
+    "CombatSolver@0.47.3",
+    "HextechRunes@0.9.7",
+    "STS2-RitsuLib@0.6.3",
+    "HextechCompatLab@0.1.0",
+    "HextechSolverCompat@0.1.0"
+  ],
+  "characterId": "NECROBINDER",
+  "encounterId": "FUZZY_WURM_CRAWLER_WEAK",
+  "enemyCurrentHp": 2000,
+  "clearPlayerPiles": true,
+  "cards": [
+    {
+      "cardId": "NEUROSURGE",
+      "pile": "Hand",
+      "count": 2,
+      "upgradeLevels": 1
+    },
+    {
+      "cardId": "DEFEND_NECROBINDER",
+      "pile": "Draw",
+      "count": 30
+    }
+  ],
+  "fixedSearchBudget": true,
+  "searchBudgetOverrideMilliseconds": 0,
+  "timeoutSeconds": 60,
+  "initialEnemyMaxHps": [
+    2000
+  ],
+  "initialEnemyCurrentHps": [
+    1600
+  ],
+  "initialEnemyMoveIds": [
+    "FIRST_ACID_GOOP"
+  ],
+  "initialPlayerEnergy": 30,
+  "initialPlayerHp": 800,
+  "initialPlayerMaxHp": 1000,
+  "clearAllPowers": true,
+  "relics": [
+    {
+      "relicId": "NEUROSURGE_UPGRADE_RUNE",
+      "addWithoutObtainedEffects": true
+    }
+  ],
+  "hextechEnemyHexes": [],
+  "hextechExpected": {},
+  "initialEnemyBlocks": [
+    0
+  ],
+  "hextechNativeTokenForkProbe": true,
+  "hextechNativeTokenActualProbe": true,
+  "hextechNativePlayEnemy": false,
+  "initialPlayerStars": 20,
+  "hextechNativePlaySequence": [
+    {
+      "cardId": "NEUROSURGE",
+      "enemy": false,
+      "expectedPlays": 1
+    },
+    {
+      "cardId": "NEUROSURGE",
+      "enemy": false,
+      "expectedPlays": 1
+    }
+  ],
+  "fixtureNotes": "Neurosurge positive power is not blocked by owner Artifact; enemy Artifact blocks first native future Doom, next round applies Doom; Shroud reacts to successful Doom. Complete snapshots after each native round.",
+  "hextechNativeRoundsAfterPlay": 2,
+  "hextechNativePlaySequenceAfterRounds": [
+    {
+      "cardId": "DEFEND_NECROBINDER",
+      "enemy": false,
+      "expectedPlays": 1
+    }
+  ],
+  "powers": [
+    {
+      "powerId": "ARTIFACT_POWER",
+      "amount": 1,
+      "target": "Player"
+    },
+    {
+      "powerId": "ARTIFACT_POWER",
+      "amount": 1,
+      "target": "Enemy"
+    },
+    {
+      "powerId": "SHROUD_POWER",
+      "amount": 2,
+      "target": "Player"
+    }
+  ],
+  "hextechNativeExpectedAfterSequence": {
+    "power:HEXTECH_NEUROSURGE_POWER": 6,
+    "power:NEUROSURGE_POWER": 0,
+    "power:ARTIFACT_POWER": 1
+  },
+  "hextechNativeExpectedAfterRounds": {
+    "enemyPower:DOOM_POWER": 6,
+    "power:ARTIFACT_POWER": 1
+  }
+}

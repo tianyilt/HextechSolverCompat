@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "REPORT-HEXTECH-NATIVE-SUMMON-RESOURCE-STACK",
+  "seed": "HEXTECHCOMPAT",
+  "expectedLoadedMods": [
+    "CombatSolver@0.47.3",
+    "HextechRunes@0.9.7",
+    "STS2-RitsuLib@0.6.3",
+    "HextechCompatLab@0.1.0",
+    "HextechSolverCompat@0.1.0"
+  ],
+  "characterId": "NECROBINDER",
+  "encounterId": "FUZZY_WURM_CRAWLER_WEAK",
+  "enemyCurrentHp": 2000,
+  "clearPlayerPiles": true,
+  "cards": [
+    {
+      "cardId": "DEFEND_NECROBINDER",
+      "pile": "Draw",
+      "count": 10
+    }
+  ],
+  "fixedSearchBudget": true,
+  "searchBudgetOverrideMilliseconds": 0,
+  "timeoutSeconds": 60,
+  "initialEnemyMaxHps": [
+    2000
+  ],
+  "initialEnemyCurrentHps": [
+    1600
+  ],
+  "initialEnemyMoveIds": [
+    "FIRST_ACID_GOOP"
+  ],
+  "initialPlayerEnergy": 20,
+  "initialPlayerHp": 70,
+  "initialPlayerMaxHp": 80,
+  "clearAllPowers": true,
+  "hextechEnemyHexes": [],
+  "relics": [
+    {
+      "relicId": "BIG_HANDS_RUNE",
+      "addWithoutObtainedEffects": true
+    },
+    {
+      "relicId": "DRAIN_RUNE",
+      "addWithoutObtainedEffects": true
+    },
+    {
+      "relicId": "BONE_GUARD_RUNE",
+      "addWithoutObtainedEffects": true
+    },
+    {
+      "relicId": "PLASTER_RUNE",
+      "addWithoutObtainedEffects": true
+    }
+  ],
+  "initialPlayerBlock": 0,
+  "hextechExpected": {},
+  "hextechSummonProbe": {
+    "amounts": [
+      1,
+      3,
+      5
+    ],
+    "hp": 5,
+    "maxHp": 20
+  },
+  "fixtureNotes": "Original 0.9.7 summon callbacks retain decimal amount until each native command; compare real OstyCmd growth/revive/zero and all power/HP/block/RNG state, key/stamp and fork isolation."
+}

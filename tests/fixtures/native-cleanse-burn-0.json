@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "REPORT-CARDS-HEXTECH-NATIVE-CLEANSE-BURN-0",
+  "seed": "HEXTECHCOMPAT",
+  "expectedLoadedMods": [
+    "CombatSolver@0.47.3",
+    "HextechRunes@0.9.7",
+    "STS2-RitsuLib@0.6.3",
+    "HextechCompatLab@0.1.0",
+    "HextechSolverCompat@0.1.0"
+  ],
+  "characterId": "SILENT",
+  "encounterId": "FUZZY_WURM_CRAWLER_WEAK",
+  "enemyCurrentHp": 2000,
+  "clearPlayerPiles": true,
+  "cards": [
+    {
+      "cardId": "FEEL_THE_BURN_CARD",
+      "pile": "Hand",
+      "count": 1,
+      "upgradeLevels": 0
+    },
+    {
+      "cardId": "DEFEND_SILENT",
+      "pile": "Draw",
+      "count": 40
+    }
+  ],
+  "fixedSearchBudget": true,
+  "searchBudgetOverrideMilliseconds": 0,
+  "timeoutSeconds": 60,
+  "initialEnemyMaxHps": [
+    2000
+  ],
+  "initialEnemyCurrentHps": [
+    1600
+  ],
+  "initialEnemyMoveIds": [
+    "FIRST_ACID_GOOP"
+  ],
+  "initialPlayerEnergy": 30,
+  "initialPlayerHp": 800,
+  "initialPlayerMaxHp": 1000,
+  "clearAllPowers": true,
+  "relics": [
+    {
+      "relicId": "FEEL_THE_BURN_RUNE",
+      "addWithoutObtainedEffects": true
+    }
+  ],
+  "hextechEnemyHexes": [],
+  "hextechExpected": {},
+  "initialEnemyBlocks": [
+    15
+  ],
+  "hextechNativeTokenForkProbe": true,
+  "hextechNativeTokenActualProbe": true,
+  "hextechNativePlayEnemy": false,
+  "initialPlayerStars": 20,
+  "hextechNativePlaySequence": [
+    {
+      "cardId": "FEEL_THE_BURN_CARD",
+      "enemy": false,
+      "expectedPlays": 1
+    }
+  ],
+  "fixtureNotes": "Original cleanse/removal callback semantics: original AfterRemoved/native downgrade restoration, captured power and combat-card membership, full native snapshots/RNG/fork and subsequent rounds; single-player. Infested is the protected structural buff. A sole Minion makes the SDK consider combat already over, so it cannot exercise card execution; failed setup artifacts retained.",
+  "hextechNativeRoundsAfterPlay": 1,
+  "powers": [
+    {
+      "powerId": "ARTIFACT_POWER",
+      "amount": 2,
+      "target": "Enemy",
+      "applier": "Player"
+    },
+    {
+      "powerId": "STRENGTH_POWER",
+      "amount": 2,
+      "target": "Enemy",
+      "applier": "Player"
+    },
+    {
+      "powerId": "REGEN_POWER",
+      "amount": 4,
+      "target": "Enemy",
+      "applier": "Player"
+    },
+    {
+      "powerId": "REFLECT_POWER",
+      "amount": 2,
+      "target": "Enemy",
+      "applier": "Player"
+    },
+    {
+      "powerId": "VIGOR_POWER",
+      "amount": 3,
+      "target": "Enemy",
+      "applier": "Player"
+    },
+    {
+      "powerId": "BURROWED_POWER",
+      "amount": 1,
+      "target": "Enemy",
+      "applier": "Player"
+    },
+    {
+      "powerId": "INFESTED_POWER",
+      "amount": 1,
+      "target": "Enemy",
+      "applier": "Player"
+    }
+  ],
+  "hextechNativeExpectedAfterSequence": {
+    "enemyBlock": 0,
+    "enemyPower:HEXTECH_BURN_POWER": 5,
+    "enemyPower:ARTIFACT_POWER": 0,
+    "enemyPower:STRENGTH_POWER": 0,
+    "enemyPower:REGEN_POWER": 0,
+    "enemyPower:REFLECT_POWER": 0,
+    "enemyPower:VIGOR_POWER": 0,
+    "enemyPower:BURROWED_POWER": 0,
+    "enemyPower:INFESTED_POWER": 1
+  },
+  "hextechNativeExpectedAfterRounds": {},
+  "hextechNativeEndTurnOnlyRounds": true,
+  "initialPlayerBlock": 0
+}

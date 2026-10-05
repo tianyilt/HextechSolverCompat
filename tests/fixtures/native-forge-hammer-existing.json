@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "NATIVE-FORGE-HAMMER-EXISTING",
+  "seed": "HEXTECHCOMPAT",
+  "expectedLoadedMods": [
+    "CombatSolver@0.47.3",
+    "HextechRunes@0.9.7",
+    "STS2-RitsuLib@0.6.3",
+    "HextechCompatLab@0.1.0",
+    "HextechSolverCompat@0.1.0"
+  ],
+  "characterId": "REGENT",
+  "encounterId": "FUZZY_WURM_CRAWLER_WEAK",
+  "enemyCurrentHp": 2000,
+  "clearPlayerPiles": true,
+  "cards": [
+    {
+      "cardId": "CONQUEROR",
+      "pile": "Hand",
+      "count": 2
+    },
+    {
+      "cardId": "SOVEREIGN_BLADE",
+      "pile": "Hand"
+    },
+    {
+      "cardId": "SOVEREIGN_BLADE",
+      "pile": "Exhaust"
+    },
+    {
+      "cardId": "DEFEND_REGENT",
+      "pile": "Draw",
+      "count": 30
+    }
+  ],
+  "fixedSearchBudget": true,
+  "searchBudgetOverrideMilliseconds": 0,
+  "timeoutSeconds": 60,
+  "initialEnemyMaxHps": [
+    5000
+  ],
+  "initialEnemyCurrentHps": [
+    5000
+  ],
+  "initialEnemyMoveIds": [
+    "INHALE"
+  ],
+  "initialPlayerEnergy": 30,
+  "initialPlayerHp": 800,
+  "initialPlayerMaxHp": 1000,
+  "clearAllPowers": true,
+  "relics": [
+    {
+      "relicId": "BIG_HAMMER_RUNE",
+      "addWithoutObtainedEffects": true
+    }
+  ],
+  "hextechExpected": {},
+  "initialEnemyBlocks": [
+    0
+  ],
+  "hextechNativeTokenForkProbe": true,
+  "hextechNativeTokenActualProbe": true,
+  "hextechNativePlayEnemy": false,
+  "initialPlayerStars": 20,
+  "hextechNativePlaySequence": [
+    {
+      "cardId": "CONQUEROR",
+      "enemy": true,
+      "expectedPlays": 1
+    },
+    {
+      "cardId": "CONQUEROR",
+      "enemy": true,
+      "expectedPlays": 1
+    }
+  ],
+  "fixtureNotes": "Native Forge decimal growth/AfterForge dispatch, stable minion ordinal and reentry guard, branch key/stamp/full snapshot differential and next round; source17/17. CondensedRadiance generates stars; StardustUpgrade is unrelated despite stale source comment.",
+  "hextechNativeRoundsAfterPlay": 1,
+  "powers": [],
+  "hextechNativeEndTurnOnlyRounds": true,
+  "initialPlayerBlock": 0,
+  "hextechEnemyTierFloor": 1,
+  "initialPlayerGold": 100
+}

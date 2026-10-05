@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "NATIVE-PENDING-DAMAGE-COMP-PLAYER",
+  "seed": "HEXTECHCOMPAT",
+  "expectedLoadedMods": [
+    "CombatSolver@0.47.3",
+    "HextechRunes@0.9.7",
+    "STS2-RitsuLib@0.6.3",
+    "HextechCompatLab@0.1.0",
+    "HextechSolverCompat@0.1.0"
+  ],
+  "characterId": "NECROBINDER",
+  "encounterId": "FUZZY_WURM_CRAWLER_WEAK",
+  "enemyCurrentHp": 2000,
+  "clearPlayerPiles": true,
+  "cards": [
+    {
+      "cardId": "DEFEND_NECROBINDER",
+      "pile": "Hand",
+      "count": 1
+    },
+    {
+      "cardId": "DEFEND_NECROBINDER",
+      "pile": "Draw",
+      "count": 40
+    }
+  ],
+  "fixedSearchBudget": true,
+  "searchBudgetOverrideMilliseconds": 0,
+  "timeoutSeconds": 90,
+  "initialEnemyMaxHps": [
+    3000
+  ],
+  "initialEnemyCurrentHps": [
+    2000
+  ],
+  "initialEnemyMoveIds": [
+    "FIRST_ACID_GOOP"
+  ],
+  "initialPlayerEnergy": 3,
+  "initialPlayerHp": 800,
+  "initialPlayerMaxHp": 1000,
+  "clearAllPowers": true,
+  "relics": [
+    {
+      "relicId": "COMPENSATION_RUNE"
+    }
+  ],
+  "hextechEnemyHexes": [],
+  "hextechExpected": {},
+  "initialPlayerBlock": 0,
+  "hextechEnemyTierFloor": 1,
+  "fixtureNotes": "Original Compensation/Piercing callbacks and nested damage command IDs/owned static registries/finally cleanup; original delayed damage side phase and AmountOnTurnStart keyed; full native snapshots/fork/key/stamp/RNG/two rounds, original command counter/registries unchanged by prediction. Source141/141. No arbitrary damage bonus or simplified replacement.",
+  "initialPlayerStars": 0,
+  "powers": [
+    {
+      "powerId": "STRENGTH_POWER",
+      "amount": 20,
+      "target": "Enemy"
+    }
+  ],
+  "initialEnemyBlocks": [
+    0
+  ],
+  "hextechNativeDamageBoundaryProbe": true,
+  "hextechNativePlaySequence": [
+    {
+      "cardId": "DEFEND_NECROBINDER",
+      "enemy": false,
+      "expectedPlays": 1
+    }
+  ],
+  "hextechNativeRoundsAfterPlay": 2
+}

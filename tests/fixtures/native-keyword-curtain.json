@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "NATIVE-KEYWORD-CURTAIN",
+  "seed": "HEXTECHCOMPAT",
+  "expectedLoadedMods": [
+    "CombatSolver@0.47.3",
+    "HextechRunes@0.9.7",
+    "STS2-RitsuLib@0.6.3",
+    "HextechCompatLab@0.1.0",
+    "HextechSolverCompat@0.1.0"
+  ],
+  "characterId": "SILENT",
+  "encounterId": "FUZZY_WURM_CRAWLER_WEAK",
+  "enemyCurrentHp": 2000,
+  "clearPlayerPiles": true,
+  "cards": [
+    {
+      "cardId": "GRAND_FINALE",
+      "count": 2,
+      "pile": "Hand",
+      "treatAsDeckCard": true
+    },
+    {
+      "cardId": "DEFEND_SILENT",
+      "count": 1,
+      "pile": "Hand",
+      "treatAsDeckCard": false
+    },
+    {
+      "cardId": "DEFEND_SILENT",
+      "count": 30,
+      "pile": "Discard",
+      "treatAsDeckCard": false
+    }
+  ],
+  "fixedSearchBudget": true,
+  "searchBudgetOverrideMilliseconds": 0,
+  "timeoutSeconds": 90,
+  "initialEnemyMaxHps": [
+    5000,
+    5000
+  ],
+  "initialEnemyCurrentHps": [
+    5000,
+    5000
+  ],
+  "initialEnemyMoveIds": [
+    "INHALE"
+  ],
+  "initialPlayerEnergy": 30,
+  "initialPlayerHp": 800,
+  "initialPlayerMaxHp": 1000,
+  "clearAllPowers": true,
+  "relics": [
+    {
+      "relicId": "CURTAIN_CALL_RUNE",
+      "addWithoutObtainedEffects": true
+    }
+  ],
+  "hextechExpected": {},
+  "initialEnemyBlocks": [
+    0,
+    0
+  ],
+  "hextechNativeTokenForkProbe": true,
+  "hextechNativeTokenActualProbe": true,
+  "hextechNativePlayEnemy": false,
+  "initialPlayerStars": 20,
+  "hextechNativePlaySequence": [
+    {
+      "cardId": "DEFEND_SILENT",
+      "enemy": false,
+      "expectedPlays": 1
+    }
+  ],
+  "fixtureNotes": "Original keyword helpers94/95; sole reviewed compiler iterator Dispose difference has no calls/card/global writes. Real native deck-marker restore/entered callbacks, two identical card IDs with only one marked, marker-only mutation in both signatures and fork/COW isolation. Prediction clone copies membership only, preserves current keyword values, freezes root deck membership.",
+  "hextechNativeRoundsAfterPlay": 1,
+  "powers": [],
+  "hextechNativeEndTurnOnlyRounds": true,
+  "initialPlayerBlock": 0,
+  "hextechEnemyTierFloor": 1,
+  "initialPlayerGold": 100,
+  "hextechNativeScopeCounterProbe": false,
+  "additionalMonsterIds": [
+    "BigDummy"
+  ],
+  "hextechNativeKeywordSetup": [
+    {
+      "handIndex": 0,
+      "tracker": "CurtainCallKeywordPersistence"
+    }
+  ],
+  "hextechNativeKeywordIsolation": true
+}

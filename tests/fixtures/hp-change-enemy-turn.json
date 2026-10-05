@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "REPORT-CARDS-HEXTECH-HP-CHANGE-ENEMY-TURN",
+  "seed": "HEXTECHCOMPAT",
+  "expectedLoadedMods": [
+    "CombatSolver@0.47.3",
+    "HextechRunes@0.9.7",
+    "STS2-RitsuLib@0.6.3",
+    "HextechCompatLab@0.1.0",
+    "HextechSolverCompat@0.1.0"
+  ],
+  "characterId": "IRONCLAD",
+  "encounterId": "FUZZY_WURM_CRAWLER_WEAK",
+  "enemyCurrentHp": 200,
+  "clearPlayerPiles": true,
+  "cards": [
+    {
+      "cardId": "STRIKE_IRONCLAD",
+      "pile": "Hand"
+    },
+    {
+      "cardId": "STRIKE_IRONCLAD",
+      "pile": "Draw",
+      "count": 10
+    }
+  ],
+  "fixedSearchBudget": true,
+  "searchBudgetOverrideMilliseconds": 0,
+  "timeoutSeconds": 60,
+  "initialEnemyMaxHps": [
+    200
+  ],
+  "initialEnemyCurrentHps": [
+    130
+  ],
+  "initialEnemyMoveIds": [
+    "FIRST_ACID_GOOP"
+  ],
+  "initialPlayerEnergy": 20,
+  "initialPlayerHp": 70,
+  "initialPlayerMaxHp": 100,
+  "clearAllPowers": true,
+  "relics": [
+    {
+      "relicId": "PLATELET_RUNE",
+      "addWithoutObtainedEffects": true
+    },
+    {
+      "relicId": "BLOOD_ARMOR_RUNE",
+      "addWithoutObtainedEffects": true
+    },
+    {
+      "relicId": "FIRST_AID_KIT_RUNE",
+      "addWithoutObtainedEffects": true
+    }
+  ],
+  "hextechEnemyHexes": [],
+  "hextechExpected": {},
+  "initialEnemyBlocks": [
+    0
+  ],
+  "hextechNativeTokenForkProbe": true,
+  "hextechNativeTokenActualProbe": true,
+  "hextechNativePlayEnemy": false,
+  "initialPlayerStars": 20,
+  "hextechNativePlaySequence": [
+    {
+      "cardId": "STRIKE_IRONCLAD",
+      "enemy": true,
+      "expectedPlays": 1
+    }
+  ],
+  "hextechNativeRoundsAfterPlay": 2,
+  "fixtureNotes": "Enemy-side HP loss must not grant Platelet block; BloodArmor still gains native Plating. Two complete native rounds and next player play snapshots compare side query with branch side. Explicit block0 after initial HP injection prevents its native HP-change reaction from contaminating the root expectation.",
+  "powers": [],
+  "hextechNativePlaySequenceAfterRounds": [
+    {
+      "cardId": "STRIKE_IRONCLAD",
+      "enemy": true,
+      "expectedPlays": 1
+    }
+  ],
+  "initialPlayerBlock": 0
+}

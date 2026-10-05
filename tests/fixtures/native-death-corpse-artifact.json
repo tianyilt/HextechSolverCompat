@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "NATIVE-DEATH-GROWTH-CORPSE-ARTIFACT",
+  "seed": "HEXTECHCOMPAT",
+  "expectedLoadedMods": [
+    "CombatSolver@0.47.3",
+    "HextechRunes@0.9.7",
+    "STS2-RitsuLib@0.6.3",
+    "HextechCompatLab@0.1.0",
+    "HextechSolverCompat@0.1.0"
+  ],
+  "characterId": "SILENT",
+  "encounterId": "FUZZY_WURM_CRAWLER_WEAK",
+  "enemyCurrentHp": 2000,
+  "clearPlayerPiles": true,
+  "cards": [
+    {
+      "cardId": "SOUL",
+      "pile": "Hand"
+    },
+    {
+      "cardId": "STRIKE_SILENT",
+      "pile": "Hand"
+    },
+    {
+      "cardId": "DEFEND_SILENT",
+      "pile": "Draw",
+      "count": 40
+    }
+  ],
+  "fixedSearchBudget": true,
+  "searchBudgetOverrideMilliseconds": 0,
+  "timeoutSeconds": 60,
+  "initialEnemyMaxHps": [
+    100,
+    100
+  ],
+  "initialEnemyCurrentHps": [
+    5,
+    100
+  ],
+  "initialEnemyMoveIds": [
+    "INHALE"
+  ],
+  "initialPlayerEnergy": 30,
+  "initialPlayerHp": 800,
+  "initialPlayerMaxHp": 1000,
+  "clearAllPowers": true,
+  "relics": [
+    {
+      "relicId": "CORPSE_EXPLOSION_RUNE",
+      "addWithoutObtainedEffects": true
+    }
+  ],
+  "hextechExpected": {},
+  "initialEnemyBlocks": [
+    0,
+    0
+  ],
+  "hextechNativeTokenForkProbe": true,
+  "hextechNativeTokenActualProbe": true,
+  "hextechNativePlayEnemy": false,
+  "initialPlayerStars": 20,
+  "hextechNativePlaySequence": [
+    {
+      "cardId": "SOUL",
+      "enemy": false,
+      "expectedPlays": 1
+    },
+    {
+      "cardId": "STRIKE_SILENT",
+      "enemy": true,
+      "expectedPlays": 1
+    }
+  ],
+  "fixtureNotes": "Original death/growth callbacks89/89. Continuing battles require complete actual action/round snapshots, scalar counters, branch key/continuation and parent/sibling/live isolation. Source max-HP bases initialized consistently with scaled current max HP. Potion uses are actual EnqueueManualUse and paired SDK ManualUse, not fake callback calls. Artifact is acquired by the actual SwiftAndSafe draw threshold on both enemies before killing the first, rather than using an unrecognized enemy-index fixture field.",
+  "hextechNativeRoundsAfterPlay": 2,
+  "powers": [],
+  "hextechNativeEndTurnOnlyRounds": true,
+  "initialPlayerBlock": 0,
+  "hextechEnemyTierFloor": 3,
+  "initialPlayerGold": 100,
+  "hextechNativeScopeCounterProbe": true,
+  "additionalMonsterIds": [
+    "BigDummy"
+  ],
+  "hextechEnemyHexes": [
+    "SwiftAndSafe"
+  ],
+  "hextechNativeEnemyDrawProgress": {
+    "SwiftAndSafePlayerCardsDrawnThisCombat": 9
+  },
+  "hextechNativeExpectedAfterSequence": {
+    "enemyPowerTotal:POISON_POWER": 0
+  }
+}

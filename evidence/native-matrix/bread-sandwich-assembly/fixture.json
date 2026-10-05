@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "REPORT-CARDS-HEXTECH-BREAD-SANDWICH-ASSEMBLY-RELEASE-RITSU065-FULL-MODS-SOLVER0481",
+  "seed": "HEXTECHCOMPAT",
+  "expectedLoadedMods": [
+    "CombatSolver@0.48.1",
+    "HextechRunes@0.9.7",
+    "STS2-RitsuLib@0.6.5",
+    "HextechCompatLab@0.1.0",
+    "HextechSolverCompat@0.1.0",
+    "BaseLib@v3.4.7",
+    "MintySpire2@v1.2.0",
+    "QuickRestart@v2.0.0",
+    "RelicRewardChoices@0.3.9",
+    "ImportVanillaSaves@v0.2.1",
+    "sts2_god_mod@1.7.10",
+    "RandomForeseer@0.13.18"
+  ],
+  "characterId": "IRONCLAD",
+  "encounterId": "FUZZY_WURM_CRAWLER_WEAK",
+  "enemyCurrentHp": 200,
+  "clearPlayerPiles": true,
+  "cards": [
+    {
+      "cardId": "DEFEND_IRONCLAD",
+      "pile": "Hand",
+      "count": 1
+    },
+    {
+      "cardId": "INFLAME",
+      "pile": "Hand",
+      "count": 1
+    },
+    {
+      "cardId": "STRIKE_IRONCLAD",
+      "pile": "Hand",
+      "count": 2
+    },
+    {
+      "cardId": "DEFEND_IRONCLAD",
+      "pile": "Draw",
+      "count": 16
+    }
+  ],
+  "fixedSearchBudget": true,
+  "searchBudgetOverrideMilliseconds": 0,
+  "timeoutSeconds": 60,
+  "initialEnemyMaxHps": [
+    200
+  ],
+  "initialEnemyCurrentHps": [
+    130
+  ],
+  "initialEnemyMoveIds": [
+    "FIRST_ACID_GOOP"
+  ],
+  "initialPlayerEnergy": 20,
+  "initialPlayerHp": 70,
+  "initialPlayerMaxHp": 100,
+  "clearAllPowers": true,
+  "relics": [
+    {
+      "relicId": "BREAD_AND_BUTTER_RUNE"
+    },
+    {
+      "relicId": "BREAD_AND_CHEESE_RUNE"
+    },
+    {
+      "relicId": "BREAD_AND_JAM_RUNE"
+    }
+  ],
+  "hextechEnemyHexes": [],
+  "hextechExpected": {
+    "playerBlock": 10,
+    "strength": 4,
+    "enemyHp": 90
+  },
+  "initialEnemyBlocks": [
+    0
+  ],
+  "hextechNativeTokenForkProbe": true,
+  "hextechNativeTokenActualProbe": true,
+  "initialPlayerStars": 20,
+  "hextechNativePlaySequence": [
+    {
+      "cardId": "DEFEND_IRONCLAD",
+      "expectedPlays": 2,
+      "enemy": false
+    },
+    {
+      "cardId": "INFLAME",
+      "expectedPlays": 2,
+      "enemy": false
+    },
+    {
+      "cardId": "STRIKE_IRONCLAD",
+      "expectedPlays": 2,
+      "enemy": true
+    },
+    {
+      "cardId": "STRIKE_IRONCLAD",
+      "expectedPlays": 2,
+      "enemy": true
+    }
+  ],
+  "hextechExpectedRelics": {
+    "present": [
+      "BREAD_SANDWICH_RUNE"
+    ],
+    "absent": [
+      "BREAD_AND_BUTTER_RUNE",
+      "BREAD_AND_CHEESE_RUNE",
+      "BREAD_AND_JAM_RUNE"
+    ]
+  }
+}

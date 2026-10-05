@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <OutputType>Exe</OutputType>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <UseSharedCompilation>false</UseSharedCompilation>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Mono.Cecil" HintPath="$(UserProfile)/.nuget/packages/mono.cecil/0.10.4/lib/netstandard1.3/Mono.Cecil.dll" />
+  </ItemGroup>
+</Project>

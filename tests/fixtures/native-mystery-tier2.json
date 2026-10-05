@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "NATIVE-MYSTERY-TIER2",
+  "seed": "HEXTECHCOMPAT",
+  "expectedLoadedMods": [
+    "CombatSolver@0.47.3",
+    "HextechRunes@0.9.7",
+    "STS2-RitsuLib@0.6.3",
+    "HextechCompatLab@0.1.0",
+    "HextechSolverCompat@0.1.0"
+  ],
+  "characterId": "SILENT",
+  "encounterId": "FUZZY_WURM_CRAWLER_WEAK",
+  "enemyCurrentHp": 2000,
+  "clearPlayerPiles": true,
+  "cards": [
+    {
+      "cardId": "ACROBATICS",
+      "pile": "Draw",
+      "count": 1,
+      "upgradeLevels": 1
+    },
+    {
+      "cardId": "BACKFLIP",
+      "pile": "Draw",
+      "count": 1,
+      "upgradeLevels": 1
+    },
+    {
+      "cardId": "SURVIVOR",
+      "pile": "Draw",
+      "count": 1,
+      "upgradeLevels": 1
+    },
+    {
+      "cardId": "STRIKE_SILENT",
+      "pile": "Hand",
+      "count": 1
+    },
+    {
+      "cardId": "DEFEND_SILENT",
+      "pile": "Draw",
+      "count": 30
+    }
+  ],
+  "fixedSearchBudget": true,
+  "searchBudgetOverrideMilliseconds": 0,
+  "timeoutSeconds": 60,
+  "initialEnemyMaxHps": [
+    3000
+  ],
+  "initialEnemyCurrentHps": [
+    2000
+  ],
+  "initialEnemyMoveIds": [
+    "FIRST_ACID_GOOP"
+  ],
+  "initialPlayerEnergy": 20,
+  "initialPlayerHp": 800,
+  "initialPlayerMaxHp": 1000,
+  "clearAllPowers": true,
+  "relics": [],
+  "hextechEnemyHexes": [
+    "Mystery"
+  ],
+  "hextechExpected": {},
+  "initialPlayerBlock": 0,
+  "hextechEnemyTierFloor": 2,
+  "fixtureNotes": "Source32/32 original Mystery/transform helper; exact chosen-card and replacement order, upgraded cards, frozen canonical unlock pools/seed, branch global-proc counters, count2/4/6 or actual candidate clamp, Exhaust excluded, full snapshots/key/stamp/fork/live isolation and two native future rounds. Only test opening proc re-armed after fixture pile reconstruction; original opening callback remains.",
+  "hextechNativeMysteryProbe": true,
+  "hextechNativeMysteryExpectedCount": 4
+}

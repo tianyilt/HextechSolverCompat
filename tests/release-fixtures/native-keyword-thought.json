@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "NATIVE-KEYWORD-THOUGHT-RELEASE-RITSU065-FULL-MODS-SOLVER0481",
+  "seed": "HEXTECHCOMPAT",
+  "expectedLoadedMods": [
+    "CombatSolver@0.48.1",
+    "HextechRunes@0.9.7",
+    "STS2-RitsuLib@0.6.5",
+    "HextechCompatLab@0.1.0",
+    "HextechSolverCompat@0.1.0",
+    "BaseLib@v3.4.7",
+    "MintySpire2@v1.2.0",
+    "QuickRestart@v2.0.0",
+    "RelicRewardChoices@0.3.9",
+    "ImportVanillaSaves@v0.2.1",
+    "sts2_god_mod@1.7.10",
+    "RandomForeseer@0.13.18"
+  ],
+  "characterId": "NECROBINDER",
+  "encounterId": "FUZZY_WURM_CRAWLER_WEAK",
+  "enemyCurrentHp": 2000,
+  "clearPlayerPiles": true,
+  "cards": [
+    {
+      "cardId": "STRIKE_NECROBINDER",
+      "count": 2,
+      "pile": "Hand",
+      "treatAsDeckCard": true
+    },
+    {
+      "cardId": "DEFEND_NECROBINDER",
+      "count": 30,
+      "pile": "Draw",
+      "treatAsDeckCard": false
+    }
+  ],
+  "fixedSearchBudget": true,
+  "searchBudgetOverrideMilliseconds": 0,
+  "timeoutSeconds": 90,
+  "initialEnemyMaxHps": [
+    5000,
+    5000
+  ],
+  "initialEnemyCurrentHps": [
+    5000,
+    5000
+  ],
+  "initialEnemyMoveIds": [
+    "INHALE"
+  ],
+  "initialPlayerEnergy": 30,
+  "initialPlayerHp": 800,
+  "initialPlayerMaxHp": 1000,
+  "clearAllPowers": true,
+  "relics": [
+    {
+      "relicId": "THOUGHT_OVERWRITE_RUNE",
+      "addWithoutObtainedEffects": true
+    }
+  ],
+  "hextechExpected": {},
+  "initialEnemyBlocks": [
+    0,
+    0
+  ],
+  "hextechNativeTokenForkProbe": true,
+  "hextechNativeTokenActualProbe": true,
+  "hextechNativePlayEnemy": false,
+  "initialPlayerStars": 20,
+  "hextechNativePlaySequence": [
+    {
+      "cardId": "STRIKE_NECROBINDER",
+      "enemy": true,
+      "expectedPlays": 2
+    },
+    {
+      "cardId": "STRIKE_NECROBINDER",
+      "enemy": true,
+      "expectedPlays": 1
+    }
+  ],
+  "fixtureNotes": "Original keyword helpers94/95; sole reviewed compiler iterator Dispose difference has no calls/card/global writes. Real native deck-marker restore/entered callbacks, two identical card IDs with only one marked, marker-only mutation in both signatures and fork/COW isolation. Prediction clone copies membership only, preserves current keyword values, freezes root deck membership.",
+  "hextechNativeRoundsAfterPlay": 1,
+  "powers": [],
+  "hextechNativeEndTurnOnlyRounds": true,
+  "initialPlayerBlock": 0,
+  "hextechEnemyTierFloor": 1,
+  "initialPlayerGold": 100,
+  "hextechNativeScopeCounterProbe": false,
+  "additionalMonsterIds": [
+    "BigDummy"
+  ],
+  "hextechNativeKeywordSetup": [
+    {
+      "handIndex": 0,
+      "tracker": "ThoughtOverwriteKeywordPersistence"
+    }
+  ],
+  "hextechNativeKeywordIsolation": true
+}

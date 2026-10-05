@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "REPORT-CARDS-HEXTECH-NATIVE-SCOPE-TRANSIENT",
+  "seed": "HEXTECHCOMPAT",
+  "expectedLoadedMods": [
+    "CombatSolver@0.47.3",
+    "HextechRunes@0.9.7",
+    "STS2-RitsuLib@0.6.3",
+    "HextechCompatLab@0.1.0",
+    "HextechSolverCompat@0.1.0"
+  ],
+  "characterId": "NECROBINDER",
+  "encounterId": "FUZZY_WURM_CRAWLER_WEAK",
+  "enemyCurrentHp": 2000,
+  "clearPlayerPiles": true,
+  "cards": [
+    {
+      "cardId": "DEFEND_NECROBINDER",
+      "pile": "Hand"
+    },
+    {
+      "cardId": "DEFEND_NECROBINDER",
+      "pile": "Draw",
+      "count": 12
+    }
+  ],
+  "fixedSearchBudget": true,
+  "searchBudgetOverrideMilliseconds": 0,
+  "timeoutSeconds": 60,
+  "initialEnemyMaxHps": [
+    2000
+  ],
+  "initialEnemyCurrentHps": [
+    1600
+  ],
+  "initialEnemyMoveIds": [
+    "FIRST_ACID_GOOP"
+  ],
+  "initialPlayerEnergy": 20,
+  "initialPlayerHp": 800,
+  "initialPlayerMaxHp": 1000,
+  "clearAllPowers": true,
+  "relics": [
+    {
+      "relicId": "AUTO_PATROL_RUNE",
+      "addWithoutObtainedEffects": true
+    },
+    {
+      "relicId": "UNIVERSAL_SCOPE_RUNE",
+      "addWithoutObtainedEffects": true
+    },
+    {
+      "relicId": "MORE_UNIVERSAL_SCOPE_RUNE",
+      "addWithoutObtainedEffects": true
+    },
+    {
+      "relicId": "MOST_UNIVERSAL_SCOPE_RUNE",
+      "addWithoutObtainedEffects": true
+    }
+  ],
+  "hextechEnemyHexes": [],
+  "hextechExpected": {},
+  "initialEnemyBlocks": [
+    0
+  ],
+  "initialPlayerStars": 20,
+  "fixtureNotes": "Original native AutoPatrol temporary cards must be excluded from scopes before consuming roll ordinals; native/sim all scope scalar fields and complete card/power/RNG snapshots compared, with native following round.",
+  "hextechInitialOsty": {
+    "maxHp": 100,
+    "hp": 20
+  },
+  "hextechNativeTransientAutoPlayProbe": true,
+  "hextechNativeTransientExpectedPlays": 2,
+  "hextechNativeScopeCounterProbe": true
+}

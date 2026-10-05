@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "REPORT-ROUND-HEXTECH-SKULKING-HEAL-STACK",
+  "seed": "HEXTECHCOMPAT",
+  "expectedLoadedMods": [
+    "CombatSolver@0.47.3",
+    "HextechRunes@0.9.7",
+    "STS2-RitsuLib@0.6.3",
+    "HextechCompatLab@0.1.0",
+    "HextechSolverCompat@0.1.0"
+  ],
+  "characterId": "IRONCLAD",
+  "encounterId": "SKULKING_COLONY_ELITE",
+  "enemyCurrentHp": 200,
+  "clearPlayerPiles": true,
+  "cards": [
+    {
+      "cardId": "STRIKE_IRONCLAD",
+      "pile": "Hand",
+      "count": 1
+    },
+    {
+      "cardId": "DEFEND_IRONCLAD",
+      "pile": "Draw",
+      "count": 6
+    }
+  ],
+  "fixedSearchBudget": true,
+  "searchBudgetOverrideMilliseconds": 0,
+  "timeoutSeconds": 60,
+  "initialEnemyMaxHps": [
+    200
+  ],
+  "initialEnemyCurrentHps": [
+    70
+  ],
+  "initialEnemyMoveIds": [
+    "ZOOM_MOVE"
+  ],
+  "initialPlayerEnergy": 20,
+  "initialPlayerHp": 70,
+  "initialPlayerMaxHp": 80,
+  "clearAllPowers": true,
+  "hextechEnemyHexes": [
+    "FirstAidKit",
+    "ProteinShake",
+    "VitalitySurge",
+    "MoreTheMerrier"
+  ],
+  "hextechExpected": {
+    "enemyHp": 70,
+    "enemyBlock": 73
+  },
+  "hextechEnemySustainProbe": 20
+}

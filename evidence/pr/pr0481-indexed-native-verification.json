@@ -1,0 +1,29 @@
+{
+  "status": "NativePassed",
+  "sourceCommit": "2ead87d9c9e35b1588a760efff0bd6154545a77c",
+  "solverCandidateSha256": "04c70a0c0ff4d9169a8184a327beae1e246bca75179ed8bd521331e08d384d1c",
+  "adapterHandSizeFixInstalled": false,
+  "build": {
+    "HextechSolverCompat": "5dc56b16049077dcbeffb9bf1aa245c5062143e29140f274d57186631a434580",
+    "HextechCompatLab": "4486f7aa9e8b58cf56d538e3aee623bf12a13ca9d8d2fe1a09385e53396df434"
+  },
+  "cases": [
+    {
+      "fixture": "generated-dredge-limit-13",
+      "status": "NativePassed",
+      "requestSha256": "461ac92cbd26f62200b55cb33af189afd2d7f0122366eeee430ced6af8a25714",
+      "resultSha256": "515eee45cba47e7eb016ba291d48e9471d18c90cc8d4de66851f1a35b471b3ee",
+      "nativeExitCode": -6
+    },
+    {
+      "fixture": "generated-crash-landing-limit-5",
+      "status": "NativePassed",
+      "requestSha256": "90fd784e2b2213c1d4593f9070218f6e4ddfcb5c63d31238d9456a1c04b6cddf",
+      "resultSha256": "e04000d41de302adf4abe1d4bb3e4651917ca94fbbad9fe64268709168c46a67",
+      "nativeExitCode": -6
+    }
+  ],
+  "baseline": "upstream-pr0481-baseline-receipt.json;1170/1170 hand-limit consumed baseline methods match official binary",
+  "qualityTimeSentinel": "Native route/work pass; search-time no-regression gate NotPassed",
+  "publicPR": "Not submitted"
+}

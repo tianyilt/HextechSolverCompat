@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "NATIVE-STARTER-VICTORY-REPEAT",
+  "seed": "HEXTECHCOMPAT",
+  "expectedLoadedMods": [
+    "CombatSolver@0.47.3",
+    "HextechRunes@0.9.7",
+    "STS2-RitsuLib@0.6.3",
+    "HextechCompatLab@0.1.0",
+    "HextechSolverCompat@0.1.0"
+  ],
+  "characterId": "IRONCLAD",
+  "encounterId": "FUZZY_WURM_CRAWLER_WEAK",
+  "enemyCurrentHp": 2000,
+  "clearPlayerPiles": true,
+  "cards": [
+    {
+      "cardId": "STRIKE_IRONCLAD",
+      "pile": "Hand",
+      "count": 1,
+      "treatAsDeckCard": true,
+      "upgradeLevels": 2
+    },
+    {
+      "cardId": "DEFEND_IRONCLAD",
+      "pile": "Hand",
+      "count": 1,
+      "treatAsDeckCard": true,
+      "upgradeLevels": 3
+    },
+    {
+      "cardId": "DEFEND_IRONCLAD",
+      "pile": "Draw",
+      "count": 40
+    },
+    {
+      "cardId": "DEFEND_IRONCLAD",
+      "pile": "Draw",
+      "count": 1,
+      "treatAsDeckCard": true,
+      "upgradeLevels": 4
+    }
+  ],
+  "fixedSearchBudget": true,
+  "searchBudgetOverrideMilliseconds": 0,
+  "timeoutSeconds": 60,
+  "initialEnemyMaxHps": [
+    1000
+  ],
+  "initialEnemyCurrentHps": [
+    16
+  ],
+  "initialEnemyMoveIds": [
+    "INHALE"
+  ],
+  "initialPlayerEnergy": 30,
+  "initialPlayerHp": 800,
+  "initialPlayerMaxHp": 1000,
+  "clearAllPowers": true,
+  "relics": [
+    {
+      "relicId": "STRIKE_UPGRADE_RUNE",
+      "addWithoutObtainedEffects": true
+    },
+    {
+      "relicId": "DEFEND_UPGRADE_RUNE",
+      "addWithoutObtainedEffects": true
+    },
+    {
+      "relicId": "FAN_THE_HAMMER_RUNE",
+      "addWithoutObtainedEffects": true
+    }
+  ],
+  "hextechExpected": {},
+  "initialEnemyBlocks": [
+    0
+  ],
+  "hextechNativeTokenForkProbe": true,
+  "hextechNativeTokenActualProbe": true,
+  "hextechNativePlayEnemy": false,
+  "initialPlayerStars": 20,
+  "hextechNativePlaySequence": [
+    {
+      "cardId": "DEFEND_IRONCLAD",
+      "expectedPlays": 1
+    },
+    {
+      "cardId": "STRIKE_IRONCLAD",
+      "enemy": true
+    }
+  ],
+  "fixtureNotes": "Original damage/upgrade family117/117 plus response guards246/246. Full native action/round snapshots and branch isolation; original Outbreak/Sleight AsyncLocal guard prevents recursive poison feedback. Starter victory probe separately verifies original deck growth after native cleanup.",
+  "hextechNativeRoundsAfterPlay": 0,
+  "powers": [],
+  "hextechNativeEndTurnOnlyRounds": true,
+  "initialPlayerBlock": 0,
+  "hextechEnemyTierFloor": 1,
+  "initialPlayerGold": 100,
+  "hextechNativeScopeCounterProbe": true,
+  "additionalMonsterIds": [],
+  "hextechNativeStarterVictoryProbe": true
+}

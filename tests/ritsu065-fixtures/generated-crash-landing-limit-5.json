@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "BASELIB-GENERATED-CRASH-LANDING-LIMIT-5-RITSU065-SOLVER0481",
+  "seed": "HEXTECHCOMPAT",
+  "expectedLoadedMods": [
+    "CombatSolver@0.48.1",
+    "HextechRunes@0.9.7",
+    "STS2-RitsuLib@0.6.5",
+    "HextechCompatLab@0.1.0",
+    "HextechSolverCompat@0.1.0",
+    "BaseLib@v3.4.7",
+    "MintySpire2@v1.2.0",
+    "QuickRestart@v2.0.0",
+    "RelicRewardChoices@0.3.9",
+    "ImportVanillaSaves@v0.2.1",
+    "sts2_god_mod@1.7.10",
+    "RandomForeseer@0.13.18"
+  ],
+  "characterId": "REGENT",
+  "encounterId": "FUZZY_WURM_CRAWLER_WEAK",
+  "enemyCurrentHp": 2000,
+  "clearPlayerPiles": true,
+  "cards": [
+    {
+      "cardId": "DEFEND_REGENT",
+      "pile": "Hand"
+    },
+    {
+      "cardId": "STRIKE_REGENT",
+      "pile": "Draw",
+      "count": 30
+    }
+  ],
+  "fixedSearchBudget": true,
+  "searchBudgetOverrideMilliseconds": 0,
+  "timeoutSeconds": 60,
+  "initialEnemyMaxHps": [
+    2000
+  ],
+  "initialEnemyCurrentHps": [
+    1600
+  ],
+  "initialEnemyMoveIds": [
+    "FIRST_ACID_GOOP"
+  ],
+  "initialPlayerEnergy": 20,
+  "initialPlayerHp": 70,
+  "initialPlayerMaxHp": 100,
+  "clearAllPowers": true,
+  "relics": [],
+  "hextechEnemyHexes": [],
+  "hextechExpected": {},
+  "initialEnemyBlocks": [
+    0
+  ],
+  "initialPlayerStars": 20,
+  "fixtureNotes": "Actual BaseLib IMaxHandSizeModifier registered as a test-only ModHelper listener. Native query changes to requested limit; frozen root/sibling keep old limit, new root and live stamp change, restore exact live stamp; card absent at root, generated then played with full actual/predicted snapshots. Not a patch of the hand-size query.",
+  "hextechGeneratedOnPlayProbe": true,
+  "hextechNativePlaySequence": [
+    {
+      "cardId": "CRASH_LANDING",
+      "enemy": false
+    }
+  ],
+  "hextechNativeMaxHandSize": 5,
+  "hextechNativeExpectedGeneratedHandCount": 5
+}

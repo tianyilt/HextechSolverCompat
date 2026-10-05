@@ -1,0 +1,126 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "REPORT-CARDS-HEXTECH-TEMPORARY-DEXTERITY-MIXED",
+  "seed": "HEXTECHCOMPAT",
+  "expectedLoadedMods": [
+    "CombatSolver@0.47.3",
+    "HextechRunes@0.9.7",
+    "STS2-RitsuLib@0.6.3",
+    "HextechCompatLab@0.1.0",
+    "HextechSolverCompat@0.1.0"
+  ],
+  "characterId": "SILENT",
+  "encounterId": "FUZZY_WURM_CRAWLER_WEAK",
+  "enemyCurrentHp": 200,
+  "clearPlayerPiles": true,
+  "cards": [
+    {
+      "cardId": "DEFEND_SILENT",
+      "pile": "Hand"
+    },
+    {
+      "cardId": "STRIKE_SILENT",
+      "pile": "Hand"
+    },
+    {
+      "cardId": "STRIKE_SILENT",
+      "pile": "Draw",
+      "count": 12
+    }
+  ],
+  "fixedSearchBudget": true,
+  "searchBudgetOverrideMilliseconds": 0,
+  "timeoutSeconds": 60,
+  "initialEnemyMaxHps": [
+    200
+  ],
+  "initialEnemyCurrentHps": [
+    130
+  ],
+  "initialEnemyMoveIds": [
+    "FIRST_ACID_GOOP"
+  ],
+  "initialPlayerEnergy": 20,
+  "initialPlayerHp": 70,
+  "initialPlayerMaxHp": 100,
+  "clearAllPowers": true,
+  "relics": [
+    {
+      "relicId": "KILLER_HUNTER_RUNE",
+      "addWithoutObtainedEffects": true
+    },
+    {
+      "relicId": "SLAP_RUNE",
+      "addWithoutObtainedEffects": true
+    }
+  ],
+  "hextechEnemyHexes": [],
+  "hextechExpected": {},
+  "initialEnemyBlocks": [
+    0
+  ],
+  "hextechNativeTokenForkProbe": true,
+  "hextechNativeTokenActualProbe": true,
+  "hextechNativePlayEnemy": false,
+  "initialPlayerStars": 20,
+  "hextechNativePlaySequence": [
+    {
+      "cardId": "DEFEND_SILENT",
+      "enemy": false,
+      "expectedPlays": 1
+    },
+    {
+      "cardId": "STRIKE_SILENT",
+      "enemy": true,
+      "expectedPlays": 1
+    }
+  ],
+  "hextechNativeRoundsAfterPlay": 2,
+  "fixtureNotes": "Native positive and negative player Dexterity wrappers coexist with Artifact; removal and stat commands must remain separate and ordered. KillerHunter negative enemy wrapper must survive player end; native round snapshots verify both expiry boundaries.",
+  "hextechNativePlaySequenceAfterRounds": [
+    {
+      "cardId": "STRIKE_SILENT",
+      "enemy": true,
+      "expectedPlays": 1
+    }
+  ],
+  "powers": [
+    {
+      "powerId": "STRENGTH_POWER",
+      "amount": 5,
+      "target": "Enemy",
+      "applier": "Player"
+    },
+    {
+      "powerId": "DEXTERITY_POWER",
+      "amount": 5,
+      "target": "Enemy",
+      "applier": "Player"
+    },
+    {
+      "powerId": "ANTICIPATE_POWER",
+      "amount": 3,
+      "target": "Player",
+      "applier": "Player"
+    },
+    {
+      "powerId": "FADE_POWER",
+      "amount": 2,
+      "target": "Player",
+      "applier": "Player"
+    },
+    {
+      "powerId": "SPEED_POTION_POWER",
+      "amount": 4,
+      "target": "Player",
+      "applier": "Player"
+    },
+    {
+      "powerId": "ARTIFACT_POWER",
+      "amount": 1,
+      "target": "Player",
+      "applier": "Player"
+    }
+  ],
+  "hextechTemporaryDexterityBoundaryProbe": true
+}

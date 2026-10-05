@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "NATIVE-PENDING-DAMAGE-COMP-OUTBREAK",
+  "seed": "HEXTECHCOMPAT",
+  "expectedLoadedMods": [
+    "CombatSolver@0.47.3",
+    "HextechRunes@0.9.7",
+    "STS2-RitsuLib@0.6.3",
+    "HextechCompatLab@0.1.0",
+    "HextechSolverCompat@0.1.0"
+  ],
+  "characterId": "SILENT",
+  "encounterId": "FUZZY_WURM_CRAWLER_WEAK",
+  "enemyCurrentHp": 2000,
+  "clearPlayerPiles": true,
+  "cards": [
+    {
+      "cardId": "OUTBREAK",
+      "pile": "Hand",
+      "count": 1
+    },
+    {
+      "cardId": "DEFEND_SILENT",
+      "pile": "Draw",
+      "count": 40
+    }
+  ],
+  "fixedSearchBudget": true,
+  "searchBudgetOverrideMilliseconds": 0,
+  "timeoutSeconds": 90,
+  "initialEnemyMaxHps": [
+    3000
+  ],
+  "initialEnemyCurrentHps": [
+    2000
+  ],
+  "initialEnemyMoveIds": [
+    "FIRST_ACID_GOOP"
+  ],
+  "initialPlayerEnergy": 3,
+  "initialPlayerHp": 800,
+  "initialPlayerMaxHp": 1000,
+  "clearAllPowers": true,
+  "relics": [],
+  "hextechEnemyHexes": [
+    "Compensation"
+  ],
+  "hextechExpected": {},
+  "initialPlayerBlock": 0,
+  "hextechEnemyTierFloor": 1,
+  "fixtureNotes": "Original Compensation/Piercing callbacks and nested damage command IDs/owned static registries/finally cleanup; original delayed damage side phase and AmountOnTurnStart keyed; full native snapshots/fork/key/stamp/RNG/two rounds, original command counter/registries unchanged by prediction. Source141/141. No arbitrary damage bonus or simplified replacement.",
+  "initialPlayerStars": 0,
+  "powers": [
+    {
+      "powerId": "POISON_POWER",
+      "amount": 3,
+      "target": "Enemy"
+    },
+    {
+      "powerId": "SLEIGHT_OF_FLESH_POWER",
+      "amount": 5,
+      "target": "Player"
+    }
+  ],
+  "initialEnemyBlocks": [
+    0
+  ],
+  "hextechNativeDamageBoundaryProbe": true,
+  "hextechNativePlaySequence": [
+    {
+      "cardId": "OUTBREAK",
+      "enemy": false,
+      "expectedPlays": 1
+    }
+  ],
+  "hextechNativeRoundsAfterPlay": 2,
+  "hextechNativeDamageAfterPlay": {
+    "enemyHp": 1983,
+    "enemyBlock": 0,
+    "nextDamage": 0
+  }
+}

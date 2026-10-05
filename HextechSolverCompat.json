@@ -1,0 +1,25 @@
+{
+  "id": "HextechSolverCompat",
+  "name": "HextechRunes × CombatSolver | 海克斯兼容补丁",
+  "author": "HextechSolverCompat contributors",
+  "description": "Single-player combat compatibility for HextechRunes and CombatSolver. 海克斯单人战斗适配；支持范围与已验证版本见说明。",
+  "version": "0.1.0",
+  "has_dll": true,
+  "has_pck": false,
+  "affects_gameplay": false,
+  "min_game_version": "0.111.0",
+  "dependencies": [
+    {
+      "id": "HextechRunes",
+      "min_version": "0.9.7"
+    },
+    {
+      "id": "CombatSolver",
+      "min_version": "0.48.1"
+    },
+    {
+      "id": "STS2-RitsuLib",
+      "min_version": "0.6.3"
+    }
+  ]
+}

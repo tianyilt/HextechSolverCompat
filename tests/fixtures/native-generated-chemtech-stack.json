@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "NATIVE-GENERATED-CHEMTECH-STACK",
+  "seed": "HEXTECHCOMPAT",
+  "expectedLoadedMods": [
+    "CombatSolver@0.47.3",
+    "HextechRunes@0.9.7",
+    "STS2-RitsuLib@0.6.3",
+    "HextechCompatLab@0.1.0",
+    "HextechSolverCompat@0.1.0"
+  ],
+  "characterId": "IRONCLAD",
+  "encounterId": "FUZZY_WURM_CRAWLER_WEAK",
+  "enemyCurrentHp": 2000,
+  "clearPlayerPiles": true,
+  "cards": [
+    {
+      "cardId": "CHEMTECH_DRAGON_SOUL_CARD",
+      "pile": "Hand",
+      "count": 2
+    },
+    {
+      "cardId": "DEFEND_IRONCLAD",
+      "pile": "Draw",
+      "count": 40
+    }
+  ],
+  "fixedSearchBudget": true,
+  "searchBudgetOverrideMilliseconds": 0,
+  "timeoutSeconds": 90,
+  "initialEnemyMaxHps": [
+    3000,
+    3000
+  ],
+  "initialEnemyCurrentHps": [
+    2000,
+    2000
+  ],
+  "initialEnemyMoveIds": [
+    "FIRST_ACID_GOOP"
+  ],
+  "initialPlayerEnergy": 30,
+  "initialPlayerHp": 800,
+  "initialPlayerMaxHp": 1000,
+  "clearAllPowers": true,
+  "relics": [],
+  "hextechEnemyHexes": [],
+  "hextechExpected": {},
+  "initialPlayerBlock": 0,
+  "hextechEnemyTierFloor": 1,
+  "fixtureNotes": "Generated dependent models official/source37/37 exact. Original Boomerang forward/reverse target loops/return to hand, Wish block/damage and Chemtech stable potion generation retained. Owned commands and immutable root potion pool/seed; native full snapshots, potion slots, fork/key/stamp/RNG/two future rounds. No UI/profile writes in prediction.",
+  "initialPlayerStars": 0,
+  "powers": [],
+  "initialEnemyBlocks": [
+    0,
+    0
+  ],
+  "hextechNativePlaySequence": [
+    {
+      "cardId": "CHEMTECH_DRAGON_SOUL_CARD",
+      "enemy": false,
+      "expectedPlays": 1
+    },
+    {
+      "cardId": "CHEMTECH_DRAGON_SOUL_CARD",
+      "enemy": false,
+      "expectedPlays": 1
+    }
+  ],
+  "hextechNativeRoundsAfterPlay": 2,
+  "additionalMonsterIds": [
+    "LEAF_SLIME_M"
+  ],
+  "hextechNativeEndTurnOnlyRounds": true,
+  "hextechNativeGeneratedTokensProbe": true,
+  "hextechNativePotionPrepare": [],
+  "hextechNativeChemtechExpectedCount": 4
+}

@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "NATIVE-VAKUU-PLAIN",
+  "seed": "HEXTECHCOMPAT",
+  "expectedLoadedMods": [
+    "CombatSolver@0.47.3",
+    "HextechRunes@0.9.7",
+    "STS2-RitsuLib@0.6.3",
+    "HextechCompatLab@0.1.0",
+    "HextechSolverCompat@0.1.0"
+  ],
+  "characterId": "SILENT",
+  "encounterId": "FUZZY_WURM_CRAWLER_WEAK",
+  "enemyCurrentHp": 2000,
+  "clearPlayerPiles": true,
+  "cards": [
+    {
+      "cardId": "DEFEND_SILENT",
+      "pile": "Draw",
+      "count": 30
+    }
+  ],
+  "fixedSearchBudget": true,
+  "searchBudgetOverrideMilliseconds": 0,
+  "timeoutSeconds": 60,
+  "initialEnemyMaxHps": [
+    3000
+  ],
+  "initialEnemyCurrentHps": [
+    2000
+  ],
+  "initialEnemyMoveIds": [
+    "FIRST_ACID_GOOP"
+  ],
+  "initialPlayerEnergy": 3,
+  "initialPlayerHp": 800,
+  "initialPlayerMaxHp": 1000,
+  "clearAllPowers": true,
+  "relics": [],
+  "hextechEnemyHexes": [
+    "ShoulderVaku"
+  ],
+  "hextechExpected": {},
+  "initialPlayerBlock": 0,
+  "hextechEnemyTierFloor": 1,
+  "hextechNativeRounds": 3,
+  "fixtureNotes": "Original native second-round Vakuu loop, source193/193 reviewed family includes original controller; native first-playable order/resource payment/first-max automatic nested choices/limit13/once marker/full snapshots/key/stamp/forks/RNG. Player-play tracking moved to the original late boundary, preserving Inspect startup exception and controlled-play draw prevention.",
+  "hextechNativeVakuuProbe": true,
+  "hextechNativeVakuuMinimumPayments": 1,
+  "initialPlayerStars": 0
+}

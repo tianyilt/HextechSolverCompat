@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "REPORT-CARDS-HEXTECH-NATIVE-CALLBACK-CHOICE-RALLYING",
+  "seed": "HEXTECHCOMPAT",
+  "expectedLoadedMods": [
+    "CombatSolver@0.47.3",
+    "HextechRunes@0.9.7",
+    "STS2-RitsuLib@0.6.3",
+    "HextechCompatLab@0.1.0",
+    "HextechSolverCompat@0.1.0"
+  ],
+  "characterId": "IRONCLAD",
+  "encounterId": "FUZZY_WURM_CRAWLER_WEAK",
+  "enemyCurrentHp": 2000,
+  "clearPlayerPiles": true,
+  "cards": [
+    {
+      "cardId": "WHITE_HOLE_CARD",
+      "pile": "Hand"
+    },
+    {
+      "cardId": "DEFEND_IRONCLAD",
+      "pile": "Draw",
+      "count": 2
+    },
+    {
+      "cardId": "WHITE_HOLE_CARD",
+      "pile": "Draw"
+    },
+    {
+      "cardId": "SEEKER_STRIKE",
+      "pile": "Draw"
+    },
+    {
+      "cardId": "DEFEND_IRONCLAD",
+      "pile": "Draw",
+      "count": 12
+    }
+  ],
+  "fixedSearchBudget": true,
+  "searchBudgetOverrideMilliseconds": 0,
+  "timeoutSeconds": 60,
+  "initialEnemyMaxHps": [
+    2000
+  ],
+  "initialEnemyCurrentHps": [
+    1600
+  ],
+  "initialEnemyMoveIds": [
+    "FIRST_ACID_GOOP"
+  ],
+  "initialPlayerEnergy": 20,
+  "initialPlayerHp": 800,
+  "initialPlayerMaxHp": 1000,
+  "clearAllPowers": true,
+  "relics": [
+    {
+      "relicId": "WHITE_HOLE_RUNE",
+      "addWithoutObtainedEffects": true
+    },
+    {
+      "relicId": "RALLYING_CALL_RUNE",
+      "addWithoutObtainedEffects": true
+    }
+  ],
+  "hextechEnemyHexes": [],
+  "hextechExpected": {},
+  "initialEnemyBlocks": [
+    0
+  ],
+  "initialPlayerStars": 20,
+  "fixtureNotes": "Manual WhiteHole draws two Defends; native RallyingCall then autoplays remaining matching WhiteHole from Draw, which draws SeekerStrike→Hellraiser and a real nested choice. Full enclosing action replay and native original selection API comparison.",
+  "hextechNativeCallbackChoiceCard": "WHITE_HOLE_CARD",
+  "powers": [
+    {
+      "powerId": "HELLRAISER_POWER",
+      "amount": 1,
+      "target": "Player",
+      "applier": "Player"
+    }
+  ]
+}

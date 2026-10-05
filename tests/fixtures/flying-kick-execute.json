@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "REPORT-HEXTECH-FLYING-KICK-EXECUTE",
+  "seed": "HEXTECHCOMPAT",
+  "expectedLoadedMods": [
+    "CombatSolver@0.47.3",
+    "HextechRunes@0.9.7",
+    "STS2-RitsuLib@0.6.3",
+    "HextechCompatLab@0.1.0",
+    "HextechSolverCompat@0.1.0"
+  ],
+  "characterId": "IRONCLAD",
+  "encounterId": "FUZZY_WURM_CRAWLER_WEAK",
+  "enemyCurrentHp": 200,
+  "clearPlayerPiles": true,
+  "cards": [
+    {
+      "cardId": "STRIKE_IRONCLAD",
+      "pile": "Hand"
+    }
+  ],
+  "fixedSearchBudget": true,
+  "searchBudgetOverrideMilliseconds": 0,
+  "timeoutSeconds": 60,
+  "initialEnemyMaxHps": [
+    200,
+    200
+  ],
+  "initialEnemyCurrentHps": [
+    41,
+    200
+  ],
+  "initialPlayerEnergy": 20,
+  "initialPlayerHp": 60,
+  "initialPlayerMaxHp": 100,
+  "clearAllPowers": true,
+  "relics": [
+    {
+      "relicId": "FLYING_KICK_RUNE",
+      "addWithoutObtainedEffects": true
+    }
+  ],
+  "hextechEnemyHexes": [],
+  "hextechExpected": {
+    "enemyHpTotal": 200,
+    "playerHp": 70
+  },
+  "hextechNativeTokenForkProbe": true,
+  "hextechNativeTokenActualProbe": true,
+  "hextechEnemyTierFloor": 1,
+  "additionalMonsterIds": [
+    "BigDummy"
+  ],
+  "hextechNativePlayEnemy": true,
+  "initialEnemyBlocks": [
+    0,
+    0
+  ]
+}

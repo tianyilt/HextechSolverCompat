@@ -1,0 +1,8 @@
+{
+  "sourceCommit": "2ead87d9c9e35b1588a760efff0bd6154545a77c",
+  "configuration": "Release; same SDK9.0.318 and local.props; CopyModOnBuild=false",
+  "candidate": "04c70a0c0ff4d9169a8184a327beae1e246bca75179ed8bd521331e08d384d1c",
+  "baseline": "ae38d7c7d1d52958c2609a029f7b75eface88384a111fa9f9ba25d5c32867af4",
+  "sourceChange": "Frozen root player order indexed directly; no per-fingerprint LINQ sorting; native/predicted continuation append captured limit",
+  "nativeAcceptance": "Pending"
+}
