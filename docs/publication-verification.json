@@ -30,9 +30,9 @@
     ],
     "coverAndTwoGameplayImagesDownloadedAndByteVerified": true,
     "allFiveContentFilesDownloadedAndHashVerified": true,
-    "publicWebVisibility": "Temporarily hidden pending Steam automatic content check, explicitly stated by logged-in author page",
-    "publicAvailabilityNotClaimed": true,
-    "cause": "Steam automatic content check pending",
+    "publicWebVisibility": "WorkshopAnonymousPublicPageVerified on2026-10-08; HTTP200 actual item description visible without login",
+    "publicAvailabilityNotClaimed": false,
+    "cause": "Earlier automatic content check hold no longer prevents public access",
     "workshopEulaStatusQuery": "InvalidParam; cannot establish agreement status.",
     "ownerUi": "Logged-in author page observed after unlocking; cover and both gameplay images display; banner confirms temporary hiding until automated content check clears.",
     "ownerLoginConfirmed": true,
@@ -41,7 +41,7 @@
   },
   "pr": {
     "url": "https://github.com/Torch1230/CombatSolver/pull/224",
-    "status": "ReadyForReviewWithValidationGaps",
+    "status": "Merged",
     "head": "89798a78418e72e5f75b066dce163aea778db3a0",
     "bodyAndTwoImagesVerified": true,
     "rebasedBase": "CombatSolver0.50.0",
@@ -50,7 +50,8 @@
     "performanceAcceptance": "NotPassed",
     "current050NativeAndPerformance": "Pending",
     "upstreamTemplateAndIssue171Reviewed": true,
-    "readyStatusAndUpdatedBodyReadBack": true
+    "readyStatusAndUpdatedBodyReadBack": true,
+    "mergedAt": "2026-10-06T06:52:52Z"
   },
   "publicBinary": {
     "nativeTestedSha256": "8ae924216c665a6c4e7957cf508e3039f97d5f9ffdfce9be72947d49d4fe7ddf",
@@ -58,11 +59,10 @@
     "difference": "Only128bytes of the external-PDB debug filename were removed to avoid a private developer path. All other PE bytes identical;3326/3326 normalized method contracts match."
   },
   "pending": [
-    "Workshop anonymous public availability",
     "Windows acceptance",
     "Fresh complete run on the final candidate",
     "Newer dependency acceptance",
     "Upstream PR native/performance validation on0.50.0"
   ],
-  "lastStatusUpdate": "2026-10-06"
+  "lastStatusUpdate": "2026-10-08"
 }

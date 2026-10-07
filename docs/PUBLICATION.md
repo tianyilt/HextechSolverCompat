@@ -1,5 +1,9 @@
 # Publication status / 发布状态（2026-10-05）
 
+**October8 status / 10月8日最新状态：** [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3814083983) is now publicly accessible without login; actual title/description were read back with HTTP200 and no hidden-item error. The earlier automatic-content-check hold has cleared for the public page. [PR224](https://github.com/Torch1230/CombatSolver/pull/224) was merged on October6. This does not change the compatibility package's pinned0.48.1/macOS scope, nor turn the recorded historical performance gate into Passed. Below is the preserved earlier publication history.
+
+**工坊已公开：**10月8日匿名回读实际物品页面与说明，HTTP200，无隐藏错误；此前检查不再阻止公开访问。PR224已于10月6合并。兼容包仍固定0.48.1/macOS，不因PR合并宣称新版兼容或历史性能Passed。以下保留原发布过程。
+
 [Source / 源码](https://github.com/tianyilt/HextechSolverCompat) · [macOS preview / macOS预览发行包](https://github.com/tianyilt/HextechSolverCompat/releases/tag/v0.1.0-preview-macos) · [Steam Workshop / 工坊](https://steamcommunity.com/sharedfiles/filedetails/?id=3814083983) · [PR224](https://github.com/Torch1230/CombatSolver/pull/224)
 
 The source and GitHub prerelease are publicly accessible. Steam accepted the Workshop upload and reports Public metadata with no ban; the exact bilingual description, three dependencies, cover, two gameplay images and all five downloaded package files have been verified. **On October6, the logged-in author page explicitly reports that the item is waiting for Steam's automatic content check and will remain temporarily hidden until the check clears.** The cover and both gameplay images display on the actual owner page. Public Workshop availability is still pending. The earlier email/permission explanations were unconfirmed possibilities; the owner banner now establishes the actual pending stage. No email-confirmation request is shown in the observed banner. No re-upload or account change was made.
